@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "Lake"
-  text: "Lake is a browser-based editor that enables writing rich text directly inside of web pages or online applications."
-  tagline: My great project tagline
+  text: ""
+  tagline: Lake is a browser-based editor that enables writing rich text directly inside of web pages or online applications.
   actions:
     - theme: brand
       text: Markdown Examples
