@@ -4,22 +4,31 @@ layout: home
 
 hero:
   name: "Lake"
-  text: ""
-  tagline: Lake is a browser-based editor that enables writing rich text directly inside of web pages or online applications.
+  text: "Browser-based WYSIWYG Editor"
+  tagline: A rich text editor with good user experience
+  image:
+    src: /assets/lake-screenshot.png
+    style: "max-width: 380px;"
+    alt: Lake
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Try demos
+      link: /demos
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Get started
+      link: /getting-started
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon:
+      src: /assets/users.svg
+    title: Focus on UX
+    details: Beautiful user interface, smooth user experience, small size and simple architecture enable Lake to load quickly.
+  - icon:
+      src: /assets/cube.svg
+    title: Easy to use
+    details: Out-of-the-box features that do not need extra installation, easily integrate a full-featured editor into your website or app with just a few lines of code
+  - icon:
+      src: /assets/puzzle-piece.svg
+    title: Extension
+    details: Built on top of the DOM, no complex programming layers, directly call all browser APIs by instinct in the plugin.
 ---
-
