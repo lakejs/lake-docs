@@ -22,13 +22,13 @@ features:
   - icon:
       src: /assets/users.svg
     title: Focus on UX
-    details: Beautiful user interface, smooth user experience, small size and simple architecture enable Lake to load quickly.
+    details: Beautiful user interface, smooth user experience, quickly load editor due to small size, support operating huge content due to simple architecture
   - icon:
       src: /assets/cube.svg
-    title: Easy to use
+    title: Approachable
     details: Out-of-the-box features that do not need extra installation, easily integrate a full-featured editor into your website or app with just a few lines of code
   - icon:
       src: /assets/puzzle-piece.svg
-    title: Extension
-    details: Built on top of the DOM, no complex programming layers, directly call all browser APIs by instinct in the plugin.
+    title: Easy to extend
+    details: Easy-to-use programming interface, no complex programming layers, built on top of the DOM, directly call all browser APIs by instinct in the plugin
 ---
