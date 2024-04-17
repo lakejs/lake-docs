@@ -13,10 +13,10 @@ hero:
   actions:
     - theme: brand
       text: Try demos
-      link: /demos/
+      link: /examples/
     - theme: alt
       text: Get started
-      link: /getting-started
+      link: /handbook/
 
 features:
   - icon:

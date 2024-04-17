@@ -10,24 +10,23 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/favicon-16.png' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/favicon-32.png' }],
     ['link', { rel: 'apple-touch-icon', href: '/assets/favicon-192.png' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/lakelib@latest/dist/codemirror.min.js' }],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/assets/logo.svg',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Demos', link: '/demos/' },
+      { text: 'Examples', link: '/examples/' },
       { text: 'Handbook', link: '/handbook/' },
       { text: 'Reference', link: '/reference/' }
     ],
 
     sidebar: {
-      '/demos/': [{
-        text: 'Demos',
+      '/examples/': [{
+        text: 'Examples',
         items: [
-          { text: 'Default configuration', link: '/demos/' },
-          { text: 'Full-featured editor', link: '/demos/full-featured' }
+          { text: 'Default configuration', link: '/examples/' },
+          { text: 'Full-featured editor', link: '/examples/full-featured' }
         ]
       }],
       '/handbook/': [{

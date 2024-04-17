@@ -8,6 +8,7 @@
     "preview": "vitepress preview"
   },
   "dependencies": {
+    "lake-codemirror": "^1.0.0",
     "lakelib": "^0.0.6"
   }
 }
