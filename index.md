@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: Try demos
-      link: /demos
+      link: /demos/
     - theme: alt
       text: Get started
       link: /getting-started
@@ -22,13 +22,13 @@ features:
   - icon:
       src: /assets/users.svg
     title: Focus on UX
-    details: Beautiful user interface, smooth user experience, quickly load editor due to small size, support operating huge content due to simple architecture
+    details: Beautiful user interface, smooth user experience, quickly load editor due to small size, support operating huge content
   - icon:
       src: /assets/cube.svg
     title: Approachable
-    details: Out-of-the-box features that do not need extra installation, easily integrate a full-featured editor into your website or app with just a few lines of code
+    details: Out-of-the-box features, easily integrate a full-featured editor into your website or app without any extra module
   - icon:
       src: /assets/puzzle-piece.svg
     title: Easy to extend
-    details: Easy-to-use programming interface, no complex programming layers, built on top of the DOM, directly call all browser APIs by instinct in the plugin
+    details: Easy-to-use programming interface, built on top of the DOM, able to call all browser APIs when customizing or developing plugin
 ---
