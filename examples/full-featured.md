@@ -67,7 +67,7 @@ onMounted(() => {
     const editor = new Editor({
       root: '.lake-root',
       toolbar,
-      value: '<p><a href="aa">New link</a></p>',
+      value: window.defaultValue || '',
     });
     editor.render();
     window.editor = editor;
@@ -93,7 +93,7 @@ onUnmounted(() => {
 }
 .lake-root {
   border: 1px solid #d9d9d9;
-  height: calc(100vh - 160px);
+  height: 500px;
   overflow: auto;
 }
 </style>

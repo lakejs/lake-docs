@@ -79,7 +79,7 @@ onMounted(() => {
       const languageDropdown = new Dropdown({
         root,
         name: 'language',
-        icon: '<img src="/assets/globe.svg" />',
+        icon: '<img src="/assets/icons/globe.svg" />',
         defaultValue: localStorage.getItem(localStorageKey) ?? 'en-US',
         tooltip: 'Select language',
         width: 'auto',
@@ -100,7 +100,7 @@ onMounted(() => {
       const directionDropdown = new Dropdown({
         root,
         name: 'direction',
-        icon: '<img src="/assets/direction.svg" />',
+        icon: '<img src="/assets/icons/direction.svg" />',
         defaultValue: localStorage.getItem(localStorageKey) ?? 'en-US',
         tooltip: 'Select writing direction',
         width: 'auto',
@@ -131,7 +131,7 @@ onMounted(() => {
       renderDirection();
       const menuNode = query('.header .menu');
       menuNode.empty();
-      menuNode.append('<button type="button" name="list"><img src="/assets/list.svg" /></button>');
+      menuNode.append('<button type="button" name="list"><img src="/assets/icons/list.svg" /></button>');
       const ul = query('<ul />');
       menuNode.append(ul);
       for (const item of menuItems) {

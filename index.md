@@ -7,7 +7,7 @@ hero:
   text: "Browser-based WYSIWYG Editor"
   tagline: A rich text editor with good user experience
   image:
-    src: /assets/lake-screenshot.png
+    src: /assets/images/lake-screenshot.png
     style: "max-width: 380px;"
     alt: Lake
   actions:
@@ -20,15 +20,15 @@ hero:
 
 features:
   - icon:
-      src: /assets/users.svg
+      src: /assets/icons/users.svg
     title: Focus on UX
     details: Beautiful user interface, smooth user experience, quickly load editor due to small size, support operating huge content
   - icon:
-      src: /assets/cube.svg
+      src: /assets/icons/cube.svg
     title: Approachable
     details: Out-of-the-box features, easily integrate a full-featured editor into your website or app without any extra module
   - icon:
-      src: /assets/puzzle-piece.svg
+      src: /assets/icons/puzzle-piece.svg
     title: Easy to extend
     details: Easy-to-use programming interface, built on top of the DOM, able to call all browser APIs when customizing or developing plugin
 ---
