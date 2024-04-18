@@ -56,8 +56,10 @@ onMounted(() => {
   if (window.editor) {
     window.editor.unmount();
   }
+  window.LAKE_LANGUAGE = localStorage.getItem('lake-example-language') ?? 'en-US';
   import('lakelib').then(module => {
-    const { Editor, Toolbar } = module;
+    const { Editor, Toolbar, Utils } = module;
+    Utils.query('.lake-editor').attr('dir', localStorage.getItem('lake-example-direction') ?? 'ltr');
     const toolbar = new Toolbar({
       root: '.lake-toolbar-root',
       items: toolbarItems,

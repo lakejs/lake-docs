@@ -141,6 +141,9 @@ onMounted(() => {
         event.preventDefault();
         event.stopPropagation();
         const link = query(event.target).closest('a');
+        if (link.length === 0) {
+          return;
+        }
         menuNode.find('button').removeClass('hovered');
         ul.hide();
         go(link.attr('href'));
