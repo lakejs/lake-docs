@@ -1,9 +1,10 @@
 ---
 layout: example
+title: Full-featured editor
 ---
 
 <script setup>
-import { onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const toolbarItems = [
   'undo',
@@ -52,20 +53,21 @@ const toolbarItems = [
   'selectAll',
 ];
 
+const toolbarRef = ref(null);
+const contentRef = ref(null);
+
 onMounted(() => {
   if (window.editor) {
     window.editor.unmount();
   }
-  window.LAKE_LANGUAGE = localStorage.getItem('lake-example-language') ?? 'en-US';
   import('lakelib').then(module => {
-    const { Editor, Toolbar, Utils } = module;
-    Utils.query('.lake-editor').attr('dir', localStorage.getItem('lake-example-direction') ?? 'ltr');
+    const { Editor, Toolbar } = module;
     const toolbar = new Toolbar({
-      root: '.lake-toolbar-root',
+      root: toolbarRef.value,
       items: toolbarItems,
     });
     const editor = new Editor({
-      root: '.lake-root',
+      root: contentRef.value,
       toolbar,
       value: window.defaultValue || '',
     });
@@ -81,17 +83,15 @@ onUnmounted(() => {
 });
 </script>
 
-<div class="lake-editor">
-  <div class="lake-toolbar-root"></div>
-  <div class="lake-root"></div>
-</div>
+<div :class="$style.toolbar" ref="toolbarRef"></div>
+<div :class="$style.content" ref="contentRef"></div>
 
-<style global>
-.lake-toolbar-root {
+<style module>
+.toolbar {
   border: 1px solid #d9d9d9;
   border-bottom: 0;
 }
-.lake-root {
+.content {
   border: 1px solid #d9d9d9;
   height: 500px;
   overflow: auto;

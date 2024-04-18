@@ -30,6 +30,15 @@ export default defineConfig({
     ],
 
     sidebar: {
+      '/examples/': [{
+        text: 'Examples',
+        items: [
+          { text: 'Default configuration', link: '/examples/' },
+          { text: 'Full-featured editor', link: '/examples/full-featured' },
+          { text: 'Document editor', link: '/examples/document' },
+        ],
+      }],
+
       '/handbook/': [{
         text: 'Handbook',
         items: [

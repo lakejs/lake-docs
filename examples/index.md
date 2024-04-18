@@ -1,9 +1,13 @@
 ---
 layout: example
+title: Default configuration
 ---
 
 <script setup>
-import { onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const toolbarRef = ref(null);
+const contentRef = ref(null);
 
 onMounted(() => {
   if (window.editor) {
@@ -12,10 +16,10 @@ onMounted(() => {
   import('lakelib').then(module => {
     const { Editor, Toolbar } = module;
     const toolbar = new Toolbar({
-      root: '.lake-toolbar-root',
+      root: toolbarRef.value,
     });
     const editor = new Editor({
-      root: '.lake-root',
+      root: contentRef.value,
       toolbar,
       value: window.defaultValue || '',
     });
@@ -31,17 +35,15 @@ onUnmounted(() => {
 });
 </script>
 
-<div class="lake-editor">
-  <div class="lake-toolbar-root"></div>
-  <div class="lake-root"></div>
-</div>
+<div :class="$style.toolbar" ref="toolbarRef"></div>
+<div :class="$style.content" ref="contentRef"></div>
 
-<style global>
-.lake-toolbar-root {
+<style module>
+.toolbar {
   border: 1px solid #d9d9d9;
   border-bottom: 0;
 }
-.lake-root {
+.content {
   border: 1px solid #d9d9d9;
   height: 500px;
   overflow: auto;
