@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lake Examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/icons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="../assets/icons/favicon-192.png" />
+    <link rel="stylesheet" href="../node_modules/photoswipe/dist/photoswipe.css" />
+    <link rel="stylesheet" href="../temp/examples/bundle.css" />
+    <script src="../node_modules/lake-codemirror/dist/codemirror.min.js"></script>
+    <script src="../node_modules/js-base64/base64.js"></script>
+    <script src="../node_modules/eventemitter3/dist/eventemitter3.umd.min.js"></script>
+    <script src="../node_modules/lodash/lodash.min.js"></script>
+    <script src="../node_modules/photoswipe/dist/umd/photoswipe.umd.min.js"></script>
+    <script src="../node_modules/photoswipe/dist/umd/photoswipe-lightbox.umd.min.js"></script>
+    <script src="../node_modules/tinykeys/dist/tinykeys.umd.js"></script>
+    <script src="../node_modules/blueimp-md5/js/md5.min.js"></script>
+    <script src="../node_modules/typesafe-i18n/dist/i18n.all.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="menu"></div>
+      <div class="title"></div>
+      <div class="language lake-custom-properties"></div>
+      <div class="direction lake-custom-properties"></div>
+      <div class="source"></div>
+    </div>
+    <div class="lake-editor">
+      <div class="lake-toolbar-root"></div>
+      <div class="lake-root"></div>
+    </div>
+    <script>
+      window.LAKE_LANGUAGE = localStorage.getItem('lake-example-language') ?? 'en-US';
+      document.documentElement.dir = localStorage.getItem('lake-example-direction') ?? 'ltr';
+      window.LAKE_DEBUG = true;
+    </script>
+    <script src="../assets/values/default-value.js"></script>
+    <script src="../assets/values/miniature-value.js"></script>
+    <script src="../assets/values/headless-value.js"></script>
+    <script src="../assets/values/huge-value.js"></script>
+    <script src="../temp/examples/bundle.js"></script>
+  </body>
+</html>

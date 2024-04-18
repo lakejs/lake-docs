@@ -4,11 +4,11 @@
   },
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "vitepress build && cp -r ./assets ./.vitepress/dist/assets",
     "preview": "vitepress preview"
   },
   "dependencies": {
-    "lake-codemirror": "^1.0.0",
-    "lakelib": "^0.0.6"
+    "lake-codemirror": "^1.0.1",
+    "lakelib": "^0.0.7"
   }
 }

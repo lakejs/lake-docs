@@ -1,40 +1,48 @@
-# Default configuration
-
-This page demonstrates some of the built-in features that are useful in most situations.
+---
+layout: example
+---
 
 <script setup>
-import 'lakelib/lib/lake.css';
-import { onMounted } from 'vue';
-import { Editor, Toolbar } from 'lakelib';
-import * as CodeMirror from 'lake-codemirror';
-
-window.CodeMirror = CodeMirror;
+import { onMounted, onUnmounted } from 'vue';
 
 onMounted(() => {
-  const toolbar = new Toolbar({
-    root: '#toolbar',
+  if (window.editor) {
+    window.editor.unmount();
+  }
+  import('lakelib').then(module => {
+    const { Editor, Toolbar } = module;
+    const toolbar = new Toolbar({
+      root: '.lake-toolbar-root',
+    });
+    const editor = new Editor({
+      root: '.lake-root',
+      toolbar,
+    });
+    editor.render();
+    window.editor = editor;
   });
-  const editor = new Editor({
-    root: '#content',
-    toolbar,
-  });
-  editor.render();
+});
+onUnmounted(() => {
+  if (window.editor) {
+    window.editor.unmount();
+    window.editor = null;
+  }
 });
 </script>
 
-<div>
-  <div :class="$style.toolbar" id="toolbar">a</div>
-  <div :class="$style.content" id="content">b</div>
+<div class="lake-editor">
+  <div class="lake-toolbar-root"></div>
+  <div class="lake-root"></div>
 </div>
 
-<style module>
-.toolbar {
+<style global>
+.lake-toolbar-root {
   border: 1px solid #d9d9d9;
   border-bottom: 0;
 }
-.content {
+.lake-root {
   border: 1px solid #d9d9d9;
-  height: 300px;
+  height: calc(100vh - 160px);
   overflow: auto;
 }
 </style>
