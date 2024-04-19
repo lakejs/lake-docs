@@ -19,16 +19,20 @@ export default defineConfig({
     ['script', { src: '/assets/values/huge-value.js' }],
     ['script', { src: '/assets/values/miniature-value.js' }],
   ],
+  rewrites: {
+    'examples/default.md': 'examples/index.md',
+    'guide/introduction.md': 'guide/index.md',
+    'reference/editor-config.md': 'reference/index.md',
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/assets/icons/logo.svg',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/examples/', activeMatch: '/examples/' },
-      { text: 'Handbook', link: '/handbook/', activeMatch: '/handbook/' },
+      { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
       { text: 'Reference', link: '/reference/', activeMatch: '/reference/' },
     ],
-
     sidebar: {
       '/examples/': [{
         text: 'Examples',
@@ -42,23 +46,27 @@ export default defineConfig({
           { text: 'Read-only mode', link: '/examples/readonly' },
         ],
       }],
-
-      '/handbook/': [{
-        text: 'Handbook',
+      '/guide/': [{
+        text: 'Guide',
         items: [
-          { text: 'Getting started', link: '/markdown-examples' },
-          { text: 'With React', link: '/api-examples' },
+          { text: 'Introduction', link: '/guide/' },
+          { text: 'Getting started', link: '/guide/getting-started' },
+        ],
+      }],
+      '/reference/': [{
+        text: 'Reference',
+        items: [
+          { text: 'Editor config', link: '/reference/' },
+          { text: 'Toolbar config', link: '/reference/toolbar-config' },
         ],
       }],
     },
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lakejs/lake' },
     ],
-
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2024-present Luo Longhao',
     },
-  }
+  },
 })
