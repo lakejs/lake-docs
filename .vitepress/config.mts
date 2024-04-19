@@ -39,6 +39,7 @@ export default defineConfig({
           { text: 'Miniature toolbar', link: '/examples/miniature' },
           { text: 'Headless editor', link: '/examples/headless' },
           { text: 'Huge content', link: '/examples/huge-content' },
+          { text: 'Read-only mode', link: '/examples/readonly' },
         ],
       }],
 
