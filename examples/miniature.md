@@ -113,6 +113,7 @@ onMounted(() => {
       indentWithTab: false,
     });
     editor.render();
+    editor.blur();
     window.editor = editor;
   });
 });

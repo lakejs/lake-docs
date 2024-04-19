@@ -38,6 +38,7 @@ export default defineConfig({
           { text: 'Document editor', link: '/examples/document' },
           { text: 'Miniature toolbar', link: '/examples/miniature' },
           { text: 'Headless editor', link: '/examples/headless' },
+          { text: 'Huge content', link: '/examples/huge-content' },
         ],
       }],
 
