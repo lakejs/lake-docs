@@ -21,12 +21,12 @@ export default defineConfig({
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/assets/logo.svg',
+    logo: '/assets/icons/logo.svg',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/examples/index.html' },
-      { text: 'Handbook', link: '/handbook/' },
-      { text: 'Reference', link: '/reference/' },
+      { text: 'Examples', link: '/examples/', activeMatch: '/examples/' },
+      { text: 'Handbook', link: '/handbook/', activeMatch: '/handbook/' },
+      { text: 'Reference', link: '/reference/', activeMatch: '/reference/' },
     ],
 
     sidebar: {
@@ -36,6 +36,7 @@ export default defineConfig({
           { text: 'Default configuration', link: '/examples/' },
           { text: 'Full-featured editor', link: '/examples/full-featured' },
           { text: 'Document editor', link: '/examples/document' },
+          { text: 'Miniature toolbar', link: '/examples/miniature' },
         ],
       }],
 

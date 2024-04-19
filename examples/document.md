@@ -1,11 +1,48 @@
 ---
-layout: false
+layout: page
+sidebar: false
+footer: false
 title: Document editor
 ---
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import ExampleHeader from '../.vitepress/theme/ExampleHeader.vue';
+
+const toolbarItems = [
+  'undo',
+  'redo',
+  '|',
+  'heading',
+  'fontFamily',
+  'fontSize',
+  '|',
+  'formatPainter',
+  'removeFormat',
+  'bold',
+  'moreStyle',
+  '|',
+  'fontColor',
+  'highlight',
+  '|',
+  'numberedList',
+  'bulletedList',
+  'checklist',
+  '|',
+  'alignLeft',
+  'alignCenter',
+  'alignRight',
+  'alignJustify',
+  '|',
+  'increaseIndent',
+  'decreaseIndent',
+  '|',
+  'image',
+  'link',
+  'codeBlock',
+  'blockQuote',
+  'hr',
+];
 
 const mainRef = ref(null);
 const toolbarRef = ref(null);
@@ -18,9 +55,10 @@ onMounted(() => {
     window.editor.unmount();
   }
   import('lakelib').then(module => {
-    const { Editor, Toolbar } = module;
+    const { Editor, Toolbar, Utils } = module;
     const toolbar = new Toolbar({
       root: toolbarRef.value,
+      items: toolbarItems,
     });
     const editor = new Editor({
       root: contentRef.value,
@@ -30,19 +68,18 @@ onMounted(() => {
     editor.render();
     window.editor = editor;
   });
+  document.body.style.backgroundColor = '#0000000d';
 });
 onUnmounted(() => {
   if (window.editor) {
     window.editor.unmount();
     window.editor = null;
   }
+  document.body.style.backgroundColor = '';
 });
 </script>
 
-<div :class="$style.document" class="vp-raw">
-  <div :class="$style.headerWrapper">
-    <ExampleHeader />
-  </div>
+<div class="vp-raw">
   <div :class="$style.editor" ref="mainRef">
     <div :class="$style.toolbar" ref="toolbarRef"></div>
     <div :class="$style.content" ref="contentRef"></div>
@@ -50,15 +87,6 @@ onUnmounted(() => {
 </div>
 
 <style module>
-.document {
-  background-color: #0000000d;
-}
-.headerWrapper {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
 .editor {
   box-sizing: border-box;
   padding: 0;
@@ -68,30 +96,21 @@ onUnmounted(() => {
 }
 .toolbar {
   position: fixed;
-  top: 60px;
+  top: 64px;
   width: 100%;
-  border: 1px solid #d9d9d9;
-  border-left: none;
-  border-right: none;
+  padding: 6px 0;
+  border-bottom: 1px solid #d9d9d9;
+  background-color: #fff;
+  z-index: 1;
 }
 .content {
   height: auto;
+  min-height: 800px;
   overflow: visible;
-  margin: 110px auto;
+  margin: 76px auto 28px auto;
   max-width: 1000px;
   border: 1px solid #d9d9d9;
   background-color: #fff;
 }
 </style>
 
-<style global>
-.document {
-  background-color: #0000000d;
-}
-.document .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-</style>
