@@ -37,6 +37,7 @@ export default defineConfig({
           { text: 'Full-featured editor', link: '/examples/full-featured' },
           { text: 'Document editor', link: '/examples/document' },
           { text: 'Miniature toolbar', link: '/examples/miniature' },
+          { text: 'Headless editor', link: '/examples/headless' },
         ],
       }],
 
