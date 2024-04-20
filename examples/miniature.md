@@ -125,26 +125,10 @@ onUnmounted(() => {
 });
 </script>
 
-<div :class="$style.editor" class="miniature-editor">
+<div :class="$style.editor">
   <div :class="$style.toolbar" ref="toolbarRef"></div>
   <div :class="$style.content" ref="contentRef"></div>
 </div>
-
-<style global>
-.miniature-editor .lake-toolbar .lake-color-dropdown-menu {
-  width: 156px;
-}
-.miniature-editor .lake-toolbar .lake-color-dropdown-menu li:first-child .lake-dropdown-menu-text {
-  text-align: center;
-}
-.miniature-editor .lake-root-focused {
-  outline: 2px solid var(--input-border-hover-color);
-  outline-offset: -2px;
-}
-.miniature-editor .lake-container {
-  padding: 8px 12px;
-}
-</style>
 
 <style module>
 .editor {
@@ -152,9 +136,22 @@ onUnmounted(() => {
   min-width: 300px;
   max-width: 600px;
 }
+.editor :global .lake-root-focused {
+  outline: 2px solid var(--input-border-hover-color);
+  outline-offset: -2px;
+}
+.editor :global .lake-container {
+  padding: 8px 12px;
+}
 .toolbar {
   border: 1px solid #d9d9d9;
   border-bottom: none;
+}
+.toolbar :global .lake-color-dropdown-menu {
+  width: 156px;
+}
+.toolbar :global .lake-color-dropdown-menu li:first-child .lake-dropdown-menu-text {
+  text-align: center;
 }
 .content {
   border: 1px solid #d9d9d9;

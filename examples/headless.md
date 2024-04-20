@@ -137,18 +137,15 @@ onUnmounted(() => {
 });
 </script>
 
-<div :class="$style.toolbar" class="headless-toolbar" ref="toolbarRef"></div>
+<div :class="$style.toolbar" ref="toolbarRef"></div>
 <div :class="$style.content" ref="contentRef"></div>
-
-<style global>
-.headless-toolbar .lake-button {
-  margin-right: 8px;
-}
-</style>
 
 <style module>
 .toolbar {
   padding-bottom: 8px;
+}
+.toolbar :global .lake-button {
+  margin-right: 8px;
 }
 .content {
   border: 1px solid #d9d9d9;

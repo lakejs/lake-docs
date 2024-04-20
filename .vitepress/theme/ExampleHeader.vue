@@ -90,34 +90,27 @@ onMounted(() => {
 </script>
 
 <template>
-  <div :class="$style.header" class="example-header">
+  <div :class="$style.header">
     <div :class="$style.title">{{ $frontmatter.title }}</div>
     <div class="lake-custom-properties" ref="languageRef"></div>
     <div class="lake-custom-properties" ref="directionRef"></div>
   </div>
 </template>
 
-<style global>
-.example-header .lake-dropdown .lake-dropdown-icon img {
-  width: 24px;
-  height: 24px;
-}
-.example-header .lake-dropdown .lake-dropdown-menu {
-  top: 36px;
-}
-</style>
-
 <style module>
 .header {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-  font-weight: normal;
-  line-height: normal;
-  box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 38px 36px;
   align-items: center;
   padding: 16px 8px;
   background: #fff;
+}
+.header :global .lake-dropdown .lake-dropdown-icon img {
+  width: 24px;
+  height: 24px;
+}
+.header :global .lake-dropdown .lake-dropdown-menu {
+  top: 36px;
 }
 .title {
   font-size: 18px;

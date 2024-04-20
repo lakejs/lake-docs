@@ -3,6 +3,8 @@ layout: doc
 title: Getting started
 ---
 
+# {{ $frontmatter.title }}
+
 ## Downloading Lake from CDN
 
 Compressed copies of Lake files are available, you can download them from jsDelivr or UNPKG.
