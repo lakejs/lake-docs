@@ -103,7 +103,6 @@ onMounted(() => {
   grid-template-columns: 1fr 38px 36px;
   align-items: center;
   padding: 16px 8px;
-  background: #fff;
 }
 .header :global .lake-dropdown .lake-dropdown-icon img {
   width: 24px;

@@ -12,11 +12,6 @@ Compressed copies of Lake files are available, you can download them from jsDeli
 * jsDelivr: https://www.jsdelivr.com/package/npm/lakelib
 * UNPKG: https://unpkg.com/browse/lakelib/
 
-Note: These files do not include CodeMirror, so if you need the code block feature, addtioanaly including CodeMirror to your page is needed.
-
-* jsDelivr: https://www.jsdelivr.com/package/npm/lake-codemirror
-* UNPKG: https://unpkg.com/browse/lake-codemirror/
-
 ## Downloading Lake using npm
 
 Lake is registered as a package on npm. You can install the latest version of Lake with the following npm command.
@@ -56,6 +51,20 @@ const editor = new Lake.Editor({
 editor.render();
 ```
 
+The `root` property can also be a DOM element.
+
+```js
+const toolbar = new Lake.Toolbar({
+  root: document.querySelector('.lake-toolbar-root'),
+});
+const editor = new Lake.Editor({
+  root: document.querySelector('.lake-root'),
+  toolbar,
+});
+editor.render();
+```
+
+
 ## Quick start with npm
 
 First, in the HTML page add the following HTML code that will serve as a placeholder for an editor instance.
@@ -81,4 +90,26 @@ const editor = new Editor({
   toolbar,
 });
 editor.render();
+```
+
+## Using `change` event
+
+```js
+editor.event.on('statechange', () => {
+  console.log("Event 'statechange' emitted");
+});
+editor.event.on('change', (val: string) => {
+  console.log(`Event 'change' emitted, the length of the value is ${val.length}`);
+});
+```
+
+## Code block
+
+The `code block` feature is based on [CodeMirror](https://codemirror.net/), so if you need the feature, CodeMirror must be included before loading Lake.
+
+* jsDelivr: https://www.jsdelivr.com/package/npm/lake-codemirror
+* UNPKG: https://unpkg.com/browse/lake-codemirror/
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/lake-codemirror@latest/dist/codemirror.min.js"></script>
 ```
