@@ -59,6 +59,7 @@ export default defineConfig({
         items: [
           { text: 'Editor config', link: '/reference/' },
           { text: 'Toolbar config', link: '/reference/toolbar-config' },
+          { text: 'Content Format', link: '/reference/content-format' },
         ],
       }],
     },

@@ -54,10 +54,10 @@ new Editor({
 
 ## value
 
-* Type: `LML String`
+* Type: `string`
 * Default: `<p><br /><focus /></p>`
 
-The default content of the editor. It is an LML(Lake Markup Language) string similar to HTML.
+The default content of the editor. The format is [Lake Markup Language (LML)](./content-format.md) similar to HTML.
 
 ```js
 const defaultValue = `
@@ -67,6 +67,6 @@ const defaultValue = `
 `;
 new Editor({
   root: '.lake-root',
-  value,
+  value: defaultValue,
 });
 ```
