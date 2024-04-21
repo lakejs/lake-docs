@@ -22,14 +22,14 @@ npm install lakelib
 
 ## Quick start with CDN
 
-First, add the following lines of code in the `<head>` of an HTML page.
+Add the following lines of code in the `<head>` of an HTML page.
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lakelib@latest/dist/lake.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/lakelib@latest/dist/lake.min.js"></script>
 ```
 
-Then, in the HTML page add the following HTML code that will serve as a placeholder for an editor instance.
+In the HTML page add the following HTML code that will serve as a placeholder for an editor instance.
 
 ```html
 <div class="lake-editor">
@@ -38,7 +38,7 @@ Then, in the HTML page add the following HTML code that will serve as a placehol
 </div>
 ```
 
-Finally, call the following JavaScript code to render the editor.
+Call the following JavaScript code to render the editor.
 
 ```js
 const toolbar = new Lake.Toolbar({
@@ -51,7 +51,7 @@ const editor = new Lake.Editor({
 editor.render();
 ```
 
-The `root` property can also be a DOM element.
+The `root` property can also be given a DOM element.
 
 ```js
 const toolbar = new Lake.Toolbar({
@@ -67,7 +67,7 @@ editor.render();
 
 ## Quick start with npm
 
-First, in the HTML page add the following HTML code that will serve as a placeholder for an editor instance.
+In the HTML page add the following HTML code that will serve as a placeholder for an editor instance.
 
 ```html
 <div class="lake-editor">
@@ -76,7 +76,7 @@ First, in the HTML page add the following HTML code that will serve as a placeho
 </div>
 ```
 
-Then, call the following JavaScript code to render the editor.
+Call the following JavaScript code to render the editor.
 
 ```js
 import 'lakelib/lib/lake.css';
@@ -95,11 +95,8 @@ editor.render();
 ## Using `change` event
 
 ```js
-editor.event.on('statechange', () => {
-  console.log("Event 'statechange' emitted");
-});
-editor.event.on('change', (val: string) => {
-  console.log(`Event 'change' emitted, the length of the value is ${val.length}`);
+editor.event.on('change', value => {
+  console.log(`Event 'change' emitted, the length of the value is ${value.length}`);
 });
 ```
 
