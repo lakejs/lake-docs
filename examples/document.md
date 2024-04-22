@@ -7,7 +7,6 @@ title: Document editor
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import ExampleHeader from '../.vitepress/theme/ExampleHeader.vue';
 
 const toolbarItems = [
   'undo',

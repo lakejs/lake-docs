@@ -5,7 +5,9 @@ title: Markdown Shortcuts
 
 # {{ $frontmatter.title }}
 
-Lake provides markdown-like shortcuts, you can use the following shortcuts to format the text.
+Lake provides markdown-style shortcuts, you can use the following shortcuts to format the text.
+
+## Shortcuts table
 
 | Format type  | Shortcuts |
 | ------------- | ------------- |
@@ -42,3 +44,10 @@ Lake provides markdown-like shortcuts, you can use the following shortcuts to fo
 |   | <code>\`\`\`html</code> `Enter`  |
 |   | <code>\`\`\`css</code> `Enter`  |
 |   | <code>\`\`\`javascript</code> `Enter`  |
+
+## Playground
+
+<LakeEditor value="
+<p>Start a line with <code>#</code> followed by a <code>space</code> to create a heading.</p>
+<p>Start a line with <code>[]</code> followed by a <code>space</code> to insert a checklist.</p>
+" />

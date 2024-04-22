@@ -31,7 +31,7 @@ The `focus` attribute represents the position of the caret.
 
 ```xml
 <lake-box type="block" name="hr" focus="start"></lake-box>
-<lake-box type="inline" name="image" value="..." focus="end"></lake-box>
+<p><lake-box type="inline" name="image" value="..." focus="end"></lake-box></p>
 ```
 
 Attributes:
