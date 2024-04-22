@@ -77,11 +77,7 @@ The `<br />` tag represents a line break in text.
 The `<blockquote>` tag represents a block quotation.
 
 ```html
-<blockquote>Normal quote</blockquote>
-<blockquote type="success">Success</blockquote>
-<blockquote type="info">Info</blockquote>
-<blockquote type="warning">Warning</blockquote>
-<blockquote type="error">Error</blockquote>
+<blockquote>This is a block quotation.</blockquote>
 ```
 
 ## Numbered list
@@ -241,6 +237,27 @@ The `<code>` tag represents inline code, which displays a short fragment of comp
 
 ```html
 <code>Inline code</code>
+```
+
+## Alert block
+
+The `<blockquote>` with `type` attribute represents alert block that you can use to emphasize critical information.
+
+```html
+<blockquote type="info">This is an info block.</blockquote>
+<blockquote type="tip">This is a tip block.</blockquote>
+<blockquote type="success">This is a success box.</blockquote>
+<blockquote type="warning">This is a warning box.</blockquote>
+<blockquote type="error">This is an error box.</blockquote>
+<blockquote type="danger">This is a danger box.</blockquote>
+```
+
+## Thematic break
+
+Lake uses `<lake-box>` tag to represents the thematic break (horizontal rule).
+
+```html
+<lake-box type="block" name="hr"></lake-box>
 ```
 
 ## Link

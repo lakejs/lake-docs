@@ -31,6 +31,12 @@ Lake provides markdown-like shortcuts, you can use the following shortcuts to fo
 | Highlight  | `==highlight==` `Space`  |
 | Strikethrough  | `~~strikethrough~~` `Space`  |
 | Inline code  | <code>\`code\`</code> `Space`  |
+| Alert block  | `:::info` `Enter`  |
+|   | `:::tip` `Enter`  |
+|   | `:::success` `Enter`  |
+|   | `:::warning` `Enter`  |
+|   | `:::error` `Enter`  |
+|   | `:::danger` `Enter`  |
 | Thematic break  | `---` `Enter`  |
 | Code block  | <code>\`\`\`</code> `Enter`  |
 |   | <code>\`\`\`html</code> `Enter`  |
