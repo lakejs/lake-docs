@@ -60,6 +60,7 @@ export default defineConfig({
           { text: 'Editor config', link: '/reference/' },
           { text: 'Toolbar config', link: '/reference/toolbar-config' },
           { text: 'Content Format', link: '/reference/content-format' },
+          { text: 'Markdown Shortcuts', link: '/reference/markdown' },
         ],
       }],
     },

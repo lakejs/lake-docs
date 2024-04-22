@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Lake Markup Language 
+title: Lake Markup Language
 ---
 
 # {{ $frontmatter.title }}
