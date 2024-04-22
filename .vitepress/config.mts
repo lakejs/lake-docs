@@ -33,6 +33,7 @@ export default defineConfig({
       { text: 'Examples', link: '/examples/', activeMatch: '/examples/' },
       { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
       { text: 'Reference', link: '/reference/', activeMatch: '/reference/' },
+      { text: 'Discussions', link: 'https://github.com/lakejs/lake/discussions', target: '_blank' },
     ],
     sidebar: {
       '/examples/': [{
