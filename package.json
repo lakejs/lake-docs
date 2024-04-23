@@ -1,4 +1,7 @@
 {
+  "dependencies": {
+    "lakelib": "^0.0.7"
+  },
   "devDependencies": {
     "vitepress": "1.0.0-rc.39"
   },
@@ -7,8 +10,5 @@
     "build": "vitepress build && cp -r ./assets ./.vitepress/dist/assets",
     "preview": "vitepress preview"
   },
-  "dependencies": {
-    "lake-codemirror": "^1.0.2",
-    "lakelib": "^0.0.7"
-  }
+  "packageManager": "pnpm@8.15.6"
 }
