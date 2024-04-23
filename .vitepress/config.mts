@@ -6,6 +6,7 @@ export default defineConfig({
   outDir: './.vitepress/dist',
   assetsDir: 'static',
   appearance: false,
+  cleanUrls: true,
   lang: 'en-US',
   title: "Lake",
   description: "Lake is a rich text editor for the web.",
