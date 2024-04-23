@@ -35,7 +35,6 @@ config/base.yaml
 /.vscode/
 /coverage
 package-lock.json
-pnpm-lock.yaml
 .pnpm-debug.log
 /.history
 *.tmp
