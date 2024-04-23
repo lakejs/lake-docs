@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "lakelib": "^0.0.7"
+    "lakelib": "^0.1.0"
   },
   "devDependencies": {
     "vitepress": "1.0.0-rc.39"
