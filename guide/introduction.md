@@ -17,4 +17,4 @@ There are already hundreds of editors on the Internet, so there seems to be no p
 
 * Commercial type: They usually provide many features, but there are some limitations to integrating them into your commercial product. Purchasing a commercial license is also needed.
 
-Lake aims to be a full-featured, user-friendly editor, and is released under the MIT license which puts very few restrictions on commercial use.
+Lake aims to be a feature-rich, user-friendly editor, and is released under the MIT license which puts very few restrictions on commercial use.

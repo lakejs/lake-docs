@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Lake"
   text: "Browser-based WYSIWYG Editor"
-  tagline: A full-featured editor with good user experience
+  tagline: A feature-rich editor with good user experience
   image:
     src: /assets/images/lake-screenshot.png
     style: "max-width: 380px;"
@@ -26,7 +26,7 @@ features:
   - icon:
       src: /assets/icons/cube.svg
     title: Approachable
-    details: Out-of-the-box features, seamlessly integrate a full-featured editor into your website or app with a few lines of code
+    details: Out-of-the-box features, seamlessly integrate a feature-rich editor into your website or app with a few lines of code
   - icon:
       src: /assets/icons/puzzle-piece.svg
     title: Customizable
