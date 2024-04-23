@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   lakelib:
-    specifier: ^0.1.0
-    version: 0.1.0(typescript@5.4.5)
+    specifier: ^0.1.1
+    version: 0.1.1(typescript@5.4.5)
 
 devDependencies:
   vitepress:
@@ -859,8 +859,8 @@ packages:
     resolution: {integrity: sha512-7rCnleh0z2CkXhH67J8K1Ytz0b2Y+yxTPL+/KOJoa20hfnVQ/3/T6W/KflYI4bRHRagNeXeU2bkNGI3v1oS/lw==}
     dev: false
 
-  /lakelib@0.1.0(typescript@5.4.5):
-    resolution: {integrity: sha512-BajytIll30ig0RSRkW0LzKLGtzkiCFEoAowFoDkWeE/6ceEnr02zixZcMtXQhfJbKdqzzbh/L8iyNAXQpSUE+g==}
+  /lakelib@0.1.1(typescript@5.4.5):
+    resolution: {integrity: sha512-xgUNUJcpF8VJpWgz6Lp6OXol/z6Np6m/swCMOTgi0QjgZQ6Lutt9goaI87tAoZX7pBrCjZK9+/DELNSzIpdTNA==}
     dependencies:
       '@types/blueimp-md5': 2.18.2
       '@types/lodash': 4.17.0

@@ -70,6 +70,10 @@ onMounted(() => {
       root: contentRef.value,
       toolbar,
       value: window.defaultValue || '',
+      image: {
+        requestMethod: 'GET',
+        requestAction: '/assets/json/upload-image.json',
+      },
     });
     editor.render();
     window.editor = editor;
