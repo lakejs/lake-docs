@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: Editor config
+title: Editor configuration
 ---
 
 # {{ $frontmatter.title }}
 
-Editor config is the parameter of `Editor` where you can define the settings of the editor.
+You can configure the editor through the parameter of the `Editor` class.
 
 ```js
 const editor = new Editor({

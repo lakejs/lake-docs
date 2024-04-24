@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: Toolbar config
+title: Toolbar configuration
 ---
 
 # {{ $frontmatter.title }}
 
-Toolbar config is the parameter of `Toolbar` where you can define the settings of the toolbar.
+You can configure the toolbar through the parameter of the `Toolbar` class.
 
 ```js
 const toolbarItems = [
@@ -51,7 +51,7 @@ DOM element:
 
 * Type: `(string | ToolbarItem)[]`
 
-The items of the toolbar.
+The items (button, dropdown, divider, etc.) in the toolbar. The `|` character represents a divider, and other strings represent built-in items. You can also provide a customized item.
 
 ```js
 import { Toolbar, icons } from 'lakelib';
@@ -69,6 +69,7 @@ const heading = {
 
 const toolbarItems = [
   heading,
+  '|',
   'bold',
 ];
 new Toolbar({

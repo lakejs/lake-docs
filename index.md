@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Lake"
   text: "Browser-based WYSIWYG Editor"
-  tagline: A feature-rich editor with good user experience
+  tagline: A feature-rich editor with a good user experience
   image:
     src: /assets/images/lake-screenshot.png
     style: "max-width: 380px;"
@@ -30,5 +30,5 @@ features:
   - icon:
       src: /assets/icons/puzzle-piece.svg
     title: Customizable
-    details: Easy-to-use programming interface, built on top of the DOM, able to call all browser APIs when customizing or developing plugin
+    details: Easy-to-use programming interface, built on top of the DOM, able to call all browser APIs when customizing or developing plugins
 ---

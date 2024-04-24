@@ -59,8 +59,8 @@ export default defineConfig({
       '/reference/': [{
         text: 'Reference',
         items: [
-          { text: 'Editor config', link: '/reference/' },
-          { text: 'Toolbar config', link: '/reference/toolbar-config' },
+          { text: 'Editor configuration', link: '/reference/' },
+          { text: 'Toolbar configuration', link: '/reference/toolbar-config' },
           { text: 'Content Format', link: '/reference/content-format' },
           { text: 'Markdown Shortcuts', link: '/reference/markdown' },
         ],

@@ -5,7 +5,7 @@ title: Lake Markup Language
 
 # {{ $frontmatter.title }}
 
-Lake uses an LML(Lake Markup Language) string similar to HTML to describe the content of the editor.
+Lake uses an LML (Lake Markup Language) string similar to HTML to describe the content of the editor.
 
 ## Selection
 
@@ -23,24 +23,30 @@ The `<anchor />` and `<focus />` tags represent the range of text selected by th
 
 ## Box
 
-The `<lake-box>` tag represents an embedded content. It is used to enhance editing capability like an external component.
-The `type` attribute indicates whether the box is treated as a block or inline box.
-The `name` attribute represents the name of the box.
-The `value` attribute represents the value of the box. It is used to render `Box` component.
-The `focus` attribute represents the position of the caret.
-
-```xml
-<lake-box type="block" name="hr" focus="start"></lake-box>
-<p><lake-box type="inline" name="image" value="..." focus="end"></lake-box></p>
-```
+The `<lake-box>` tag represents embedded content, which is used to enhance editing capability.
 
 Attributes:
 
 * type: `inline | block`
+
+  Indicates whether the box is treated as a block or inline box.
+
 * name: `hr | image | codeBlock`
+
+  The name of the box.
+
 * value: `Base64 string`
+
+  The data of the box.
+
 * focus: `start | center | end`
 
+  The position of the caret in the box.
+
+```xml
+<lake-box type="block" name="hr" focus="start"></lake-box>
+<lake-box type="inline" name="image" value="..." focus="end"></lake-box>
+```
 
 ## Heading
 
@@ -110,7 +116,7 @@ The `<ul>` tag with `<li>` represents an item in an unordered list.
 
 ## Checklist
 
-The `<ul>` tag with `type="checklist"` represents an item in a checklist.
+If `<ul>`'s `type` is `checklist`, the `<ul>` tag with `<li>` represents an item in a checklist.
 
 ```html
 <ul type="checklist"><li>first item</li></ul>
@@ -177,7 +183,7 @@ The `<u>` tag represents underline, which renders text with a simple solid under
 
 ## Strikethrough
 
-The `<s>` tag represents strikethrough, which renders text with a strikethrough, or a line through it.
+The `<s>` tag represents strikethrough, which renders text with a strikethrough or a line through it.
 
 ```html
 <s>Strikethrough</s>
@@ -254,7 +260,7 @@ The `<blockquote>` with `type` attribute represents alert block that you can use
 
 ## Thematic break
 
-Lake uses `<lake-box>` tag to represents the thematic break (horizontal rule).
+Using the `<lake-box>` tag to represent the thematic break (horizontal rule).
 
 ```html
 <lake-box type="block" name="hr"></lake-box>
@@ -271,7 +277,7 @@ The `<a>` tag with its `href` attribute represents a hyperlink.
 
 ## Image
 
-Lake uses `<lake-box>` tag to represents an image.
+Using the `<lake-box>` tag to represent an image.
 
 ```xml
 <lake-box type="inline" name="image" value=".."></lake-box>
@@ -279,7 +285,7 @@ Lake uses `<lake-box>` tag to represents an image.
 
 ## Code block
 
-Lake uses `<lake-box>` tag to represents a code block.
+Using the `<lake-box>` tag to represent a code block.
 
 ```xml
 <lake-box type="block" name="codeBlock" value=".."></lake-box>
