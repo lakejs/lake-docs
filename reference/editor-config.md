@@ -38,7 +38,6 @@ DOM element:
 ## toolbar
 
 * Type: `Toolbar`
-* Default: `undefined`
 
 An toolbar object. If not given, the editor will be rendered without toolbar.
 
@@ -68,5 +67,113 @@ const defaultValue = `
 new Editor({
   root: '.lake-root',
   value: defaultValue,
+});
+```
+
+## readonly
+
+* Type: `boolean`
+* Default: `false`
+
+Whether the editor is in read-only mode. Setting it to `true` can be used to display the content in the view page. You can visit the [Read-only Example](/examples/readonly) to see how it displays.
+
+```js
+new Editor({
+  root: '.lake-root',
+  readonly: true,
+});
+```
+
+## spellcheck
+
+* Type: `boolean`
+* Default: `false`
+
+Whether the editor is checked for spelling errors. This is a feature of the browser. For more details on `spellcheck`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck).
+
+```js
+new Editor({
+  root: '.lake-root',
+  spellcheck: true,
+});
+```
+
+## tabIndex
+
+* Type: `number`
+* Default: `0`
+
+The tab order of the editor. This is a feature of the browser. For more details on `tabIndex`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
+
+```js
+new Editor({
+  root: '.lake-root',
+  tabIndex: -1,
+});
+```
+
+:::warning
+You are recommended to only use 0 and -1 as tabIndex values. Avoid using tabIndex values greater than 0.
+:::
+
+
+## indentWithTab
+
+* Type: `boolean`
+* Default: `true`
+
+The `indentWithTab` defines whether the content can be indented by `Tab` key. When the value is false, you can use `Tab` or `Shift-Tab` to move the focus. The [Miniature Example](/examples/miniature) demonstrates how it works.
+
+```js
+new Editor({
+  root: '.lake-root',
+  indentWithTab: false,
+});
+```
+
+## minChangeSize
+
+* Type: `number`
+* Default: `5`
+
+The minimum length of the text for saving history. If the inputted text is shorter than the `minChangeSize`, the history will not be saved until the length reaches or exceeds that threshold.
+
+```js
+new Editor({
+  root: '.lake-root',
+  minChangeSize: 10,
+});
+```
+
+## image
+
+### requestAction
+
+* Type: `URL`
+
+The request URL for uploading images.
+
+### requestMethod
+
+* Type: `'POST' | 'PUT' | 'PATCH'`
+* Default: `'POST'`
+
+The request method for uploading images.
+
+### requestTypes
+
+The `requestTypes` defines the MIME types allowed for uploading images.
+
+* Type: `string[]`
+* Default: `['image/gif', 'image/jpeg', 'image/png', 'image/svg+xml']`
+
+```js
+new Editor({
+  root: '.lake-root',
+  image: {
+    requestMethod: 'POST',
+    requestAction: '/upload',
+    requestTypes: ['image/gif', 'image/jpeg', 'image/png'],
+  },
 });
 ```

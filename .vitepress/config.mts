@@ -32,6 +32,9 @@ export default defineConfig({
       { text: 'Reference', link: '/reference/', activeMatch: '/reference/' },
       { text: 'Discussions', link: 'https://github.com/lakejs/lake/discussions', target: '_blank' },
     ],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/lakejs/lake' },
+    ],
     sidebar: {
       '/examples/': [{
         text: 'Examples',
@@ -62,9 +65,9 @@ export default defineConfig({
         ],
       }],
     },
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/lakejs/lake' },
-    ],
+    outline: {
+      level: 'deep',
+    },
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2024-present Luo Longhao',

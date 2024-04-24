@@ -94,15 +94,33 @@ editor.render();
 
 ## Using `change` event
 
+The `change` event is fired when the user modifies the editor's value.
+
 ```js
 editor.event.on('change', value => {
   console.log(`Event 'change' emitted, the length of the value is ${value.length}`);
 });
 ```
 
+## Image
+
+Uploading and inserting image requires request config. For more details, see [Image Configuration](/reference/editor-config.md#image).
+
+```js
+new Editor({
+  root: '.lake-root',
+  image: {
+    requestMethod: 'POST',
+    requestAction: '/upload',
+    requestTypes: ['image/gif', 'image/jpeg', 'image/png'],
+  },
+});
+```
+
+
 ## Code block
 
-The `code block` feature is based on [CodeMirror](https://codemirror.net/), so if you need the feature, CodeMirror must be included before loading Lake.
+This feature is based on [CodeMirror](https://codemirror.net/), so if you need the feature, CodeMirror must be included before loading Lake.
 
 * jsDelivr: https://www.jsdelivr.com/package/npm/lake-codemirror
 * UNPKG: https://unpkg.com/browse/lake-codemirror/
