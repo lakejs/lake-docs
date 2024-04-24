@@ -1,4 +1,7 @@
-window.defaultValue = `
+export default {
+  load() {
+    return {
+      value: `
 <h3>Selection</h3>
 <lake-box type="block" name="hr"></lake-box>
 <p>The <code>&lt;focus /&gt;</code> tag represents the current position of the caret.</p>
@@ -133,4 +136,7 @@ window.defaultValue = `
   </tr>
 </table>
 <p><br /></p>
-`;
+`
+    }
+  }
+}

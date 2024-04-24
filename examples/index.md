@@ -5,47 +5,57 @@ title: Default configuration
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { data } from '../assets/values/default-value.data.js';
 
+const editorRef = ref(null);
 const toolbarRef = ref(null);
 const contentRef = ref(null);
 
+let editor = null;
+
 onMounted(() => {
-  if (window.editor) {
-    window.editor.unmount();
+  if (editor) {
+    editor.unmount();
   }
   import('lakelib').then(module => {
     const { Editor, Toolbar } = module;
     const toolbar = new Toolbar({
       root: toolbarRef.value,
     });
-    const editor = new Editor({
+    editor = new Editor({
       root: contentRef.value,
       toolbar,
-      value: window.defaultValue || '',
+      value: data.value,
     });
     editor.render();
-    window.editor = editor;
+    editorRef.value.style.visibility = 'visible';
   });
 });
 onUnmounted(() => {
-  if (window.editor) {
-    window.editor.unmount();
-    window.editor = null;
+  if (editor) {
+    editor.unmount();
+    editor = null;
   }
 });
 </script>
 
-<div :class="$style.toolbar" ref="toolbarRef"></div>
-<div :class="$style.content" ref="contentRef"></div>
+<div ref="editorRef" style="visibility: hidden;">
+  <div :class="$style.toolbar" ref="toolbarRef"></div>
+  <div :class="$style.content" ref="contentRef"></div>
+</div>
 
 <style module>
 .toolbar {
   border: 1px solid #d9d9d9;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   border-bottom: 0;
 }
 .content {
   border: 1px solid #d9d9d9;
-  height: 500px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 550px;
   overflow: auto;
 }
 </style>

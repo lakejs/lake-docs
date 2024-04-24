@@ -5,6 +5,7 @@ title: Full-featured editor
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { data } from '../assets/values/default-value.data.js';
 
 const toolbarItems = [
   'undo',
@@ -53,6 +54,7 @@ const toolbarItems = [
   'selectAll',
 ];
 
+const editorRef = ref(null);
 const toolbarRef = ref(null);
 const contentRef = ref(null);
 
@@ -71,13 +73,14 @@ onMounted(() => {
     editor = new Editor({
       root: contentRef.value,
       toolbar,
-      value: window.defaultValue || '',
+      value: data.value,
       image: {
         requestMethod: 'GET',
         requestAction: '/assets/json/upload-image.json',
       },
     });
     editor.render();
+    editorRef.value.style.visibility = 'visible';
   });
 });
 onUnmounted(() => {
@@ -88,17 +91,23 @@ onUnmounted(() => {
 });
 </script>
 
-<div :class="$style.toolbar" ref="toolbarRef"></div>
-<div :class="$style.content" ref="contentRef"></div>
+<div ref="editorRef" style="visibility: hidden;">
+  <div :class="$style.toolbar" ref="toolbarRef"></div>
+  <div :class="$style.content" ref="contentRef"></div>
+</div>
 
 <style module>
 .toolbar {
   border: 1px solid #d9d9d9;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   border-bottom: 0;
 }
 .content {
   border: 1px solid #d9d9d9;
-  height: 500px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 550px;
   overflow: auto;
 }
 </style>

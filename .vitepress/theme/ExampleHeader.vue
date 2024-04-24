@@ -91,7 +91,7 @@ onMounted(() => {
 
 <template>
   <div :class="$style.header">
-    <h1 class="title">{{ $frontmatter.title }}</h1>
+    <h1 :class="$style.title">{{ $frontmatter.title }}</h1>
     <div class="lake-custom-properties" ref="languageRef"></div>
     <div class="lake-custom-properties" ref="directionRef"></div>
   </div>
@@ -103,6 +103,7 @@ onMounted(() => {
   grid-template-columns: 1fr 38px 36px;
   align-items: center;
   padding: 16px 8px;
+  height: 68px;
 }
 .header :global .lake-dropdown .lake-dropdown-icon img {
   width: 24px;
@@ -112,6 +113,7 @@ onMounted(() => {
   top: 36px;
 }
 .title {
+  margin: 0;
   font-size: 18px;
 }
 </style>

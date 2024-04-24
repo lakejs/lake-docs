@@ -20,6 +20,7 @@ for (const color of colors) {
   });
 }
 
+const editorRef = ref(null);
 const toolbarRef = ref(null);
 const contentRef = ref(null);
 
@@ -112,6 +113,7 @@ onMounted(() => {
       indentWithTab: false,
     });
     editor.render();
+    editorRef.value.style.visibility = 'visible';
   });
 });
 onUnmounted(() => {
@@ -123,7 +125,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div :class="$style.editor" class="vp-raw">
+  <div :class="$style.editor" class="vp-raw" ref="editorRef" style="visibility: hidden;">
     <div :class="$style.toolbar" ref="toolbarRef"></div>
     <div :class="$style.content" ref="contentRef"></div>
   </div>

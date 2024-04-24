@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
+const editorRef = ref(null);
 const toolbarRef = ref(null);
 const contentRef = ref(null);
 
@@ -23,6 +24,7 @@ onMounted(() => {
       value: props.value || '<p><br /><focus /></p>',
     });
     editor.render();
+    editorRef.value.style.visibility = 'visible';
   });
 });
 onUnmounted(() => {
@@ -34,7 +36,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="vp-raw">
+  <div class="vp-raw" ref="editorRef" style="visibility: hidden;">
     <div :class="$style.toolbar" ref="toolbarRef"></div>
     <div :class="$style.content" ref="contentRef"></div>
   </div>

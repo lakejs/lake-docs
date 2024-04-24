@@ -7,6 +7,7 @@ title: Document editor
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { data } from '../assets/values/default-value.data.js';
 
 const toolbarItems = [
   'undo',
@@ -62,7 +63,7 @@ onMounted(() => {
     const editor = new Editor({
       root: contentRef.value,
       toolbar,
-      value: window.defaultValue || '',
+      value: data.value,
     });
     editor.render();
     window.editor = editor;
