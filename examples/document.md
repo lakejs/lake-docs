@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: false
 sidebar: false
 footer: false
 title: Document editor
@@ -44,15 +44,17 @@ const toolbarItems = [
   'hr',
 ];
 
-const mainRef = ref(null);
+const editorRef = ref(null);
 const toolbarRef = ref(null);
 const contentRef = ref(null);
 
+let editor = null;
+
 onMounted(() => {
   window.LAKE_LANGUAGE = localStorage.getItem('lake-example-language') ?? 'en-US';
-  mainRef.value.dir = localStorage.getItem('lake-example-direction') ?? 'ltr';
-  if (window.editor) {
-    window.editor.unmount();
+  editorRef.value.dir = localStorage.getItem('lake-example-direction') ?? 'ltr';
+  if (editor) {
+    editor.unmount();
   }
   import('lakelib').then(module => {
     const { Editor, Toolbar, Utils } = module;
@@ -60,27 +62,31 @@ onMounted(() => {
       root: toolbarRef.value,
       items: toolbarItems,
     });
-    const editor = new Editor({
+    editor = new Editor({
       root: contentRef.value,
       toolbar,
       value: data.value,
+      image: {
+        requestMethod: 'GET',
+        requestAction: '/assets/json/upload-image.json',
+      },
     });
     editor.render();
-    window.editor = editor;
+    editorRef.value.style.visibility = 'visible';
   });
   document.body.style.backgroundColor = '#0000000d';
 });
 onUnmounted(() => {
-  if (window.editor) {
-    window.editor.unmount();
-    window.editor = null;
+  if (editor) {
+    editor.unmount();
+    editor = null;
   }
   document.body.style.backgroundColor = '';
 });
 </script>
 
 <div class="vp-raw">
-  <div :class="$style.editor" ref="mainRef">
+  <div :class="$style.editor" ref="editorRef" style="visibility: hidden;">
     <div :class="$style.toolbar" ref="toolbarRef"></div>
     <div :class="$style.content" ref="contentRef"></div>
   </div>
@@ -96,8 +102,9 @@ onUnmounted(() => {
 }
 .toolbar {
   position: fixed;
-  top: 64px;
+  top: 0;
   width: 100%;
+  min-width: 550px;
   padding: 6px 0;
   border-bottom: 1px solid #d9d9d9;
   background-color: #fff;
@@ -107,7 +114,8 @@ onUnmounted(() => {
   height: auto;
   min-height: 800px;
   overflow: visible;
-  margin: 76px auto 28px auto;
+  margin: 84px auto 28px auto;
+  min-width: 550px;
   max-width: 1000px;
   border: 1px solid #d9d9d9;
   background-color: #fff;

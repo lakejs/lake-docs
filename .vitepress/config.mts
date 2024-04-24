@@ -38,7 +38,7 @@ export default defineConfig({
         items: [
           { text: 'Default configuration', link: '/examples/' },
           { text: 'Full-featured editor', link: '/examples/full-featured' },
-          { text: 'Document editor', link: '/examples/document' },
+          { text: 'Document editor', link: '/examples/document', target: '_blank' },
           { text: 'Miniature toolbar', link: '/examples/miniature' },
           { text: 'Headless editor', link: '/examples/headless' },
           { text: 'Huge content', link: '/examples/huge-content' },
