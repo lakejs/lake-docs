@@ -17,9 +17,7 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', href: '/assets/icons/favicon-192.png' }],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/lake-codemirror@latest/dist/codemirror.min.js' }],
     ['script', { src: '/assets/values/default-value.js' }],
-    ['script', { src: '/assets/values/headless-value.js' }],
     ['script', { src: '/assets/values/huge-value.js' }],
-    ['script', { src: '/assets/values/miniature-value.js' }],
   ],
   rewrites: {
     'examples/default.md': 'examples/index.md',

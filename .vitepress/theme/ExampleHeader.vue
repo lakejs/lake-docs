@@ -91,7 +91,7 @@ onMounted(() => {
 
 <template>
   <div :class="$style.header">
-    <div :class="$style.title">{{ $frontmatter.title }}</div>
+    <h1 class="title">{{ $frontmatter.title }}</h1>
     <div class="lake-custom-properties" ref="languageRef"></div>
     <div class="lake-custom-properties" ref="directionRef"></div>
   </div>

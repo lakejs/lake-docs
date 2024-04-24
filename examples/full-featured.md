@@ -56,9 +56,11 @@ const toolbarItems = [
 const toolbarRef = ref(null);
 const contentRef = ref(null);
 
+let editor = null;
+
 onMounted(() => {
-  if (window.editor) {
-    window.editor.unmount();
+  if (editor) {
+    editor.unmount();
   }
   import('lakelib').then(module => {
     const { Editor, Toolbar } = module;
@@ -66,7 +68,7 @@ onMounted(() => {
       root: toolbarRef.value,
       items: toolbarItems,
     });
-    const editor = new Editor({
+    editor = new Editor({
       root: contentRef.value,
       toolbar,
       value: window.defaultValue || '',
@@ -76,13 +78,12 @@ onMounted(() => {
       },
     });
     editor.render();
-    window.editor = editor;
   });
 });
 onUnmounted(() => {
-  if (window.editor) {
-    window.editor.unmount();
-    window.editor = null;
+  if (editor) {
+    editor.unmount();
+    editor = null;
   }
 });
 </script>

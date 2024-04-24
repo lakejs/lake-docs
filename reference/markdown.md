@@ -47,7 +47,7 @@ Lake provides markdown-style shortcuts, you can use the following shortcuts to f
 
 ## Playground
 
-<LakeEditor value="
+<DefaultEditor value="
 <p>Start a line with <code>#</code> followed by a <code>space</code> to create a heading.</p>
 <p>Start a line with <code>[]</code> followed by a <code>space</code> to insert a checklist.</p>
 " />

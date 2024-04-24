@@ -1,7 +1,11 @@
 ---
-layout: example
+layout: doc
 title: Headless editor
 ---
+
+# {{ $frontmatter.title }}
+
+This example shows you how to customize a toolbar that is well adapted to your needs.
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
@@ -9,15 +13,16 @@ import { ref, onMounted, onUnmounted } from 'vue';
 const toolbarRef = ref(null);
 const contentRef = ref(null);
 
+let editor = null;
+
 onMounted(() => {
-  if (window.editor) {
-    window.editor.unmount();
+  if (editor) {
+    editor.unmount();
   }
   import('lakelib').then(module => {
     const { Editor, Toolbar, Utils, Button } = module;
-    const editor = new Editor({
+    editor = new Editor({
       root: contentRef.value,
-      value: window.headlessValue || '',
     });
     const toolbarRoot = Utils.query(toolbarRef.value);
     toolbarRoot.addClass('lake-custom-properties');
@@ -126,23 +131,24 @@ onMounted(() => {
       }
     });
     editor.render();
-    window.editor = editor;
   });
 });
 onUnmounted(() => {
-  if (window.editor) {
-    window.editor.unmount();
-    window.editor = null;
+  if (editor) {
+    editor.unmount();
+    editor = null;
   }
 });
 </script>
 
-<div :class="$style.toolbar" ref="toolbarRef"></div>
-<div :class="$style.content" ref="contentRef"></div>
+<div class="vp-raw">
+  <div :class="$style.toolbar" ref="toolbarRef"></div>
+  <div :class="$style.content" ref="contentRef"></div>
+</div>
 
 <style module>
 .toolbar {
-  padding-bottom: 8px;
+  margin: 16px 0;
 }
 .toolbar :global .lake-button {
   margin-right: 8px;
