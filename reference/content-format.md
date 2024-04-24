@@ -5,7 +5,7 @@ title: Lake Markup Language
 
 # {{ $frontmatter.title }}
 
-Lake uses an LML (Lake Markup Language) string similar to HTML to describe the content of the editor.
+Lake uses a Lake Markup Language (LML) format similar to HTML to describe the content of the editor.
 
 ## Selection
 
