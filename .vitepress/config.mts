@@ -19,7 +19,7 @@ export default defineConfig({
   ],
   rewrites: {
     'examples/default.md': 'examples/index.md',
-    'guide/introduction.md': 'guide/index.md',
+    'guide/getting-started.md': 'guide/index.md',
     'reference/editor-config.md': 'reference/index.md',
   },
   themeConfig: {
@@ -51,8 +51,8 @@ export default defineConfig({
       '/guide/': [{
         text: 'Guide',
         items: [
-          { text: 'Introduction', link: '/guide/' },
-          { text: 'Getting started', link: '/guide/getting-started' },
+          { text: 'Introduction', link: '/guide/introduction' },
+          { text: 'Getting started', link: '/guide/' },
         ],
       }],
       '/reference/': [{
