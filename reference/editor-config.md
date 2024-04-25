@@ -151,18 +151,18 @@ new Editor({
 
 * Type: `URL`
 
-The request URL for uploading images.
+The request URL for uploading image.
 
 ### requestMethod
 
 * Type: `'POST' | 'PUT' | 'PATCH'`
-* Default: `'POST'`
+* Default: `POST`
 
-The request method for uploading images.
+The request method for uploading image.
 
 ### requestTypes
 
-The `requestTypes` defines the MIME types allowed for uploading images.
+The `requestTypes` defines the MIME types allowed for uploading image.
 
 * Type: `string[]`
 * Default: `['image/gif', 'image/jpeg', 'image/png', 'image/svg+xml']`
@@ -174,6 +174,54 @@ new Editor({
     requestMethod: 'POST',
     requestAction: '/upload',
     requestTypes: ['image/gif', 'image/jpeg', 'image/png'],
+  },
+});
+```
+
+## codeBlock
+
+### langList
+
+* Type: `string[]`
+
+The `langList` defines the language types for the dropdown box. The following types are currently available.
+
+```js
+[
+  'text',
+  'c',
+  'csharp',
+  'cpp',
+  'css',
+  'go',
+  'html',
+  'java',
+  'javascript',
+  'json',
+  'markdown',
+  'php',
+  'python',
+  'rust',
+  'sql',
+  'typescript',
+  'xml',
+  'yaml',
+]
+```
+
+### defaultLang
+
+* Type: `string`
+* Default: `text`
+
+The default language type.
+
+```js
+new Editor({
+  root: '.lake-root',
+  codeBlock: {
+    langList: ['text', 'html', 'css', 'javascript'],
+    defaultLang: 'javascript',
   },
 });
 ```
