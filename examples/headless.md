@@ -19,8 +19,9 @@ onMounted(() => {
   if (editor) {
     editor.unmount();
   }
-  import('lakelib').then(module => {
-    const { Editor, Toolbar, Utils, Button } = module;
+  (async () => {
+    window.LakeCodeMirror = await import('lake-codemirror');
+    const { Editor, Toolbar, Utils, Button } = await import('lakelib');
     editor = new Editor({
       root: contentRef.value,
     });
@@ -131,7 +132,7 @@ onMounted(() => {
       }
     });
     editor.render();
-  });
+  })();
 });
 onUnmounted(() => {
   if (editor) {

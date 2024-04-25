@@ -117,14 +117,30 @@ new Editor({
 });
 ```
 
-
 ## Code block
 
-This feature is based on [CodeMirror](https://codemirror.net/), so if you need the feature, CodeMirror must be included before loading Lake.
+This feature is built upon [CodeMirror](https://codemirror.net/), therefore you need to add CodeMirror for Lake to your HTML page before using it.
+
+Using CDN:
 
 * jsDelivr: https://www.jsdelivr.com/package/npm/lake-codemirror
 * UNPKG: https://unpkg.com/browse/lake-codemirror/
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/lake-codemirror@latest/dist/codemirror.min.js"></script>
+```
+
+Using npm:
+
+```js
+import 'lakelib/lib/lake.css';
+import { Editor, Toolbar } from 'lakelib';
+import * as CodeMirror from 'lake-codemirror';
+
+window.LakeCodeMirror = CodeMirror;
+
+const editor = new Editor({
+  root: '.lake-root',
+});
+editor.render();
 ```

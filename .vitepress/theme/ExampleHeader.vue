@@ -37,8 +37,8 @@ const directionRef = ref(null);
 const mainRef = ref(null);
 
 onMounted(() => {
-  import('lakelib').then(module => {
-    const { Editor, Utils, Dropdown } = module;
+  (async () => {
+    const { Editor, Utils, Dropdown } = await import('lakelib');
     const { query, safeTemplate } = Utils;
     window.Editor = Editor;
     function renderLanguage() {
@@ -85,7 +85,7 @@ onMounted(() => {
 
     renderLanguage();
     renderDirection();
-  });
+  })();
 });
 </script>
 

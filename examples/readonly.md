@@ -10,13 +10,15 @@ import { data } from '../assets/values/default-value.data.js';
 const contentRef = ref(null);
 
 onMounted(() => {
-  import('lakelib').then(module => {
-    new module.Editor({
+  (async () => {
+    window.LakeCodeMirror = await import('lake-codemirror');
+    const { Editor } = await import('lakelib');
+    new Editor({
       root: contentRef.value,
       value: data.value,
       readonly: true,
     }).render();
-  });
+  })();
 });
 </script>
 

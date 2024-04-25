@@ -32,8 +32,9 @@ onMounted(() => {
   if (editor) {
     editor.unmount();
   }
-  import('lakelib').then(module => {
-    const { Editor, Toolbar, Utils, icons } = module;
+  (async () => {
+    window.LakeCodeMirror = await import('lake-codemirror');
+    const { Editor, Toolbar, Utils, icons } = await import('lakelib');
 
     const heading = {
       name: 'heading',
@@ -114,7 +115,7 @@ onMounted(() => {
     });
     editor.render();
     editorRef.value.style.visibility = 'visible';
-  });
+  })();
 });
 onUnmounted(() => {
   if (editor) {

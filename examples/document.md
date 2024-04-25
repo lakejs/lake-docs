@@ -56,8 +56,9 @@ onMounted(() => {
   if (editor) {
     editor.unmount();
   }
-  import('lakelib').then(module => {
-    const { Editor, Toolbar, Utils } = module;
+  (async () => {
+    window.LakeCodeMirror = await import('lake-codemirror');
+    const { Editor, Toolbar } = await import('lakelib');
     const toolbar = new Toolbar({
       root: toolbarRef.value,
       items: toolbarItems,
@@ -73,7 +74,7 @@ onMounted(() => {
     });
     editor.render();
     editorRef.value.style.visibility = 'visible';
-  });
+  })();
   document.body.style.backgroundColor = '#0000000d';
 });
 onUnmounted(() => {
