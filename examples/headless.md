@@ -149,10 +149,11 @@ onUnmounted(() => {
 
 <style module>
 .toolbar {
-  margin: 16px 0;
+  margin-top: 16px;
 }
 .toolbar :global .lake-button {
   margin-right: 8px;
+  margin-bottom: 16px;
 }
 .content {
   border: 1px solid #d9d9d9;
