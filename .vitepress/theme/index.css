@@ -3,6 +3,17 @@
   --vp-c-brand-2: #3a5ccc;
 }
 
+@media (min-width: 640px) {
+  .VPHome .tagline {
+    max-width: 490px;
+  }
+}
+@media (min-width: 1040px) {
+  .VPHome .tagline {
+    max-width: 576px;
+  }
+}
+
 .VPSidebarItem a[target="_blank"] p::after {
   display: inline-block;
   margin-top: -1px;

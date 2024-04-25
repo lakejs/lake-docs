@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Lake"
   text: "Browser-based WYSIWYG Editor"
-  tagline: A feature-rich editor with a good user experience
+  tagline: A feature-rich editor with good user experience
   image:
     src: /assets/images/lake-screenshot.png
     style: "max-width: 380px;"
