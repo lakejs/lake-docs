@@ -3,14 +3,9 @@
   --vp-c-brand-2: #3a5ccc;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 960px) and (max-width: 1050px) {
   .VPHome .tagline {
     max-width: 490px;
-  }
-}
-@media (min-width: 1040px) {
-  .VPHome .tagline {
-    max-width: 576px;
   }
 }
 

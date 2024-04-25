@@ -43,6 +43,7 @@ Lake provides markdown-style shortcuts, you can use the following shortcuts to f
 | Code block  | <code>\`\`\`</code> `Enter`  |
 |   | <code>\`\`\`html</code> `Enter`  |
 |   | <code>\`\`\`css</code> `Enter`  |
+|   | <code>\`\`\`js</code> `Enter`  |
 |   | <code>\`\`\`javascript</code> `Enter`  |
 
 ## Playground
