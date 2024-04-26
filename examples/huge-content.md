@@ -4,7 +4,6 @@ title: Huge content
 ---
 
 <script setup>
-import 'lakelib/lib/lake.css';
 import { ref, onMounted, onUnmounted } from 'vue';
 import { data } from '../assets/values/huge-value.data.js';
 

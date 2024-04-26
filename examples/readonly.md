@@ -8,7 +8,6 @@ title: Read-only mode
 Read-only mode is used to display the editor's content in your view page.
 
 <script setup>
-import 'lakelib/lib/lake.css';
 import { ref, onMounted } from 'vue';
 import { data } from '../assets/values/default-value.data.js';
 

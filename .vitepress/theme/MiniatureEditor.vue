@@ -1,5 +1,4 @@
 <script setup>
-import 'lakelib/lib/lake.css';
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const colors = [

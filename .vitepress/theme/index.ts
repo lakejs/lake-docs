@@ -1,4 +1,5 @@
 import DefaultTheme from 'vitepress/theme';
+import 'lakelib/lib/lake.css';
 import './index.css';
 import Example from './Example.vue';
 import DefaultEditor from './DefaultEditor.vue';
