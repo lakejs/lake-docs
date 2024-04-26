@@ -245,16 +245,14 @@ The `<code>` tag represents inline code, which displays a short fragment of comp
 <code>Inline code</code>
 ```
 
-## Alert block
+## Alerts
 
-The `<blockquote>` with `type` attribute represents alert block that you can use to emphasize critical information.
+The `<blockquote>` with `type` attribute represents alerts that you can use to emphasize critical information.
 
 ```html
 <blockquote type="info">This is an info.</blockquote>
 <blockquote type="tip">This is a tip.</blockquote>
-<blockquote type="success">This is a success.</blockquote>
 <blockquote type="warning">This is a warning.</blockquote>
-<blockquote type="error">This is an error.</blockquote>
 <blockquote type="danger">This is a danger.</blockquote>
 ```
 
