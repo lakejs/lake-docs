@@ -49,6 +49,9 @@ Lake provides markdown-style shortcuts, you can use the following shortcuts to f
 ## Playground
 
 <DefaultEditor value="
-<p>Start a line with <code>#</code> followed by a <code>space</code> to create a heading.</p>
-<p>Start a line with <code>[]</code> followed by a <code>space</code> to insert a checklist.</p>
+<p>In the beginning of a paragraph, try the followings:</p>
+<p>Input <code>#</code> followed by a space, and you can see that the paragraph becomes a heading.</p>
+<p>Input <code>[]</code> followed by a space to insert a checklist.</p>
+<p>Input <code>:::info</code> followed by an enter to insert an alert block.</p>
+<p>Did you get it?</p>
 " />

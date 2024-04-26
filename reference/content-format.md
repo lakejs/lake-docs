@@ -48,7 +48,7 @@ Attributes:
 <lake-box type="inline" name="image" value="..." focus="end"></lake-box>
 ```
 
-## Heading
+## Headings
 
 The `<h1>` to `<h6>` tags represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
 
@@ -119,12 +119,12 @@ The `<ul>` tag with `<li>` represents an item in an unordered list.
 If `<ul>`'s `type` is `checklist`, the `<ul>` tag with `<li>` represents an item in a checklist.
 
 ```html
-<ul type="checklist"><li>first item</li></ul>
-<ul type="checklist"><li>second item</li></ul>
-<ul type="checklist" indent="1"><li>second item first subitem</li></ul>
-<ul type="checklist" indent="1"><li>second item second subitem</li></ul>
-<ul type="checklist" indent="1"><li>second item third subitem</li></ul>
-<ul type="checklist"><li>third item</li></ul>
+<ul type="checklist"><li value="true">first item</li></ul>
+<ul type="checklist"><li value="false">second item</li></ul>
+<ul type="checklist" indent="1"><li value="false">second item first subitem</li></ul>
+<ul type="checklist" indent="1"><li value="false">second item second subitem</li></ul>
+<ul type="checklist" indent="1"><li value="false">second item third subitem</li></ul>
+<ul type="checklist"><li value="false">third item</li></ul>
 ```
 
 ## Block indentation
@@ -226,7 +226,7 @@ The `<span>` tag with its `background-color` property represents highlight.
 The `<sup>` tag represents superscript, which renders text with a raised baseline using smaller text.
 
 ```html
-<sup>Subscript</sup>
+<sup>Superscript</sup>
 ```
 
 ## Subscript
@@ -250,12 +250,12 @@ The `<code>` tag represents inline code, which displays a short fragment of comp
 The `<blockquote>` with `type` attribute represents alert block that you can use to emphasize critical information.
 
 ```html
-<blockquote type="info">This is an info block.</blockquote>
-<blockquote type="tip">This is a tip block.</blockquote>
-<blockquote type="success">This is a success box.</blockquote>
-<blockquote type="warning">This is a warning box.</blockquote>
-<blockquote type="error">This is an error box.</blockquote>
-<blockquote type="danger">This is a danger box.</blockquote>
+<blockquote type="info">This is an info.</blockquote>
+<blockquote type="tip">This is a tip.</blockquote>
+<blockquote type="success">This is a success.</blockquote>
+<blockquote type="warning">This is a warning.</blockquote>
+<blockquote type="error">This is an error.</blockquote>
+<blockquote type="danger">This is a danger.</blockquote>
 ```
 
 ## Thematic break
