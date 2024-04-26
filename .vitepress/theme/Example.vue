@@ -1,34 +1,30 @@
-<script setup>
-import { ref, onMounted } from 'vue';
-import ExampleHeader from './ExampleHeader.vue';
-
-const mainRef = ref(null);
-
-onMounted(() => {
-  window.LAKE_LANGUAGE = localStorage.getItem('lake-example-language') ?? 'en-US';
-  mainRef.value.dir = localStorage.getItem('lake-example-direction') ?? 'ltr';
-});
-</script>
-
 <template>
   <div class="vp-raw">
-    <div :class="$style.headerWrapper">
-      <ExampleHeader />
+    <div :class="$style.header">
+      <h1>{{ $frontmatter.title }}</h1>
     </div>
-    <div :class="$style.main" ref="mainRef">
+    <div :class="$style.main">
       <Content />
     </div>
   </div>
 </template>
 
 <style module>
-.headerWrapper {
+.header {
+  padding: 32px 32px 16px;
   max-width: 1000px;
   margin: 0 auto;
 }
+.header :global h1 {
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 40px;
+  font-size: 32px;
+  font-weight: 600;
+}
 .main {
   box-sizing: border-box;
-  padding: 0 8px 32px 8px;
+  padding: 16px 32px;
   margin: 0 auto;
   max-width: 1000px;
 }

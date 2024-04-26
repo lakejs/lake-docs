@@ -1,11 +1,10 @@
 ---
 layout: false
-sidebar: false
-footer: false
 title: Document editor
 ---
 
 <script setup>
+import 'lakelib/lib/lake.css';
 import { ref, onMounted, onUnmounted } from 'vue';
 import { data } from '../assets/values/default-value.data.js';
 
@@ -51,8 +50,6 @@ const contentRef = ref(null);
 let editor = null;
 
 onMounted(() => {
-  window.LAKE_LANGUAGE = localStorage.getItem('lake-example-language') ?? 'en-US';
-  editorRef.value.dir = localStorage.getItem('lake-example-direction') ?? 'ltr';
   if (editor) {
     editor.unmount();
   }

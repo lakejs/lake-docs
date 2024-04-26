@@ -45,6 +45,7 @@ export default defineConfig({
           { text: 'Headless editor', link: '/examples/headless' },
           { text: 'Huge content', link: '/examples/huge-content' },
           { text: 'Read-only mode', link: '/examples/readonly' },
+          { text: 'Internationalization', link: '/examples/internationalization' }
         ],
       }],
       '/guide/': [{

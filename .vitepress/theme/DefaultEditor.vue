@@ -1,11 +1,12 @@
 <script setup>
+import 'lakelib/lib/lake.css';
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const editorRef = ref(null);
 const toolbarRef = ref(null);
 const contentRef = ref(null);
 
-const props = defineProps(['value']);
+const props = defineProps(['lang', 'value']);
 
 let editor = null;
 
@@ -22,6 +23,7 @@ onMounted(() => {
     editor = new Editor({
       root: contentRef.value,
       toolbar,
+      lang: props.lang || 'en-US',
       value: props.value || '<p><br /><focus /></p>',
     });
     editor.render();

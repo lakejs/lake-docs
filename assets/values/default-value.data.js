@@ -133,7 +133,7 @@ export default {
 <p>Lake does not currently support advanced table editing, but we plan to provide this feature in the next version.</p>
 <table>
   <tr>
-    <td style="width: 100px; border: 1px solid rgb(160 160 160); text-align: center;"><strong>Tag name</strong></td>
+    <td style="width: 120px; border: 1px solid rgb(160 160 160); text-align: center;"><strong>Tag name</strong></td>
     <td style="border: 1px solid rgb(160 160 160); text-align: center;"><strong>Description</strong></td>
   </tr>
   <tr>
