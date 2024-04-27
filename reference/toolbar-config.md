@@ -42,7 +42,7 @@ new Toolbar({
 
 DOM element:
 ```js
-  new Toolbar({
+new Toolbar({
   root: document.querySelector('.my-toolbar'),
 });
 ```
@@ -51,7 +51,89 @@ DOM element:
 
 * Type: `(string | ToolbarItem)[]`
 
-The items (button, dropdown, divider, etc.) in the toolbar. The `|` character represents a divider, and other strings represent built-in items. You can also provide a customized item.
+The `items` defines the buttons of the toolbar. The `|` character represents a divider, and other strings represent built-in items.
+
+```js
+import { Toolbar } from 'lakelib';
+
+const toolbarItems = [
+  'undo',
+  'redo',
+  '|',
+  'bold',
+];
+new Toolbar({
+  root: '.my-toolbar',
+  items: toolbarItems,
+});
+```
+
+### Built-in items
+
+The following items are currently available.
+
+```js
+[
+  'undo',
+  'redo',
+  'heading',
+  'fontFamily',
+  'fontSize',
+  'formatPainter',
+  'removeFormat',
+  'bold',
+  'italic',
+  'underline',
+  'strikethrough',
+  'superscript',
+  'subscript',
+  'code',
+  'moreStyle',
+  'fontColor',
+  'highlight',
+  'list',
+  'numberedList',
+  'bulletedList',
+  'checklist',
+  'align',
+  'alignLeft',
+  'alignCenter',
+  'alignRight',
+  'alignJustify',
+  'indent',
+  'increaseIndent',
+  'decreaseIndent',
+  'image',
+  'link',
+  'codeBlock',
+  'blockQuote',
+  'paragraph',
+  'hr',
+  'selectAll',
+]
+```
+
+You can also set a customized item, which type is the `ToolbarItem`.
+
+```ts
+type ToolbarItem = ToolbarButtonItem | ToolbarDropdownItem;
+```
+
+### Button item
+
+```ts
+type ToolbarButtonItem = {
+  name: string;
+  type: 'button';
+  icon?: string;
+  tooltip: string | ((locale: TranslationFunctions) => string);
+  isSelected?: (appliedItems: AppliedItem[]) => boolean;
+  isDisabled?: (appliedItems: AppliedItem[]) => boolean;
+  onClick: (editor: Editor, value: string) => void;
+};
+```
+
+Example:
 
 ```js
 import { Toolbar, icons } from 'lakelib';
@@ -66,11 +148,83 @@ const heading = {
     editor.command.execute('heading', 'h3');
   },
 };
-
 const toolbarItems = [
   heading,
   '|',
   'bold',
+];
+new Toolbar({
+  root: '.my-toolbar',
+  items: toolbarItems,
+});
+```
+
+### Dropdown item
+
+```ts
+type DropdownMenuItem = {
+  value: string;
+  icon?: string;
+  text: string | ((locale: TranslationFunctions) => string);
+};
+type DropdownItem = {
+  name: string;
+  icon?: string;
+  accentIcon?: string;
+  downIcon?: string;
+  defaultValue: string;
+  tooltip: string | ((locale: TranslationFunctions) => string);
+  width: string;
+  menuType: 'list' | 'color';
+  menuItems: DropdownMenuItem[];
+};
+type ToolbarDropdownItem = DropdownItem & {
+  name: string;
+  type: 'dropdown';
+  selectedValues?: (appliedItems: AppliedItem[]) => string[];
+  isDisabled?: (appliedItems: AppliedItem[]) => boolean;
+  onSelect: (editor: Editor, value: string) => void;
+}
+```
+
+Example:
+
+```js
+import { Toolbar, icons } from 'lakelib';
+
+const alignMenuItems = [
+  {
+    icon: icons.get('alignLeft'),
+    value: 'left',
+    text: locale => locale.toolbar.alignLeft(),
+  },
+  {
+    icon: icons.get('alignCenter'),
+    value: 'center',
+    text: locale => locale.toolbar.alignCenter(),
+  },
+  {
+    icon: icons.get('alignRight'),
+    value: 'right',
+    text: locale => locale.toolbar.alignRight(),
+  },
+];
+const align = {
+  name: 'align',
+  type: 'dropdown',
+  downIcon: icons.get('down'),
+  icon: icons.get('alignLeft'),
+  defaultValue: '',
+  tooltip: locale => locale.toolbar.align(),
+  width: 'auto',
+  menuType: 'list',
+  menuItems: alignMenuItems,
+  onSelect: (editor, value) => {
+    editor.command.execute('align', value);
+  },
+};
+const toolbarItems = [
+  align,
 ];
 new Toolbar({
   root: '.my-toolbar',

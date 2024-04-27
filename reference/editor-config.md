@@ -30,7 +30,7 @@ new Editor({
 
 DOM element:
 ```js
-  new Editor({
+new Editor({
   root: document.querySelector('.my-content'),
 });
 ```
@@ -39,7 +39,7 @@ DOM element:
 
 * Type: `Toolbar`
 
-An toolbar object. If not given, the editor will be rendered without toolbar.
+An toolbar object. If not given, the editor will be rendered without toolbar. For more information about toolbar, see [Toolbar configuration](/reference/toolbar-config.md).
 
 ```js
 const toolbar = new Toolbar({
