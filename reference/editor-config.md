@@ -131,6 +131,20 @@ new Editor({
 });
 ```
 
+## lang
+
+* Type: `'en-US' | 'zh-CN' | 'ko' | 'ja'`
+* Default: `en-US`
+
+The `lang` defines the language in which the UI should be displayed. You can visit the [Internationalization Example](/examples/internationalization.md) to see how it displays.
+
+```js
+new Editor({
+  root: '.lake-root',
+  lang: 'zh-CN',
+});
+```
+
 ## minChangeSize
 
 * Type: `number`
