@@ -14,7 +14,7 @@ Compressed copies of Lake files are available, you can download them from jsDeli
 
 ## Downloading Lake using npm
 
-Lake is registered as a package on npm. You can install the latest version of Lake with the following npm command.
+Lake is registered as a package on npm. You can install the latest version of Lake with the following npm command:
 
 ```bash
 npm install lakelib
@@ -121,7 +121,7 @@ new Editor({
 
 This feature is built upon [CodeMirror](https://codemirror.net/), therefore you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page before using it.
 
-Using CDN:
+### CDN
 
 * jsDelivr: https://www.jsdelivr.com/package/npm/lake-codemirror
 * UNPKG: https://unpkg.com/browse/lake-codemirror/
@@ -130,7 +130,7 @@ Using CDN:
 <script src="https://cdn.jsdelivr.net/npm/lake-codemirror@latest/dist/codemirror.min.js"></script>
 ```
 
-Using npm:
+### npm
 
 ```js
 import 'lakelib/lib/lake.css';

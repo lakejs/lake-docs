@@ -165,7 +165,13 @@ new Editor({
 
 * Type: `URL`
 
-The request URL for uploading image.
+The `requestAction` defines the request URL, and its return value should follow the following format:
+
+```json
+{
+  "url": "http://example.com/foo.png"
+}
+```
 
 ### requestMethod
 
