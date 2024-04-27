@@ -139,10 +139,6 @@ onUnmounted(() => {
   min-width: 300px;
   max-width: 600px;
 }
-.editor :global .lake-root-focused {
-  outline: 2px solid var(--input-border-hover-color);
-  outline-offset: -2px;
-}
 .editor :global .lake-container {
   padding: 8px 12px;
 }
