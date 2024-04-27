@@ -28,4 +28,9 @@
   margin: 0 auto;
   max-width: 1000px;
 }
+@media (max-width: 960px) {
+  .main {
+    padding: 16px;
+  }
+}
 </style>

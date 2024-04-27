@@ -1,6 +1,6 @@
 ---
 layout: example
-title: Full-featured editor
+title: Full-featured toolbar
 ---
 
 <script setup>

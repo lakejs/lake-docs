@@ -1,6 +1,6 @@
 ---
 layout: example
-title: Default configuration
+title: Default toolbar
 ---
 
 <script setup>

@@ -38,14 +38,14 @@ export default defineConfig({
       '/examples/': [{
         text: 'Examples',
         items: [
-          { text: 'Default configuration', link: '/examples/' },
-          { text: 'Full-featured editor', link: '/examples/full-featured' },
-          { text: 'Document editor', link: '/examples/document', target: '_blank' },
+          { text: 'Default toolbar', link: '/examples/' },
+          { text: 'Full-featured toolbar', link: '/examples/full-featured' },
           { text: 'Miniature toolbar', link: '/examples/miniature' },
           { text: 'Headless editor', link: '/examples/headless' },
           { text: 'Huge content', link: '/examples/huge-content' },
           { text: 'Read-only mode', link: '/examples/readonly' },
-          { text: 'Internationalization', link: '/examples/internationalization' }
+          { text: 'Internationalization', link: '/examples/internationalization' },
+          { text: 'Document editor', link: '/examples/document', target: '_blank' },
         ],
       }],
       '/guide/': [{
