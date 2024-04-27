@@ -9,7 +9,7 @@ You can configure the editor through the parameter of the `Editor` class.
 
 ```js
 const editor = new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   value: '<p><br /><focus /></p>',
 });
 editor.render();
@@ -24,14 +24,14 @@ An element to which the editor is appended.
 CSS selector:
 ```js
 new Editor({
-  root: '.lake-root',
+  root: '.my-content',
 });
 ```
 
 DOM element:
 ```js
   new Editor({
-  root: document.querySelector('.lake-root'),
+  root: document.querySelector('.my-content'),
 });
 ```
 
@@ -43,10 +43,10 @@ An toolbar object. If not given, the editor will be rendered without toolbar.
 
 ```js
 const toolbar = new Toolbar({
-  root: '.lake-toolbar-root',
+  root: '.my-toolbar',
 });
 new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   toolbar,
 });
 ```
@@ -65,7 +65,7 @@ const defaultValue = `
   <p><lake-box type="inline" name="image" value="..."></lake-box></p>
 `;
 new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   value: defaultValue,
 });
 ```
@@ -79,7 +79,7 @@ Whether the editor is in read-only mode. Setting it to `true` can be used to dis
 
 ```js
 new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   readonly: true,
 });
 ```
@@ -93,7 +93,7 @@ Whether the editor is checked for spelling errors. This is a feature of the brow
 
 ```js
 new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   spellcheck: true,
 });
 ```
@@ -107,7 +107,7 @@ The tab order of the editor. This is a feature of the browser. For more details 
 
 ```js
 new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   tabIndex: -1,
 });
 ```
@@ -126,7 +126,7 @@ The `indentWithTab` defines whether the content can be indented by `Tab` key. Wh
 
 ```js
 new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   indentWithTab: false,
 });
 ```
@@ -140,7 +140,7 @@ The `lang` defines the language in which the UI should be displayed. You can vis
 
 ```js
 new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   lang: 'zh-CN',
 });
 ```
@@ -154,7 +154,7 @@ The minimum length of the text for saving history. If the inputted text is short
 
 ```js
 new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   minChangeSize: 10,
 });
 ```
@@ -183,7 +183,7 @@ The `requestTypes` defines the MIME types allowed for uploading image.
 
 ```js
 new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   image: {
     requestMethod: 'POST',
     requestAction: '/upload',
@@ -232,7 +232,7 @@ The default language type.
 
 ```js
 new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   codeBlock: {
     langList: ['text', 'html', 'css', 'javascript'],
     defaultLang: 'javascript',

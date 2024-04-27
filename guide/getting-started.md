@@ -32,9 +32,9 @@ Add the following lines of code in the `<head>` of an HTML page.
 In the HTML page add the following HTML code that will serve as a placeholder for an editor instance.
 
 ```html
-<div class="lake-editor">
-  <div class="lake-toolbar-root"></div>
-  <div class="lake-root"></div>
+<div class="my-editor">
+  <div class="my-toolbar"></div>
+  <div class="my-content"></div>
 </div>
 ```
 
@@ -42,10 +42,10 @@ Call the following JavaScript code to render the editor.
 
 ```js
 const toolbar = new Lake.Toolbar({
-  root: '.lake-toolbar-root',
+  root: '.my-toolbar',
 });
 const editor = new Lake.Editor({
-  root: '.lake-root',
+  root: '.my-content',
   toolbar,
 });
 editor.render();
@@ -55,10 +55,10 @@ The `root` property can also be given a DOM element.
 
 ```js
 const toolbar = new Lake.Toolbar({
-  root: document.querySelector('.lake-toolbar-root'),
+  root: document.querySelector('.my-toolbar'),
 });
 const editor = new Lake.Editor({
-  root: document.querySelector('.lake-root'),
+  root: document.querySelector('.my-content'),
   toolbar,
 });
 editor.render();
@@ -70,9 +70,9 @@ editor.render();
 In the HTML page add the following HTML code that will serve as a placeholder for an editor instance.
 
 ```html
-<div class="lake-editor">
-  <div class="lake-toolbar-root"></div>
-  <div class="lake-root"></div>
+<div class="my-editor">
+  <div class="my-toolbar"></div>
+  <div class="my-content"></div>
 </div>
 ```
 
@@ -83,10 +83,10 @@ import 'lakelib/lib/lake.css';
 import { Editor, Toolbar } from 'lakelib';
 
 const toolbar = new Toolbar({
-  root: '.lake-toolbar-root',
+  root: '.my-toolbar',
 });
 const editor = new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   toolbar,
 });
 editor.render();
@@ -108,7 +108,7 @@ Uploading and inserting image requires request config. For more details, see [Im
 
 ```js
 new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   image: {
     requestMethod: 'POST',
     requestAction: '/upload',
@@ -119,7 +119,7 @@ new Editor({
 
 ## Code block
 
-This feature is built upon [CodeMirror](https://codemirror.net/), therefore you need to add CodeMirror for Lake to your HTML page before using it.
+This feature is built upon [CodeMirror](https://codemirror.net/), therefore you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page before using it.
 
 Using CDN:
 
@@ -140,7 +140,7 @@ import * as CodeMirror from 'lake-codemirror';
 window.LakeCodeMirror = CodeMirror;
 
 const editor = new Editor({
-  root: '.lake-root',
+  root: '.my-content',
 });
 editor.render();
 ```

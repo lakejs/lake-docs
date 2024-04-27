@@ -17,11 +17,11 @@ const toolbarItems = [
   'bold',
 ];
 const toolbar = new Toolbar({
-  root: '.lake-toolbar-root',
+  root: '.my-toolbar',
   items: toolbarItems,
 });
 const editor = new Editor({
-  root: '.lake-root',
+  root: '.my-content',
   toolbar,
 });
 editor.render();
@@ -36,14 +36,14 @@ An element to which the toolbar is appended.
 CSS selector:
 ```js
 new Toolbar({
-  root: '.lake-toolbar-root',
+  root: '.my-toolbar',
 });
 ```
 
 DOM element:
 ```js
   new Toolbar({
-  root: document.querySelector('.lake-toolbar-root'),
+  root: document.querySelector('.my-toolbar'),
 });
 ```
 
@@ -73,7 +73,7 @@ const toolbarItems = [
   'bold',
 ];
 new Toolbar({
-  root: '.lake-root',
+  root: '.my-toolbar',
   items: toolbarItems,
 });
 ```
