@@ -5,7 +5,7 @@ const editorRef = ref(null);
 const toolbarRef = ref(null);
 const contentRef = ref(null);
 
-const props = defineProps(['lang', 'value']);
+const props = defineProps(['lang', 'value', 'toolbar', 'rootStyle']);
 
 let editor = null;
 
@@ -18,13 +18,21 @@ onMounted(() => {
     const { Editor, Toolbar } = await import('lakelib');
     const toolbar = new Toolbar({
       root: toolbarRef.value,
+      items: props.toolbar,
     });
     editor = new Editor({
       root: contentRef.value,
       toolbar,
       lang: props.lang || 'en-US',
       value: props.value || '<p><br /><focus /></p>',
+      image: {
+        requestMethod: 'GET',
+        requestAction: '/assets/json/upload-image.json',
+      },
     });
+    if (props.rootStyle) {
+      editor.root.css(props.rootStyle);
+    }
     editor.render();
     editorRef.value.style.visibility = 'visible';
   })();

@@ -8,24 +8,59 @@ title: Toolbar configuration
 You can configure the toolbar through the parameter of the `Toolbar` class.
 
 ```js
+import { Toolbar, icons } from 'lakelib';
+
+const heading = {
+  name: 'heading',
+  type: 'button',
+  icon: icons.get('heading'),
+  tooltip: 'Heading',
+  isSelected: appliedItems => !!appliedItems.find(item => item.name === 'h3'),
+  onClick: editor => {
+    editor.command.execute('heading', 'h3');
+  },
+};
 const toolbarItems = [
   'undo',
   'redo',
   '|',
-  'heading',
+  heading,
+  'paragraph',
   '|',
   'bold',
+  'moreStyle',
 ];
 const toolbar = new Toolbar({
   root: '.my-toolbar',
   items: toolbarItems,
 });
-const editor = new Editor({
-  root: '.my-content',
-  toolbar,
-});
-editor.render();
 ```
+
+<script setup>
+import { icons } from 'lakelib';
+
+const heading = {
+  name: 'heading',
+  type: 'button',
+  icon: icons.get('heading'),
+  tooltip: 'Heading',
+  isSelected: appliedItems => !!appliedItems.find(item => item.name === 'h3'),
+  onClick: editor => {
+    editor.command.execute('heading', 'h3');
+  },
+};
+const toolbarItems = [
+  'undo',
+  'redo',
+  '|',
+  heading,
+  'paragraph',
+  '|',
+  'bold',
+  'moreStyle',
+];
+</script>
+<DefaultEditor :toolbar="toolbarItems" />
 
 ## root
 
