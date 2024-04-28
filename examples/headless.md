@@ -104,8 +104,8 @@ onMounted(() => {
     for (const button of buttonList) {
       button.render();
     }
-    editor.event.on('statechange', stateData => {
-      const { disabledNameMap, selectedNameMap, selectedValuesMap } = stateData;
+    editor.event.on('statechange', state => {
+      const { disabledNameMap, selectedNameMap, selectedValuesMap } = state;
       for (const button of buttonList) {
         const name = button.node.attr('name');
         let isDisabled = disabledNameMap.get(name);

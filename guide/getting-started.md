@@ -92,13 +92,25 @@ const editor = new Editor({
 editor.render();
 ```
 
-## Using `change` event
+## Binding events
 
-The `change` event is fired when the user modifies the editor's value.
+### `change` event
+
+The `change` event is fired when the content of the editor is changed.
 
 ```js
 editor.event.on('change', value => {
-  console.log(`Event 'change' emitted, the length of the value is ${value.length}`);
+  console.log(value);
+});
+```
+
+### `statechange` event
+
+The `statechange` event is fired when the current selection of the editor is changed.
+
+```js
+editor.event.on('statechange', state => {
+  console.log(state);
 });
 ```
 
@@ -119,7 +131,7 @@ new Editor({
 
 ## Code block
 
-This feature is built upon [CodeMirror](https://codemirror.net/), therefore you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page before using it.
+Before using the code block, you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to the HTML page.
 
 ### CDN
 
