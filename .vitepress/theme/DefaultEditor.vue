@@ -10,15 +10,14 @@ const props = defineProps(['lang', 'value', 'toolbar', 'rootStyle']);
 
 let editor = null;
 
-const timeoutId = window.setTimeout(() => {
-  loadingRef.value.style.display = 'block';
-}, 1000);
-
 onMounted(() => {
   if (editor) {
     editor.unmount();
   }
   (async () => {
+    const timeoutId = window.setTimeout(() => {
+      loadingRef.value.style.display = 'block';
+    }, 1000);
     window.LakeCodeMirror = await import('lake-codemirror');
     const { Editor, Toolbar } = await import('lakelib');
     const toolbar = new Toolbar({
