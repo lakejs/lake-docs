@@ -48,14 +48,10 @@ Lake provides markdown-style handy shortcuts, you can use the following shortcut
 
 ## Playground
 
-<script setup>
-const content = `
+<DefaultEditor value="
 <p>At the beginning of a paragraph, try the shortcuts above:</p>
 <p>Input <code>#</code> followed by a space, and you can see that the paragraph becomes a heading.</p>
 <p>Input <code>[]</code> followed by a space to insert a checklist.</p>
 <p>Input <code>:::info</code> followed by an enter to insert an alert block.</p>
 <p>Did you get it?</p>
-`;
-</script>
-
-<DefaultEditor :value="content" />
+" />
