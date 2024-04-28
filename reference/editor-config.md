@@ -10,7 +10,7 @@ You can configure the editor through the parameter of the `Editor` class.
 ```js
 const editor = new Editor({
   root: '.my-content',
-  value: '<p><br /><focus /></p>',
+  value: '<p>This is a paragraph.</p>',
 });
 editor.render();
 ```
@@ -54,7 +54,7 @@ new Editor({
 ## value
 
 * Type: `string`
-* Default: `<p><br /><focus /></p>`
+* Default: `<p><br /></p>`
 
 The default content of the editor. The format is [Lake Markup Language (LML)](./content-format.md) similar to HTML.
 

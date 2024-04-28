@@ -111,7 +111,7 @@ onMounted(() => {
       root: contentRef.value,
       toolbar,
       lang: props.lang || 'en-US',
-      value: props.value || '<p><br /><focus /></p>',
+      value: props.value || '<p><br /></p>',
       indentWithTab: false,
     });
     editor.render();

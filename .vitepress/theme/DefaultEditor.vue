@@ -24,7 +24,7 @@ onMounted(() => {
       root: contentRef.value,
       toolbar,
       lang: props.lang || 'en-US',
-      value: props.value || '<p><br /><focus /></p>',
+      value: props.value || '<p><br /></p>',
       image: {
         requestMethod: 'GET',
         requestAction: '/assets/json/upload-image.json',
