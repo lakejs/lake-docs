@@ -16,11 +16,6 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/icons/favicon-32.png' }],
     ['link', { rel: 'apple-touch-icon', href: '/assets/icons/favicon-192.png' }],
   ],
-  rewrites: {
-    'examples/default.md': 'examples/index.md',
-    'guide/getting-started.md': 'guide/index.md',
-    'reference/editor-config.md': 'reference/index.md',
-  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/assets/icons/logo.svg',
