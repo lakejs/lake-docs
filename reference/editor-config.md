@@ -89,7 +89,7 @@ new Editor({
 * Type: `boolean`
 * Default: `false`
 
-Whether the editor is checked for spelling errors. This is a feature of the browser. For more details on `spellcheck`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck).
+Whether the editor is checked for spelling errors. For more details on `spellcheck`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck).
 
 ```js
 new Editor({
@@ -103,7 +103,7 @@ new Editor({
 * Type: `number`
 * Default: `0`
 
-The tab order of the editor. This is a feature of the browser. For more details on `tabIndex`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
+The tab order of the editor. For more details on `tabIndex`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
 
 ```js
 new Editor({

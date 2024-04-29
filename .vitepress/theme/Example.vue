@@ -3,7 +3,7 @@
     <div :class="$style.header">
       <h1>{{ $frontmatter.title }}</h1>
     </div>
-    <div :class="$style.main">
+    <div :class="$style.main" class="vp-doc">
       <Content />
     </div>
   </div>
@@ -11,7 +11,7 @@
 
 <style module>
 .header {
-  padding: 32px 32px 16px;
+  padding: 32px 32px 0;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -29,6 +29,9 @@
   max-width: 1000px;
 }
 @media (max-width: 960px) {
+  .header {
+    padding: 32px 16px 0;
+  }
   .main {
     padding: 16px;
   }

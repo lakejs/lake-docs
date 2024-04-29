@@ -38,7 +38,7 @@ export default defineConfig({
       '/examples/': [{
         text: 'Examples',
         items: [
-          { text: 'Default toolbar', link: '/examples/' },
+          { text: 'Default configuration', link: '/examples/' },
           { text: 'Full-featured toolbar', link: '/examples/full-featured' },
           { text: 'Miniature toolbar', link: '/examples/miniature' },
           { text: 'Headless editor', link: '/examples/headless' },
