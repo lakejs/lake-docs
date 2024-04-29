@@ -13,7 +13,7 @@ Lake is a rich text editor for the web. It has a good user experience and provid
 
 There are already hundreds of editors on the Internet, so there seems to be no point in developing another one. But if you look into them closely, you will find that there are, in fact, only two types of editors.
 
-* Insufficient type: They lack some features that are essential to your product. So to meet the needs of your product, you have to do a lot of work to customize or develop extensions. And the people who do these jobs must have advanced programming skills.
+* Insufficient type: They lack some features that are crucial to your product. So to meet the needs of your product, you have to do a lot of work to customize or develop extensions. And the people who do these jobs must have advanced programming skills.
 
 * Commercial type: They usually provide many features, but most of them are hard to customize and have slow loading because of their heavy size. Of course, without purchasing a commercial license, there are some limitations to integrating them into your commercial product.
 
