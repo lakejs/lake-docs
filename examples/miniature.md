@@ -5,7 +5,7 @@ title: Miniature toolbar
 
 # {{ $frontmatter.title }}
 
-This example shows you how to use the Lake for the comment box. For more details about customizing toolbar, see the [toolbar config](/reference/toolbar-config.md).
+This example shows you how to use the Lake for the comment box. For more details about customizing toolbar, see the [toolbar configuration](/reference/toolbar-config.md).
 
 <MiniatureEditor />
 

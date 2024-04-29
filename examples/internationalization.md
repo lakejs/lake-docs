@@ -5,7 +5,7 @@ title: Internationalization
 
 # {{ $frontmatter.title }}
 
-This page shows you how the editor displays different language user interfaces. You can change the language by setting the [lang config](/reference/editor-config.md#lang).
+This page shows you how the editor displays different language user interfaces. You can change the language by setting the config [lang](/reference/editor-config.md#lang).
 
 ## English
 

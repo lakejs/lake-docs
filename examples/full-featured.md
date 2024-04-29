@@ -3,7 +3,7 @@ layout: example
 title: Full-featured toolbar
 ---
 
-This example demonstrates most of the Lake features. To add a button that you need, see the [toolbar config](/reference/toolbar-config.md).
+This example demonstrates most of the Lake features. To add a button that you need, see the [toolbar configuration](/reference/toolbar-config.md).
 
 <script setup>
 import { data } from '../assets/values/default-value.data.js';

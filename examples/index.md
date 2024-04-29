@@ -3,7 +3,7 @@ layout: example
 title: Default configuration
 ---
 
-This example shows you the display of the Lake under default config. For setting specified config, please refer to other examples.
+This example shows you the display of the Lake via the default config. For setting your specified config, please refer to other examples.
 
 <script setup>
 import { data } from '../assets/values/default-value.data.js';
