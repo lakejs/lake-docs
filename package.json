@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "lake-codemirror": "^2.0.0",
-    "lakelib": "^0.1.5"
+    "lakelib": "^0.1.6"
   },
   "devDependencies": {
     "vitepress": "1.1.3"
