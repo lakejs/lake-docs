@@ -5,7 +5,7 @@ const editorRef = ref(null);
 const toolbarRef = ref(null);
 const contentRef = ref(null);
 
-const props = defineProps(['lang', 'value']);
+const props = defineProps(['lang', 'value', 'placeholder']);
 
 let editor = null;
 
@@ -18,6 +18,7 @@ onMounted(() => {
     editor = createMiniatureEditor({
       editorRoot: contentRef.value,
       toolbarRoot: toolbarRef.value,
+      placeholder: props.placeholder,
       lang: props.lang,
       value: props.value,
     });

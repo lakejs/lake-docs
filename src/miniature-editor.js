@@ -98,6 +98,7 @@ export function createMiniatureEditor(config) {
   const editor = new Editor({
     root: config.editorRoot,
     toolbar,
+    placeholder: config.placeholder || '',
     lang: config.lang || 'en-US',
     value: config.value || '<p><br /></p>',
     indentWithTab: false,

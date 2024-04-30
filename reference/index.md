@@ -22,6 +22,7 @@ editor.render();
 An element to which the editor is appended.
 
 CSS selector:
+
 ```js
 new Editor({
   root: '.my-content',
@@ -29,6 +30,7 @@ new Editor({
 ```
 
 DOM element:
+
 ```js
 new Editor({
   root: document.querySelector('.my-content'),
@@ -46,7 +48,6 @@ const toolbar = new Toolbar({
   root: '.my-toolbar',
 });
 new Editor({
-  root: '.my-content',
   toolbar,
 });
 ```
@@ -65,7 +66,6 @@ const defaultValue = `
   <p><lake-box type="inline" name="image" value="..."></lake-box></p>
 `;
 new Editor({
-  root: '.my-content',
   value: defaultValue,
 });
 ```
@@ -79,7 +79,6 @@ Whether the editor is in read-only mode. Setting it to `true` can be used to dis
 
 ```js
 new Editor({
-  root: '.my-content',
   readonly: true,
 });
 ```
@@ -93,7 +92,6 @@ Whether the editor is checked for spelling errors. For more details on `spellche
 
 ```js
 new Editor({
-  root: '.my-content',
   spellcheck: true,
 });
 ```
@@ -107,7 +105,6 @@ The tab order of the editor. For more details on `tabIndex`, refer to [MDN](http
 
 ```js
 new Editor({
-  root: '.my-content',
   tabIndex: -1,
 });
 ```
@@ -116,6 +113,17 @@ new Editor({
 You are recommended to only use 0 and -1 as tabIndex values. Avoid using tabIndex values greater than 0.
 :::
 
+## placeholder
+
+* Type: `string`
+
+The text displayed in the editor when the editor has no content.
+
+```js
+new Editor({
+  placeholder: 'Add your comment here...',
+});
+```
 
 ## indentWithTab
 
@@ -126,7 +134,6 @@ The `indentWithTab` defines whether the content can be indented by `Tab` key. Wh
 
 ```js
 new Editor({
-  root: '.my-content',
   indentWithTab: false,
 });
 ```
@@ -140,7 +147,6 @@ The `lang` defines the language in which the UI should be displayed. You can vis
 
 ```js
 new Editor({
-  root: '.my-content',
   lang: 'zh-CN',
 });
 ```
@@ -154,7 +160,6 @@ The minimum length of the text for saving history. If the inputted text is short
 
 ```js
 new Editor({
-  root: '.my-content',
   minChangeSize: 10,
 });
 ```
@@ -189,7 +194,6 @@ The `requestTypes` defines the MIME types allowed for uploading image.
 
 ```js
 new Editor({
-  root: '.my-content',
   image: {
     requestMethod: 'POST',
     requestAction: '/upload',
@@ -238,7 +242,6 @@ The default language type.
 
 ```js
 new Editor({
-  root: '.my-content',
   codeBlock: {
     langList: ['text', 'html', 'css', 'javascript'],
     defaultLang: 'javascript',
