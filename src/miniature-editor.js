@@ -94,12 +94,12 @@ export function createMiniatureEditor(config) {
   const toolbar = new Toolbar({
     root: config.toolbarRoot,
     items: toolbarItems,
+    placement: 'bottom',
   });
   const editor = new Editor({
     root: config.editorRoot,
     toolbar,
-    placeholder: config.placeholder || '',
-    lang: config.lang || 'en-US',
+    placeholder: 'Add your comment here...',
     value: config.value || '<p><br /></p>',
     indentWithTab: false,
   });

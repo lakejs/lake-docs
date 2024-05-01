@@ -264,3 +264,18 @@ new Toolbar({
   items: toolbarItems,
 });
 ```
+
+## placement
+
+* Type: `top | bottom`
+* Default: `top`
+
+The `placement` defines the position of the toolbar, either above or below the editing area.
+If the value is set to `bottom`, the menu of dropdowns in the toolbar is displayed above the toolbar.
+
+CSS selector:
+```js
+new Toolbar({
+  placement: 'bottom',
+});
+```

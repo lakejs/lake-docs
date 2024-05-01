@@ -5,7 +5,7 @@ const editorRef = ref(null);
 const toolbarRef = ref(null);
 const contentRef = ref(null);
 
-const props = defineProps(['lang', 'value', 'placeholder']);
+const props = defineProps(['value']);
 
 let editor = null;
 
@@ -18,8 +18,6 @@ onMounted(() => {
     editor = createMiniatureEditor({
       editorRoot: contentRef.value,
       toolbarRoot: toolbarRef.value,
-      placeholder: props.placeholder,
-      lang: props.lang,
       value: props.value,
     });
     editorRef.value.style.visibility = 'visible';
@@ -35,8 +33,8 @@ onUnmounted(() => {
 
 <template>
   <div :class="$style.editor" class="vp-raw" ref="editorRef" style="visibility: hidden;">
-    <div :class="$style.toolbar" ref="toolbarRef"></div>
     <div :class="$style.content" ref="contentRef"></div>
+    <div :class="$style.toolbar" ref="toolbarRef"></div>
   </div>
 </template>
 
@@ -49,9 +47,9 @@ onUnmounted(() => {
 }
 .toolbar {
   border: 1px solid #d9d9d9;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom: none;
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .toolbar :global .lake-color-dropdown-menu {
   width: 156px;
@@ -61,8 +59,9 @@ onUnmounted(() => {
 }
 .content {
   border: 1px solid #d9d9d9;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   height: 100px;
   overflow: auto;
   outline-offset: -2px;
