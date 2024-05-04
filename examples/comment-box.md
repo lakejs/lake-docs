@@ -7,8 +7,8 @@ title: Comment box
 
 This example shows you how to use the Lake for the comment box.
 
-<MiniatureEditor />
+<CommentBox />
 
 ::: details Source code
-<<< @/src/miniature-editor.js
+<<< @/src/comment-box.js
 :::

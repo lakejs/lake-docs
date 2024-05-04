@@ -75,7 +75,7 @@ new Editor({
 * Type: `boolean`
 * Default: `false`
 
-Whether the editor is in read-only mode. Setting it to `true` can be used to display the content in the view page. You can visit the [Read-only Example](/examples/readonly) to see how it displays.
+Whether the editor is in read-only mode. Setting it to `true` can be used to display the content in the view page. You can visit the [read-only example](/examples/readonly) to see how it displays.
 
 ```js
 new Editor({
@@ -130,7 +130,7 @@ new Editor({
 * Type: `boolean`
 * Default: `true`
 
-The `indentWithTab` defines whether the content can be indented by `Tab` key. When the value is false, you can use `Tab` or `Shift-Tab` to move the focus. The [Miniature Example](/examples/miniature) demonstrates how it works.
+The `indentWithTab` defines whether the content can be indented by `Tab` key. When the value is false, you can use `Tab` or `Shift-Tab` to move the focus. The [comment box example](/examples/comment-box) demonstrates how it works.
 
 ```js
 new Editor({
@@ -143,7 +143,7 @@ new Editor({
 * Type: `'en-US' | 'zh-CN' | 'ko' | 'ja'`
 * Default: `en-US`
 
-The `lang` defines the language in which the UI should be displayed. You can visit the [Internationalization Example](/examples/internationalization.md) to see how it displays.
+The `lang` defines the language in which the UI should be displayed. You can visit the [internationalization example](/examples/internationalization.md) to see how it displays.
 
 ```js
 new Editor({
