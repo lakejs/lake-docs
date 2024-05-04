@@ -1,9 +1,9 @@
 ---
 layout: example
-title: Full-featured toolbar
+title: Feature-rich editor
 ---
 
-This example demonstrates most of the Lake features. To add a button that you need, see the [toolbar configuration](/reference/toolbar-config.md).
+This example demonstrates most of the available features. For more details about customizing toolbar, see the [toolbar configuration](/reference/toolbar-config.md).
 
 <script setup>
 import { data } from '../assets/values/default-value.data.js';

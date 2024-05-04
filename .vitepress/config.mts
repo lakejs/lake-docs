@@ -34,8 +34,8 @@ export default defineConfig({
         text: 'Examples',
         items: [
           { text: 'Default configuration', link: '/examples/' },
-          { text: 'Full-featured toolbar', link: '/examples/full-featured' },
-          { text: 'Miniature toolbar', link: '/examples/miniature' },
+          { text: 'Feature-rich editor', link: '/examples/feature-rich' },
+          { text: 'Comment box', link: '/examples/comment-box' },
           { text: 'Headless editor', link: '/examples/headless' },
           { text: 'Huge content', link: '/examples/huge-content' },
           { text: 'Read-only mode', link: '/examples/readonly' },
