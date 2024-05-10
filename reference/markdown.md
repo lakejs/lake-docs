@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Markdown Shortcuts
+title: Markdown shortcuts
 ---
 
 # {{ $frontmatter.title }}
