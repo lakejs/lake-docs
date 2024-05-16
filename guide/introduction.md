@@ -11,7 +11,7 @@ Lake is a rich text editor for the web. It has a good user experience and provid
 
 ## Why create Lake?
 
-With hundreds of editors already available on the Internet, it may seem redundant to develop another one. But if you look into them closely, you will find that these editors can be categorized into just two types.
+With hundreds of editors already available on the Internet, it may seem redundant to develop yet another one. But if you look into them closely, you will find that these editors can be categorized into just two types.
 
 * Insufficient type: They lack some features that are crucial to your product. So to meet the needs of your product, you have to do a lot of work to customize or develop extensions. And the people who do these jobs must have advanced programming skills.
 
