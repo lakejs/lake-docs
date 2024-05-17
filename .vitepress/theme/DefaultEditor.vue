@@ -33,6 +33,10 @@ onMounted(() => {
         requestMethod: 'GET',
         requestAction: '/assets/json/upload-image.json',
       },
+      file: {
+        requestMethod: 'GET',
+        requestAction: '/assets/json/upload-file.json',
+      },
     });
     if (props.rootStyle) {
       editor.root.css(props.rootStyle);
