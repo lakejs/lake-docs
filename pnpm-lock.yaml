@@ -9,8 +9,8 @@ dependencies:
     specifier: ^2.0.0
     version: 2.0.0
   lakelib:
-    specifier: ^0.1.10
-    version: 0.1.10(typescript@5.4.5)
+    specifier: ^0.1.11
+    version: 0.1.11(typescript@5.4.5)
 
 devDependencies:
   vitepress:
@@ -922,8 +922,8 @@ packages:
     resolution: {integrity: sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==}
     dev: true
 
-  /@types/lodash@4.17.1:
-    resolution: {integrity: sha512-X+2qazGS3jxLAIz5JDXDzglAF3KpijdhFxlf/V1+hEsOUc+HnWi81L/uv/EvGuV90WY+7mPGFCUDGfQC3Gj95Q==}
+  /@types/lodash@4.17.4:
+    resolution: {integrity: sha512-wYCP26ZLxaT3R39kiN2+HcJ4kTd3U1waI/cY7ivWYqFP6pW3ZNpvi6Wd6PHZx7T/t8z0vlkXMg3QYLa7DZ/IJQ==}
     dev: false
 
   /@types/markdown-it@14.1.1:
@@ -1249,11 +1249,11 @@ packages:
       '@lezer/highlight': 1.2.0
     dev: false
 
-  /lakelib@0.1.10(typescript@5.4.5):
-    resolution: {integrity: sha512-NotFuyMj4GCvyw54kLYXeTJah4q34fxRqIZ988fzDr0uJEknbaSzS2Lzo0mQ+/t1ptPvCIbfiUF3BwyjaF1zBQ==}
+  /lakelib@0.1.11(typescript@5.4.5):
+    resolution: {integrity: sha512-iIoI1c7ifeKIZ6vKJMLqG4MKs8pjmaWSVMcpmKSJnSQE59j+gZ8EnnK4ITNwrR7dkTeZQYyYjMywr9KANcVW8w==}
     dependencies:
       '@types/blueimp-md5': 2.18.2
-      '@types/lodash': 4.17.1
+      '@types/lodash': 4.17.4
       blueimp-md5: 2.19.0
       eventemitter3: 5.0.1
       js-base64: 3.7.7
