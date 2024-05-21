@@ -29,6 +29,13 @@ onMounted(() => {
       toolbar,
       lang: props.lang || 'en-US',
       value: props.value || '<p><br /></p>',
+      onMessage: (type, message) => {
+        if (type === 'error') {
+          window.alert(message);
+        } else {
+          console.log(message);
+        }
+      },
       image: {
         requestMethod: 'GET',
         requestAction: '/assets/json/upload-image.json',

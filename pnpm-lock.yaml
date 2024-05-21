@@ -9,8 +9,8 @@ dependencies:
     specifier: ^2.0.0
     version: 2.0.0
   lakelib:
-    specifier: ^0.1.11
-    version: 0.1.11(typescript@5.4.5)
+    specifier: ^0.1.12
+    version: 0.1.12(typescript@5.4.5)
 
 devDependencies:
   vitepress:
@@ -900,14 +900,14 @@ packages:
     dev: true
     optional: true
 
-  /@shikijs/core@1.5.2:
-    resolution: {integrity: sha512-wSAOgaz48GmhILFElMCeQypSZmj6Ru6DttOOtl3KNkdJ17ApQuGNCfzpk4cClasVrnIu45++2DBwG4LNMQAfaA==}
+  /@shikijs/core@1.6.0:
+    resolution: {integrity: sha512-NIEAi5U5R7BLkbW1pG/ZKu3eb1lzc3/+jD0lFsuxMT7zjaf9bbNwdNyMr7zh/Zl8EXQtQ+MYBAt5G+JLu+5DlA==}
     dev: true
 
-  /@shikijs/transformers@1.5.2:
-    resolution: {integrity: sha512-/Sh64rKOFGMQLCvtHeL1Y7EExdq8LLxcdVkvoGx2aMHsYMOn8DckYl2gYKMHRBu/YUt1C38/Amd1Jdh48tWHgw==}
+  /@shikijs/transformers@1.6.0:
+    resolution: {integrity: sha512-qGfHe1ECiqfE2STPWvfogIj/9Q0SK+MCRJdoITkW7AmFuB7DmbFnBT2US84+zklJOB51MzNO8RUXZiauWssJlQ==}
     dependencies:
-      shiki: 1.5.2
+      shiki: 1.6.0
     dev: true
 
   /@types/blueimp-md5@2.18.2:
@@ -990,20 +990,20 @@ packages:
       '@vue/shared': 3.4.27
     dev: true
 
-  /@vue/devtools-api@7.2.0(vue@3.4.27):
-    resolution: {integrity: sha512-92RsjyH9WKNFO6U/dECUMakq4dm2CeqEDJYLJ8wZ81AnCifpXE7d4jPIjK34ENsPaapA6BSfIZdH/qzLOHiepA==}
+  /@vue/devtools-api@7.2.1(vue@3.4.27):
+    resolution: {integrity: sha512-6oNCtyFOrNdqm6GUkFujsCgFlpbsHLnZqq7edeM/+cxAbMyCWvsaCsIMUaz7AiluKLccCGEM8fhOsjaKgBvb7g==}
     dependencies:
-      '@vue/devtools-kit': 7.2.0(vue@3.4.27)
+      '@vue/devtools-kit': 7.2.1(vue@3.4.27)
     transitivePeerDependencies:
       - vue
     dev: true
 
-  /@vue/devtools-kit@7.2.0(vue@3.4.27):
-    resolution: {integrity: sha512-Kx+U0QiQg/g714euYKfnCdhTcOycSlH1oyTE57D0sAmisdsRCNLfXcnnIwcFY2jdCpuz9DNbuE0VWQuYF5zAZQ==}
+  /@vue/devtools-kit@7.2.1(vue@3.4.27):
+    resolution: {integrity: sha512-Wak/fin1X0Q8LLIfCAHBrdaaB+R6IdpSXsDByPHbQ3BmkCP0/cIo/oEGp9i0U2+gEqD4L3V9RDjNf1S34DTzQQ==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
-      '@vue/devtools-shared': 7.2.0
+      '@vue/devtools-shared': 7.2.1
       hookable: 5.5.3
       mitt: 3.0.1
       perfect-debounce: 1.0.0
@@ -1011,8 +1011,8 @@ packages:
       vue: 3.4.27(typescript@5.4.5)
     dev: true
 
-  /@vue/devtools-shared@7.2.0:
-    resolution: {integrity: sha512-gVr3IjKjU7axNvclRgICgy1gq/TDnF1hhBAEox+l5mMXZiTIFVIm1zpcIPssc0HxMDgzy+lXqOVsY4DGyZ+ZeA==}
+  /@vue/devtools-shared@7.2.1:
+    resolution: {integrity: sha512-PCJF4UknJmOal68+X9XHyVeQ+idv0LFujkTOIW30+GaMJqwFVN9LkQKX4gLqn61KkGMdJTzQ1bt7EJag3TI6AA==}
     dependencies:
       rfdc: 1.3.1
     dev: true
@@ -1249,8 +1249,8 @@ packages:
       '@lezer/highlight': 1.2.0
     dev: false
 
-  /lakelib@0.1.11(typescript@5.4.5):
-    resolution: {integrity: sha512-iIoI1c7ifeKIZ6vKJMLqG4MKs8pjmaWSVMcpmKSJnSQE59j+gZ8EnnK4ITNwrR7dkTeZQYyYjMywr9KANcVW8w==}
+  /lakelib@0.1.12(typescript@5.4.5):
+    resolution: {integrity: sha512-KN7tnzatk+e2yGHXWpYx/c93twgOuQIG6aTGhEJzrqo2fnXlOr2/scT8RmYopLColSjfFE7ZnoqigmG0shI3Uw==}
     dependencies:
       '@types/blueimp-md5': 2.18.2
       '@types/lodash': 4.17.4
@@ -1353,10 +1353,10 @@ packages:
     resolution: {integrity: sha512-Orrsjf9trHHxFRuo9/rzm0KIWmgzE8RMlZMzuhZOJ01Rnz3D0YBAe+V6473t6/H6c7irs6Lt48brULAiRWb3Vw==}
     dev: true
 
-  /shiki@1.5.2:
-    resolution: {integrity: sha512-fpPbuSaatinmdGijE7VYUD3hxLozR3ZZ+iAx8Iy2X6REmJGyF5hQl94SgmiUNTospq346nXUVZx0035dyGvIVw==}
+  /shiki@1.6.0:
+    resolution: {integrity: sha512-P31ROeXcVgW/k3Z+vUUErcxoTah7ZRaimctOpzGuqAntqnnSmx1HOsvnbAB8Z2qfXPRhw61yptAzCsuKOhTHwQ==}
     dependencies:
-      '@shikijs/core': 1.5.2
+      '@shikijs/core': 1.6.0
     dev: true
 
   /source-map-js@1.2.0:
@@ -1449,17 +1449,17 @@ packages:
     dependencies:
       '@docsearch/css': 3.6.0
       '@docsearch/js': 3.6.0(@algolia/client-search@4.23.3)(search-insights@2.13.0)
-      '@shikijs/core': 1.5.2
-      '@shikijs/transformers': 1.5.2
+      '@shikijs/core': 1.6.0
+      '@shikijs/transformers': 1.6.0
       '@types/markdown-it': 14.1.1
       '@vitejs/plugin-vue': 5.0.4(vite@5.2.11)(vue@3.4.27)
-      '@vue/devtools-api': 7.2.0(vue@3.4.27)
+      '@vue/devtools-api': 7.2.1(vue@3.4.27)
       '@vueuse/core': 10.9.0(vue@3.4.27)
       '@vueuse/integrations': 10.9.0(focus-trap@7.5.4)(vue@3.4.27)
       focus-trap: 7.5.4
       mark.js: 8.11.1
       minisearch: 6.3.0
-      shiki: 1.5.2
+      shiki: 1.6.0
       vite: 5.2.11
       vue: 3.4.27(typescript@5.4.5)
     transitivePeerDependencies:
