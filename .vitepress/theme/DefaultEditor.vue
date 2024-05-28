@@ -73,7 +73,7 @@ onUnmounted(() => {
 </template>
 
 <style module>
-@keyframes lakeRotate {
+@keyframes lakerotate {
   0% {
     transform: rotate(0);
   }
@@ -88,7 +88,7 @@ onUnmounted(() => {
 }
 .loading svg {
   display: inline;
-  animation: lakeRotate 1s linear 0s infinite normal none;
+  animation: lakerotate 1s linear 0s infinite normal none;
 }
 .toolbar {
   border: 1px solid #d9d9d9;
