@@ -14,7 +14,7 @@ Compressed copies of Lake files are available, you can download them from jsDeli
 
 ## Downloading Lake using npm
 
-Lake is registered as a package on npm. You can install the latest version of Lake with the following npm command:
+Lake is registered as a package on npm, you can install the latest version with the following npm command:
 
 ```bash
 npm install lakelib
@@ -22,14 +22,14 @@ npm install lakelib
 
 ## Quick start with CDN
 
-Add the following lines of code in the `<head>` of an HTML page.
+Add the following lines of code in the `<head>` of your HTML page.
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lakelib@latest/dist/lake.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/lakelib@latest/dist/lake.min.js"></script>
 ```
 
-In the HTML page add the following HTML code that will serve as a placeholder for an editor instance.
+In the HTML page, add the following code that will serve as a placeholder for an editor instance.
 
 ```html
 <div class="my-editor">
@@ -67,7 +67,7 @@ editor.render();
 
 ## Quick start with npm
 
-In the HTML page add the following HTML code that will serve as a placeholder for an editor instance.
+In the HTML page, add the following code that will serve as a placeholder for an editor instance.
 
 ```html
 <div class="my-editor">
@@ -116,7 +116,7 @@ editor.event.on('statechange', state => {
 
 ## Image
 
-Uploading and inserting image requires request config. For more details, see [Image Configuration](/reference/index.md#image).
+Uploading and inserting image requires request config. For more details, see the [image configuration](/reference/index.md#image).
 
 ```js
 new Editor({
@@ -131,7 +131,7 @@ new Editor({
 
 ## Code block
 
-Before using the code block, you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to the HTML page.
+Before using the code block, you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page.
 
 ### CDN
 
