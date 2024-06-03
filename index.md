@@ -30,5 +30,5 @@ features:
   - icon:
       src: /assets/icons/puzzle-piece.svg
     title: Customizable
-    details: Easy-to-use programming interface, built on top of the DOM, allowing content modification through DOM manipulation
+    details: Intuitive programming interface, no complex layers, allowing straightforward content modification through DOM manipulation
 ---
