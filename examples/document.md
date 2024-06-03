@@ -35,8 +35,10 @@ const toolbarItems = [
   'increaseIndent',
   'decreaseIndent',
   '|',
-  'image',
   'link',
+  'image',
+  'video',
+  'file',
   'codeBlock',
   'blockQuote',
   'hr',
@@ -63,9 +65,20 @@ onMounted(() => {
       root: contentRef.value,
       toolbar,
       value: data.value,
+      onMessage: (type, message) => {
+        if (type === 'error') {
+          window.alert(message);
+        } else {
+          console.log(message);
+        }
+      },
       image: {
         requestMethod: 'GET',
         requestAction: '/assets/json/upload-image.json',
+      },
+      file: {
+        requestMethod: 'GET',
+        requestAction: '/assets/json/upload-file.json',
       },
     });
     editor.render();

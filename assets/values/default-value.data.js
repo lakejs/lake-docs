@@ -138,7 +138,7 @@ export default {
 
 <h3>Code block</h3>
 <lake-box type="block" name="hr"></lake-box>
-<p>At the beginning of a paragraph, input <code>\`\`\`</code> or <code>\`\`\`js</code> followed by a enter to create a code block.</p>
+<p>At the beginning of a paragraph, input <code>\`\`\`</code> or <code>\`\`\`js</code> followed by an enter to create a code block.</p>
 <lake-box type="block" name="codeBlock" value="eyJjb2RlIjoiZnVuY3Rpb24gbXlGdW5jKHRoZU9iamVjdCkge1xuICB0aGVPYmplY3QubWFrZSA9IFwiVG95b3RhXCI7XG59XG5cbmNvbnN0IG15Y2FyID0ge1xuICBtYWtlOiBcIkhvbmRhXCIsXG4gIG1vZGVsOiBcIkFjY29yZFwiLFxuICB5ZWFyOiAxOTk4LFxufTtcblxuY29uc29sZS5sb2cobXljYXIubWFrZSk7IC8vIFwiSG9uZGFcIlxubXlGdW5jKG15Y2FyKTtcbmNvbnNvbGUubG9nKG15Y2FyLm1ha2UpOyAvLyBcIlRveW90YVwiIiwibGFuZyI6ImphdmFzY3JpcHQifQ=="></lake-box>
 <blockquote type="tip">This feature is based on <a href="https://codemirror.net/">CodeMirror</a>.</blockquote>
 <p><br /></p>
