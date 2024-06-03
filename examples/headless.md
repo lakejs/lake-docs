@@ -5,7 +5,7 @@ title: Headless editor
 
 # {{ $frontmatter.title }}
 
-This example shows you how to customize a toolbar that is well adapted to your needs.
+This example demonstrates how to customize a toolbar that is well adapted to your needs.
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';

@@ -5,7 +5,7 @@ title: Editor configuration
 
 # {{ $frontmatter.title }}
 
-You can configure the editor through the parameter of the `Editor` class.
+You can configure the editor using the parameter of the `Editor` class.
 
 ```js
 const editor = new Editor({

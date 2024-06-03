@@ -5,7 +5,7 @@ title: Comment box
 
 # {{ $frontmatter.title }}
 
-This example shows you how to use the Lake for the comment box.
+This example demonstrates how to use the Lake as a comment box.
 
 <CommentBox />
 

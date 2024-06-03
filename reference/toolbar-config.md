@@ -5,7 +5,7 @@ title: Toolbar configuration
 
 # {{ $frontmatter.title }}
 
-You can configure the toolbar through the parameter of the `Toolbar` class.
+You can configure the toolbar using the parameter of the `Toolbar` class.
 
 ```js
 import { Toolbar } from 'lakelib';
