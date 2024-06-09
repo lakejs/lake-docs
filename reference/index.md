@@ -156,11 +156,24 @@ new Editor({
 * Type: `number`
 * Default: `5`
 
-The minimum length of the text for saving history. If the inputted text is shorter than the `minChangeSize`, the history will not be saved until the length reaches or exceeds that threshold.
+The minimum length of the text for saving history. If the inputted text is shorter than the `minChangeSize`, the history will not be saved until the length reaches or exceeds this threshold.
 
 ```js
 new Editor({
   minChangeSize: 10,
+});
+```
+
+## historySize
+
+* Type: `number`
+* Default: `100`
+
+The maximum length of the history. When this threshold is reached, the earliest item in the history will be removed.
+
+```js
+new Editor({
+  historySize: 200,
 });
 ```
 
