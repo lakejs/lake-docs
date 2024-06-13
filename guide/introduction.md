@@ -7,7 +7,7 @@ title: Introduction
 
 ## What is Lake?
 
-Lake is a rich text editor for the web. It offers an excellent user experience and has an easy-to-use programming interface to allow further extension.
+Lake is a rich text editor for the web. It aims to be a user-friendly editor, and provides an easy-to-use programming interface to allow further extension.
 
 ## Why create Lake?
 
