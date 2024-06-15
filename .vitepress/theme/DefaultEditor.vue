@@ -18,37 +18,17 @@ onMounted(() => {
     const timeoutId = window.setTimeout(() => {
       loadingRef.value.style.display = 'block';
     }, 1000);
-    window.LakeCodeMirror = await import('lake-codemirror');
-    const { Editor, Toolbar } = await import('lakelib');
-    const toolbar = new Toolbar({
-      root: toolbarRef.value,
-      items: props.toolbar,
-    });
-    editor = new Editor({
-      root: contentRef.value,
-      toolbar,
-      lang: props.lang || 'en-US',
-      value: props.value || '<p><br /></p>',
-      onMessage: (type, message) => {
-        if (type === 'error') {
-          window.alert(message);
-        } else {
-          console.log(message);
-        }
-      },
-      image: {
-        requestMethod: 'GET',
-        requestAction: '/assets/json/upload-image.json',
-      },
-      file: {
-        requestMethod: 'GET',
-        requestAction: '/assets/json/upload-file.json',
-      },
+    const { createDefaultEditor } = await import('/src/default-editor');
+    editor = createDefaultEditor({
+      editorRoot: contentRef.value,
+      toolbarRoot: toolbarRef.value,
+      toolbarItems: props.toolbar,
+      value: props.value,
+      lang: props.lang,
     });
     if (props.rootStyle) {
       editor.root.css(props.rootStyle);
     }
-    editor.render();
     window.clearTimeout(timeoutId);
     loadingRef.value.style.display = 'none';
     editorRef.value.style.display = 'block';

@@ -55,33 +55,13 @@ onMounted(() => {
     editor.unmount();
   }
   (async () => {
-    window.LakeCodeMirror = await import('lake-codemirror');
-    const { Editor, Toolbar } = await import('lakelib');
-    const toolbar = new Toolbar({
-      root: toolbarRef.value,
-      items: toolbarItems,
-    });
-    editor = new Editor({
-      root: contentRef.value,
-      toolbar,
+    const { createDefaultEditor } = await import('/src/default-editor');
+    editor = createDefaultEditor({
+      editorRoot: contentRef.value,
+      toolbarRoot: toolbarRef.value,
+      toolbarItems,
       value: data.value,
-      onMessage: (type, message) => {
-        if (type === 'error') {
-          window.alert(message);
-        } else {
-          console.log(message);
-        }
-      },
-      image: {
-        requestMethod: 'GET',
-        requestAction: '/assets/json/upload-image.json',
-      },
-      file: {
-        requestMethod: 'GET',
-        requestAction: '/assets/json/upload-file.json',
-      },
     });
-    editor.render();
     editorRef.value.style.visibility = 'visible';
   })();
   document.body.style.backgroundColor = '#0000000d';
