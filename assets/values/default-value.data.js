@@ -153,7 +153,7 @@ export default {
 
 <h3>Table</h3>
 <lake-box type="block" name="hr"></lake-box>
-<p>Lake does not currently support advanced table editing, but we plan to provide this feature in the next version.</p>
+<p>Advanced table editing is not available, we plan to provide this feature in the next major version.</p>
 <table>
   <tr>
     <td style="width: 120px; border: 1px solid rgb(160 160 160); text-align: center;"><strong>Tag name</strong></td>
