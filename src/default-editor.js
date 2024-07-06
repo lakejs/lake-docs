@@ -2,6 +2,7 @@ import * as CodeMirror from 'lake-codemirror';
 import { Editor, Toolbar, icons } from 'lakelib';
 
 window.LakeCodeMirror = CodeMirror;
+window.Editor = Editor;
 
 // These emojis are sourced from Fluent Emoji.
 // https://github.com/microsoft/fluentui-emoji
@@ -95,5 +96,6 @@ export function createDefaultEditor(config) {
     },
   });
   editor.render();
+  window.editor = editor;
   return editor;
 }
