@@ -44,6 +44,26 @@ const toolbarItems = [
   'hr',
 ];
 
+const slashItems = [
+  'image',
+  'file',
+  'heading1',
+  'heading2',
+  'heading3',
+  'heading4',
+  'heading5',
+  'heading6',
+  'paragraph',
+  'blockQuote',
+  'numberedList',
+  'bulletedList',
+  'checklist',
+  'hr',
+  'codeBlock',
+  'video',
+  'equation',
+];
+
 const editorRef = ref(null);
 const toolbarRef = ref(null);
 const contentRef = ref(null);
@@ -61,6 +81,7 @@ onMounted(() => {
       toolbarRoot: toolbarRef.value,
       toolbarItems,
       value: data.value,
+      slashItems,
     });
     editorRef.value.style.visibility = 'visible';
   })();

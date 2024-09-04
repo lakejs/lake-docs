@@ -1,6 +1,9 @@
+import 'katex/dist/katex.min.css';
+import katex from 'katex';
 import * as CodeMirror from 'lake-codemirror';
 import { Editor, Utils, Button } from 'lakelib';
 
+window.katex = katex.default;
 window.LakeCodeMirror = CodeMirror;
 
 function createToolbar(config) {

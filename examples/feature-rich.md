@@ -46,12 +46,33 @@ const toolbarItems = [
   'video',
   'file',
   'emoji',
+  'specialCharacter',
   'codeBlock',
+  'equation',
   'blockQuote',
   'paragraph',
   'hr',
   '|',
   'selectAll',
+];
+const slashItems = [
+  'image',
+  'file',
+  'heading1',
+  'heading2',
+  'heading3',
+  'heading4',
+  'heading5',
+  'heading6',
+  'paragraph',
+  'blockQuote',
+  'numberedList',
+  'bulletedList',
+  'checklist',
+  'hr',
+  'codeBlock',
+  'video',
+  'equation',
 ];
 const rootStyle = {
   height: '500px',
@@ -59,4 +80,4 @@ const rootStyle = {
 };
 </script>
 
-<DefaultEditor :toolbar="toolbarItems" :value="data.value" :rootStyle="rootStyle" />
+<DefaultEditor :toolbar="toolbarItems" :value="data.value" :slash="slashItems" :rootStyle="rootStyle" />

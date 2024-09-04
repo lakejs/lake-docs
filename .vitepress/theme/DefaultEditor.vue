@@ -6,7 +6,7 @@ const editorRef = ref(null);
 const toolbarRef = ref(null);
 const contentRef = ref(null);
 
-const props = defineProps(['lang', 'value', 'toolbar', 'rootStyle']);
+const props = defineProps(['lang', 'value', 'toolbar', 'slash', 'rootStyle']);
 
 let editor = null;
 
@@ -25,6 +25,7 @@ onMounted(() => {
       toolbarItems: props.toolbar,
       value: props.value,
       lang: props.lang,
+      slashItems: props.slash,
     });
     if (props.rootStyle) {
       editor.root.css(props.rootStyle);

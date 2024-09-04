@@ -1,6 +1,9 @@
+import 'katex/dist/katex.min.css';
+import katex from 'katex';
 import * as CodeMirror from 'lake-codemirror';
 import { Editor, Toolbar, Utils, icons } from 'lakelib';
 
+window.katex = katex.default;
 window.LakeCodeMirror = CodeMirror;
 
 const colors = [
