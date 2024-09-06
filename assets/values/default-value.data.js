@@ -136,11 +136,19 @@ export default {
 <p><lake-box type="inline" name="file" value="eyJ1cmwiOiIuLi9hc3NldHMvZmlsZXMvaGVhdmVuLWxha2Utd2lraXBlZGlhLnBkZiIsInN0YXR1cyI6ImRvbmUiLCJuYW1lIjoiSGVhdmVuIExha2UgLSBXaWtpcGVkaWEucGRmIiwic2l6ZSI6NzQ3Mzg1LCJ0eXBlIjoiYXBwbGljYXRpb24vcGRmIiwibGFzdE1vZGlmaWVkIjoxNzE1OTM1MjE1MzA5fQ=="></lake-box></p>
 <p><br /></p>
 
-<h3>Emoji</h3>
+<h3>Emoji using image</h3>
 <lake-box type="block" name="hr"></lake-box>
 <ul>
   <li>Face blowing a kiss: <lake-box type="inline" name="emoji" value="eyJ1cmwiOiIuLi9hc3NldHMvZW1vamlzL2ZhY2VfYmxvd2luZ19hX2tpc3NfY29sb3Iuc3ZnIiwidGl0bGUiOiJGYWNlIGJsb3dpbmcgYSBraXNzIn0="></lake-box></li>
   <li>Face exhaling: <lake-box type="inline" name="emoji" value="eyJ1cmwiOiIuLi9hc3NldHMvZW1vamlzL2ZhY2VfZXhoYWxpbmdfY29sb3Iuc3ZnIiwidGl0bGUiOiJGYWNlIGV4aGFsaW5nIn0="></lake-box></li>
+</ul>
+<p><br /></p>
+
+<h3>Emoji using special character</h3>
+<lake-box type="block" name="hr"></lake-box>
+<ul>
+  <li>Grinning face with big eyes: 😃</li>
+  <li>Beaming face with smiling eyes: 😁</li>
 </ul>
 <p><br /></p>
 
@@ -149,6 +157,14 @@ export default {
 <p>At the beginning of a paragraph, input <code>\`\`\`</code> or <code>\`\`\`js</code> followed by an enter to create a code block.</p>
 <lake-box type="block" name="codeBlock" value="eyJjb2RlIjoiZnVuY3Rpb24gbXlGdW5jKHRoZU9iamVjdCkge1xuICB0aGVPYmplY3QubWFrZSA9IFwiVG95b3RhXCI7XG59XG5cbmNvbnN0IG15Y2FyID0ge1xuICBtYWtlOiBcIkhvbmRhXCIsXG4gIG1vZGVsOiBcIkFjY29yZFwiLFxuICB5ZWFyOiAxOTk4LFxufTtcblxuY29uc29sZS5sb2cobXljYXIubWFrZSk7IC8vIFwiSG9uZGFcIlxubXlGdW5jKG15Y2FyKTtcbmNvbnNvbGUubG9nKG15Y2FyLm1ha2UpOyAvLyBcIlRveW90YVwiIiwibGFuZyI6ImphdmFzY3JpcHQifQ=="></lake-box>
 <blockquote type="tip">This feature is based on <a href="https://codemirror.net/">CodeMirror</a>.</blockquote>
+<p><br /></p>
+
+<h3>Mathematical formula</h3>
+<lake-box type="block" name="hr"></lake-box>
+<ul>
+  <li>Difference of squares: <lake-box type="inline" name="equation" value="eyJjb2RlIjoiYV4yLWJeMj0oYStiKShhLWIpIn0="></lake-box></li>
+  <li>Difference of cubes: <lake-box type="inline" name="equation" value="eyJjb2RlIjoiYV4zLWJeMz0oYS1iKShhXjIrYWIrYl4yKSJ9"></lake-box></li>
+</ul>
 <p><br /></p>
 
 <h3>Table</h3>
