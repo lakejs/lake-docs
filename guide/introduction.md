@@ -5,16 +5,14 @@ title: Introduction
 
 # {{ $frontmatter.title }}
 
-## What is Lake?
+Lake is a rich text editor for the web. It aims to be a feature-rich editor, and provides an easy-to-use programming interface to allow further extension.
 
-Lake is a rich text editor for the web. It aims to be a user-friendly editor, and provides an easy-to-use programming interface to allow further extension.
+## Why?
 
-## Why create Lake?
+There are already hundreds of editors available on the internet, creating another one might seem like a waste of time. But when you need an editor, if you take a close look at these editors, you will find that they can usually be categorized into just two types.
 
-With hundreds of editors already available on the Internet, creating another one might seem unnecessary. But if you closely compare these editors, you will find that they can be categorized into just two types.
+* Insufficient type: These editors might lack some essential features you need. To meet what you need, you have to spend a lot of time to customize or develop these features, and the people who do this work need to have advanced programming skills.
 
-* Insufficient type: These editors might lack essential features that your product needs. To meet these needs, you have to spend a lot of time to customize or develop additional features. And the people who do this work need to have advanced programming skills.
+* Commercial type: These editors usually come with a lot of features, but they are often with complex layers, so it is very difficult to customize them. Most importantly, integrating them into a commercial product needs to buy a commercial license, or you will face some limitations.
 
-* Commercial type: These editors usually come with a lot of features, but they are often hard to customize and have slow loading because of their large size. Plus, you need to buy a commercial license to fully integrate them into your product, or you will face some limitations.
-
-Lake aims to be a feature-rich, lightweight editor and is released under the MIT license, which puts very few restrictions on commercial use.
+Lake's goal is to provide as many features as we can, and it is released under the MIT license, which allows for commercial use.
