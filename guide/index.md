@@ -116,7 +116,7 @@ editor.event.on('statechange', state => {
 
 ## Image
 
-Uploading and inserting image requires request config. For more details, see the [image configuration](/reference/index.md#image).
+Uploading image requires request config. For more details, see the [image configuration](/reference/index.md#image).
 
 ```js
 new Editor({
@@ -131,7 +131,7 @@ new Editor({
 
 ## Code block
 
-Before using the code block, you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page.
+This feature depends on CodeMirror, so you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page.
 
 ### CDN
 
@@ -146,10 +146,40 @@ Before using the code block, you need to add [CodeMirror for Lake](https://www.n
 
 ```js
 import 'lakelib/lib/lake.css';
-import { Editor, Toolbar } from 'lakelib';
 import * as CodeMirror from 'lake-codemirror';
+import { Editor } from 'lakelib';
 
 window.LakeCodeMirror = CodeMirror;
+
+const editor = new Editor({
+  root: '.my-content',
+});
+editor.render();
+```
+
+## Mathematical formula
+
+This feature depends on KaTeX, so you need to add [KaTeX](https://katex.org/) to your HTML page.
+
+### CDN
+
+* jsDelivr: https://www.jsdelivr.com/package/npm/katex
+* UNPKG: https://unpkg.com/browse/katex/
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+```
+
+### npm
+
+```js
+import 'katex/dist/katex.css';
+import 'lakelib/lib/lake.css';
+import katex from 'katex';
+import { Editor } from 'lakelib';
+
+window.katex = katex;
 
 const editor = new Editor({
   root: '.my-content',

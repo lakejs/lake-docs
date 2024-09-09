@@ -1,4 +1,4 @@
-import 'katex/dist/katex.min.css';
+import 'katex/dist/katex.css';
 import katex from 'katex';
 import * as CodeMirror from 'lake-codemirror';
 import { Editor, Toolbar, icons } from 'lakelib';
