@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Lake"
   text: "Browser-based WYSIWYG Editor"
-  tagline: with clean UI and excellent UX
+  tagline: with out-of-the-box features
   image:
     src: /assets/images/lake-screenshot.png
     style: "max-width: 380px;"
@@ -22,13 +22,14 @@ features:
   - icon:
       src: /assets/icons/users.svg
     title: User experience
-    details: Excellent content editing experience, clean UI, ensure stability with high code coverage, support huge content editing
+    details: Lake offers a smooth editing experience, even with huge content. Its stability is ensured by high test coverage.
   - icon:
       src: /assets/icons/cube.svg
     title: Approachable
-    details: Out-of-the-box features, seamlessly integrate a feature-rich editor into your website or app with just a few lines of code
+    details: You can effortlessly integrate Lake, a feature-rich editor, into your apps. It requires just a few lines of code.
   - icon:
       src: /assets/icons/puzzle-piece.svg
     title: Customizable
-    details: Intuitive programming interface, simple structures, straightforward content modification through DOM manipulation
+    details: Lake features a simple structure and an easy-to-use programming interface, making customization straightforward.
+
 ---
