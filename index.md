@@ -22,13 +22,13 @@ features:
   - icon:
       src: /assets/icons/users.svg
     title: User experience
-    details: Excellent content editing experience, clean UI, ensure high quality with high code coverage, support huge content editing
+    details: Excellent content editing experience, clean UI, ensure stability with high code coverage, support huge content editing
   - icon:
       src: /assets/icons/cube.svg
     title: Approachable
-    details: Out-of-the-box features, integrate a feature-rich editor seamlessly into your website or app with just a few lines of code
+    details: Out-of-the-box features, seamlessly integrate a feature-rich editor into your website or app with just a few lines of code
   - icon:
       src: /assets/icons/puzzle-piece.svg
     title: Customizable
-    details: Intuitive programming interface, no complex layers, straightforward content modification through DOM manipulation
+    details: Intuitive programming interface, simple structures, straightforward content modification through DOM manipulation
 ---
