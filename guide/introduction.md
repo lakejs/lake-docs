@@ -11,7 +11,7 @@ Lake is a browser-based rich text editor designed for creating content such as b
 
 There are tons of editors, but they often either lack essential features or are not open enough. It is difficult to find an editor that perfectly fits your business needs. There are usually two kinds:
 
-* Basic editors: These editors might lack some features that is essential to you. To add these features, you have to spend a lot of time to customize them, and the people who do this work need to have advanced programming skills.
+* Basic editors: These editors might lack some features that are essential to you. To add these features, you have to spend a lot of time on customizing them, and the people who do this work need to have advanced programming skills.
 
 * Commercial editors: These editors usually provide the features you need, but have very complex structures, making customization difficult. Most importantly, integrating them into your commercial application needs purchasing a commercial license, or you will face some limitations.
 
