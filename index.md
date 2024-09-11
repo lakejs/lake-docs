@@ -26,7 +26,7 @@ features:
   - icon:
       src: /assets/icons/cube.svg
     title: Approachable
-    details: You can easily integrate Lake, a feature-rich editor, into your websites or apps with just a few lines of code.
+    details: You can easily integrate Lake, a feature-rich editor, into your web applications with just a few lines of code.
   - icon:
       src: /assets/icons/puzzle-piece.svg
     title: Customizable
