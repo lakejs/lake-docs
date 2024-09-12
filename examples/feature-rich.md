@@ -74,10 +74,6 @@ const slashItems = [
   'video',
   'equation',
 ];
-const rootStyle = {
-  height: '500px',
-  overflow: 'auto',
-};
 </script>
 
-<DefaultEditor :toolbar="toolbarItems" :value="data.value" :slash="slashItems" :rootStyle="rootStyle" />
+<DefaultEditor :toolbar="toolbarItems" :value="data.value" :slash="slashItems" />

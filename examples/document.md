@@ -85,7 +85,7 @@ onMounted(() => {
       value: data.value,
       slashItems,
     });
-    editorRef.value.style.visibility = 'visible';
+    editorRef.value.style.display = 'block';
   })();
   document.body.style.backgroundColor = '#0000000d';
 });
@@ -99,7 +99,7 @@ onUnmounted(() => {
 </script>
 
 <div class="vp-raw">
-  <div :class="$style.editor" ref="editorRef" style="visibility: hidden;">
+  <div :class="$style.editor" ref="editorRef" style="display: none;">
     <div :class="$style.toolbar" ref="toolbarRef"></div>
     <div :class="$style.content" ref="contentRef"></div>
   </div>
@@ -124,13 +124,14 @@ onUnmounted(() => {
   z-index: 1;
 }
 .content {
-  height: auto;
-  min-height: 800px;
-  overflow: visible;
   margin: 84px auto 28px auto;
   min-width: 550px;
   max-width: 1000px;
   border: 1px solid #d9d9d9;
   background-color: #fff;
+}
+.content :global .lake-container {
+  height: auto;
+  min-height: 800px;
 }
 </style>

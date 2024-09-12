@@ -9,7 +9,7 @@ export default defineConfig({
   cleanUrls: true,
   lang: 'en-US',
   title: "Lake",
-  description: "Lake is a rich text editor for the web.",
+  description: "Lake is a browser-based rich text editor designed for creating content such as blogs, comments, and emails.",
   head: [
     ['link', { rel: 'icon', href: '/assets/icons/favicon.ico' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/icons/favicon-16.png' }],

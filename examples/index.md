@@ -7,11 +7,6 @@ This example demonstrates the features of the Lake using the default configurati
 
 <script setup>
 import { data } from '../assets/values/default-value.data.js';
-
-const rootStyle = {
-  height: '500px',
-  overflow: 'auto',
-};
 </script>
 
-<DefaultEditor :value="data.value" :rootStyle="rootStyle" />
+<DefaultEditor :value="data.value" />

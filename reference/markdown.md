@@ -48,7 +48,7 @@ Lake provides markdown-style handy shortcuts, you can use the following shortcut
 
 ## Playground
 
-<DefaultEditor value="
+<EmbeddedEditor value="
 <p>At the beginning of a paragraph, try the shortcuts above:</p>
 <p>Input <code>#</code> followed by a space, and you can see that the paragraph becomes a heading.</p>
 <p>Input <code>[]</code> followed by a space to insert a checklist.</p>

@@ -7,11 +7,6 @@ This example demonstrates how the editor performs when handling huge amounts of 
 
 <script setup>
 import { data } from '../assets/values/huge-value.data.js';
-
-const rootStyle = {
-  height: '500px',
-  overflow: 'auto',
-};
 </script>
 
-<DefaultEditor :value="data.value" :rootStyle="rootStyle" />
+<DefaultEditor :value="data.value" />

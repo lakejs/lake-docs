@@ -58,7 +58,7 @@ const toolbarItems = [
   'moreStyle',
 ];
 </script>
-<DefaultEditor :toolbar="toolbarItems" />
+<EmbeddedEditor :toolbar="toolbarItems" />
 
 ## root
 
