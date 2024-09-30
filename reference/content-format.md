@@ -266,7 +266,7 @@ The `<a>` tag with its `href` attribute represents a hyperlink.
 
 ## Thematic break
 
-Using the `<lake-box name="hr">` tag to represent the thematic break (horizontal rule).
+Lake uses the `<lake-box name="hr">` tag to represent the thematic break (horizontal rule).
 
 ```html
 <lake-box type="block" name="hr"></lake-box>
@@ -274,7 +274,7 @@ Using the `<lake-box name="hr">` tag to represent the thematic break (horizontal
 
 ## Image
 
-Using the `<lake-box name="image">` tag to represent an image.
+Lake uses the `<lake-box name="image">` tag to represent an image.
 
 ```xml
 <lake-box type="inline" name="image" value=".."></lake-box>
@@ -282,7 +282,7 @@ Using the `<lake-box name="image">` tag to represent an image.
 
 ## Video
 
-Using the `<lake-box name="video">` tag to represent a video.
+Lake uses the `<lake-box name="video">` tag to represent a video.
 
 ```xml
 <lake-box type="inline" name="video" value=".."></lake-box>
@@ -290,7 +290,7 @@ Using the `<lake-box name="video">` tag to represent a video.
 
 ## File
 
-Using the `<lake-box name="file">` tag to represent a file.
+Lake uses the `<lake-box name="file">` tag to represent a file.
 
 ```xml
 <lake-box type="inline" name="file" value=".."></lake-box>
@@ -298,7 +298,7 @@ Using the `<lake-box name="file">` tag to represent a file.
 
 ## Code block
 
-Using the `<lake-box name="codeBlock">` tag to represent a code block.
+Lake uses the `<lake-box name="codeBlock">` tag to represent a code block.
 
 ```xml
 <lake-box type="block" name="codeBlock" value=".."></lake-box>
@@ -306,7 +306,7 @@ Using the `<lake-box name="codeBlock">` tag to represent a code block.
 
 ## Emoji
 
-Using the `<lake-box name="emoji">` tag to represent an emoji.
+Lake uses the `<lake-box name="emoji">` tag to represent an emoji.
 
 ```xml
 <lake-box type="inline" name="emoji" value=".."></lake-box>
@@ -314,8 +314,16 @@ Using the `<lake-box name="emoji">` tag to represent an emoji.
 
 ## Mathematical formula
 
-Using the `<lake-box name="equation">` tag to represent a mathematical formula.
+Lake uses the `<lake-box name="equation">` tag to represent a mathematical formula.
 
 ```xml
 <lake-box type="inline" name="equation" value=".."></lake-box>
+```
+
+## Mention
+
+Lake uses the `<lake-box name="mention">` tag to represent a mentioned user.
+
+```xml
+<lake-box type="inline" name="mention" value=".."></lake-box>
 ```
