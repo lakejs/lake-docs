@@ -78,9 +78,7 @@ onUnmounted(() => {
   border: 1px solid #d9d9d9;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  overflow: auto;
-}
-.content :global .lake-container {
   height: 500px;
+  overflow: auto;
 }
 </style>

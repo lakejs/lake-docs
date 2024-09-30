@@ -62,11 +62,9 @@ onUnmounted(() => {
   border-bottom: none;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  overflow: auto;
-  outline-offset: -2px;
-}
-.content :global .lake-container {
   min-height: 100px;
   max-height: 150px;
+  overflow: auto;
+  outline-offset: -2px;
 }
 </style>
