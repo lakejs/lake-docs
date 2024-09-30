@@ -2,6 +2,11 @@ export default {
   load() {
     return {
       value: `
+<h3>Slash commands</h3>
+<lake-box type="block" name="hr"></lake-box>
+<p>At the beginning of a paragraph, type <code>/</code> to display a popup menu containing commonly used commands. You can search for commands by typing <code>/keyword</code>.</p>
+<p><br /></p>
+
 <h3>Headings</h3>
 <lake-box type="block" name="hr"></lake-box>
 <p>At the beginning of a paragraph, input <code>#</code>, <code>##</code>, or <code>###</code> followed by a space to create a heading 1, heading 2, or heading 3.</p>
@@ -165,6 +170,11 @@ export default {
   <li>Difference of squares: <lake-box type="inline" name="equation" value="eyJjb2RlIjoiYV4yLWJeMj0oYStiKShhLWIpIn0="></lake-box></li>
   <li>Difference of cubes: <lake-box type="inline" name="equation" value="eyJjb2RlIjoiYV4zLWJeMz0oYS1iKShhXjIrYWIrYl4yKSJ9"></lake-box></li>
 </ul>
+<p><br /></p>
+
+<h3>Mention</h3>
+<lake-box type="block" name="hr"></lake-box>
+<p>At the beginning of a paragraph, type <code>@</code> to display a popup menu containing specified users. You can search for users by typing <code>@keyword</code>.</p>
 <p><br /></p>
 
 <h3>Table</h3>

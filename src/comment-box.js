@@ -105,6 +105,9 @@ export function createMiniatureEditor(config) {
     placeholder: 'Add your comment here...',
     value: config.value || '<p><br /></p>',
     indentWithTab: false,
+    mention: {
+      requestAction: '../assets/json/mention.json',
+    },
   });
   editor.render();
   return editor;

@@ -234,6 +234,9 @@ export function createDefaultEditor(config) {
     slash: config.slashItems ? {
       items: config.slashItems,
     } : true,
+    mention: {
+      requestAction: '../assets/json/mention.json',
+    },
   });
   editor.render();
   window.editor = editor;
