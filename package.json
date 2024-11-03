@@ -2,10 +2,10 @@
   "dependencies": {
     "katex": "^0.16.11",
     "lake-codemirror": "^2.0.0",
-    "lakelib": "^0.2.5"
+    "lakelib": "^0.2.6"
   },
   "devDependencies": {
-    "vitepress": "^1.4.1"
+    "vitepress": "^1.4.3"
   },
   "scripts": {
     "dev": "vitepress dev",
