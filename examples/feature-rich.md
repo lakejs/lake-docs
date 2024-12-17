@@ -32,6 +32,7 @@ const toolbarItems = [
   'numberedList',
   'bulletedList',
   'checklist',
+  'table',
   '|',
   'alignLeft',
   'alignCenter',

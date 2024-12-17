@@ -3,8 +3,9 @@ import katex from 'katex';
 import * as CodeMirror from 'lake-codemirror';
 import { Editor, Toolbar, toHex, icons } from 'lakelib';
 
-window.katex = katex.default;
+window.katex = katex;
 window.LakeCodeMirror = CodeMirror;
+window.Editor = Editor;
 
 const colors = [
   '#E53333', '#E56600', '#FF9900', '#64451D', '#DFC5A4', '#FFE500',

@@ -3,8 +3,9 @@ import katex from 'katex';
 import * as CodeMirror from 'lake-codemirror';
 import { Editor, query, Button } from 'lakelib';
 
-window.katex = katex.default;
+window.katex = katex;
 window.LakeCodeMirror = CodeMirror;
+window.Editor = Editor;
 
 function createToolbar(config) {
   const editor = config.editor;
