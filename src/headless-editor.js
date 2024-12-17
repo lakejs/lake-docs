@@ -1,14 +1,14 @@
 import 'katex/dist/katex.css';
 import katex from 'katex';
 import * as CodeMirror from 'lake-codemirror';
-import { Editor, Utils, Button } from 'lakelib';
+import { Editor, query, Button } from 'lakelib';
 
 window.katex = katex.default;
 window.LakeCodeMirror = CodeMirror;
 
 function createToolbar(config) {
   const editor = config.editor;
-  const toolbarRoot = Utils.query(config.root);
+  const toolbarRoot = query(config.root);
   toolbarRoot.addClass('lake-custom-properties');
   const buttonList = [];
   // Heading

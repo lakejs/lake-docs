@@ -1,7 +1,7 @@
 import 'katex/dist/katex.css';
 import katex from 'katex';
 import * as CodeMirror from 'lake-codemirror';
-import { Editor, Toolbar, Utils, icons } from 'lakelib';
+import { Editor, Toolbar, toHex, icons } from 'lakelib';
 
 window.katex = katex.default;
 window.LakeCodeMirror = CodeMirror;
@@ -49,7 +49,7 @@ const fontColor = {
   menuItems: colorMenuItems,
   selectedValues: appliedItems => {
     const currentValue = appliedItems[0].node.computedCSS('color');
-    return [Utils.toHex(currentValue)];
+    return [toHex(currentValue)];
   },
   onSelect: (editor, value) => {
     editor.command.execute('fontColor', value);
@@ -69,7 +69,7 @@ const highlight = {
   menuItems: colorMenuItems,
   selectedValues: appliedItems => {
     const currentValue = appliedItems[0].node.computedCSS('background-color');
-    return [Utils.toHex(currentValue)];
+    return [toHex(currentValue)];
   },
   onSelect: (editor, value) => {
     editor.command.execute('highlight', value);
