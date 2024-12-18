@@ -105,46 +105,96 @@ new Toolbar({
 
 The following items are currently available.
 
-```js
-[
-  'undo',
-  'redo',
-  'heading',
-  'fontFamily',
-  'fontSize',
-  'formatPainter',
-  'removeFormat',
-  'bold',
-  'italic',
-  'underline',
-  'strikethrough',
-  'superscript',
-  'subscript',
-  'code',
-  'moreStyle',
-  'fontColor',
-  'highlight',
-  'list',
-  'numberedList',
-  'bulletedList',
-  'checklist',
-  'align',
-  'alignLeft',
-  'alignCenter',
-  'alignRight',
-  'alignJustify',
-  'indent',
-  'increaseIndent',
-  'decreaseIndent',
-  'image',
-  'link',
-  'codeBlock',
-  'blockQuote',
-  'paragraph',
-  'hr',
-  'selectAll',
-]
-```
+`undo`
+
+Undoes the last executed command.
+
+`redo`
+
+Redoes the previous undo command.
+
+`selectAll`
+
+Selects all of the content.
+
+`heading`
+
+Changes the selected block to heading.
+
+`paragraph`
+
+Changes the selected block to paragraph.
+
+`blockQuote`
+
+`list`
+
+`numberedList`
+
+`bulletedList`
+
+`checklist`
+
+`table`
+
+`align`
+
+`alignLeft`
+
+`alignCenter`
+
+`alignRight`
+
+`alignJustify`
+
+`indent`
+
+`increaseIndent`
+
+`decreaseIndent`
+
+`bold`
+
+`italic`
+
+`underline`
+
+`strikethrough`
+
+`superscript`
+
+`subscript`
+
+`code`
+
+`fontFamily`
+
+`fontSize`
+
+`fontColor`
+
+`highlight`
+
+`removeFormat`
+
+`formatPainter`
+
+`moreStyle`
+
+`link`
+
+`hr`
+
+`codeBlock`
+
+`image`
+
+`video`
+
+`file`
+
+`equation`
+
 
 You can also set a customized item, which type is the `ToolbarItem`.
 
