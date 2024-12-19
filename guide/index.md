@@ -129,6 +129,21 @@ new Editor({
 });
 ```
 
+## File
+
+Uploading file requires request config. For more details, see the [file configuration](/reference/index.md#file).
+
+```js
+new Editor({
+  root: '.my-content',
+  file: {
+    requestMethod: 'POST',
+    requestAction: '/upload',
+    requestTypes: ['application/zip', 'application/pdf'],
+  },
+});
+```
+
 ## Code block
 
 This feature depends on CodeMirror, so you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page.

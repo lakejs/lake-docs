@@ -7,6 +7,8 @@ title: Editor configuration
 
 You can configure the editor using the parameter of the `Editor` class.
 
+Example:
+
 ```js
 const editor = new Editor({
   root: '.my-content',
@@ -17,9 +19,9 @@ editor.render();
 
 ## root
 
-* Type: `CSS selector | DOM element`
-
 An element to which the editor is appended.
+
+* Type: `CSS selector | DOM element`
 
 CSS selector:
 
@@ -39,9 +41,11 @@ new Editor({
 
 ## toolbar
 
+An toolbar object. If not given, the editor will be rendered without toolbar. For more information about toolbar, see [Toolbar configuration](/reference/toolbar-config.md).
+
 * Type: `Toolbar`
 
-An toolbar object. If not given, the editor will be rendered without toolbar. For more information about toolbar, see [Toolbar configuration](/reference/toolbar-config.md).
+Example:
 
 ```js
 const toolbar = new Toolbar({
@@ -54,10 +58,12 @@ new Editor({
 
 ## value
 
+The default content of the editor. The format is [Lake Markup Language (LML)](./content-format.md) similar to HTML.
+
 * Type: `string`
 * Default: `<p><br /></p>`
 
-The default content of the editor. The format is [Lake Markup Language (LML)](./content-format.md) similar to HTML.
+Example:
 
 ```js
 const defaultValue = `
@@ -72,10 +78,12 @@ new Editor({
 
 ## readonly
 
+Whether the editor is in read-only mode. Setting it to `true` can be used to display the content in the view page. You can visit the [read-only example](/examples/readonly) to see how it displays.
+
 * Type: `boolean`
 * Default: `false`
 
-Whether the editor is in read-only mode. Setting it to `true` can be used to display the content in the view page. You can visit the [read-only example](/examples/readonly) to see how it displays.
+Example:
 
 ```js
 new Editor({
@@ -85,10 +93,12 @@ new Editor({
 
 ## spellcheck
 
+Whether the editor is checked for spelling errors. For more details on `spellcheck`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck).
+
 * Type: `boolean`
 * Default: `false`
 
-Whether the editor is checked for spelling errors. For more details on `spellcheck`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck).
+Example:
 
 ```js
 new Editor({
@@ -98,10 +108,12 @@ new Editor({
 
 ## tabIndex
 
+The tab order of the editor. For more details on `tabIndex`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
+
 * Type: `number`
 * Default: `0`
 
-The tab order of the editor. For more details on `tabIndex`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
+Example:
 
 ```js
 new Editor({
@@ -109,15 +121,13 @@ new Editor({
 });
 ```
 
-:::warning
-You are recommended to only use 0 and -1 as tabIndex values. Avoid using tabIndex values greater than 0.
-:::
-
 ## placeholder
+
+The text displayed in the editor when the editor has no content.
 
 * Type: `string`
 
-The text displayed in the editor when the editor has no content.
+Example:
 
 ```js
 new Editor({
@@ -127,10 +137,12 @@ new Editor({
 
 ## indentWithTab
 
+The `indentWithTab` defines whether the content can be indented by `Tab` key. When the value is false, you can use `Tab` or `Shift-Tab` to move the focus. The [comment box example](/examples/comment-box) demonstrates how it works.
+
 * Type: `boolean`
 * Default: `true`
 
-The `indentWithTab` defines whether the content can be indented by `Tab` key. When the value is false, you can use `Tab` or `Shift-Tab` to move the focus. The [comment box example](/examples/comment-box) demonstrates how it works.
+Example:
 
 ```js
 new Editor({
@@ -140,10 +152,12 @@ new Editor({
 
 ## lang
 
+The `lang` defines the language in which the UI should be displayed. You can visit the [internationalization example](/examples/internationalization.md) to see how it displays.
+
 * Type: `'en-US' | 'zh-CN' | 'ko' | 'ja'`
 * Default: `en-US`
 
-The `lang` defines the language in which the UI should be displayed. You can visit the [internationalization example](/examples/internationalization.md) to see how it displays.
+Example:
 
 ```js
 new Editor({
@@ -153,10 +167,12 @@ new Editor({
 
 ## minChangeSize
 
+The minimum length of the text for saving history. If the inputted text is shorter than the `minChangeSize`, the history will not be saved until the length reaches or exceeds this threshold.
+
 * Type: `number`
 * Default: `5`
 
-The minimum length of the text for saving history. If the inputted text is shorter than the `minChangeSize`, the history will not be saved until the length reaches or exceeds this threshold.
+Example:
 
 ```js
 new Editor({
@@ -166,10 +182,12 @@ new Editor({
 
 ## historySize
 
+The maximum length of the history. When this threshold is reached, the earliest item in the history will be removed.
+
 * Type: `number`
 * Default: `100`
 
-The maximum length of the history. When this threshold is reached, the earliest item in the history will be removed.
+Example:
 
 ```js
 new Editor({
@@ -177,13 +195,98 @@ new Editor({
 });
 ```
 
+## slash
+
+### items
+
+The items of the slash commands.
+
+* Type: `(string | SlashItem)[]`
+* Default:
+
+```js
+[
+  'heading1',
+  'heading2',
+  'heading3',
+  'heading4',
+  'heading5',
+  'heading6',
+  'paragraph',
+  'blockQuote',
+  'numberedList',
+  'bulletedList',
+  'checklist',
+  'table',
+  'hr',
+];
+```
+
+Example:
+
+```js
+new Editor({
+  slash: [
+    'image',
+    'heading1',
+    'paragraph',
+    'blockQuote',
+    'numberedList',
+    'bulletedList',
+    'checklist',
+    'table',
+    'hr',
+  ],
+});
+```
+
+The following items are currently available.
+
+`heading1`
+
+`heading2`
+
+`heading3`
+
+`heading4`
+
+`heading5`
+
+`heading6`
+
+`paragraph`
+
+`blockQuote`
+
+`numberedList`
+
+`bulletedList`
+
+`checklist`
+
+`table`
+
+`hr`
+
+`codeBlock`
+
+`video`
+
+`equation`
+
+`image`
+
+`file`
+
 ## image
 
 ### requestAction
 
+The request URL for uploading image.
+
 * Type: `URL`
 
-The `requestAction` defines the request URL, and its return value should follow the following format:
+Its response data should follow the following format:
 
 ```json
 {
@@ -193,17 +296,19 @@ The `requestAction` defines the request URL, and its return value should follow 
 
 ### requestMethod
 
+The request method for uploading image.
+
 * Type: `'POST' | 'PUT' | 'PATCH'`
 * Default: `POST`
 
-The request method for uploading image.
-
 ### requestTypes
 
-The `requestTypes` defines the MIME types allowed for uploading image.
+The MIME types allowed for uploading image.
 
 * Type: `string[]`
 * Default: `['image/gif', 'image/jpeg', 'image/png', 'image/svg+xml']`
+
+Example:
 
 ```js
 new Editor({
@@ -215,13 +320,77 @@ new Editor({
 });
 ```
 
+## file
+
+### requestAction
+
+The request URL for uploading file.
+
+* Type: `URL`
+
+Its response data should follow the following format:
+
+```json
+{
+  "url": "http://example.com/foo.pdf"
+}
+```
+
+### requestMethod
+
+The request method for uploading file.
+
+* Type: `'POST' | 'PUT' | 'PATCH'`
+* Default: `POST`
+
+### requestTypes
+
+The MIME types allowed for uploading file.
+
+* Type: `string[]`
+* Default:
+
+```js
+[
+  'application/zip',
+  'application/x-zip-compressed',
+  'application/vnd.rar',
+  'image/gif',
+  'image/jpeg',
+  'image/png',
+  'image/svg+xml',
+  'text/plain',
+  'text/html',
+  'application/pdf',
+  'application/msword',
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  'application/vnd.ms-excel',
+  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  'application/vnd.ms-powerpoint',
+  'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+]
+```
+
+Example:
+
+```js
+new Editor({
+  image: {
+    requestMethod: 'POST',
+    requestAction: '/upload',
+    requestTypes: ['application/zip', 'application/pdf'],
+  },
+});
+```
+
 ## codeBlock
 
 ### langList
 
-* Type: `string[]`
+The language types for the dropdown.
 
-The `langList` defines the language types for the dropdown box. The following types are currently available.
+* Type: `string[]`
+* Default:
 
 ```js
 [
@@ -248,16 +417,77 @@ The `langList` defines the language types for the dropdown box. The following ty
 
 ### defaultLang
 
+The default language type.
+
 * Type: `string`
 * Default: `text`
 
-The default language type.
+Example:
 
 ```js
 new Editor({
   codeBlock: {
     langList: ['text', 'html', 'css', 'javascript'],
     defaultLang: 'javascript',
+  },
+});
+```
+
+## mention
+
+### requestAction
+
+The request URL for getting user list.
+
+* Type: `URL`
+
+Its response data should follow the following format:
+
+```json
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "foo",
+      "nickname": "Foo",
+      "avatar": "<img src=\"/images/foo.png\" />"
+    },
+    {
+      "id": "2",
+      "name": "bar",
+      "nickname": "Bar",
+      "avatar": "<img src=\"/images/bar.png\" />"
+    }
+  ]
+}
+```
+
+### requestMethod
+
+The request method for getting user list.
+
+* Type: `'GET' | 'POST' | 'PUT' | 'PATCH'`
+* Default: `GET`
+
+### getProfileUrl
+
+A function that returns a URL to visit the user profile.
+
+* Type: `function`
+* Default:
+
+```js
+(value: MentionItem) => `/${value.name}`
+```
+
+Example:
+
+```js
+new Editor({
+  mention: {
+    requestMethod: 'GET',
+    requestAction: '/mention/list',
+    getProfileUrl: value => `/user/${value.id}`
   },
 });
 ```
