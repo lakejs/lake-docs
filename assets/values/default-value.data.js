@@ -116,7 +116,7 @@ export default {
   <i>Italic</i>,
   <u>Underline</u>,
   <s>Strikethrough</s>,
-  <span style="font-family: 'Arial Black';">Font family</span>,
+  <span style="font-family: 'Arial Black';">Font name</span>,
   <span style="font-size: 24px;">Font size</span>,
   <span style="color: #F5222D;">Font color</span>,
   <span style="background-color: #FADB14;">Highlight</span>,

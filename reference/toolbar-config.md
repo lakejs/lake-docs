@@ -107,102 +107,173 @@ The following items are currently available.
 
 `undo`
 
-Undoes the last executed command.
+A button that undoes the last executed command.
 
 `redo`
 
-Redoes the previous undo command.
+A button that redoes the previous undo command.
 
 `selectAll`
 
-Selects all of the content.
+A button that selects all of the content.
 
 `heading`
 
-Changes the selected block to heading.
+A dropdown that changes a block containing the current selection to a heading.
 
 `paragraph`
 
-Changes the selected block to paragraph.
+A button that changes a block containing the current selection to a paragraph.
 
 `blockQuote`
 
+A button that changes a block containing the current selection to a block quotation.
+
 `list`
+
+A dropdown that changes a block containing the current selection to a list.
 
 `numberedList`
 
+A button that changes a block containing the current selection to a numbered list.
+
 `bulletedList`
+
+A button that changes a block containing the current selection to a bulleted list.
 
 `checklist`
 
+A button that changes a block containing the current selection to a checklist.
+
 `table`
+
+A button that inserts a table into the current selection.
 
 `align`
 
+A dropdown that changes the horizontal alignment.
+
 `alignLeft`
+
+A button that aligns the inline contents to the left.
 
 `alignCenter`
 
+A button that centers the inline contents.
+
 `alignRight`
+
+A button that aligns the inline contents to the right.
 
 `alignJustify`
 
+A button that justifies the inline contents.
+
 `indent`
+
+A dropdown that changes the indent.
 
 `increaseIndent`
 
+A button that increases the indent for the current block.
+
 `decreaseIndent`
+
+A button that decreases the indent for the current block.
 
 `bold`
 
+A button that toggles bold on/off for the current selection.
+
 `italic`
+
+A button that toggles italic on/off for the current selection.
 
 `underline`
 
+A button that toggles underline on/off for the current selection.
+
 `strikethrough`
+
+A button that toggles strikethrough on/off for the current selection.
 
 `superscript`
 
+A button that toggles superscript on/off for the current selection.
+
 `subscript`
+
+A button that toggles subscript on/off for the current selection.
 
 `code`
 
+A button that toggles inline code on/off for the current selection.
+
 `fontFamily`
+
+A dropdown that changes the font name for the current selection.
 
 `fontSize`
 
+A dropdown that changes the font size for the current selection.
+
 `fontColor`
+
+A color picker that changes the font color for the current selection.
 
 `highlight`
 
+A color picker that changes the background color for the current selection.
+
 `removeFormat`
+
+A button that removes all inline formatting for the current selection.
 
 `formatPainter`
 
+A button that replicates the inline formatting of the selected text.
+
 `moreStyle`
+
+A dropdown that includes inline formatting items.
 
 `link`
 
+A button that creates a hyperlink for the selected text.
+
 `hr`
+
+A button that inserts a horizontal line.
 
 `codeBlock`
 
+A button that inserts a code block.
+
 `image`
+
+A button that uploads and inserts an image.
 
 `video`
 
+A button that inserts a video.
+
 `file`
+
+A button that uploads and inserts a file.
 
 `equation`
 
+A button that inserts a mathematical formula.
 
-You can also set a customized item, which type is the `ToolbarItem`.
+### Customizing item
+
+You can also set a customized item using the `ToolbarItem`.
 
 ```ts
 type ToolbarItem = ToolbarButtonItem | ToolbarDropdownItem;
 ```
 
-### Button item
+#### Button item
 
 ```ts
 type ToolbarButtonItem = {
@@ -242,7 +313,7 @@ new Toolbar({
 });
 ```
 
-### Dropdown item
+#### Dropdown item
 
 ```ts
 type DropdownMenuItem = {

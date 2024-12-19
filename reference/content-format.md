@@ -189,12 +189,12 @@ The `<s>` tag represents strikethrough, which renders text with a strikethrough 
 <s>Strikethrough</s>
 ```
 
-## Font family
+## Font name
 
-The `<span>` tag with its `font-family` property represents font family, which sets a font family name for the selected text.
+The `<span>` tag with its `font-family` property represents font name, which sets a font name for the selected text.
 
 ```html
-<span style="font-family: 'Arial Black';">Font family</span>
+<span style="font-family: 'Arial Black';">Font name</span>
 ```
 
 ## Font size
