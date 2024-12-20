@@ -3,6 +3,7 @@ layout: doc
 title: Read-only mode
 prev: false
 next: false
+editLink: false
 lastUpdated: false
 ---
 

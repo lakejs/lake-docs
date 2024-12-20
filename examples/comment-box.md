@@ -3,6 +3,7 @@ layout: doc
 title: Comment box
 prev: false
 next: false
+editLink: false
 lastUpdated: false
 ---
 

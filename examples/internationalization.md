@@ -3,6 +3,7 @@ layout: doc
 title: Internationalization
 prev: false
 next: false
+editLink: false
 lastUpdated: false
 ---
 

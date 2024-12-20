@@ -3,6 +3,7 @@ layout: doc
 title: Headless editor
 prev: false
 next: false
+editLink: false
 lastUpdated: false
 ---
 
