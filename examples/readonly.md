@@ -1,6 +1,9 @@
 ---
 layout: doc
 title: Read-only mode
+prev: false
+next: false
+lastUpdated: false
 ---
 
 # {{ $frontmatter.title }}

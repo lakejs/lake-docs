@@ -1,6 +1,9 @@
 ---
 layout: doc
 title: Comment box
+prev: false
+next: false
+lastUpdated: false
 ---
 
 # {{ $frontmatter.title }}

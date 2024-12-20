@@ -1,6 +1,9 @@
 ---
 layout: doc
 title: Internationalization
+prev: false
+next: false
+lastUpdated: false
 ---
 
 # {{ $frontmatter.title }}

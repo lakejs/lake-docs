@@ -7,6 +7,7 @@ export default defineConfig({
   assetsDir: 'static',
   appearance: false,
   cleanUrls: true,
+  lastUpdated: true,
   lang: 'en-US',
   title: "Lake",
   description: "Lake is a browser-based rich text editor designed for creating content such as blogs, comments, and emails.",
@@ -62,6 +63,10 @@ export default defineConfig({
     },
     outline: {
       level: 'deep',
+    },
+    editLink: {
+      pattern: 'https://github.com/lakejs/lake-docs/tree/main/:path',
+      text: 'View this page on GitHub'
     },
     footer: {
       message: 'Released under the MIT License.',

@@ -1,6 +1,9 @@
 ---
 layout: doc
 title: Headless editor
+prev: false
+next: false
+lastUpdated: false
 ---
 
 # {{ $frontmatter.title }}
