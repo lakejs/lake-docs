@@ -7,7 +7,7 @@ export default defineConfig({
   assetsDir: 'static',
   appearance: false,
   cleanUrls: true,
-  lastUpdated: true,
+  lastUpdated: false,
   lang: 'en-US',
   title: "Lake",
   description: "Lake is a browser-based rich text editor designed for creating content such as blogs, comments, and emails.",
@@ -47,8 +47,8 @@ export default defineConfig({
       '/guide/': [{
         text: 'Guide',
         items: [
-          { text: 'Introduction', link: '/guide/introduction' },
-          { text: 'Getting started', link: '/guide/' },
+          { text: 'Introduction', link: '/guide/' },
+          { text: 'Getting started', link: '/guide/getting-started' },
         ],
       }],
       '/reference/': [{
