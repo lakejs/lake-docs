@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: Editor configuration
+title: Editor config
 ---
 
 # {{ $frontmatter.title }}
 
-You can configure the editor using the parameter of the `Editor` class.
+You can configure the editor using the parameter of the constructor of the [Editor](/reference/editor.md) class.
 
 Example:
 
@@ -21,7 +21,7 @@ editor.render();
 
 An element to which the editor is appended.
 
-* Type: `CSS selector | DOM element`
+* Type: [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) | [DOM Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) | `Nodes`
 
 CSS selector:
 
@@ -39,9 +39,17 @@ new Editor({
 });
 ```
 
+Nodes:
+
+```js
+new Editor({
+  root: query('.my-content'),
+});
+```
+
 ## toolbar
 
-An toolbar object. If not given, the editor will be rendered without toolbar. For more information about toolbar, see [Toolbar configuration](/reference/toolbar-config.md).
+An toolbar object. If not given, the editor will be rendered without toolbar. For more information about toolbar, see the [toolbar config](/reference/toolbar-config.md).
 
 * Type: `Toolbar`
 

@@ -34,7 +34,7 @@ export default defineConfig({
       '/examples/': [{
         text: 'Examples',
         items: [
-          { text: 'Default configuration', link: '/examples/' },
+          { text: 'Default config', link: '/examples/' },
           { text: 'Feature-rich editor', link: '/examples/feature-rich' },
           { text: 'Comment box', link: '/examples/comment-box' },
           { text: 'Headless editor', link: '/examples/headless' },
@@ -54,15 +54,17 @@ export default defineConfig({
       '/reference/': [{
         text: 'Reference',
         items: [
-          { text: 'Editor configuration', link: '/reference/' },
-          { text: 'Toolbar configuration', link: '/reference/toolbar-config' },
+          { text: 'Editor config', link: '/reference/' },
+          { text: 'Editor class', link: '/reference/editor' },
+          { text: 'Toolbar config', link: '/reference/toolbar-config' },
+          { text: 'Toolbar class', link: '/reference/toolbar' },
           { text: 'Content format', link: '/reference/content-format' },
           { text: 'Markdown shortcuts', link: '/reference/markdown' },
         ],
       }],
     },
     outline: {
-      level: 'deep',
+      level: 2,
     },
     editLink: {
       pattern: 'https://github.com/lakejs/lake-docs/tree/main/:path',

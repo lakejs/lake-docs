@@ -1,6 +1,7 @@
 ---
 layout: doc
 title: Introduction
+outline: false
 ---
 
 # {{ $frontmatter.title }}

@@ -116,7 +116,7 @@ editor.event.on('statechange', state => {
 
 ## Image
 
-Uploading image requires request config. For more details, see the [image configuration](/reference/index.md#image).
+Uploading image requires request config. For more details, see the [image config](/reference/index.md#image).
 
 ```js
 new Editor({
@@ -131,7 +131,7 @@ new Editor({
 
 ## File
 
-Uploading file requires request config. For more details, see the [file configuration](/reference/index.md#file).
+Uploading file requires request config. For more details, see the [file config](/reference/index.md#file).
 
 ```js
 new Editor({

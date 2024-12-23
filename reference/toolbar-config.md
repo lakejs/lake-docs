@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: Toolbar configuration
+title: Toolbar config
 ---
 
 # {{ $frontmatter.title }}
 
-You can configure the toolbar using the parameter of the `Toolbar` class.
+You can configure the toolbar using the parameter of the constructor of the [Toolbar](/reference/toolbar.md) class.
 
 ```js
 import { Toolbar } from 'lakelib';
