@@ -5,7 +5,7 @@ title: Editor config
 
 # {{ $frontmatter.title }}
 
-You can configure the editor using the parameter of the constructor of the [Editor](/reference/editor.md) class.
+The config is the parameter of the constructor of the [Editor](/reference/editor.md) class, it allows you to customize various aspects of the editor.
 
 Example:
 
@@ -21,7 +21,7 @@ editor.render();
 
 An element to which the editor is appended.
 
-* Type: [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) | [DOM Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) | `Nodes`
+* Type: [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) | [DOM element](https://developer.mozilla.org/en-US/docs/Web/API/Element) | `Nodes`
 
 CSS selector:
 

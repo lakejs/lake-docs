@@ -5,7 +5,9 @@ title: Toolbar config
 
 # {{ $frontmatter.title }}
 
-You can configure the toolbar using the parameter of the constructor of the [Toolbar](/reference/toolbar.md) class.
+The config is the parameter of the constructor of the [Toolbar](/reference/toolbar.md) class, it allows you to customize the toolbar.
+
+Example:
 
 ```js
 import { Toolbar } from 'lakelib';
@@ -62,11 +64,12 @@ const toolbarItems = [
 
 ## root
 
-* Type: `CSS selector | DOM element`
-
 An element to which the toolbar is appended.
 
+* Type: [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) | [DOM element](https://developer.mozilla.org/en-US/docs/Web/API/Element) | `Nodes`
+
 CSS selector:
+
 ```js
 new Toolbar({
   root: '.my-toolbar',
@@ -74,17 +77,28 @@ new Toolbar({
 ```
 
 DOM element:
+
 ```js
 new Toolbar({
   root: document.querySelector('.my-toolbar'),
 });
 ```
 
+Nodes:
+
+```js
+new Toolbar({
+  root: query('.my-toolbar'),
+});
+```
+
 ## items
+
+The buttons of the toolbar. The `|` character represents a divider, and other strings represent the names of built-in items.
 
 * Type: `(string | ToolbarItem)[]`
 
-The `items` defines the buttons of the toolbar. The `|` character represents a divider, and other strings represent built-in items.
+Example:
 
 ```js
 import { Toolbar } from 'lakelib';
@@ -100,6 +114,7 @@ new Toolbar({
   items: toolbarItems,
 });
 ```
+
 
 ### Built-in items
 
@@ -388,11 +403,13 @@ new Toolbar({
 
 ## placement
 
+The position of the toolbar, either above or below the editing area.
+If the value is set to `bottom`, the menu of dropdowns in the toolbar is displayed above the toolbar.
+
 * Type: `top | bottom`
 * Default: `top`
 
-The `placement` defines the position of the toolbar, either above or below the editing area.
-If the value is set to `bottom`, the menu of dropdowns in the toolbar is displayed above the toolbar.
+Example:
 
 ```js
 new Toolbar({
