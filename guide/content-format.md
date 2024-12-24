@@ -5,11 +5,11 @@ title: Content format
 
 # {{ $frontmatter.title }}
 
-Lake uses a Lake Markup Language (LML) format similar to HTML to describe the content of the editor.
+Lake uses `Lake Markup Language (LML)` format similar to HTML to describe the content of the editor.
 
 ## Selection
 
-The `<focus />` tag represents the current position of the caret.
+The `<focus />` tag represents the current position of the cursor.
 
 ```xml
 <p>This is the paragraph of text.<focus /></p>
@@ -41,7 +41,7 @@ Attributes:
 
 * focus: `start | center | end`
 
-  The position of the caret in the box.
+  The position of the cursor in the box.
 
 ```xml
 <lake-box type="block" name="hr" focus="start"></lake-box>

@@ -49,6 +49,8 @@ export default defineConfig({
         items: [
           { text: 'Introduction', link: '/guide/' },
           { text: 'Getting started', link: '/guide/getting-started' },
+          { text: 'Content format', link: '/guide/content-format' },
+          { text: 'Markdown shortcuts', link: '/guide/markdown' },
         ],
       }],
       '/reference/': [{
@@ -58,8 +60,6 @@ export default defineConfig({
           { text: 'Toolbar config', link: '/reference/toolbar-config' },
           { text: 'Editor class', link: '/reference/editor' },
           { text: 'Toolbar class', link: '/reference/toolbar' },
-          { text: 'Content format', link: '/reference/content-format' },
-          { text: 'Markdown shortcuts', link: '/reference/markdown' },
         ],
       }],
     },

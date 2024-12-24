@@ -70,7 +70,7 @@ An instance of the `EventEmitter` class.
 
 ### selection <Badge type="info" text="Read only" />
 
-An instance of the `Selection` class representing the range of text selected by the user or the current position of the caret.
+An instance of the `Selection` class representing the range of text selected by the user or the current position of the cursor.
 
 * Type: `Selection`
 
