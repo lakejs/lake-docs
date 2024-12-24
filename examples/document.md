@@ -42,6 +42,7 @@ const toolbarItems = [
   'specialCharacter',
   'codeBlock',
   'equation',
+  'table',
   'blockQuote',
   'hr',
 ];
@@ -60,6 +61,7 @@ const slashItems = [
   'numberedList',
   'bulletedList',
   'checklist',
+  'table',
   'hr',
   'codeBlock',
   'video',

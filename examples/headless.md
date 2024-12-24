@@ -9,7 +9,7 @@ lastUpdated: false
 
 # {{ $frontmatter.title }}
 
-This example demonstrates how to customize a toolbar that is well adapted to your needs.
+This example shows how to customize a toolbar that is well adapted to your needs.
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';

@@ -9,7 +9,7 @@ lastUpdated: false
 
 # {{ $frontmatter.title }}
 
-This page demonstrates how the editor displays different language user interfaces. You can change the language by setting the config [lang](/reference/index.md#lang).
+This page shows how the editor displays different language user interfaces. You can change the language by setting the [lang](/reference/index.md#lang) config.
 
 ## English
 

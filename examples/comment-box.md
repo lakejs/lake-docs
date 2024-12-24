@@ -9,7 +9,7 @@ lastUpdated: false
 
 # {{ $frontmatter.title }}
 
-This example demonstrates how to use the Lake as a comment box.
+This example shows how to use Lake as a comment box.
 
 <CommentBox />
 

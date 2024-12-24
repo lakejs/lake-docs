@@ -3,7 +3,7 @@ layout: example
 title: Feature-rich editor
 ---
 
-This example demonstrates most of the available features. For more information on customizing the toolbar, see the [toolbar config](/reference/toolbar-config.md).
+This example shows most of the available features. For more information on customizing the toolbar, see the [toolbar config](/reference/toolbar-config.md).
 
 <script setup>
 import { data } from '../assets/values/default-value.data.js';
@@ -32,7 +32,6 @@ const toolbarItems = [
   'numberedList',
   'bulletedList',
   'checklist',
-  'table',
   '|',
   'alignLeft',
   'alignCenter',
@@ -50,6 +49,7 @@ const toolbarItems = [
   'specialCharacter',
   'codeBlock',
   'equation',
+  'table',
   'blockQuote',
   'paragraph',
   'hr',
