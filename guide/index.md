@@ -10,10 +10,10 @@ Lake is a browser-based rich text editor designed for creating content such as b
 
 ## Why?
 
-There are many editors out there, but they often either lack key features or are not open enough, finding one that fully fits your needs is not easy. There are usually two types of editors:
+There are many rich text editors out there, but finding one that fully meets your needs is not easy. They often either lack key features or are not open enough. There are usually two types of editors:
 
 * Basic: These editors often lack some features that are essential to you. You need to spend a lot of time to add these features, and the people who do this work need to have advanced programming skills for customization.
 
-* Commercial: These editors usually have the necessary features, but it is not easy to customize because of their complex structures. Most importantly, they require a paid license for commercial use.
+* Commercial: These editors usually include the features you need, but you need to buy a license for commercial use. Furthermore, it is not easy to customize because of their complex structures.
 
-Lake aims to provide as many features as possible while being free for commercial use.
+Lake aims to provide as many features as possible with a simple structure while being free for commercial use under the MIT license.
