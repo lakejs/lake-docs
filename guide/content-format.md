@@ -127,6 +127,30 @@ If `<ul>`'s `type` is `checklist`, the `<ul>` tag with `<li>` represents an item
 <ul type="checklist"><li value="false">third item</li></ul>
 ```
 
+## Table
+
+The `<table>` tag represents tabular data. The `<tr>` tag represents a row of cells in a table. The `<td>` tag represents a cell of a table that contains data.
+
+```html
+<table>
+  <tr>
+    <td>Person</td>
+    <td>Most interest in</td>
+    <td>Age</td>
+  </tr>
+  <tr>
+    <td>Chris</td>
+    <td>HTML tables</td>
+    <td>22</td>
+  </tr>
+  <tr>
+    <td>Dennis</td>
+    <td>Web accessibility</td>
+    <td>45</td>
+  </tr>
+</table>
+```
+
 ## Block indentation
 
 The block tag with its `margin-left` property represents the indentation of a block.
