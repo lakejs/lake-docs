@@ -92,6 +92,22 @@ const editor = new Editor({
 editor.render();
 ```
 
+## Default content
+
+You can set the default content using the [value](/reference/#value) config when initializing the editor.
+
+```js
+const defaultValue = `
+  <h1>title</h1>
+  <p>content<focus /></p>
+`;
+new Editor({
+  root: '.my-content',
+  toolbar,
+  value: defaultValue,
+});
+```
+
 ## Binding events
 
 ### `change` event
