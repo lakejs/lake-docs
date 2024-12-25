@@ -7,7 +7,7 @@ title: Getting started
 
 ## Downloading Lake from CDN
 
-Compressed files are available under the `dist` directory in the distribution. You can download them from jsDelivr or UNPKG.
+Bundled files are available in the `dist` folder of the distribution. You can download them from jsDelivr or UNPKG.
 
 * jsDelivr: https://www.jsdelivr.com/package/npm/lakelib
 * UNPKG: https://unpkg.com/browse/lakelib/

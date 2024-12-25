@@ -25,4 +25,4 @@ Lake aims to provide as many features as possible with a simple structure while 
 
 * **Stability**: Lake uses extensive test cases to ensure its stability. All of its features have been carefully tested.
 
-* **Easy customization**: Lake's interface and data model is based on the DOM. This means you can do anything that you can do in the DOM.
+* **Easy customization**: Lake's interface and data model is based on the DOM. This means you can do anything that can be done in the DOM.
