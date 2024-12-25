@@ -7,14 +7,14 @@ title: Getting started
 
 ## Downloading Lake from CDN
 
-Compressed copies of Lake files are available, you can download them from jsDelivr or UNPKG.
+Compressed files are available under the `dist` directory in the distribution. You can download them from jsDelivr or UNPKG.
 
 * jsDelivr: https://www.jsdelivr.com/package/npm/lakelib
 * UNPKG: https://unpkg.com/browse/lakelib/
 
 ## Downloading Lake using npm
 
-Lake is registered as a package on npm, you can install the latest version with the following npm command:
+Lake is published on npm under the [lakelib](https://www.npmjs.com/package/lakelib) package. You can install the latest version with the following command:
 
 ```bash
 npm install lakelib
@@ -29,7 +29,7 @@ Add the following lines of code in the `<head>` of your HTML page.
 <script src="https://cdn.jsdelivr.net/npm/lakelib@latest/dist/lake.min.js"></script>
 ```
 
-In the HTML page, add the following code that will serve as a placeholder for an editor instance.
+In the HTML page, add the following code that will serve as placeholders for the toolbar and the editor.
 
 ```html
 <div class="my-editor">
@@ -67,7 +67,7 @@ editor.render();
 
 ## Quick start with npm
 
-In the HTML page, add the following code that will serve as a placeholder for an editor instance.
+In the HTML page, add the following code that will serve as placeholders for the toolbar and the editor.
 
 ```html
 <div class="my-editor">
@@ -114,9 +114,9 @@ editor.event.on('statechange', state => {
 });
 ```
 
-## Image
+## Uploading images
 
-Uploading image requires request config. For more details, see the [image config](/reference/index.md#image).
+This feature requires configuring the request settings for the image plugin. For more details, see the [image config](/reference/index.md#image).
 
 ```js
 new Editor({
@@ -129,9 +129,9 @@ new Editor({
 });
 ```
 
-## File
+## Uploading files
 
-Uploading file requires request config. For more details, see the [file config](/reference/index.md#file).
+This feature requires configuring the request settings for the file plugin. For more details, see the [file config](/reference/index.md#file).
 
 ```js
 new Editor({
@@ -146,9 +146,9 @@ new Editor({
 
 ## Code block
 
-This feature depends on CodeMirror, so you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page.
+This feature depends on [CodeMirror](https://codemirror.net/), so you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page.
 
-### CDN
+### Using CDN
 
 * jsDelivr: https://www.jsdelivr.com/package/npm/lake-codemirror
 * UNPKG: https://unpkg.com/browse/lake-codemirror/
@@ -157,7 +157,7 @@ This feature depends on CodeMirror, so you need to add [CodeMirror for Lake](htt
 <script src="https://cdn.jsdelivr.net/npm/lake-codemirror@latest/dist/codemirror.min.js"></script>
 ```
 
-### npm
+### Using npm
 
 ```js
 import 'lakelib/lib/lake.css';
@@ -174,9 +174,9 @@ editor.render();
 
 ## Mathematical formula
 
-This feature depends on KaTeX, so you need to add [KaTeX](https://katex.org/) to your HTML page.
+This feature depends on [KaTeX](https://katex.org/), so you need to add KaTeX to your HTML page.
 
-### CDN
+### Using CDN
 
 * jsDelivr: https://www.jsdelivr.com/package/npm/katex
 * UNPKG: https://unpkg.com/browse/katex/
@@ -186,7 +186,7 @@ This feature depends on KaTeX, so you need to add [KaTeX](https://katex.org/) to
 <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
 ```
 
-### npm
+### Using npm
 
 ```js
 import 'katex/dist/katex.css';
