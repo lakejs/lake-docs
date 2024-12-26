@@ -10,6 +10,8 @@ The config is the parameter of the constructor of the [Editor](/reference/editor
 Example:
 
 ```js
+import { Editor } from 'lakelib';
+
 const editor = new Editor({
   root: '.my-content',
   value: '<p>This is a paragraph.</p>',

@@ -11,6 +11,8 @@ The `Editor` class provides properties and methods for rendering and manipulatin
 Example:
 
 ```js
+import { Editor } from 'lakelib';
+
 const editor = new Editor({
   root: '.my-content',
 });
@@ -18,8 +20,56 @@ editor.render();
 editor.setValue('<p>foo</p>');
 ```
 
+## Static properties
 
-## Properties
+### version <Badge type="info" text="Read only" />
+
+The current version of Lake.
+
+* Type: `string`
+
+Example:
+
+```js
+const version = Editor.version;
+```
+
+
+### box <Badge type="info" text="Read only" />
+
+An instance of the `BoxManager` class managing the box components.
+
+* Type: `BoxManager`
+
+Example:
+
+```js
+const names = Editor.box.getNames();
+```
+
+
+### plugin <Badge type="info" text="Read only" />
+
+An instance of the `Plugin` class managing the plugins.
+
+* Type: `Plugin`
+
+Example:
+
+```js
+Editor.plugin.add('selectAll', editor => {
+  editor.command.add('selectAll', {
+    execute: () => {
+      const range = editor.selection.range;
+      range.selectNodeContents(editor.container);
+      range.shrink();
+    },
+  });
+});
+```
+
+
+## Instance properties
 
 ### root <Badge type="info" text="Read only" />
 
@@ -36,7 +86,7 @@ const root = editor.root;
 
 ### toolbar <Badge type="info" text="Read only" />
 
-The toolbar for the editor.
+An instance of the Toolbar class.
 
 * Type: [Toolbar](/reference/toolbar.md)
 
@@ -68,18 +118,6 @@ Example:
 
 ```js
 const container = editor.container;
-```
-
-### containerWrapper <Badge type="info" text="Read only" />
-
-The parent element of the [container](/reference/editor.md#container).
-
-* Type: `Nodes`
-
-Example:
-
-```js
-const containerWrapper = editor.containerWrapper;
 ```
 
 
@@ -168,7 +206,7 @@ editor.keystroke.setKeydown('mod+b', event => {
 
 ### box <Badge type="info" text="Read only" />
 
-An instance of the `BoxManager` class managing the `BoxComponent`.
+An instance of the `BoxManager` class managing the box components.
 
 * Type: `BoxManager`
 
@@ -207,7 +245,7 @@ const isComposing = editor.isComposing;
 
 ### popup <Badge type="info" text="Read only" />
 
-A pop-up component which is currently displayed, such as `LinkPopup`, `MentionMenu`, `SlashMenu` etc.
+A pop-up component which is currently displayed, such as `LinkPopup`, `MentionMenu`, and `SlashMenu`.
 
 * Type: `any`
 
@@ -220,7 +258,7 @@ const popup = editor.popup;
 
 ### locale <Badge type="info" text="Read only" />
 
-The property returns translation functions for the specified language.
+Returns translation functions for the specified language.
 
 * Type: `TranslationFunctions`
 
@@ -232,63 +270,25 @@ const locale = editor.locale;
 
 
 
-## Methods
-
-### hasFocus()
-
-The method returns a boolean value indicating whether the editor has focus.
-
-Parameters:
-
-None.
-
-Return value:
-
-`false` if the editor has no focus; `true` if the editor has focus.
-
-Example:
-
-```js
-const isFocused = editor.hasFocus();
-```
-
-
-### fixContent()
-
-The method fixes incorrect content, for example, adding paragraph for void element, removing empty tag.
-
-Parameters:
-
-None.
-
-Return value:
-
-`false` if the content has not changed; `true` if the content has changed.
-
-Example:
-
-```js
-editor.fixContent();
-```
-
+## Instance methods
 
 ### setPluginConfig()
 
-The method sets default config for the specified plugin.
+Sets the default config for the specified plugin.
 
-Parameters:
+* Parameters:
 
-`name`
+  `name`
 
-A string that specifies the name of a plugin.
+  A string that specifies the name of the plugin.
 
-`config`
+  `config`
 
-A key-value object that specifies the config for the plugin.
+  A key-value object that specifies the default config for the plugin.
 
-Return value:
+* Return value:
 
-None.
+  None.
 
 Example:
 
@@ -297,4 +297,196 @@ editor.setPluginConfig('image', {
   requestMethod: 'POST',
   requestTypes: ['image/gif', 'image/jpeg', 'image/png'],
 });
+```
+
+
+### fixContent()
+
+Fixes incorrect content, such as adding paragraphs for void elements or removing empty tags.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  `false` if the content has not changed. `true` if the content has changed.
+
+Example:
+
+```js
+editor.fixContent();
+```
+
+
+### renderBoxes()
+
+Renders all boxes that haven't been rendered yet.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+editor.renderBoxes();
+```
+
+
+### scrollToCursor()
+
+Scrolls to the cursor.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+editor.scrollToCursor();
+```
+
+
+### hasFocus()
+
+Checks whether the editor has focus.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  `false` if the editor has no focus. `true` if the editor has focus.
+
+Example:
+
+```js
+const isFocused = editor.hasFocus();
+```
+
+
+### focus()
+
+Sets focus on the editor.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+editor.focus();
+```
+
+
+### blur()
+
+Removes focus from the editor.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+editor.blur();
+```
+
+
+### setValue()
+
+Sets the specified content to the editor.
+
+* Parameters:
+
+  `value`
+
+  A string that conforms to the [LML format](/guide/content-format.md).
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+editor.setValue('<p>foo<focus /></p>');
+```
+
+
+### getValue()
+
+Returns the content of the editor.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A string that conforms to the [LML format](/guide/content-format.md).
+
+Example:
+
+```js
+const content = editor.getValue();
+```
+
+
+### render()
+
+Renders an editing area and sets default content to it.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+editor.render();
+```
+
+
+### unmount()
+
+Destroys the editor.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+editor.unmount();
 ```
