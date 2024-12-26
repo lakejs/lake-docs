@@ -32,7 +32,6 @@ export default defineConfig({
           { text: 'jsDelivr', link: 'https://www.jsdelivr.com/package/npm/lakelib', target: '_blank' },
           { text: 'UNPKG', link: 'https://unpkg.com/browse/lakelib/', target: '_blank' },
           { text: 'Changelog', link: 'https://github.com/lakejs/lake/blob/main/CHANGELOG.md', target: '_blank' },
-          { text: 'Issues', link: 'https://github.com/lakejs/lake/issues', target: '_blank' },
         ]
       }
     ],
@@ -76,8 +75,8 @@ export default defineConfig({
       level: 2,
     },
     editLink: {
-      pattern: 'https://github.com/lakejs/lake-docs/tree/main/:path',
-      text: 'View this page on GitHub'
+      pattern: 'https://github.com/lakejs/lake-docs/edit/main/:path',
+      text: 'Edit this page on GitHub'
     },
     footer: {
       message: 'Released under the MIT License.',
