@@ -21,8 +21,8 @@ Lake aims to provide as many features as possible with a simple structure while 
 
 * **Straightforward**: Lake strives to reduce the complexity of its code architecture, using native browser features as much as possible, and providing a simple and intuitive programming interface.
 
-* **High performance**: Lake works well with huge content. You can also cleanly copy and paste huge content from HTML page, Microsoft Word, Google Docs and more with high speed.
+* **High performance**: Lake works well with huge content. You can also cleanly copy and paste huge content from HTML page, Microsoft Word, Google Docs and more at high speed.
 
 * **Stability**: Lake uses extensive test cases to ensure its stability. All of its features have been carefully tested.
 
-* **Easy customization**: Lake's interface and data model are based on the DOM. This means you can do anything that can be done in the DOM.
+* **Easy customization**: The interface and data model are extensions built on the DOM, rather than creating a completely new model. This means you can do anything that can be done in the DOM.
