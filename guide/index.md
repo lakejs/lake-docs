@@ -26,3 +26,10 @@ Lake aims to provide as many features as possible with a simple structure while 
 * **Stability**: Lake uses extensive test cases to ensure its stability. All of its features have been carefully tested.
 
 * **Easy customization**: The interface and data model are extensions built on the DOM, rather than creating a completely new model. This means you can do anything that can be done in the DOM.
+
+::: warning NOTE
+Lake is not going to add the following features, as doing so would significantly increase the software's size and complexity. If you need these features, please consider using another editor.
+
+* Real-time collaboration
+* Typography beyond the web format
+:::
