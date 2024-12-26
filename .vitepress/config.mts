@@ -25,7 +25,16 @@ export default defineConfig({
       { text: 'Examples', link: '/examples/', activeMatch: '/examples/' },
       { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
       { text: 'Reference', link: '/reference/', activeMatch: '/reference/' },
-      { text: 'Discussions', link: 'https://github.com/lakejs/lake/discussions', target: '_blank' },
+      {
+        text: '0.3.1',
+        items: [
+          { text: 'npm', link: 'https://www.npmjs.com/package/lakelib', target: '_blank' },
+          { text: 'jsDelivr', link: 'https://www.jsdelivr.com/package/npm/lakelib', target: '_blank' },
+          { text: 'UNPKG', link: 'https://unpkg.com/browse/lakelib/', target: '_blank' },
+          { text: 'Changelog', link: 'https://github.com/lakejs/lake/blob/main/CHANGELOG.md', target: '_blank' },
+          { text: 'Issues', link: 'https://github.com/lakejs/lake/issues', target: '_blank' },
+        ]
+      }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lakejs/lake' },
