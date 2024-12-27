@@ -20,6 +20,29 @@ editor.render();
 editor.setValue('<p>foo</p>');
 ```
 
+## Constructor
+
+Creates a new `Editor` object.
+
+* Parameters:
+
+  `config`
+
+  A key-value object. For more details, see the [editor config](/reference/).
+
+* Return value:
+
+  A new `Editor` object.
+
+Example:
+
+```js
+const editor = new Editor({
+  root: '.my-content',
+});
+```
+
+
 ## Static properties
 
 ### version <Badge type="info" text="Read only" />
