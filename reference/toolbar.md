@@ -10,7 +10,9 @@ The `Toolbar` class provides properties and methods for rendering and manipulati
 
 Example:
 
-```js
+::: code-group
+
+```js [npm]
 import { Toolbar } from 'lakelib';
 
 const toolbarItems = [
@@ -25,6 +27,22 @@ const toolbar = new Toolbar({
   items: toolbarItems,
 });
 ```
+
+```js [CDN]
+const toolbarItems = [
+  'undo',
+  'redo',
+  '|',
+  'bold',
+  'moreStyle',
+];
+const toolbar = new Lake.Toolbar({
+  root: '.my-toolbar',
+  items: toolbarItems,
+});
+```
+
+:::
 
 
 ## Constructor

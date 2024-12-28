@@ -10,7 +10,9 @@ The `Editor` class provides properties and methods for rendering and manipulatin
 
 Example:
 
-```js
+::: code-group
+
+```js [npm]
 import { Editor } from 'lakelib';
 
 const editor = new Editor({
@@ -19,6 +21,17 @@ const editor = new Editor({
 editor.render();
 editor.setValue('<p>foo</p>');
 ```
+
+```js [CDN]
+const editor = new Lake.Editor({
+  root: '.my-content',
+});
+editor.render();
+editor.setValue('<p>foo</p>');
+```
+
+:::
+
 
 ## Constructor
 

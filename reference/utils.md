@@ -6,6 +6,26 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
+A collection of utility functions.
+
+
+Example:
+
+::: code-group
+
+```js [npm]
+import { query } from 'lakelib';
+
+query(document.body).append('<p>foo</p>');
+```
+
+```js [CDN]
+Lake.query(document.body).append('<p>foo</p>');
+```
+
+:::
+
+
 ## query()
 
 Returns a `Nodes` object representing a collection of the document's nodes. It is similar to [jQuery](https://jquery.com/) and is designed for simplifying DOM manipulation.

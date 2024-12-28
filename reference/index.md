@@ -9,7 +9,9 @@ The config is the parameter of the constructor of the [Editor](/reference/editor
 
 Example:
 
-```js
+::: code-group
+
+```js [npm]
 import { Editor } from 'lakelib';
 
 const editor = new Editor({
@@ -18,6 +20,17 @@ const editor = new Editor({
 });
 editor.render();
 ```
+
+```js [CDN]
+const editor = new Lake.Editor({
+  root: '.my-content',
+  value: '<p>This is a paragraph.</p>',
+});
+editor.render();
+```
+
+:::
+
 
 ## root
 

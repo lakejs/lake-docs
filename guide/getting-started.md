@@ -5,6 +5,14 @@ title: Getting started
 
 # {{ $frontmatter.title }}
 
+## Downloading Lake using npm
+
+Lake is published on npm under the [lakelib](https://www.npmjs.com/package/lakelib) package. You can install the latest version with the following command:
+
+```bash
+npm install lakelib
+```
+
 ## Downloading Lake from CDN
 
 Bundled files are available in the `dist` folder of the distribution. You can download them from jsDelivr or UNPKG.
@@ -12,12 +20,44 @@ Bundled files are available in the `dist` folder of the distribution. You can do
 * jsDelivr: https://www.jsdelivr.com/package/npm/lakelib
 * UNPKG: https://unpkg.com/browse/lakelib/
 
-## Downloading Lake using npm
+## Quick start with npm
 
-Lake is published on npm under the [lakelib](https://www.npmjs.com/package/lakelib) package. You can install the latest version with the following command:
+In the HTML page, add the following code that will serve as placeholders for the toolbar and the editor.
 
-```bash
-npm install lakelib
+```html
+<div class="my-editor">
+  <div class="my-toolbar"></div>
+  <div class="my-content"></div>
+</div>
+```
+
+Call the following JavaScript code to render the editor.
+
+```js
+import 'lakelib/lib/lake.css';
+import { Editor, Toolbar } from 'lakelib';
+
+const toolbar = new Toolbar({
+  root: '.my-toolbar',
+});
+const editor = new Editor({
+  root: '.my-content',
+  toolbar,
+});
+editor.render();
+```
+
+The `root` property can also be given a DOM element.
+
+```js
+const toolbar = new Toolbar({
+  root: document.querySelector('.my-toolbar'),
+});
+const editor = new Editor({
+  root: document.querySelector('.my-content'),
+  toolbar,
+});
+editor.render();
 ```
 
 ## Quick start with CDN
@@ -45,47 +85,6 @@ const toolbar = new Lake.Toolbar({
   root: '.my-toolbar',
 });
 const editor = new Lake.Editor({
-  root: '.my-content',
-  toolbar,
-});
-editor.render();
-```
-
-The `root` property can also be given a DOM element.
-
-```js
-const toolbar = new Lake.Toolbar({
-  root: document.querySelector('.my-toolbar'),
-});
-const editor = new Lake.Editor({
-  root: document.querySelector('.my-content'),
-  toolbar,
-});
-editor.render();
-```
-
-
-## Quick start with npm
-
-In the HTML page, add the following code that will serve as placeholders for the toolbar and the editor.
-
-```html
-<div class="my-editor">
-  <div class="my-toolbar"></div>
-  <div class="my-content"></div>
-</div>
-```
-
-Call the following JavaScript code to render the editor.
-
-```js
-import 'lakelib/lib/lake.css';
-import { Editor, Toolbar } from 'lakelib';
-
-const toolbar = new Toolbar({
-  root: '.my-toolbar',
-});
-const editor = new Editor({
   root: '.my-content',
   toolbar,
 });
@@ -164,56 +163,35 @@ new Editor({
 
 This feature depends on [CodeMirror](https://codemirror.net/), so you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page.
 
-### Using CDN
+::: code-group
 
-* jsDelivr: https://www.jsdelivr.com/package/npm/lake-codemirror
-* UNPKG: https://unpkg.com/browse/lake-codemirror/
+```js [npm]
+import * as CodeMirror from 'lake-codemirror';
+window.LakeCodeMirror = CodeMirror;
+```
 
-```html
+```html [CDN]
 <script src="https://cdn.jsdelivr.net/npm/lake-codemirror@latest/dist/codemirror.min.js"></script>
 ```
 
-### Using npm
+:::
 
-```js
-import 'lakelib/lib/lake.css';
-import * as CodeMirror from 'lake-codemirror';
-import { Editor } from 'lakelib';
-
-window.LakeCodeMirror = CodeMirror;
-
-const editor = new Editor({
-  root: '.my-content',
-});
-editor.render();
-```
 
 ## Mathematical formula
 
 This feature depends on [KaTeX](https://katex.org/), so you need to add KaTeX to your HTML page.
 
-### Using CDN
+::: code-group
 
-* jsDelivr: https://www.jsdelivr.com/package/npm/katex
-* UNPKG: https://unpkg.com/browse/katex/
+```js [npm]
+import 'katex/dist/katex.css';
+import katex from 'katex';
+window.katex = katex;
+```
 
-```html
+```html [CDN]
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
 ```
 
-### Using npm
-
-```js
-import 'katex/dist/katex.css';
-import 'lakelib/lib/lake.css';
-import katex from 'katex';
-import { Editor } from 'lakelib';
-
-window.katex = katex;
-
-const editor = new Editor({
-  root: '.my-content',
-});
-editor.render();
-```
+:::
