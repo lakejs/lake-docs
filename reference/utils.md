@@ -8,7 +8,6 @@ outline: [2, 3]
 
 A collection of utility functions.
 
-
 Example:
 
 ::: code-group
@@ -28,13 +27,13 @@ Lake.query(document.body).append('<p>foo</p>');
 
 ## query()
 
-Returns a `Nodes` object representing a collection of the document's nodes. It is similar to [jQuery](https://jquery.com/) and is designed for simplifying DOM manipulation.
+Returns a `Nodes` object representing a collection of the document's nodes. This function is similar to [jQuery](https://jquery.com/) and is designed for simplifying DOM manipulation.
 
 * Parameters:
 
   `content`
 
-  CSS selector, HTML string, and DOM element.
+  A CSS selector, HTML string, and DOM element.
 
 * Return value:
 
@@ -99,7 +98,7 @@ console.log(color);
 
 ## insertBookmark()
 
-Inserts a bookmark at the cursor position or a pair of bookmarks at the beginning and end of the selected range.
+Inserts a bookmark at the cursor position or a pair of bookmarks at the beginning and end of the range.
 
 * Parameters:
 
@@ -110,19 +109,23 @@ Inserts a bookmark at the cursor position or a pair of bookmarks at the beginnin
 * Return value:
 
   ```ts
-  { anchor: Nodes, focus: Nodes }
+  {
+    anchor: Nodes;
+    focus: Nodes;
+  }
   ```
 
 Example:
 
 ```js
 const bookmark = insertBookmark(range);
+console.log(bookmark.anchor, bookmark.focus);
 ```
 
 
 ## toBookmark()
 
-Changes the specified range to the range represented by the bookmark.
+Changes the specified range to a range represented by the bookmark.
 
 * Parameters:
 
@@ -133,7 +136,10 @@ Changes the specified range to the range represented by the bookmark.
   `bookmark`
 
   ```ts
-  { anchor: Nodes, focus: Nodes }
+  {
+    anchor: Nodes;
+    focus: Nodes;
+  }
   ```
 
 * Return value:
@@ -144,4 +150,277 @@ Example:
 
 ```js
 toBookmark(range, bookmark);
+```
+
+
+## insertContents()
+
+Inserts the specified contents into the range.
+
+* Parameters:
+
+  `range`
+
+  A `Range` object.
+
+  `contents`
+
+  HTML string, DOM node, `DocumentFragment`, `Nodes`, and `Fragment`.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+insertContents(range, '<p>foo</p>');
+```
+
+
+## deleteContents()
+
+Removes the contents of the specified range.
+
+* Parameters:
+
+  `range`
+
+  A `Range` object.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+deleteContents(range);
+```
+
+
+## setBlocks()
+
+Adds new blocks or changes the target blocks in the specified range.
+
+* Parameters:
+
+  `range`
+
+  A `Range` object.
+
+  `value`
+
+  An HTML string or key-value object.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+// Changes the target blocks to headings.
+setBlocks(range, '<h1 />');
+// Changes the target blocks to numbered lists.
+setBlocks(range, '<ol><li></li></ol>');
+// Adds "text-align" CSS property to the target blocks.
+setBlocks(range, {
+  'text-align': 'center',
+});
+```
+
+
+## splitBlock()
+
+Removes the contents of the specified range and then splits the block node at the point of the collapsed range.
+
+* Parameters:
+
+  `range`
+
+  A `Range` object.
+
+* Return value:
+
+  ```ts
+  {
+    start: Nodes | null;
+    end: Nodes | null;
+  }
+  ```
+
+Example:
+
+```js
+const parts = splitBlock(range);
+console.log(parts.start, parts.end);
+```
+
+
+## insertBlock()
+
+Inserts a block into the specified range.
+
+* Parameters:
+
+  `range`
+
+  A `Range` object.
+
+  `value`
+
+  An HTML string or `Nodes` object.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+insertBlock(range, '<h1>heading</h1>');
+```
+
+
+## splitMarks()
+
+Splits text nodes or mark nodes.
+
+* Parameters:
+
+  `range`
+
+  A `Range` object.
+
+  `removeEmptyMark` <Badge type="info" text="Optional" />
+
+  A boolean value indicating whether the empty mark nodes are removed. Default value is `true`.
+
+* Return value:
+
+  ```ts
+  {
+    start: Nodes | null;
+    center: Nodes | null;
+    end: Nodes | null;
+  }
+  ```
+
+Example:
+
+```js
+splitMarks(range);
+```
+
+
+## addMark()
+
+Adds the specified mark to the texts of the range.
+
+* Parameters:
+
+  `range`
+
+  A `Range` object.
+
+  `value`
+
+  An HTML string or `Nodes` object.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+// Adds bold effect.
+addMark(range, '<strong />');
+// Changes font size.
+addMark(range, '<span style="font-size: 18px;" />');
+```
+
+
+## removeMark()
+
+Removes the specified marks in the range.
+
+* Parameters:
+
+  `range`
+
+  A `Range` object.
+
+  `value` <Badge type="info" text="Optional" />
+
+  An HTML string or `Nodes` object.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+// Removes all format.
+removeMark(range);
+// Removes bold effect.
+removeMark(range, '<strong />');
+```
+
+
+## insertBox()
+
+Inserts a box into the specified range.
+
+* Parameters:
+
+  `range`
+
+  A `Range` object.
+
+  `boxName`
+
+  A string that specifies the name of the box.
+
+  `boxValue` <Badge type="info" text="Optional" />
+
+  A key-value object that specifies the data of the box.
+
+* Return value:
+
+  A `Box` object or `null`.
+
+Example:
+
+```js
+// Inserts a horizontal rule.
+insertBox(range, 'hr');
+// Inserts an emoji.
+insertBox(range, 'emoji', {
+  url: '/assets/emojis/face_blowing_a_kiss_color.svg',
+  title: 'Face blowing a kiss',
+});
+```
+
+
+## removeBox()
+
+Removes a box that contains the specified range.
+
+* Parameters:
+
+  `range`
+
+  A `Range` object.
+
+* Return value:
+
+  A `Box` object or `null`.
+
+Example:
+
+```js
+removeBox(range);
 ```
