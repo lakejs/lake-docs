@@ -68,6 +68,7 @@ export default defineConfig({
           { text: 'Toolbar config', link: '/reference/toolbar-config' },
           { text: 'Editor class', link: '/reference/editor' },
           { text: 'Toolbar class', link: '/reference/toolbar' },
+          { text: 'Nodes class', link: '/reference/nodes' },
           { text: 'Utils', link: '/reference/utils' },
         ],
       }],
