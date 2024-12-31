@@ -408,8 +408,7 @@ Returns a native node at the specified index.
 Example:
 
 ```js
-const div = query('<div><p>foo</p><p>bar</p></div>');
-const paragraphs = div.find('p');
+const paragraphs = query('<p>foo</p><p>bar</p>');
 // Outputs "foo".
 console.log(paragraphs.get(0).innerText);
 // Outputs "bar".
@@ -419,7 +418,7 @@ console.log(paragraphs.get(1).innerText);
 
 ### getAll()
 
-Returns all native nodes.
+Returns an array with all native nodes in the `Nodes` object.
 
 * Parameters:
 
@@ -432,18 +431,18 @@ Returns all native nodes.
 Example:
 
 ```js
-const div = query('<div><p>foo</p><p>bar</p></div>');
-const paragraphs = div.find('p').getAll();
+const paragraphs = query('<p>foo</p><p>bar</p>');
+const nativeNodes = paragraphs.getAll();
 // Outputs "foo".
-console.log(paragraphs[0].innerText);
+console.log(nativeNodes[0].innerText);
 // Outputs "bar".
-console.log(paragraphs[1].innerText);
+console.log(nativeNodes[1].innerText);
 ```
 
 
 ### eq()
 
-Reduces the nodes of a `Nodes` object to the one at the specified index.
+Returns a new `Nodes` object that includes only the node at the specified index.
 
 * Parameters:
 
@@ -458,11 +457,171 @@ Reduces the nodes of a `Nodes` object to the one at the specified index.
 Example:
 
 ```js
-const div = query('<div><p>foo</p><p>bar</p></div>');
-const paragraphs = div.find('p');
+const paragraphs = query('<p>foo</p><p>bar</p>');
 // Outputs "foo".
 console.log(paragraphs.eq(0).get(0).innerText);
 // Outputs "bar".
 console.log(paragraphs.eq(1).get(0).innerText);
 ```
 
+
+### each()
+
+Executes a provided function once for each node.
+
+* Parameters:
+
+  `callback`
+
+  A function to execute for each node in the `Nodes` object. If the return value is `false`, the iteration will be stopped. The function is called with the following arguments:
+
+  * `node`: The current native node being processed.
+
+  * `index`: The index of the current native node being processed.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const paragraphs = query('<p>foo</p><p>bar</p>');
+// Outputs the following:
+// "foo", 0
+// "bar", 1
+paragraphs.each((node, index) => {
+  console.log(node.innerText, index);
+});
+```
+
+
+### eachElement()
+
+Executes a provided function once for each element.
+
+* Parameters:
+
+  `callback`
+
+  A function to execute for each element in the `Nodes` object. If the return value is `false`, the iteration will be stopped. The function is called with the following arguments:
+
+  * `element`: The current native element being processed.
+
+  * `index`: The index of the current native element being processed.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p>text<p>bar</p></div>');
+const children = div.children();
+// Outputs 3.
+console.log(children.length);
+// Outputs the following:
+// "foo", 0
+// "bar", 2
+children.eachElement((element, index) => {
+  console.log(element.innerText, index);
+});
+```
+
+
+### reverse()
+
+Returns a new `Nodes` object with the nodes in reversed order.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const paragraphs = query('<p>foo</p><p>bar</p>');
+const reversedParagraphs = paragraphs.reverse();
+// Outputs "bar".
+console.log(reversedParagraphs.eq(0).get(0).innerText);
+// Outputs "foo".
+console.log(reversedParagraphs.eq(1).get(0).innerText);
+```
+
+
+### matches()
+
+Tests whether the first node would be selected by the specified CSS selector.
+
+* Parameters:
+
+  `selector`
+
+  A string that specifies a CSS selector to test.
+
+* Return value:
+
+  `true` if the first node matches the selector, `false` if not.
+
+Example:
+
+```js
+const div = query('<div class="foo" />');
+// Outputs true.
+console.log(div.matches('.foo'));
+```
+
+
+### contains()
+
+Returns a boolean value indicating whether the first node is a descendant of a given node, that is the first node itself, one of its direct children (childNodes), one of the children's direct children, and so on.
+
+* Parameters:
+
+  `otherNode`
+
+  A `Nodes` object to test with.
+
+* Return value:
+
+  `true` if `otherNode` is contained in the first node, `false` if not.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p></div>');
+const paragraph = div.find('p');
+// Outputs true.
+console.log(div.contains(paragraph));
+```
+
+
+### isSibling()
+
+Returns a boolean value indicating whether the first node and a given node are siblings.
+
+* Parameters:
+
+  `otherNode`
+
+  A `Nodes` object to test with.
+
+* Return value:
+
+  `true` if the first node and `otherNode` are siblings, `false` if not.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p><p>bar</p></div>');
+const paragraphs = div.find('p');
+const foo = paragraphs.eq(0);
+const bar = paragraphs.eq(1);
+// Outputs true.
+console.log(foo.isSibling(bar));
+```
