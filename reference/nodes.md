@@ -625,3 +625,278 @@ const bar = paragraphs.eq(1);
 // Outputs true.
 console.log(foo.isSibling(bar));
 ```
+
+
+### find()
+
+Returns the descendants of the first node that match the specified CSS selector or node path.
+
+* Parameters:
+
+  `selector`
+
+  A `string` that specifies CSS selector. A `NodePath` that specifies node path.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p><p>bar<strong>bold</strong></p></div>');
+// Outputs "bold".
+console.log(div.find('strong').get(0).innerText);
+// Outputs "bold".
+console.log(div.find([1, 1]).get(0).innerText);
+```
+
+
+### closest()
+
+Traverses the first node and its parents (heading toward the document root) until it finds an element that matches the specified CSS selector.
+
+* Parameters:
+
+  `selector`
+
+  A `string` that specifies CSS selector.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p><p>bar<strong>bold</strong></p></div>');
+const paragraph = div.find('strong').closest('p');
+// Outputs "bar<strong>bold</strong>".
+console.log(paragraph.get(0).innerHTML);
+```
+
+
+### closestBlock()
+
+Traverses the first node and its parents until it finds a block element.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const div = query('<div contenteditable="true"><p>foo</p>bar</div>');
+// Outputs "p".
+const foo = div.find('p').first();
+console.log(foo.closestBlock().name);
+// Outputs 0.
+const bar = div.find('p').next();
+console.log(bar.closestBlock().length);
+```
+
+
+### closestOperableBlock()
+
+Traverses the first node and its parents until it finds an operable block.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const div = query('<div contenteditable="true"><ul><li><strong>foo</strong>bar</li></ul></div>');
+// Outputs "ul".
+console.log(div.find('strong').closestOperableBlock().name);
+```
+
+
+### closestContainer()
+
+Traverses the first node and its parents until it finds a div element which contenteditable attribute is true.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const div = query('<div contenteditable="true"><p>foo</p>bar</div>');
+// Outputs "div".
+console.log(div.find('p').closestContainer().name);
+```
+
+
+### closestScroller()
+
+Traverses the first node and its parents until it finds an element which can scroll.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const div = query('<div style="overflow: auto;"><p>foo</p>bar</div>');
+// Outputs "div".
+console.log(div.find('p').closestScroller().name);
+```
+
+
+### parent()
+
+Returns the parent of the first node.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p>bar</div>');
+// Outputs "div".
+console.log(div.find('p').parent().name);
+// Outputs 0.
+console.log(div.parent().length);
+```
+
+
+### prev()
+
+Returns the immediately preceding sibling of the first node.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const div = query('<div><h1>foo</h1><p>bar</p></div>');
+// Outputs "h1".
+console.log(div.find('p').prev().name);
+// Outputs 0.
+console.log(div.find('h1').prev().length);
+```
+
+
+### next()
+
+Returns the immediately following sibling of the first node.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const div = query('<div><h1>foo</h1><p>bar</p></div>');
+// Outputs "p".
+console.log(div.find('h1').next().name);
+// Outputs 0.
+console.log(div.find('p').next().length);
+```
+
+
+### first()
+
+Returns the first child of the first node.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const div = query('<div><h1>foo</h1><p></p></div>');
+// Outputs "h1".
+console.log(div.first().name);
+// Outputs 0.
+console.log(div.find('p').first().length);
+```
+
+
+### last()
+
+Returns the last child of the first node.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const div = query('<div><h1>foo</h1><p></p></div>');
+// Outputs "p".
+console.log(div.last().name);
+// Outputs 0.
+console.log(div.find('p').last().length);
+```
+
+
+### index()
+
+Returns a number indicating the position of the first node relative to its sibling nodes.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `number` indicating zero-based index.
+
+Example:
+
+```js
+const div = query('<div><h1>foo</h1><p>bar</p></div>');
+// Outputs 0.
+console.log(div.find('h1').index());
+// Outputs 1.
+console.log(div.find('p').index());
+```
