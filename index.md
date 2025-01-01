@@ -1,7 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-title: Lake - The rich text editor for you
+title: Lake - Browser-based WYSIWYG Editor
 titleTemplate: false
 
 hero:
