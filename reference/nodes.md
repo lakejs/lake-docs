@@ -900,3 +900,272 @@ console.log(div.find('h1').index());
 // Outputs 1.
 console.log(div.find('p').index());
 ```
+
+
+### path()
+
+Returns the path of the first node.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `NodePath` indicating node path.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p><p>bar<strong>bold</strong></p></div>');
+// Outputs [1, 1].
+console.log(div.find('strong').path());
+```
+
+
+### children()
+
+Returns a list which contains all of the child nodes of the first node.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  An `Array` that contains `Nodes` objects.
+
+Example:
+
+```js
+const div = query('<div><h1>foo</h1><p>bar</p></div>');
+const childNodes = div.children();
+// Outputs "h1".
+console.log(childNodes[0].name);
+// Outputs "p".
+console.log(childNodes[1].name);
+```
+
+
+### getWalker()
+
+Returns a generator that iterates over the descendants of the first node.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `Generator` object.
+
+Example:
+
+```js
+const div = query('<div><h1>foo</h1><p>bar</p></div>');
+for (const child of div.getWalker()) {
+  console.log(child);
+}
+```
+
+
+### on()
+
+Sets up an event listener for each element in the Nodes object.
+
+* Parameters:
+
+  `type`
+
+  A string representing the event type to listen for.
+
+  `listener`
+
+  A function representing the event handler.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p><p>bar</p></div>');
+div.find('p').on('click', event => {
+  console.log(event);
+});
+```
+
+
+### off()
+
+Removes event listeners previously registered with `on()` method.
+
+* Parameters:
+
+  `type` <Badge type="info" text="Optional" />
+
+  A string which specifies the type of event for which to remove event listeners.
+
+  `listener` <Badge type="info" text="Optional" />
+
+  A function representing the event handler to remove from event targets.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div>foo</div>');
+const clickListener1 = () => {
+  console.log('click');
+};
+const clickListener2 = () => {
+  console.log('click');
+};
+const mousedownListener = () => {
+  console.log('mousedown');
+};
+div.on('click', clickListener1);
+div.on('click', clickListener2);
+div.on('mousedown', mousedownListener);
+// Removes clickListener1.
+div.off('click', clickListener1);
+// Removes clickListener1 and clickListener2.
+div.off('click');
+// Removes all event listeners.
+div.off();
+```
+
+
+### emit()
+
+Executes all event listeners attached to the `Nodes` object for the given event type.
+
+* Parameters:
+
+  `type`
+
+  A string that specifies the type of the event.
+
+  `event` <Badge type="info" text="Optional" />
+
+  An `Event` object.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div>foo</div>');
+div.on('click', event => {
+  console.log(event);
+};);
+// no event parameter
+div.emit('click');
+// with event parameter
+div.emit('click', new Event('click'));
+```
+
+
+### getEventListeners()
+
+Returns all event listeners attached to the node at the specified index.
+
+* Parameters:
+
+  `index`
+
+  Zero-based index of the node.
+
+* Return value:
+
+  An `Array` that contains event listeners.
+
+Example:
+
+```js
+const div = query('<div>foo</div>');
+const clickListener1 = () => {
+  console.log('click');
+};
+const clickListener2 = () => {
+  console.log('click');
+};
+const mousedownListener = () => {
+  console.log('mousedown');
+};
+div.on('click', clickListener1);
+div.on('click', clickListener2);
+div.on('mousedown', mousedownListener);
+console.log(div.getEventListeners(0));
+```
+
+
+### focus()
+
+Sets focus on the specified node, if it can be focused.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div contenteditable="true"><p>foo</p></div>');
+div.focus();
+```
+
+
+### blur()
+
+Removes focus from the specified node.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div contenteditable="true"><p>foo</p></div>');
+div.blur();
+```
+
+
+### clone()
+
+Returns a copy of the first node. If `deep` is true, the copy also includes the node's descendants.
+
+* Parameters:
+
+  `deep` <Badge type="info" text="Optional" />
+
+  A boolean value indicating whether the copy includes the node's descendants. Default value is false.
+
+* Return value:
+
+  A `Nodes` object.
+
+Example:
+
+```js
+const div = query('<div>foo</div>');
+// without descendants
+const newDiv1 = div.clone();
+// with descendants
+const newDiv2 = div.clone(true);
+```
