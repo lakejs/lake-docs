@@ -418,7 +418,7 @@ console.log(paragraphs.get(1).innerText);
 
 ### getAll()
 
-Returns an array with all native nodes in the `Nodes` object.
+Returns all native nodes.
 
 * Parameters:
 
@@ -971,7 +971,7 @@ for (const child of div.getWalker()) {
 
 ### on()
 
-Sets up an event listener for each element in the Nodes object.
+Sets up an event listener for each element.
 
 * Parameters:
 
@@ -1042,7 +1042,7 @@ div.off();
 
 ### emit()
 
-Executes all event listeners attached to the `Nodes` object for the given event type.
+Executes all event listeners attached to all nodes for the given event type.
 
 * Parameters:
 
@@ -1169,3 +1169,83 @@ const newDiv1 = div.clone();
 // with descendants
 const newDiv2 = div.clone(true);
 ```
+
+
+### hasAttr()
+
+Returns a boolean value indicating whether the first node has the specified attribute or not.
+
+* Parameters:
+
+  `attributeName`
+
+  A string representing the name of the attribute.
+
+* Return value:
+
+  `true` if the first node has the specified attribute, and `false` otherwise.
+
+Example:
+
+```js
+const div = query('<div foo="1">bar</div>');
+// Outputs true.
+console.log(div.hasAttr('foo'));
+```
+
+
+### attr()
+
+Returns the value of the specified attribute from the first node, or sets the values of attributes on all nodes.
+
+* Parameters:
+
+  `attributeName`
+
+  A string representing the name of the attribute. This parameter can be a key-value object used to set multiple attributes.
+
+  `value` <Badge type="info" text="Optional" />
+
+  A string representing the value of the attribute.
+
+* Return value:
+
+  The value of the attribute if the `attributeName` is a string and the `value` is not given, `this` object otherwise.
+
+Example:
+
+```js
+const div = query('<div foo="1">bar</div>');
+// Outputs "1".
+console.log(div.attr('foo'));
+// Sets an attribute.
+div.attr('foo', '2');
+// Sets multiple attributes.
+div.attr({
+  class: 'my-class',
+  foo: '3',
+});
+```
+
+
+### removeAttr()
+
+Removes the attribute with the specified name from every node.
+
+* Parameters:
+
+  `attributeName`
+
+  A string representing the name of the attribute.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div foo="1">bar</div>');
+div.removeAttr('foo');
+```
+
