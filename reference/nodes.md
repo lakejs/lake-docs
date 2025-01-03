@@ -1249,3 +1249,238 @@ const div = query('<div foo="1">bar</div>');
 div.removeAttr('foo');
 ```
 
+
+### hasClass()
+
+Returns a boolean value indicating whether the first node has the specified class or not.
+
+* Parameters:
+
+  `className`
+
+  A string representing the name of the class.
+
+* Return value:
+
+  `true` if the first node has the specified class, and `false` otherwise.
+
+Example:
+
+```js
+const div = query('<div class="foo bar">text</div>');
+// Outputs true.
+console.log(div.hasClass('foo'));
+```
+
+
+### addClass()
+
+Adds the given class to every node.
+
+* Parameters:
+
+  `className`
+
+  A string representing the name of the class. This parameter can be an `Array` used to set multiple classes.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div>text</div>');
+// Adds a class.
+div.addClass('foo');
+// Adds two classes.
+div.addClass(['foo', 'bar']);
+```
+
+
+### removeClass()
+
+Removes the given class from every node.
+
+* Parameters:
+
+  `className`
+
+  A string representing the name of the class. This parameter can be an `Array` used to set multiple classes.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div class="foo bar">text</div>');
+// Removes a class.
+div.removeClass('foo');
+// Removes two classes.
+div.removeClass(['foo', 'bar']);
+```
+
+
+### computedCSS()
+
+Returns the value of the given CSS property of the first node, after applying active stylesheets and resolving any basic computation this value may contain.
+
+* Parameters:
+
+  `propertyName`
+
+  A string representing the name of the CSS property.
+
+* Return value:
+
+  The value of the CSS property.
+
+Example:
+
+```js
+const div = query('<div>text</div>');
+const color = div.computedCSS('color');
+```
+
+
+### css()
+
+Returns the value of the given CSS property of the first node, or sets the values of CSS properties on all nodes.
+
+* Parameters:
+
+  `propertyName`
+
+  A string representing the name of the CSS property. This parameter can be a key-value object used to set multiple CSS properties.
+
+  `value` <Badge type="info" text="Optional" />
+
+  A string representing the value of the CSS property. If the value is empty, the CSS property will be removed.
+
+* Return value:
+
+  The value of the CSS property if the `propertyName` is a string and the `value` is not given, `this` object otherwise.
+
+Example:
+
+```js
+const div = query('<div style="color: #1f1f1f;">foo</div>');
+// Outputs "#1f1f1f".
+console.log(div.css('color'));
+// Sets a CSS property.
+div.css('color', '#f0f0f0');
+// Sets multiple CSS properties.
+div.css({
+  color: '#f0f0f0',
+  'font-size': '16px',
+});
+// Removes a CSS property.
+div.css('color', '');
+```
+
+
+### width()
+
+Returns the width of of the first node.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A number indicating the width.
+
+Example:
+
+```js
+const div = query('<div>text</div>');
+const width = div.width();
+```
+
+
+### innerWidth()
+
+Returns the interior width of the first node, which does not include padding.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A number indicating the width.
+
+Example:
+
+```js
+const div = query('<div>text</div>');
+const width = div.innerWidth();
+```
+
+
+### height()
+
+Returns the height of of the first node.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A number indicating the height.
+
+Example:
+
+```js
+const div = query('<div>text</div>');
+const height = div.height();
+```
+
+
+### show()
+
+Displays all nodes.
+
+* Parameters:
+
+  `displayType` <Badge type="info" text="Optional" />
+
+  A string representing the value of the `display` CSS property. Default value is `block`.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div style="display: none;">foo</div>');
+// Sets the "display" CSS property to "block".
+div.show();
+// Sets the "display" CSS property to "flex".
+div.show('flex');
+```
+
+
+### hide()
+
+Hides all nodes.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div>foo</div>');
+div.hide();
+```
