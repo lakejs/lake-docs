@@ -1196,7 +1196,7 @@ console.log(div.hasAttr('foo'));
 
 ### attr()
 
-Returns the value of the specified attribute from the first node, or sets the values of attributes on all nodes.
+Returns the value of the specified attribute from the first node, or sets the values of attributes for all elements.
 
 * Parameters:
 
@@ -1230,7 +1230,7 @@ div.attr({
 
 ### removeAttr()
 
-Removes the attribute with the specified name from every node.
+Removes the attribute with the specified name from every element.
 
 * Parameters:
 
@@ -1275,7 +1275,7 @@ console.log(div.hasClass('foo'));
 
 ### addClass()
 
-Adds the given class to every node.
+Adds the given class to every element.
 
 * Parameters:
 
@@ -1300,7 +1300,7 @@ div.addClass(['foo', 'bar']);
 
 ### removeClass()
 
-Removes the given class from every node.
+Removes the given class from every element.
 
 * Parameters:
 
@@ -1347,7 +1347,7 @@ const color = div.computedCSS('color');
 
 ### css()
 
-Returns the value of the given CSS property of the first node, or sets the values of CSS properties on all nodes.
+Returns the value of the given CSS property of the first node, or sets the values of CSS properties for all elements.
 
 * Parameters:
 
@@ -1483,4 +1483,331 @@ Example:
 ```js
 const div = query('<div>foo</div>');
 div.hide();
+```
+
+
+### html()
+
+Returns the HTML string contained within the first node, or sets the HTML string for all elements.
+
+* Parameters:
+
+  `value` <Badge type="info" text="Optional" />
+
+  A string representing the HTML string.
+
+* Return value:
+
+  The HTML string if the `value` is not given, `this` object if not.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p></div>');
+// Outputs "<p>foo</p>".
+console.log(div.html());
+// Sets inner HTML.
+div.html('<p>bar</p>');
+```
+
+
+### text()
+
+Returns the rendered text content of the first node, or sets the rendered text content for all elements.
+
+* Parameters:
+
+  `value` <Badge type="info" text="Optional" />
+
+  A string representing the rendered text content.
+
+* Return value:
+
+  The rendered text content if the `value` is not given, `this` object if not.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p></div>');
+// Outputs "foo".
+console.log(div.text());
+// Sets inner text.
+div.text('bar');
+```
+
+
+### value()
+
+Returns the value of the first node, which must be an input element, or sets the value for all input elements.
+
+* Parameters:
+
+  `value` <Badge type="info" text="Optional" />
+
+  A string representing the value of the input element.
+
+* Return value:
+
+  The value of the input element if the `value` is not given, `this` object if not.
+
+Example:
+
+```js
+const input = query('<input type="text" />');
+input.value('foo');
+// Outputs "foo".
+console.log(input.value());
+```
+
+
+### outerHTML()
+
+Returns the HTML string describing the first node including its descendants.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A HTML string.
+
+Example:
+
+```js
+const div = query('<div>foo</div>');
+// Outputs "<div>foo</div>".
+console.log(div.outerHTML());
+```
+
+
+### empty()
+
+Removes all child nodes for each element.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div>foo</div>');
+div.empty();
+// Outputs "<div></div>".
+console.log(div.outerHTML());
+```
+
+
+### prepend()
+
+Inserts the specified content just inside the first node, before its first child.
+
+* Parameters:
+
+  `content`
+
+  An HTML string, `Node` object, `DocumentFragment` object, and `Nodes` object.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p></div>');
+div.prepend('<p>bar</p>');
+// Outputs "<p>bar</p><p>foo</p>".
+console.log(div.html());
+```
+
+
+### append()
+
+Inserts the specified content just inside the first node, after its last child.
+
+* Parameters:
+
+  `content`
+
+  An HTML string, `Node` object, `DocumentFragment` object, and `Nodes` object.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p></div>');
+div.append('<p>bar</p>');
+// Outputs "<p>foo</p><p>bar</p>".
+console.log(div.html());
+```
+
+
+### before()
+
+Inserts the specified content before the first node.
+
+* Parameters:
+
+  `content`
+
+  An HTML string, `Node` object, `DocumentFragment` object, and `Nodes` object.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p></div>');
+div.find('p').before('<p>bar</p>');
+// Outputs "<p>bar</p><p>foo</p>".
+console.log(div.html());
+```
+
+
+### after()
+
+Inserts the specified content after the first node.
+
+* Parameters:
+
+  `content`
+
+  An HTML string, `Node` object, `DocumentFragment` object, and `Nodes` object.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p></div>');
+div.find('p').after('<p>bar</p>');
+// Outputs "<p>foo</p><p>bar</p>".
+console.log(div.html());
+```
+
+
+### replaceWith()
+
+Replaces the first node with the given new content.
+
+* Parameters:
+
+  `newContent`
+
+  An HTML string, `Node` object, and `Nodes` object.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p></div>');
+div.find('p').replaceWith('<p>bar</p>');
+// Outputs "<p>bar</p>".
+console.log(div.html());
+```
+
+
+### remove()
+
+Removes all nodes from the DOM.
+
+* Parameters:
+
+  `keepChildren` <Badge type="info" text="Optional" />
+
+  A boolean value indicating whether the node's descendants is removed. Default value is false.
+
+* Return value:
+
+  `this` object.
+
+Example:
+
+```js
+const div = query('<div><p>foo</p></div>');
+div.find('p').remove();
+// Outputs "<div></div>".
+console.log(div.outerHTML());
+```
+
+
+### splitText()
+
+Splits the first node, which must be a text node, into two nodes at the specified offset, keeping both as siblings in the tree.
+
+* Parameters:
+
+  `offset`
+
+  The index immediately before which to split the text node.
+
+* Return value:
+
+  A `Nodes` object representing the newly created text node that contains the text after the specified offset point.
+
+Example:
+
+```js
+const node = new Nodes(document.createTextNode('foobar'));
+const newNode = node.splitText(3);
+// Outputs "foo".
+console.log(node.text()));
+// Outputs "bar".
+console.log(newNode.text()));
+```
+
+
+### toString()
+
+Returns information about the first node, which is used for debugging.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A string representing information about the first node.
+
+Example:
+
+```js
+const body = new Nodes(document.body);
+console.log(body.toString()));
+```
+
+
+### info()
+
+Prints information about the first node, which is used for debugging.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const body = new Nodes(document.body);
+body.info();
 ```
