@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Nodes` class represents a collection of the document's nodes. Its methods are similar to those of [jQuery](https://jquery.com/), but its implementation is very simple. They can be considered aliases of native DOM interfaces, designed to simplify DOM manipulation.
+The `Nodes` class represents a collection of the document's nodes. Its interface is similar to [jQuery](https://jquery.com/), but its implementation is very simple. They can be considered aliases of native DOM interfaces, designed to simplify DOM manipulation.
 
 Example:
 
@@ -35,11 +35,7 @@ Creates a new `Nodes` object.
 
   `node`
 
-  A native node or a list of native nodes.
-
-* Return value:
-
-  A new `Nodes` object.
+  A native [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node) object or a list of native nodes.
 
 Example:
 

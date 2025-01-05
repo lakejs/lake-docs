@@ -69,6 +69,7 @@ export default defineConfig({
           { text: 'Editor class', link: '/reference/editor' },
           { text: 'Toolbar class', link: '/reference/toolbar' },
           { text: 'Nodes class', link: '/reference/nodes' },
+          { text: 'Range class', link: '/reference/range' },
           { text: 'Utils', link: '/reference/utils' },
         ],
       }],
