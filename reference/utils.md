@@ -37,7 +37,7 @@ Returns a [Nodes](/reference/nodes.md) object representing a collection of the d
 
 * Return value:
 
-  A `Nodes` object.
+  A [Nodes](/reference/nodes.md) object.
 
 Example:
 
@@ -104,7 +104,7 @@ Inserts a bookmark at the cursor position or a pair of bookmarks at the beginnin
 
   `range`
 
-  A `Range` object.
+  A [Range](/reference/range.md) object.
 
 * Return value:
 
@@ -131,7 +131,7 @@ Changes the specified range to a range represented by the bookmark.
 
   `range`
 
-  A `Range` object.
+  A [Range](/reference/range.md) object.
 
   `bookmark`
 
@@ -161,11 +161,11 @@ Inserts the specified contents into the range.
 
   `range`
 
-  A `Range` object.
+  A [Range](/reference/range.md) object.
 
   `contents`
 
-  HTML string, DOM node, `DocumentFragment`, `Nodes`, and `Fragment`.
+  HTML string, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment), [Nodes](/reference/nodes.md), and `Fragment`.
 
 * Return value:
 
@@ -186,7 +186,7 @@ Removes the contents of the specified range.
 
   `range`
 
-  A `Range` object.
+  A [Range](/reference/range.md) object.
 
 * Return value:
 
@@ -207,7 +207,7 @@ Adds new blocks or changes the target blocks in the specified range.
 
   `range`
 
-  A `Range` object.
+  A [Range](/reference/range.md) object.
 
   `value`
 
@@ -239,7 +239,7 @@ Removes the contents of the specified range and then splits the block node at th
 
   `range`
 
-  A `Range` object.
+  A [Range](/reference/range.md) object.
 
 * Return value:
 
@@ -266,11 +266,11 @@ Inserts a block into the specified range.
 
   `range`
 
-  A `Range` object.
+  A [Range](/reference/range.md) object.
 
   `value`
 
-  An HTML string or `Nodes` object.
+  An HTML string or [Nodes](/reference/nodes.md) object.
 
 * Return value:
 
@@ -291,7 +291,7 @@ Splits text nodes or mark nodes.
 
   `range`
 
-  A `Range` object.
+  A [Range](/reference/range.md) object.
 
   `removeEmptyMark` <Badge type="info" text="Optional" />
 
@@ -322,11 +322,11 @@ Adds the specified mark to the texts of the range.
 
   `range`
 
-  A `Range` object.
+  A [Range](/reference/range.md) object.
 
   `value`
 
-  An HTML string or `Nodes` object.
+  An HTML string or [Nodes](/reference/nodes.md) object.
 
 * Return value:
 
@@ -350,11 +350,11 @@ Removes the specified marks in the range.
 
   `range`
 
-  A `Range` object.
+  A [Range](/reference/range.md) object.
 
   `value` <Badge type="info" text="Optional" />
 
-  An HTML string or `Nodes` object.
+  An HTML string or [Nodes](/reference/nodes.md) object.
 
 * Return value:
 
@@ -378,7 +378,7 @@ Inserts a box into the specified range.
 
   `range`
 
-  A `Range` object.
+  A [Range](/reference/range.md) object.
 
   `boxName`
 
@@ -413,7 +413,7 @@ Removes a box that contains the specified range.
 
   `range`
 
-  A `Range` object.
+  A [Range](/reference/range.md) object.
 
 * Return value:
 

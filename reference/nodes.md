@@ -389,7 +389,7 @@ console.log(div.find('p').isEmpty);
 
 ### get()
 
-Returns a native node at the specified index.
+Returns a native [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node) object at the specified index.
 
 * Parameters:
 
@@ -1607,7 +1607,7 @@ Inserts the specified content just inside the first node, before its first child
 
   `content`
 
-  An HTML string, `Node` object, `DocumentFragment` object, and `Nodes` object.
+  HTML string, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment), and `Nodes` object.
 
 * Return value:
 
@@ -1631,7 +1631,7 @@ Inserts the specified content just inside the first node, after its last child.
 
   `content`
 
-  An HTML string, `Node` object, `DocumentFragment` object, and `Nodes` object.
+  HTML string, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment), and `Nodes` object.
 
 * Return value:
 
@@ -1655,7 +1655,7 @@ Inserts the specified content before the first node.
 
   `content`
 
-  An HTML string, `Node` object, `DocumentFragment` object, and `Nodes` object.
+  HTML string, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment), and `Nodes` object.
 
 * Return value:
 
@@ -1679,7 +1679,7 @@ Inserts the specified content after the first node.
 
   `content`
 
-  An HTML string, `Node` object, `DocumentFragment` object, and `Nodes` object.
+  HTML string, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment), and `Nodes` object.
 
 * Return value:
 
@@ -1703,7 +1703,7 @@ Replaces the first node with the given new content.
 
   `newContent`
 
-  An HTML string, `Node` object, and `Nodes` object.
+  HTML string, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), and `Nodes` object.
 
 * Return value:
 

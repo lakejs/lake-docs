@@ -55,7 +55,7 @@ const range = new Range(document.createRange());
 
 A node within which the range starts.
 
-* Type: `Nodes`
+* Type: [Nodes](/reference/nodes.md)
 
 Example:
 
@@ -83,7 +83,7 @@ const startOffset = range.startOffset;
 
 A node within which the range ends.
 
-* Type: `Nodes`
+* Type: [Nodes](/reference/nodes.md)
 
 Example:
 
@@ -104,4 +104,185 @@ Example:
 ```js
 const range = new Range();
 const endOffset = range.endOffset;
+```
+
+
+### commonAncestor <Badge type="info" text="Read only" />
+
+The deepest — or furthest down the document tree — node that contains both boundary points of the range.
+
+* Type: [Nodes](/reference/nodes.md)
+
+Example:
+
+```js
+const range = new Range();
+const commonAncestor = range.commonAncestor;
+```
+
+
+### isCollapsed <Badge type="info" text="Read only" />
+
+A boolean value indicating whether the range's start and end points are at the same position.
+
+* Type: `boolean`
+
+Example:
+
+```js
+const range = new Range();
+const isCollapsed = range.isCollapsed;
+```
+
+
+### isBox <Badge type="info" text="Read only" />
+
+A boolean value indicating whether the range's start point is in a box.
+
+* Type: `boolean`
+
+Example:
+
+```js
+const range = new Range();
+const isBox = range.isBox;
+```
+
+
+### isBoxStart <Badge type="info" text="Read only" />
+
+A boolean value indicating whether the [commonAncestor](#commonancestor) is in the start strip of a box.
+
+* Type: `boolean`
+
+Example:
+
+```js
+const range = new Range();
+const isBoxStart = range.isBoxStart;
+```
+
+
+### isBoxCenter <Badge type="info" text="Read only" />
+
+A boolean value indicating whether the [commonAncestor](#commonancestor) is in the center of a box.
+
+* Type: `boolean`
+
+Example:
+
+```js
+const range = new Range();
+const isBoxCenter = range.isBoxCenter;
+```
+
+
+### isBoxEnd <Badge type="info" text="Read only" />
+
+A boolean value indicating whether [commonAncestor](#commonancestor) is in the end strip of a box.
+
+* Type: `boolean`
+
+Example:
+
+```js
+const range = new Range();
+const isBoxEnd = range.isBoxEnd;
+```
+
+
+### isInsideBox <Badge type="info" text="Read only" />
+
+A boolean value indicating whether [commonAncestor](#commonancestor) is inside the container of a box.
+
+* Type: `boolean`
+
+Example:
+
+```js
+const range = new Range();
+const isInsideBox = range.isInsideBox;
+```
+
+
+### isInoperative <Badge type="info" text="Read only" />
+
+A boolean value indicating whether the range is inoperative.
+
+* Type: `boolean`
+
+Example:
+
+```js
+const range = new Range();
+const isInoperative = range.isInoperative;
+```
+
+
+## Instance methods
+
+### get()
+
+Returns a native [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range) object from the range.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A native [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range) object.
+
+Example:
+
+```js
+const range = new Range();
+const nativeRange = range.get();
+```
+
+
+### getRect()
+
+Returns the size and position of the range.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A [DOMRect](https://developer.mozilla.org/en-US/docs/Web/API/DOMRect) object.
+
+Example:
+
+```js
+const range = new Range();
+const rect = range.getRect();
+```
+
+
+### comparePoint()
+
+Returns -1, 0, or 1 depending on whether the specified node is before, the same as, or after the range.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object to compare with the range.
+
+  `offset`
+
+  An integer greater than or equal to zero representing the offset inside the node.
+
+* Return value:
+
+  −1 if the point is before the range, 0 if the point is in the range, and 1 if the point is after the range.
+
+Example:
+
+```js
+const range = new Range();
+range.selectNode(query('div').eq(0));
+const returnValue = range.comparePoint(query('p').eq(0), 1);
 ```
