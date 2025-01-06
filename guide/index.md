@@ -27,11 +27,11 @@ Lake aims to provide as many features as possible with a simple structure while 
 
 * **Easy customization**: The interface and data model are extensions built on the DOM, rather than creating a completely new model. This means you can do anything that can be done in the DOM.
 
-::: warning Unsupported features
-The following features will not be added to Lake, as supporting them would significantly increase the software's size and complexity.
+## Limitations
+
+The following features will not be added to Lake, as supporting them would significantly increase the size and complexity of the software, ultimately compromising the user experience.
 
 * Real-time collaboration
-* Typography beyond the web format
+* Typography beyond standard web practices
 
-If these features are important to you, please consider other editors.
-:::
+If these features are essential to you, please consider using other editors.
