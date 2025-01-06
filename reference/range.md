@@ -151,7 +151,7 @@ const isBox = range.isBox;
 
 ### isBoxStart <Badge type="info" text="Read only" />
 
-A boolean value indicating whether the [commonAncestor](#commonancestor) is in the start strip of a box.
+A boolean value indicating whether the [commonAncestor](#commonancestor) is in the start position of a box.
 
 * Type: `boolean`
 
@@ -165,7 +165,7 @@ const isBoxStart = range.isBoxStart;
 
 ### isBoxCenter <Badge type="info" text="Read only" />
 
-A boolean value indicating whether the [commonAncestor](#commonancestor) is in the center of a box.
+A boolean value indicating whether the [commonAncestor](#commonancestor) is in the center position of a box.
 
 * Type: `boolean`
 
@@ -179,7 +179,7 @@ const isBoxCenter = range.isBoxCenter;
 
 ### isBoxEnd <Badge type="info" text="Read only" />
 
-A boolean value indicating whether [commonAncestor](#commonancestor) is in the end strip of a box.
+A boolean value indicating whether [commonAncestor](#commonancestor) is in the end position of a box.
 
 * Type: `boolean`
 
@@ -354,4 +354,296 @@ Example:
 const range = new Range();
 range.selectNode(query('div').eq(0));
 const returnValue = range.intersectsNode(query('p').eq(0));
+```
+
+
+### setStart()
+
+Sets the start position of the range.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object where the range starts.
+
+  `offset`
+
+  An integer greater than or equal to zero representing the offset for the start of the range.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.setStart(query('div').eq(0), 0);
+```
+
+
+### setStartBefore()
+
+Sets the start position of the range to the beginning of the specified node.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object where the range starts.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.setStartBefore(query('div').eq(0));
+```
+
+
+### setStartAfter()
+
+Sets the start position of the range to the end of the specified node.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object where the range starts.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.setStartAfter(query('div').eq(0));
+```
+
+
+### setEnd()
+
+Sets the end position of the range.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object where the range ends.
+
+  `offset`
+
+  An integer greater than or equal to zero representing the offset for the end of the range.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.setEnd(query('div').eq(0), 0);
+```
+
+
+### setEndBefore()
+
+Sets the end position of the range to the beginning of the specified node.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object where the range ends.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.setEndBefore(query('div').eq(0));
+```
+
+
+### setEndAfter()
+
+Sets the end position of the range to the end of the specified node.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object where the range ends.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.setEndAfter(query('div').eq(0));
+```
+
+
+### collapseToStart()
+
+Collapses the range to its start.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.selectNode(query('div').eq(0));
+range.collapseToStart();
+```
+
+
+### collapseToEnd()
+
+Collapses the range to its end.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.selectNode(query('div').eq(0));
+range.collapseToEnd();
+```
+
+
+### selectNode()
+
+Sets the range to contain the specified node and its contents.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object that will be selected.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.selectNode(query('div').eq(0));
+```
+
+
+### selectNodeContents()
+
+Sets the range to contain the contents of the specified node.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object which contents will be selected.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.selectNodeContents(query('div').eq(0));
+```
+
+
+### selectBox()
+
+Collapses the range to the center position of the specified box.
+
+* Parameters:
+
+  `boxNode`
+
+  A [Nodes](/reference/nodes.md) object that will be selected.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.selectBox(query('lake-box').eq(0));
+```
+
+
+### selectBoxStart()
+
+Collapses the range to the start position of the specified box.
+
+* Parameters:
+
+  `boxNode`
+
+  A [Nodes](/reference/nodes.md) object that will be selected.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.selectBoxStart(query('lake-box').eq(0));
+```
+
+
+### selectBoxEnd()
+
+Collapses the range to the end position of the specified box.
+
+* Parameters:
+
+  `boxNode`
+
+  A [Nodes](/reference/nodes.md) object that will be selected.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.selectBoxEnd(query('lake-box').eq(0));
 ```
