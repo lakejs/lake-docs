@@ -562,7 +562,7 @@ Tests whether the first node would be selected by the specified CSS selector.
 
 * Return value:
 
-  `true` if the first node matches the selector, `false` if not.
+  `true` if the first node matches the selector. `false` if not.
 
 Example:
 
@@ -585,7 +585,7 @@ Returns a boolean value indicating whether the first node is a descendant of a g
 
 * Return value:
 
-  `true` if `otherNode` is contained in the first node, `false` if not.
+  `true` if `otherNode` is contained in the first node. `false` if not.
 
 Example:
 
@@ -609,7 +609,7 @@ Returns a boolean value indicating whether the first node and a given node are s
 
 * Return value:
 
-  `true` if the first node and `otherNode` are siblings, `false` if not.
+  `true` if the first node and `otherNode` are siblings. `false` if not.
 
 Example:
 
@@ -1494,7 +1494,7 @@ Returns the HTML string contained within the first node, or sets the HTML string
 
 * Return value:
 
-  The HTML string if the `value` is not given, `this` object if not.
+  The HTML string if the `value` is not given. `this` object if not.
 
 Example:
 
@@ -1519,7 +1519,7 @@ Returns the rendered text content of the first node, or sets the rendered text c
 
 * Return value:
 
-  The rendered text content if the `value` is not given, `this` object if not.
+  The rendered text content if the `value` is not given. `this` object if not.
 
 Example:
 
@@ -1544,7 +1544,7 @@ Returns the value of the first node, which must be an input element, or sets the
 
 * Return value:
 
-  The value of the input element if the `value` is not given, `this` object if not.
+  The value of the input element if the `value` is not given. `this` object if not.
 
 Example:
 

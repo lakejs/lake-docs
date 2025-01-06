@@ -277,7 +277,7 @@ Returns -1, 0, or 1 depending on whether the specified node is before, the same 
 
 * Return value:
 
-  −1 if the point is before the range, 0 if the point is in the range, and 1 if the point is after the range.
+  −1 if the point is before the range. 0 if the point is in the range. 1 if the point is after the range.
 
 Example:
 
@@ -285,4 +285,73 @@ Example:
 const range = new Range();
 range.selectNode(query('div').eq(0));
 const returnValue = range.comparePoint(query('p').eq(0), 1);
+```
+
+
+### compareBeforeNode()
+
+Returns -1, 0, or 1 depending on whether the beginning of the specified node is before, the same as, or after the range.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object to compare with the range.
+
+* Return value:
+
+  −1 if the beginning of the node is before the range. 0 if the beginning of the node is in the range. 1 if the beginning of the node is after the range.
+
+Example:
+
+```js
+const range = new Range();
+range.selectNode(query('div').eq(0));
+const returnValue = range.compareBeforeNode(query('p').eq(0));
+```
+
+
+### compareAfterNode()
+
+Returns -1, 0, or 1 depending on whether the end of the specified node is before, the same as, or after the range.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object to compare with the range.
+
+* Return value:
+
+  −1 if the end of the node is before the range. 0 if the end of the node is in the range. 1 if the end of the node is after the range.
+
+Example:
+
+```js
+const range = new Range();
+range.selectNode(query('div').eq(0));
+const returnValue = range.compareAfterNode(query('p').eq(0));
+```
+
+
+### intersectsNode()
+
+Returns a boolean value indicating whether the specified node is part of the range or intersects the range.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object to compare with the range.
+
+* Return value:
+
+  `true` if the node intersects the range. `false` if not.
+
+Example:
+
+```js
+const range = new Range();
+range.selectNode(query('div').eq(0));
+const returnValue = range.intersectsNode(query('p').eq(0));
 ```
