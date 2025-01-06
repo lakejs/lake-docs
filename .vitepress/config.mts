@@ -38,6 +38,14 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lakejs/lake' },
     ],
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'FQ2U4EM6C5',
+        apiKey: '417f39bb87ca98e992516d4a79d61aae',
+        indexName: 'lakejs',
+      },
+    },
     sidebar: {
       '/examples/': [{
         text: 'Examples',
