@@ -63,7 +63,7 @@ export default defineConfig({
       '/guide/': [{
         text: 'Guide',
         items: [
-          { text: 'Introduction', link: '/guide/' },
+          { text: 'Introducing Lake', link: '/guide/' },
           { text: 'Getting started', link: '/guide/getting-started' },
           { text: 'Content format', link: '/guide/content-format' },
           { text: 'Markdown shortcuts', link: '/guide/markdown' },

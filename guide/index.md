@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Introduction
+title: Introducing Lake
 ---
 
 # {{ $frontmatter.title }}
@@ -11,7 +11,7 @@ Lake is a browser-based rich text editor designed for creating content such as b
 
 There are already many rich text editors on the internet, but finding one that fully meets your needs is not easy. They often either lack key features or are not open enough. These editors are mainly divided into two types:
 
-* **Basic**: These editors often lack some features that are essential to you, so you need to spend a lot of time to add these features. And the people who do this work need to have advanced programming skills for customization.
+* **Basic**: These editors often lack some features that are essential to you, so you have to spend a lot of time adding these features. And the people who do this work need to have advanced programming skills for customization.
 
 * **Commercial**: These editors usually include the features you need, but you have to buy a license for commercial use. And it is not easy to customize because of their complex structures.
 
