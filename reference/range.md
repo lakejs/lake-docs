@@ -647,3 +647,217 @@ Example:
 const range = new Range();
 range.selectBoxEnd(query('lake-box').eq(0));
 ```
+
+
+### shrinkBefore()
+
+Collapses the range to the deepest point at the beginning of the contents of the specified node.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object to which the range will collpase.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.shrinkBefore(query('div').eq(0));
+```
+
+
+### shrinkAfter()
+
+Collapses the range to the deepest point at the end of the contents of the specified node.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object to which the range will collpase.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.shrinkAfter(query('div').eq(0));
+```
+
+
+### shrink()
+
+Sets the start and end positions of the range to the deepest start position and end position of the contents of the specified node.
+
+* Parameters:
+
+  `node`
+
+  A [Nodes](/reference/nodes.md) object to which the range will shrink.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.shrink(query('div').eq(0));
+```
+
+
+### adjustBox()
+
+Relocates the start and end positions of the range for the boxes.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.selectNodeContents(query('lake-box').eq(0));
+range.adjustBox();
+```
+
+
+### adjustTable()
+
+Relocates the start and end positions of the range for tables.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.selectNodeContents(query('table').eq(0));
+range.adjustTable();
+```
+
+
+### adjustBlock()
+
+Relocates the start and end positions of the range for blocks.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.selectNode(query('p').eq(0));
+range.adjustBlock();
+```
+
+
+### adjust()
+
+Relocates the start and end positions of the range for boxes, tables, and blocks.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.setStart(query('table').eq(0), 0);
+range.setEnd(query('lake-box').eq(0), 0);
+range.adjust();
+```
+
+
+### adjustBr()
+
+Relocates the start and end positions of the range for `<br />` elements. In composition mode (e.g., when a user starts entering a Chinese character using a Pinyin IME), uncompleted text is inserted if the cursor is positioned behind a `<br />` tag. To fix this bug, the cursor needs to be moved to the front of the `<br />` tag.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+// <p><br /></p>
+range.setEnd(query('p').eq(0), 1);
+range.collapseToEnd();
+range.adjustBr();
+```
+
+
+### getPrevNode()
+
+Returns the node immediately preceding the start position of the range.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A [Nodes](/reference/nodes.md) object.
+
+Example:
+
+```js
+const range = new Range();
+const prevNode = range.getPrevNode();
+```
+
+
+### getNextNode()
+
+Returns the node immediately following the end position of the range.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A [Nodes](/reference/nodes.md) object.
+
+Example:
+
+```js
+const range = new Range();
+const nextNode = range.getNextNode();
+```
