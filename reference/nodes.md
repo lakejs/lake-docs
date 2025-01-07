@@ -422,7 +422,7 @@ Returns all native nodes.
 
 * Return value:
 
-  An `Array` object.
+  An `Array` object that contains [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node) objects.
 
 Example:
 
@@ -1566,7 +1566,7 @@ Returns the HTML string describing the first node including its descendants.
 
 * Return value:
 
-  A HTML string.
+  An HTML string.
 
 Example:
 

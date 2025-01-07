@@ -861,3 +861,187 @@ Example:
 const range = new Range();
 const nextNode = range.getNextNode();
 ```
+
+
+### getBoxes()
+
+Returns the boxes contained within or intersected by the range.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  An `Array` that contains [Nodes](/reference/nodes.md) objects.
+
+Example:
+
+```js
+const range = new Range();
+const boxes = range.getBoxes();
+```
+
+
+### getBlocks()
+
+Returns the blocks contained within or intersected by the range.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  An `Array` that contains [Nodes](/reference/nodes.md) objects.
+
+Example:
+
+```js
+const range = new Range();
+const blocks = range.getBlocks();
+```
+
+
+### getMarks()
+
+Returns the marks and text nodes contained within or intersected by the range.
+
+* Parameters:
+
+  `hasText` <Badge type="info" text="Optional" />
+
+  A boolean value indicating whether the return value includes text nodes. Default value is false.
+
+* Return value:
+
+  An `Array` that contains [Nodes](/reference/nodes.md) objects.
+
+Example:
+
+```js
+const range = new Range();
+const marks = range.getMarks();
+```
+
+
+### getStartText()
+
+Returns the text from the start position of the closest block to the start position of the range.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `string` representing the text.
+
+Example:
+
+```js
+const range = new Range();
+const startText = range.getStartText();
+```
+
+
+### getEndText()
+
+Returns the text from the end position of the range to the end position of the closest block.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A string representing the text.
+
+Example:
+
+```js
+const range = new Range();
+const endText = range.getEndText();
+```
+
+
+### getCharacterRange()
+
+Returns a new range from the specified character to the start position of the range. The specified character must be preceded by a whitespace or be at the beginning of a paragraph, without being adjacent to other characters. It will return `null` if not.
+
+* Parameters:
+
+  `character`
+
+  A string from which the new range will start.
+
+* Return value:
+
+  A `Range` object or `null`.
+
+Example:
+
+```js
+const range = new Range();
+const newRange = range.getCharacterRange('@');
+```
+
+
+### clone()
+
+Returns a copy of the range.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A `Range` object.
+
+Example:
+
+```js
+const range = new Range();
+const newRange = range.clone();
+```
+
+
+### cloneContents()
+
+Returns a document fragment copying the nodes included in the range.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) object.
+
+Example:
+
+```js
+const range = new Range();
+const fragment = range.cloneContents();
+```
+
+
+### info()
+
+Prints information about the range, which is used for debugging.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+const range = new Range();
+range.info();
+```
