@@ -35,7 +35,7 @@ Creates a new `Range` object.
 
 * Parameters:
 
-  `range`
+  `range` <Badge type="info" text="Optional" />
 
   A native [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range) object.
 
@@ -1009,7 +1009,7 @@ const newRange = range.clone();
 
 ### cloneContents()
 
-Returns a document fragment copying the nodes included in the range.
+Returns a [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) object copying the nodes included in the range.
 
 * Parameters:
 
