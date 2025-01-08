@@ -80,7 +80,7 @@ export default defineConfig({
           { text: 'Fragment class', link: '/reference/fragment' },
           { text: 'Range class', link: '/reference/range' },
           { text: 'Box class', link: '/reference/box' },
-          { text: 'Utils', link: '/reference/utils' },
+          { text: 'Functions', link: '/reference/functions' },
         ],
       }],
     },

@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Utils
+title: Functions
 outline: [2, 3]
 ---
 
