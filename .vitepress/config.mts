@@ -79,6 +79,7 @@ export default defineConfig({
           { text: 'Nodes class', link: '/reference/nodes' },
           { text: 'Fragment class', link: '/reference/fragment' },
           { text: 'Range class', link: '/reference/range' },
+          { text: 'Box class', link: '/reference/box' },
           { text: 'Utils', link: '/reference/utils' },
         ],
       }],

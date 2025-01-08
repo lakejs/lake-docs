@@ -122,7 +122,7 @@ const root = editor.root;
 
 ### toolbar <Badge type="info" text="Read only" />
 
-An instance of the Toolbar class.
+An instance of the [Toolbar](/reference/toolbar.md) class.
 
 * Type: [Toolbar](/reference/toolbar.md)
 
@@ -172,7 +172,7 @@ const overlayContainer = editor.overlayContainer;
 
 ### event <Badge type="info" text="Read only" />
 
-An instance of the `EventEmitter` class.
+An instance of the [EventEmitter](https://github.com/primus/eventemitter3) class.
 
 * Type: [EventEmitter](https://github.com/primus/eventemitter3)
 
