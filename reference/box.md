@@ -41,7 +41,7 @@ Creates a new `Box` object.
 
   `node`
 
-  The name of a box, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), and `Nodes` object.
+  The name of a box, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), and [Nodes](/reference/nodes.md) object.
 
 Example:
 
@@ -176,3 +176,130 @@ box.updateValue({
 });
 ```
 
+
+### getEditor()
+
+Returns an instance of the editor containing the box.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  An [Editor](/reference/editor.md) object.
+
+* Exception:
+
+  Thrown when the box is not rendered in the editor.
+
+Example:
+
+```js
+const editor = box.getEditor();
+```
+
+
+### getContainer()
+
+Returns the container of the box.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A [Nodes](/reference/nodes.md) object.
+
+Example:
+
+```js
+const boxContainer = box.getContainer();
+```
+
+
+### getHTML()
+
+Returns the HTML string contained within the box.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  The HTML string.
+
+Example:
+
+```js
+const html = box.getHTML();
+```
+
+
+### setToolbar()
+
+Sets a floating toolbar for the box.
+
+* Parameters:
+
+  `items`
+
+  An `Array` object that contains `ToolbarItem` objects, representing the buttons of the toolbar.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+box.setToolbar([{
+  name: 'remove',
+  type: 'button',
+  icon: icons.get('remove'),
+  tooltip: 'Remove',
+  onClick: () => {
+    console.log('clicked');
+  },
+}]);
+```
+
+
+### render()
+
+Renders the contents of the box.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+box.render();
+```
+
+
+### unmount()
+
+Destroys the box.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+box.unmount();
+```
