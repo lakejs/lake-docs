@@ -1,12 +1,12 @@
 ---
 layout: doc
-title: Range class
+title: Range
 outline: [2, 3]
 ---
 
 # {{ $frontmatter.title }}
 
-The `Range` class represents a fragment of a document that can contain nodes and parts of text nodes. Its interface is similar to the native [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range), with some additional properties and methods specifically designed for more efficient manipulation.
+The `Range` interface represents a fragment of a document that can contain nodes and parts of text nodes. Its interface is similar to the native [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range), with some additional properties and methods specifically designed for more efficient manipulation.
 
 Example:
 

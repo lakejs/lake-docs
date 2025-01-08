@@ -1,12 +1,12 @@
 ---
 layout: doc
-title: Editor class
+title: Editor
 outline: [2, 3]
 ---
 
 # {{ $frontmatter.title }}
 
-The `Editor` class provides properties and methods for rendering and manipulating the editor.
+The `Editor` interface provides properties and methods for rendering and manipulating the editor.
 
 Example:
 

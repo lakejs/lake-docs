@@ -1,12 +1,12 @@
 ---
 layout: doc
-title: Toolbar class
+title: Toolbar
 outline: [2, 3]
 ---
 
 # {{ $frontmatter.title }}
 
-The `Toolbar` class provides properties and methods for rendering and manipulating the toolbar.
+The `Toolbar` interface provides properties and methods for rendering and manipulating the toolbar.
 
 Example:
 

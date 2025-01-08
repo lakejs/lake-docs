@@ -1,12 +1,12 @@
 ---
 layout: doc
-title: Box class
+title: Box
 outline: [2, 3]
 ---
 
 # {{ $frontmatter.title }}
 
-The `Box` class represents an embedded content, which is used to enhance editing capability.
+The `Box` interface represents an embedded content, which is used to enhance editing capability.
 
 Example:
 
