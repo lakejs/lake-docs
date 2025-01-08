@@ -81,7 +81,7 @@ Returns the descendants of the fragment that match the specified CSS selector.
 
 * Return value:
 
-  A `Nodes` object.
+  A [Nodes](/reference/nodes.md) object.
 
 Example:
 
@@ -103,7 +103,7 @@ Inserts the specified content just inside the fragment, after its last child.
 
   `content`
 
-  HTML string, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), and `Nodes` object.
+  HTML string, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), and [Nodes](/reference/nodes.md) object.
 
 * Return value:
 

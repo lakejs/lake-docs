@@ -111,7 +111,7 @@ Editor.plugin.add('selectAll', editor => {
 
 An element to which the editor is appended.
 
-* Type: `Nodes`
+* Type: [Nodes](/reference/nodes.md)
 
 Example:
 
@@ -148,7 +148,7 @@ const config = editor.config;
 
 A [contenteditable](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/contentEditable) element where users can edit the content of the editor.
 
-* Type: `Nodes`
+* Type: [Nodes](/reference/nodes.md)
 
 Example:
 
@@ -161,7 +161,7 @@ const container = editor.container;
 
 An element to which overlays are appended.
 
-* Type: `Nodes`
+* Type: [Nodes](/reference/nodes.md)
 
 Example:
 

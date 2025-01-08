@@ -61,12 +61,11 @@ const box = new Box(query('lake-box').eq(0));
 
 A [lake-box](/guide/content-format.md#box) element to which the contents of the box are appended.
 
-* Type: `Nodes`
+* Type: [Nodes](/reference/nodes.md)
 
 Example:
 
 ```js
-const box = new Box('hr');
 const boxNode = box.node;
 ```
 

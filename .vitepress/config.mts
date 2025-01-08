@@ -76,6 +76,7 @@ export default defineConfig({
           { text: 'Toolbar config', link: '/reference/toolbar-config' },
           { text: 'Editor', link: '/reference/editor' },
           { text: 'Toolbar', link: '/reference/toolbar' },
+          { text: 'Button', link: '/reference/button' },
           { text: 'Nodes', link: '/reference/nodes' },
           { text: 'Fragment', link: '/reference/fragment' },
           { text: 'Range', link: '/reference/range' },

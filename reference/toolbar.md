@@ -74,7 +74,7 @@ const toolbar = new Toolbar({
 
 An element to which the toolbar is appended.
 
-* Type: `Nodes`
+* Type: [Nodes](/reference/nodes.md)
 
 Example:
 
@@ -87,7 +87,7 @@ const root = toolbar.root;
 
 An element to which the items of the toolbar are appended.
 
-* Type: `Nodes`
+* Type: [Nodes](/reference/nodes.md)
 
 Example:
 

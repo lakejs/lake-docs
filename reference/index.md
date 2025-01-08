@@ -36,7 +36,7 @@ editor.render();
 
 An element to which the editor is appended.
 
-* Type: [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) | [DOM element](https://developer.mozilla.org/en-US/docs/Web/API/Element) | `Nodes`
+* Type: [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) | [DOM element](https://developer.mozilla.org/en-US/docs/Web/API/Element) | [Nodes](/reference/nodes.md)
 
 CSS selector:
 
