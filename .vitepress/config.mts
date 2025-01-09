@@ -81,6 +81,7 @@ export default defineConfig({
           { text: 'Editor', link: '/reference/editor' },
           { text: 'Toolbar', link: '/reference/toolbar' },
           { text: 'Button', link: '/reference/button' },
+          { text: 'Dropdown', link: '/reference/dropdown' },
           { text: 'Nodes', link: '/reference/nodes' },
           { text: 'Fragment', link: '/reference/fragment' },
           { text: 'Range', link: '/reference/range' },

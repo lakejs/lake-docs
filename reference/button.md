@@ -53,7 +53,7 @@ Creates a new `Button` object.
     tabIndex?: number;
     // The function triggered when clicked.
     onClick: () => void;
-  }
+  };
   ```
 
 Example:
