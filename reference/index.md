@@ -5,32 +5,29 @@ title: Editor config
 
 # {{ $frontmatter.title }}
 
-The config is the parameter of the constructor of the [Editor](/reference/editor.md) class, it allows you to customize various aspects of the editor.
+This config is the parameter of the constructor of the [Editor](/reference/editor.md) class, it allows you to define the settings of the editor.
 
 Example:
 
-::: code-group
-
-```js [npm]
-import { Editor } from 'lakelib';
-
-const editor = new Editor({
+```js
+new Editor({
   root: '.my-content',
-  value: '<p>This is a paragraph.</p>',
+  value: '<p><br /></p>',
+  spellcheck: false,
+  tabIndex: 0,
+  placeholder: 'Add your comment here...',
+  indentWithTab: true,
+  lang: 'en-US',
+  minChangeSize: 5,
+  historySize: 100,
+  slash: false,
+  mention: false,
 });
-editor.render();
 ```
 
-```js [CDN]
-const editor = new Lake.Editor({
-  root: '.my-content',
-  value: '<p>This is a paragraph.</p>',
-});
-editor.render();
-```
-
+::: tip
+You can disable a plugin by setting it to `false`. For example, setting the `mention` to `false` will prevent the pop-up menu for mention from being displayed.
 :::
-
 
 ## root
 
@@ -64,9 +61,9 @@ new Editor({
 
 ## toolbar
 
-An toolbar object. If not given, the editor will be rendered without toolbar. For more information about toolbar, see the [toolbar config](/reference/toolbar-config.md).
+A [Toolbar](/reference/toolbar.md) object. If not given, the editor will be rendered without toolbar. For more information about toolbar, see the [toolbar config](/reference/toolbar-config.md).
 
-* Type: `Toolbar`
+* Type: [Toolbar](/reference/toolbar.md)
 
 Example:
 
@@ -101,7 +98,7 @@ new Editor({
 
 ## readonly
 
-Whether the editor is in read-only mode. Setting it to `true` can be used to display the content in the view page. You can visit the [read-only example](/examples/readonly) to see how it displays.
+The `readonly` defines whether the editor is in read-only mode. Setting it to `true` can be used to display the content in the view page. You can visit the [read-only example](/examples/readonly) to see how it displays.
 
 * Type: `boolean`
 * Default: `false`
@@ -116,7 +113,7 @@ new Editor({
 
 ## spellcheck
 
-Whether the editor is checked for spelling errors. For more details on `spellcheck`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck).
+The `spellcheck` defines whether the editor is checked for spelling errors. For more details on `spellcheck`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck).
 
 * Type: `boolean`
 * Default: `false`
