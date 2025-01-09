@@ -17,6 +17,10 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/icons/favicon-32.png' }],
     ['link', { rel: 'apple-touch-icon', href: '/assets/icons/favicon-192.png' }],
   ],
+  sitemap: {
+    hostname: 'https://lakejs.org'
+  },
+  srcExclude: ['**/README.md'],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/assets/icons/logo.svg',
