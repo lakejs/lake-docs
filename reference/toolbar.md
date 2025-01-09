@@ -53,7 +53,7 @@ Creates a new `Toolbar` object.
 
   `config`
 
-  A key-value object. For more details, see the [toolbar config](/reference/toolbar-config.md).
+  A key-value object. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
 
 * Return value:
 

@@ -61,7 +61,7 @@ new Editor({
 
 ## toolbar
 
-A [Toolbar](/reference/toolbar.md) object. If not given, the editor will be rendered without toolbar. For more information about toolbar, see the [toolbar config](/reference/toolbar-config.md).
+A [Toolbar](/reference/toolbar.md) object. If not given, the editor will be rendered without toolbar. For more information about toolbar, see the [Toolbar config](/reference/toolbar-config.md) page.
 
 * Type: [Toolbar](/reference/toolbar.md)
 
@@ -98,7 +98,7 @@ new Editor({
 
 ## readonly
 
-The `readonly` defines whether the editor is in read-only mode. Setting it to `true` can be used to display the content in the view page. You can visit the [read-only example](/examples/readonly) to see how it displays.
+The `readonly` defines whether the editor is in read-only mode. Setting it to `true` can be used to display the content in the view page. You can visit the [Read-only mode](/examples/readonly) example to see how it displays.
 
 * Type: `boolean`
 * Default: `false`
@@ -113,7 +113,7 @@ new Editor({
 
 ## spellcheck
 
-The `spellcheck` defines whether the editor is checked for spelling errors. For more details on `spellcheck`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck).
+The `spellcheck` defines whether the editor is checked for spelling errors. For more details on `spellcheck`, refer to the [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck) page.
 
 * Type: `boolean`
 * Default: `false`
@@ -128,7 +128,7 @@ new Editor({
 
 ## tabIndex
 
-The tab order of the editor. For more details on `tabIndex`, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
+The tab order of the editor. For more details on `tabIndex`, refer to the [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) page.
 
 * Type: `number`
 * Default: `0`
@@ -157,7 +157,7 @@ new Editor({
 
 ## indentWithTab
 
-The `indentWithTab` defines whether the content can be indented by `Tab` key. When the value is false, you can use `Tab` or `Shift-Tab` to move the focus. The [comment box example](/examples/comment-box) demonstrates how it works.
+The `indentWithTab` defines whether the content can be indented by `Tab` key. When the value is `false`, you can use `Tab` or `Shift-Tab` to move the focus. The [Comment box](/examples/comment-box) example demonstrates how it works.
 
 * Type: `boolean`
 * Default: `true`
@@ -172,7 +172,7 @@ new Editor({
 
 ## lang
 
-The `lang` defines the language in which the UI should be displayed. You can visit the [internationalization example](/examples/internationalization.md) to see how it displays.
+The `lang` defines the language in which the UI should be displayed. You can visit the [Internationalization](/examples/internationalization.md) example to see how it displays.
 
 * Type: `'en-US' | 'zh-CN' | 'ko' | 'ja'`
 * Default: `en-US`

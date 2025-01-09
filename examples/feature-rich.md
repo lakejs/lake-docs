@@ -3,7 +3,7 @@ layout: example
 title: Feature-rich editor
 ---
 
-This example shows most of the available features. For more information on customizing the toolbar, see the [toolbar config](/reference/toolbar-config.md).
+This example shows most of the available features. For more information on customizing the toolbar, see the [Toolbar config](/reference/toolbar-config.md) page.
 
 <script setup>
 import { data } from '../assets/values/default-value.data.js';

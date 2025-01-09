@@ -41,7 +41,7 @@ Creates a new `Editor` object.
 
   `config`
 
-  A key-value object. For more details, see the [editor config](/reference/).
+  A key-value object. For more details, see the [Editor config](/reference/) page.
 
 * Return value:
 

@@ -131,7 +131,7 @@ editor.event.on('statechange', state => {
 
 ## Uploading images
 
-This feature requires configuring the request settings for the image plugin. For more details, see the [image config](/reference/index.md#image).
+This feature requires configuring the request settings for the image plugin. For more details, see the [image](/reference/index.md#image) config.
 
 ```js
 new Editor({
@@ -146,7 +146,7 @@ new Editor({
 
 ## Uploading files
 
-This feature requires configuring the request settings for the file plugin. For more details, see the [file config](/reference/index.md#file).
+This feature requires configuring the request settings for the file plugin. For more details, see the [file](/reference/index.md#file) config.
 
 ```js
 new Editor({
