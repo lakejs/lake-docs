@@ -10,21 +10,12 @@ The `Fragment` interface represents a minimal document object that has no parent
 
 Example:
 
-::: code-group
-
-```js [npm]
+```js
 import { Fragment } from 'lakelib';
 
 const fragment = new Fragment();
 fragment.append('<div>foo</div><div>bar</div>');
 ```
-
-```js [CDN]
-const fragment = new Lake.Fragment();
-fragment.append('<div>foo</div><div>bar</div>');
-```
-
-:::
 
 
 ## Constructor

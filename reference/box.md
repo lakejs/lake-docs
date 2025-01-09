@@ -10,9 +10,7 @@ The `Box` interface represents an embedded content, which is used to enhance edi
 
 Example:
 
-::: code-group
-
-```js [npm]
+```js
 import { Box } from 'lakelib';
 
 const box = new Box('emoji');
@@ -21,16 +19,6 @@ box.updateValue({
   title: 'Face blowing a kiss',
 });
 ```
-
-```js [CDN]
-const box = new Lake.Box('emoji');
-box.updateValue({
-  url: '/assets/emojis/face_blowing_a_kiss_color.svg',
-  title: 'Face blowing a kiss',
-});
-```
-
-:::
 
 
 ## Constructor

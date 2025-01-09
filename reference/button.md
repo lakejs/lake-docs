@@ -10,12 +10,10 @@ The `Button` interface represents a UI component clicked by a user. Once clicked
 
 Example:
 
-::: code-group
+```js
+import { query, Button } from 'lakelib';
 
-```js [npm]
-import { Button } from 'lakelib';
-
-const button = new Button({
+new Button({
   root: query('.lake-button-row'),
   name: 'embed',
   type: 'primary',
@@ -23,24 +21,8 @@ const button = new Button({
   onClick: () => {
     console.log('clicked');
   },
-});
-button.render();
+}).render();
 ```
-
-```js [CDN]
-const button = new Lake.Button({
-  root: query('.lake-button-row'),
-  name: 'embed',
-  type: 'primary',
-  text: 'Embed video',
-  onClick: () => {
-    console.log('clicked');
-  },
-});
-button.render();
-```
-
-:::
 
 
 ## Constructor
@@ -54,7 +36,7 @@ Creates a new `Button` object.
   A key-value object.
 
   ```ts
-  {
+  type ButtonConfig = {
     // An element to which the button is appended.
     root: Nodes;
     // The name of the button.

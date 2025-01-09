@@ -10,21 +10,12 @@ The `HTMLParser` interface provides the ability to parse an HTML string by speci
 
 Example:
 
-::: code-group
-
-```js [npm]
+```js
 import { HTMLParser } from 'lakelib';
 
 const parser = new HTMLParser('<div><p>foo</p><p>bar</p></div>');
 console.log(parser.getHTML());
 ```
-
-```js [CDN]
-const parser = new Lake.HTMLParser('<div><p>foo</p><p>bar</p></div>');
-console.log(parser.getHTML());
-```
-
-:::
 
 
 ## Constructor

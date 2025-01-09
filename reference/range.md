@@ -10,23 +10,13 @@ The `Range` interface represents a fragment of a document that can contain nodes
 
 Example:
 
-::: code-group
-
-```js [npm]
+```js
 import { Range } from 'lakelib';
 
 const range = new Range();
 range.selectNode(document.body);
 range.collapseToEnd();
 ```
-
-```js [CDN]
-const range = Lake.Range();
-range.selectNode(document.body);
-range.collapseToEnd();
-```
-
-:::
 
 
 ## Constructor

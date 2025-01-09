@@ -10,19 +10,11 @@ A collection of utility functions.
 
 Example:
 
-::: code-group
-
-```js [npm]
+```js
 import { query } from 'lakelib';
 
 query(document.body).append('<p>foo</p>');
 ```
-
-```js [CDN]
-Lake.query(document.body).append('<p>foo</p>');
-```
-
-:::
 
 
 ## query()

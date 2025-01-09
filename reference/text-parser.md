@@ -10,23 +10,13 @@ The `TextParser` interface provides the ability to parse a text.
 
 Example:
 
-::: code-group
-
-```js [npm]
+```js
 import { TextParser } from 'lakelib';
 
 const parser = new TextParser('foo\nbar');
 // Outputs "<p>foo</p><p>bar</p>".
 console.log(parser.getHTML());
 ```
-
-```js [CDN]
-const parser = new Lake.TextParser('foo\nbar');
-// Outputs "<p>foo</p><p>bar</p>".
-console.log(parser.getHTML());
-```
-
-:::
 
 
 ## Constructor

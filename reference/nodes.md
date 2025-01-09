@@ -10,21 +10,12 @@ The `Nodes` interface represents a collection of the document's nodes. Its inter
 
 Example:
 
-::: code-group
-
-```js [npm]
+```js
 import { Nodes } from 'lakelib';
 
 const body = new Nodes(document.body);
 body.append('<p>foo</p>');
 ```
-
-```js [CDN]
-const body = new Lake.Nodes(document.body);
-body.append('<p>foo</p>');
-```
-
-:::
 
 
 ## Constructor

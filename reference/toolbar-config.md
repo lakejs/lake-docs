@@ -57,9 +57,10 @@ const toolbarItems = [
   'bold',
   'moreStyle',
 ];
-const toolbar = new Toolbar({
+new Toolbar({
   root: '.my-toolbar',
   items: toolbarItems,
+  placement: 'top',
 });
 ```
 
