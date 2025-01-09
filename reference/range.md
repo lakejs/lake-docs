@@ -113,7 +113,7 @@ const commonAncestor = range.commonAncestor;
 
 ### isCollapsed <Badge type="info" text="Read only" />
 
-A boolean value indicating whether the range's start and end points are at the same position.
+A boolean value indicating whether the start and end positions of the range are at the same position.
 
 * Type: `boolean`
 
@@ -127,7 +127,7 @@ const isCollapsed = range.isCollapsed;
 
 ### isBox <Badge type="info" text="Read only" />
 
-A boolean value indicating whether the range's start point is in a box.
+A boolean value indicating whether the start position of the range is within a box.
 
 * Type: `boolean`
 

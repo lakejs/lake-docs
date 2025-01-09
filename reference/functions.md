@@ -19,7 +19,7 @@ query(document.body).append('<p>foo</p>');
 
 ## query()
 
-Returns a [Nodes](/reference/nodes.md) object representing a collection of the document's nodes. This function is similar to [jQuery](https://jquery.com/), but its implementation is very simple. It is designed for simplifying DOM manipulation.
+Returns a [Nodes](/reference/nodes.md) object representing a collection of the nodes. This function is similar to [jQuery](https://jquery.com/), but its implementation is very simple. It is designed for simplifying DOM manipulation.
 
 * Parameters:
 

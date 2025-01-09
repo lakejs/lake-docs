@@ -514,3 +514,27 @@ Example:
 ```js
 editor.unmount();
 ```
+
+
+## Instance events
+
+### change
+
+Fired when the content of the editor is changed.
+
+```js
+editor.event.on('change', value => {
+  console.log(value);
+});
+```
+
+### statechange
+
+Fired when the current selection is changed.
+
+```js
+editor.event.on('statechange', state => {
+  console.log(state);
+});
+```
+

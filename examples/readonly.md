@@ -9,7 +9,7 @@ lastUpdated: false
 
 # {{ $frontmatter.title }}
 
-Read-only mode is used to display the editor's content in the view page. You can enable read-only by setting the [readonly](/reference/index.md#readonly) config to `true`.
+Read-only mode is used to display the content of the editor in the view page. You can enable read-only by setting the [readonly](/reference/index.md#readonly) config to `true`.
 
 <script setup>
 import { ref, onMounted } from 'vue';

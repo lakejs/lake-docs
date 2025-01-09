@@ -116,7 +116,7 @@ The `<ul>` tag with `<li>` represents an item in an unordered list.
 
 ## Checklist
 
-If `<ul>`'s `type` is `checklist`, the `<ul>` tag with `<li>` represents an item in a checklist.
+If the `type` of `<ul>` is `checklist`, the `<ul>` tag with `<li>` represents an item in a checklist.
 
 ```html
 <ul type="checklist"><li value="true">first item</li></ul>
