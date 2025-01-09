@@ -13,12 +13,14 @@ Lake is published on npm under the [lakelib](https://www.npmjs.com/package/lakel
 npm install lakelib
 ```
 
+
 ## Downloading Lake from CDN
 
 Bundled files are available in the `dist` folder of the distribution. You can download them from jsDelivr or UNPKG.
 
 * jsDelivr: https://www.jsdelivr.com/package/npm/lakelib
 * UNPKG: https://unpkg.com/browse/lakelib/
+
 
 ## Quick start with npm
 
@@ -60,6 +62,7 @@ const editor = new Editor({
 editor.render();
 ```
 
+
 ## Quick start with CDN
 
 Add the following lines of code in the `<head>` of your HTML page.
@@ -91,9 +94,10 @@ const editor = new Lake.Editor({
 editor.render();
 ```
 
+
 ## Default content
 
-You can set the default content using the [value](/reference/#value) config when initializing the editor.
+Set the default content using the [value](/reference/#value) config when initializing the editor.
 
 ```js
 const defaultValue = `
@@ -107,11 +111,14 @@ new Editor({
 });
 ```
 
+
 ## Binding events
+
+Set up an event using the `editor.event.on()` method. You can find all events in the [Editor](/reference/editor#instance-events) class.
 
 ### `change` event
 
-The `change` event is fired when the content of the editor is changed.
+Fired when the content of the editor is changed.
 
 ```js
 editor.event.on('change', value => {
@@ -121,13 +128,14 @@ editor.event.on('change', value => {
 
 ### `statechange` event
 
-The `statechange` event is fired when the current selection of the editor is changed.
+Fired when the current selection is changed.
 
 ```js
 editor.event.on('statechange', state => {
   console.log(state);
 });
 ```
+
 
 ## Uploading images
 
@@ -144,6 +152,7 @@ new Editor({
 });
 ```
 
+
 ## Uploading files
 
 This feature requires configuring the request settings for the file plugin. For more details, see the [file](/reference/index.md#file) config.
@@ -158,6 +167,7 @@ new Editor({
   },
 });
 ```
+
 
 ## Code block
 
