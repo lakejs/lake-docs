@@ -7,7 +7,7 @@ titleTemplate: false
 hero:
   name: "Lake"
   text: "Browser-based WYSIWYG Editor"
-  tagline: with out-of-the-box features
+  tagline: Feature-rich and lightweight
   image:
     src: /assets/images/lake-screenshot.png
     style: "max-width: 380px;"
