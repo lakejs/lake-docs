@@ -298,6 +298,8 @@ box.unmount();
 
 Fired when the box has received focus.
 
+Example:
+
 ```js
 box.event.on('focus', () => {
   console.log('focused');
@@ -308,6 +310,8 @@ box.event.on('focus', () => {
 ### blur
 
 Fired when the box has lost focus.
+
+Example:
 
 ```js
 box.event.on('blur', () => {
@@ -320,6 +324,8 @@ box.event.on('blur', () => {
 
 Fired before the box is destroyed.
 
+Example:
+
 ```js
 box.event.on('beforeunmount', () => {
   console.log('unmounted');
@@ -330,6 +336,8 @@ box.event.on('beforeunmount', () => {
 ### renderfloatingtoolbar
 
 Fired when the floating toolbar has rendered.
+
+Example:
 
 ```js
 box.event.on('renderfloatingtoolbar', () => {
