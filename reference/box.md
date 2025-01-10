@@ -60,7 +60,7 @@ const boxNode = box.node;
 
 ### event <Badge type="info" text="Read only" />
 
-An instance of the [EventEmitter](https://github.com/primus/eventemitter3) class.
+An instance of the [EventEmitter](https://github.com/primus/eventemitter3) class used to set up events. For more details, see the [Instance events](#instance-events).
 
 * Type: [EventEmitter](https://github.com/primus/eventemitter3)
 
@@ -299,7 +299,7 @@ box.unmount();
 Fired when the box has received focus.
 
 ```js
-editor.event.on('focus', () => {
+box.event.on('focus', () => {
   console.log('focused');
 });
 ```
@@ -310,7 +310,7 @@ editor.event.on('focus', () => {
 Fired when the box has lost focus.
 
 ```js
-editor.event.on('blur', () => {
+box.event.on('blur', () => {
   console.log('blurred');
 });
 ```
@@ -321,7 +321,7 @@ editor.event.on('blur', () => {
 Fired before the box is destroyed.
 
 ```js
-editor.event.on('beforeunmount', () => {
+box.event.on('beforeunmount', () => {
   console.log('unmounted');
 });
 ```
@@ -332,7 +332,7 @@ editor.event.on('beforeunmount', () => {
 Fired when the floating toolbar has rendered.
 
 ```js
-editor.event.on('renderfloatingtoolbar', () => {
+box.event.on('renderfloatingtoolbar', () => {
   console.log('rendered');
 });
 ```
