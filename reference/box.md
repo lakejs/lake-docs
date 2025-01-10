@@ -290,3 +290,49 @@ Example:
 ```js
 box.unmount();
 ```
+
+
+## Instance events
+
+### focus
+
+Fired when the box has received focus.
+
+```js
+editor.event.on('focus', () => {
+  console.log('focused');
+});
+```
+
+
+### blur
+
+Fired when the box has lost focus.
+
+```js
+editor.event.on('blur', () => {
+  console.log('blurred');
+});
+```
+
+
+### beforeunmount
+
+Fired before the box is destroyed.
+
+```js
+editor.event.on('beforeunmount', () => {
+  console.log('unmounted');
+});
+```
+
+
+### renderfloatingtoolbar
+
+Fired when the floating toolbar has rendered.
+
+```js
+editor.event.on('renderfloatingtoolbar', () => {
+  console.log('rendered');
+});
+```

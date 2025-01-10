@@ -160,7 +160,7 @@ const overlayContainer = editor.overlayContainer;
 
 ### event <Badge type="info" text="Read only" />
 
-An instance of the [EventEmitter](https://github.com/primus/eventemitter3) class.
+An instance of the [EventEmitter](https://github.com/primus/eventemitter3) class used to set up events. For more details, see the [Instance events](#instance-events).
 
 * Type: [EventEmitter](https://github.com/primus/eventemitter3)
 
