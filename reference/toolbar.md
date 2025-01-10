@@ -88,22 +88,9 @@ Update the state of each item in the toolbar, such as whether it is selected, di
 
   `state`
 
-  An `SelectionState` object that specifies the state of the current selection.
+  A `SelectionState` object that specifies the state of the current selection.
 
-  ```ts
-  type ActiveItem = {
-    node: Nodes;
-    name: string;
-    attributes: KeyValue;
-    styles: KeyValue;
-  };
-  type SelectionState = {
-    activeItems: ActiveItem[];
-    disabledNameMap?: Map<string, boolean>;
-    selectedNameMap?: Map<string, boolean>;
-    selectedValuesMap?: Map<string, string[]>;
-  }
-  ```
+  <<< @/src/selection-state.ts
 
 * Return value:
 

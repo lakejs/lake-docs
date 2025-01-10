@@ -118,7 +118,7 @@ Set up an event using the `editor.event.on()` method. You can find all events in
 
 ### `change` event
 
-Fired when the content of the editor is changed.
+Fired when the content of the editor is changed. The `value` represents the content of the editor and conforms to the [LML format](/guide/content-format.md).
 
 ```js
 editor.event.on('change', value => {
@@ -128,13 +128,17 @@ editor.event.on('change', value => {
 
 ### `statechange` event
 
-Fired when the current selection is changed.
+Fired when the current selection is changed. The `state` is a `SelectionState` object representing the state of the current selection.
 
 ```js
 editor.event.on('statechange', state => {
   console.log(state);
 });
 ```
+
+::: details SelectionState type
+<<< @/src/selection-state.ts
+:::
 
 
 ## Uploading images

@@ -520,7 +520,7 @@ editor.unmount();
 
 ### change
 
-Fired when the content of the editor is changed.
+Fired when the content of the editor is changed. The `value` represents the content of the editor and conforms to the [LML format](/guide/content-format.md).
 
 ```js
 editor.event.on('change', value => {
@@ -528,9 +528,10 @@ editor.event.on('change', value => {
 });
 ```
 
+
 ### statechange
 
-Fired when the current selection is changed.
+Fired when the current selection is changed. The `state` is a `SelectionState` object representing the state of the current selection.
 
 ```js
 editor.event.on('statechange', state => {
@@ -538,3 +539,50 @@ editor.event.on('statechange', state => {
 });
 ```
 
+::: details SelectionState type
+<<< @/src/selection-state.ts
+:::
+
+
+### click
+
+Fired when the document is clicked. The `targetNode` is a [Nodes](/reference/nodes.md) object representing the clicked node.
+
+```js
+editor.event.on('click', targetNode => {
+  console.log(targetNode);
+});
+```
+
+
+### copy
+
+Fired when the user initiates a copy action. The `event` is a [ClipboardEvent](https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent) object.
+
+```js
+editor.event.on('copy', event => {
+  console.log(event);
+});
+```
+
+
+### cut
+
+Fired when the user initiates a cut action. The `event` is a [ClipboardEvent](https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent) object.
+
+```js
+editor.event.on('cut', event => {
+  console.log(event);
+});
+```
+
+
+### paste
+
+Fired when the user initiates a paste action. The `event` is a [ClipboardEvent](https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent) object.
+
+```js
+editor.event.on('paste', event => {
+  console.log(event);
+});
+```
