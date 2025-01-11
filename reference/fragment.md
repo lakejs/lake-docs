@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Fragment` interface represents a minimal document object that has no parent. It contains the native [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment), designed for more efficient manipulation.
+The `Fragment` interface represents a minimal document object that has no parent. It is designed for more efficient manipulation.
 
 Example:
 

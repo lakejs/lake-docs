@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Nodes` interface represents a collection of the nodes. Its interface is similar to [jQuery](https://jquery.com/), but its implementation is very simple. They can be considered aliases of native DOM interfaces, designed to simplify DOM manipulation.
+The `Nodes` interface represents a collection of the nodes. It is similar to [jQuery](https://jquery.com/), but its implementation is much simpler. Its methods can be considered aliases of native DOM interfaces, designed to simplify DOM manipulation.
 
 Example:
 
