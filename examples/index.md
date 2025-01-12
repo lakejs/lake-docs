@@ -1,12 +1,80 @@
 ---
 layout: example
-title: Default config
+title: Feature-rich editor
 ---
 
-This example shows how the editor displays using the default config. For specific configurations, see other examples or the [Reference](/reference/) page.
+This example shows most of the available features. For more information on customizing the toolbar, see the [Toolbar config](/reference/toolbar-config.md) page.
 
 <script setup>
 import { data } from '../assets/values/default-value.data.js';
+
+const toolbarItems = [
+  'undo',
+  'redo',
+  '|',
+  'heading',
+  'fontFamily',
+  'fontSize',
+  '|',
+  'formatPainter',
+  'removeFormat',
+  'bold',
+  'italic',
+  'underline',
+  'strikethrough',
+  'superscript',
+  'subscript',
+  'code',
+  '|',
+  'fontColor',
+  'highlight',
+  '|',
+  'numberedList',
+  'bulletedList',
+  'checklist',
+  '|',
+  'alignLeft',
+  'alignCenter',
+  'alignRight',
+  'alignJustify',
+  '|',
+  'increaseIndent',
+  'decreaseIndent',
+  '|',
+  'link',
+  'image',
+  'video',
+  'file',
+  'emoji',
+  'specialCharacter',
+  'codeBlock',
+  'equation',
+  'table',
+  'blockQuote',
+  'paragraph',
+  'hr',
+  '|',
+  'selectAll',
+];
+const slashItems = [
+  'image',
+  'file',
+  'heading1',
+  'heading2',
+  'heading3',
+  'heading4',
+  'heading5',
+  'heading6',
+  'paragraph',
+  'blockQuote',
+  'numberedList',
+  'bulletedList',
+  'checklist',
+  'hr',
+  'codeBlock',
+  'video',
+  'equation',
+];
 </script>
 
-<DefaultEditor :value="data.value" />
+<DefaultEditor :toolbar="toolbarItems" :value="data.value" :slash="slashItems" />

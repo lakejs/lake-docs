@@ -54,8 +54,7 @@ export default defineConfig({
       '/examples/': [{
         text: 'Examples',
         items: [
-          { text: 'Default config', link: '/examples/' },
-          { text: 'Feature-rich editor', link: '/examples/feature-rich' },
+          { text: 'Feature-rich editor', link: '/examples/' },
           { text: 'Comment box', link: '/examples/comment-box' },
           { text: 'Headless editor', link: '/examples/headless' },
           { text: 'Huge content', link: '/examples/huge-content' },
