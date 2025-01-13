@@ -45,9 +45,7 @@ Lake provides markdown-style handy shortcuts, you can use the following shortcut
 | Inline code  | <code>\`code\`</code> `Space`  |
 | Alert block  | `:::info` `Enter`  |
 |   | `:::tip` `Enter`  |
-|   | `:::success` `Enter`  |
 |   | `:::warning` `Enter`  |
-|   | `:::error` `Enter`  |
 |   | `:::danger` `Enter`  |
 | Thematic break  | `---` `Enter`  |
 | Code block  | <code>\`\`\`</code> `Enter`  |
