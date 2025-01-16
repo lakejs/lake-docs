@@ -78,7 +78,7 @@ onUnmounted(() => {
   border: 1px solid #d9d9d9;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  height: 500px;
+  height: 450px;
   overflow: auto;
 }
 </style>
