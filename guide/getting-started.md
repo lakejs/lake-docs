@@ -97,7 +97,7 @@ editor.render();
 
 ## Default content
 
-Set the default content using the [value](/reference/#value) config when initializing the editor.
+You can set the default content using the [value](/reference/#value) config.
 
 ```js
 const defaultValue = `
@@ -114,7 +114,7 @@ new Editor({
 
 ## Binding events
 
-Set up an event using the `editor.event.on()` method. You can find all events in the [Editor](/reference/editor#instance-events) class.
+You can set up an event using the `editor.event.on()` method. To find more available events, refer to the [Editor](/reference/editor#instance-events) class.
 
 ### `change` event
 
