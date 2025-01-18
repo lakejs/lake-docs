@@ -5,7 +5,7 @@ title: Getting started
 
 # {{ $frontmatter.title }}
 
-## Downloading Lake using npm
+## Installation
 
 Lake is published on npm under the [lakelib](https://www.npmjs.com/package/lakelib) package. You can install the latest version with the following command:
 
@@ -14,9 +14,9 @@ npm install lakelib
 ```
 
 
-## Downloading Lake from CDN
+## Using CDN
 
-Bundled files are available in the `dist` folder of the distribution. You can download them from jsDelivr or UNPKG.
+Bundled files are available in the `dist` folder of the distribution. You can also download these files locally.
 
 * jsDelivr: https://www.jsdelivr.com/package/npm/lakelib
 * UNPKG: https://unpkg.com/browse/lakelib/
@@ -33,7 +33,7 @@ In the HTML page, add the following code that will serve as placeholders for the
 </div>
 ```
 
-Call the following JavaScript code to render the editor.
+Call the following JavaScript code to render the editor. For more information about the settings of the editor, refer to the [Editor config](/reference/) page.
 
 ```js
 import 'lakelib/lib/lake.css';
@@ -49,19 +49,9 @@ const editor = new Editor({
 editor.render();
 ```
 
-The `root` property can also be given a DOM element.
-
-```js
-const toolbar = new Toolbar({
-  root: document.querySelector('.my-toolbar'),
-});
-const editor = new Editor({
-  root: document.querySelector('.my-content'),
-  toolbar,
-});
-editor.render();
-```
-
+::: warning Note
+`lake.css` should be included when rendering the editor.
+:::
 
 ## Quick start with CDN
 
@@ -81,7 +71,7 @@ In the HTML page, add the following code that will serve as placeholders for the
 </div>
 ```
 
-Call the following JavaScript code to render the editor.
+Call the following JavaScript code to render the editor. For more information about the settings of the editor, refer to the [Editor config](/reference/) page.
 
 ```js
 const toolbar = new Lake.Toolbar({

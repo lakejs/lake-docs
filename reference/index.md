@@ -10,8 +10,12 @@ This config is the parameter of the constructor of the [Editor](/reference/edito
 Example:
 
 ```js
+const toolbar = new Toolbar({
+  root: '.my-toolbar',
+});
 new Editor({
   root: '.my-content',
+  toolbar,
   value: '<p><br /></p>',
   spellcheck: false,
   tabIndex: 0,
