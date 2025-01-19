@@ -5,26 +5,15 @@ title: Getting started
 
 # {{ $frontmatter.title }}
 
-## Installation
+## Using npm
 
-Lake is published on npm under the [lakelib](https://www.npmjs.com/package/lakelib) package. You can install the latest version with the following command:
+Lake is published on npm under the [lakelib](https://www.npmjs.com/package/lakelib) package. Install the latest version with the following command:
 
 ```bash
 npm install lakelib
 ```
 
-
-## Using CDN
-
-Bundled files are available in the `dist` folder of the distribution. You can also download these files locally.
-
-* jsDelivr: https://www.jsdelivr.com/package/npm/lakelib
-* UNPKG: https://unpkg.com/browse/lakelib/
-
-
-## Quick start with npm
-
-In the HTML page, add the following code that will serve as placeholders for the toolbar and the editor.
+In the HTML page, add the following code that will serve as placeholders for the editor.
 
 ```html
 <div class="my-editor">
@@ -33,7 +22,7 @@ In the HTML page, add the following code that will serve as placeholders for the
 </div>
 ```
 
-Call the following JavaScript code to render the editor. For more information about the settings of the editor, refer to the [Editor config](/reference/) page.
+Call the following JavaScript code to render the editor. For more information about the settings of Lake, refer to the [Editor config](/reference/) page.
 
 ```js
 import 'lakelib/lib/lake.css';
@@ -53,7 +42,13 @@ editor.render();
 `lake.css` should be included when rendering the editor.
 :::
 
-## Quick start with CDN
+
+## Using CDN
+
+Bundled files are available in the `dist` folder of the distribution.
+
+* jsDelivr: https://www.jsdelivr.com/package/npm/lakelib
+* UNPKG: https://unpkg.com/browse/lakelib/
 
 Add the following lines of code in the `<head>` of your HTML page.
 
@@ -62,7 +57,7 @@ Add the following lines of code in the `<head>` of your HTML page.
 <script src="https://cdn.jsdelivr.net/npm/lakelib@latest/dist/lake.min.js"></script>
 ```
 
-In the HTML page, add the following code that will serve as placeholders for the toolbar and the editor.
+In the HTML page, add the following code that will serve as placeholders for the editor.
 
 ```html
 <div class="my-editor">
@@ -71,7 +66,7 @@ In the HTML page, add the following code that will serve as placeholders for the
 </div>
 ```
 
-Call the following JavaScript code to render the editor. For more information about the settings of the editor, refer to the [Editor config](/reference/) page.
+Call the following JavaScript code to render the editor. For more information about the settings of Lake, refer to the [Editor config](/reference/) page.
 
 ```js
 const toolbar = new Lake.Toolbar({
@@ -84,6 +79,7 @@ const editor = new Lake.Editor({
 editor.render();
 ```
 
+Click [here](/assets/cdn.html){target="_blank"} to see how the editor displays with CDN.
 
 ## Default content
 
@@ -96,7 +92,6 @@ const defaultValue = `
 `;
 new Editor({
   root: '.my-content',
-  toolbar,
   value: defaultValue,
 });
 ```

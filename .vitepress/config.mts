@@ -20,7 +20,9 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://lakejs.org'
   },
-  srcExclude: ['**/README.md'],
+  srcExclude: [
+    '**/README.md',
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/assets/icons/logo.svg',
