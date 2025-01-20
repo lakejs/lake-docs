@@ -38,6 +38,8 @@ const editor = new Editor({
 editor.render();
 ```
 
+Go to the [CodeSandbox](https://codesandbox.io/p/sandbox/lakejs-npm-example-hm39df) to see how the editor is rendered.
+
 ::: warning Note
 `lake.css` should be included when rendering the editor.
 :::
@@ -79,7 +81,7 @@ const editor = new Lake.Editor({
 editor.render();
 ```
 
-Click [here](/assets/cdn.html){target="_blank"} to see how the editor displays.
+Click [here](/assets/cdn.html){target="_blank"} to see how the editor is rendered using the CDN.
 
 ## Default content
 
