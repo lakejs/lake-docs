@@ -3,7 +3,7 @@ layout: example
 title: Feature-rich editor
 ---
 
-This example shows most of the available features. If you want to learn how to install Lake, see the [Getting started](/guide/getting-started.md) page.
+This example shows most of the available features. If you want to learn how to install Lake, see the [Getting started](/guide/) page.
 
 <script setup>
 import { data } from '../assets/values/default-value.data.js';
