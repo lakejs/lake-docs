@@ -106,8 +106,6 @@ The buttons of the toolbar. The `|` character represents a divider, and other st
 Example:
 
 ```js
-import { Toolbar } from 'lakelib';
-
 const toolbarItems = [
   'undo',
   'redo',

@@ -83,9 +83,13 @@ editor.render();
 
 Click [here](/assets/cdn.html){target="_blank"} to see how the editor is rendered using the CDN.
 
-## Default content
+## Getting and setting value
 
-You can set the default content using the [value](/reference/#value) config.
+Lake provides the following methods to get and set the content of the editor.
+
+### Setting default value
+
+The [value](/reference/#value) config is used to set the content when initializing the editor.
 
 ```js
 const defaultValue = `
@@ -98,10 +102,26 @@ new Editor({
 });
 ```
 
+### Getting value
+
+You can call [getValue()](/reference/editor.md#getvalue) method to get the current content.
+
+```js
+const content = editor.getValue();
+```
+
+### Setting value
+
+You can also use [setValue()](/reference/editor.md#setvalue) method to replace the content with the provided value.
+
+```js
+editor.setValue('<p>foo</p>');
+```
+
 
 ## Binding events
 
-You can set up an event using the `editor.event.on()` method. To find more available events, refer to the [Editor](/reference/editor#instance-events) class.
+Lake allows you to set up an event using the `editor.event.on()` method. To find more available events, refer to the [Editor](/reference/editor#instance-events) class.
 
 ### `change` event
 
@@ -127,6 +147,23 @@ editor.event.on('statechange', state => {
 <<< @/src/selection-state.ts
 :::
 
+
+## Configuring toolbar
+
+Lake allows you to make your own toolbar by setting the [items](/reference/toolbar-config#items) config for the toolbar. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
+
+```js
+const toolbarItems = [
+  'undo',
+  'redo',
+  '|',
+  'bold',
+];
+new Toolbar({
+  root: '.my-toolbar',
+  items: toolbarItems,
+});
+```
 
 ## Uploading images
 
@@ -162,7 +199,7 @@ new Editor({
 
 ## Code block
 
-This feature depends on [CodeMirror](https://codemirror.net/), so you need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page.
+This feature depends on [CodeMirror](https://codemirror.net/), so adding [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page is needed.
 
 ::: code-group
 
@@ -180,7 +217,7 @@ window.LakeCodeMirror = CodeMirror;
 
 ## Mathematical formula
 
-This feature depends on [KaTeX](https://katex.org/), so you need to add KaTeX to your HTML page.
+This feature depends on [KaTeX](https://katex.org/), so you need to include KaTeX to your HTML page.
 
 ::: code-group
 
