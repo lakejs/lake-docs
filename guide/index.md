@@ -38,7 +38,7 @@ const editor = new Editor({
 editor.render();
 ```
 
-Go to the [CodeSandbox](https://codesandbox.io/p/sandbox/lakejs-npm-example-hm39df) to see how the editor is rendered.
+Go to [CodeSandbox](https://codesandbox.io/p/sandbox/lakejs-npm-example-hm39df) to see how the editor is rendered.
 
 ::: warning Note
 `lake.css` should be included when rendering the editor.
@@ -81,7 +81,28 @@ const editor = new Lake.Editor({
 editor.render();
 ```
 
-Click [here](/assets/cdn.html){target="_blank"} to see how the editor is rendered using the CDN.
+Click [here](/assets/cdn.html){target="_blank"} to see how the editor is rendered using the CDN. The same example is also available on [CodeSandbox](https://codesandbox.io/p/sandbox/lakejs-cdn-example-z9p964).
+
+
+## Integrating with frameworks
+
+Lake is a plain JavaScript library that allows you to integrate it into any other frameworks, such as React, Vue, and Angular.
+
+::: code-group
+
+<<< @/src/LakeReactExample.js [React]
+
+<<< @/src/LakeVueExample.vue [Vue]
+
+<<< @/src/LakeAngularExample.ts [Angular]
+
+:::
+
+You can try the code above directly in CodeSandbox.
+
+* [React example](https://codesandbox.io/p/sandbox/lakejs-react-example-kvv8yq)
+* [Vue example](https://codesandbox.io/p/sandbox/lakejs-vue-example-2g4855)
+
 
 ## Getting and setting value
 
@@ -121,7 +142,7 @@ editor.setValue('<p>foo</p>');
 
 ## Binding events
 
-Lake allows you to set up an event using the `editor.event.on()` method. To find more available events, refer to the [Editor](/reference/editor#instance-events) class.
+Lake allows you to set up an event using the `editor.event.on()` method.
 
 ### `change` event
 
@@ -147,6 +168,7 @@ editor.event.on('statechange', state => {
 <<< @/src/selection-state.ts
 :::
 
+To find out more available events, refer to the [Editor](/reference/editor#instance-events) class.
 
 ## Configuring toolbar
 

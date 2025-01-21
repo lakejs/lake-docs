@@ -14,8 +14,8 @@ onMounted(() => {
     editor.unmount();
   }
   (async () => {
-    const { createMiniatureEditor } = await import('/src/comment-box');
-    editor = createMiniatureEditor({
+    const { createCommentBox } = await import('/src/comment-box');
+    editor = createCommentBox({
       editorRoot: contentRef.value,
       toolbarRoot: toolbarRef.value,
       value: props.value,

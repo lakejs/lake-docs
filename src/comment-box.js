@@ -94,7 +94,7 @@ const toolbarItems = [
   'link',
 ];
 
-export function createMiniatureEditor(config) {
+export function createCommentBox(config) {
   const toolbar = new Toolbar({
     root: config.toolbarRoot,
     items: toolbarItems,
