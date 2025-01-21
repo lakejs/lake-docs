@@ -242,6 +242,10 @@ The items of the slash commands.
   'bulletedList',
   'checklist',
   'table',
+  'infoAlert',
+  'tipAlert',
+  'warningAlert',
+  'dangerAlert',
   'hr',
 ];
 ```
@@ -289,6 +293,14 @@ The following items are currently available.
 `checklist`
 
 `table`
+
+`infoAlert`
+
+`tipAlert`
+
+`warningAlert`
+
+`dangerAlert`
 
 `hr`
 
