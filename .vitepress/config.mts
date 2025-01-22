@@ -63,6 +63,7 @@ export default defineConfig({
           { text: 'Read-only mode', link: '/examples/readonly' },
           { text: 'Internationalization', link: '/examples/internationalization' },
           { text: 'Document editor', link: '/examples/document', target: '_blank' },
+          { text: 'Playground', link: 'https://codesandbox.io/embed/ty37hm?module=/index.js', target: '_blank' },
         ],
       }],
       '/guide/': [{

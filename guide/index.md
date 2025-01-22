@@ -38,7 +38,7 @@ const editor = new Editor({
 editor.render();
 ```
 
-Go to [CodeSandbox](https://codesandbox.io/embed/hm39df) to see the result of rendering the editor by running the code above.
+Go to [CodeSandbox](https://codesandbox.io/embed/hm39df?module=/src/index.js) to see the result of rendering the editor by running the code above.
 
 ::: warning Note
 `lake.css` should be included when rendering the editor.
@@ -68,7 +68,7 @@ In the HTML page, add the following code that will serve as placeholders for the
 </div>
 ```
 
-Call the following JavaScript code to render the editor. You can change the configuration through the [Toolbar](/reference/toolbar-config.md) and [Editor](/reference/) config.
+Call the following JavaScript code to render the editor using default config. You can change the config through the [Toolbar](/reference/toolbar-config.md) and [Editor](/reference/) config.
 
 ```js
 const toolbar = new Lake.Toolbar({
@@ -100,8 +100,8 @@ Lake is a plain JavaScript library, which means you can integrate it into any ot
 
 You can try the code above directly in CodeSandbox.
 
-* [React example](https://codesandbox.io/embed/kvv8yq)
-* [Vue example](https://codesandbox.io/embed/2g4855)
+* [React example](https://codesandbox.io/embed/kvv8yq?module=/src/Lake.js)
+* [Vue example](https://codesandbox.io/embed/2g4855?module=/Lake.js)
 
 
 ## Getting and setting value
