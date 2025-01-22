@@ -38,7 +38,7 @@ const editor = new Editor({
 editor.render();
 ```
 
-Go to [CodeSandbox](https://codesandbox.io/p/sandbox/lakejs-npm-example-hm39df) to see how the editor is rendered.
+Go to [CodeSandbox](https://codesandbox.io/embed/lakejs-npm-example-hm39df) to see how the editor is rendered.
 
 ::: warning Note
 `lake.css` should be included when rendering the editor.
@@ -81,7 +81,7 @@ const editor = new Lake.Editor({
 editor.render();
 ```
 
-Click [here](/assets/cdn.html){target="_blank"} to see how the editor is rendered. The same example is also available on [CodeSandbox](https://codesandbox.io/p/sandbox/lakejs-cdn-example-z9p964).
+Click [here](/assets/cdn.html){target="_blank"} to see how the editor is rendered. The same example is also available on [CodeSandbox](https://codesandbox.io/embed/lakejs-cdn-example-z9p964).
 
 
 ## Integrating with frameworks
@@ -100,8 +100,8 @@ Lake is a plain JavaScript library, which means you can integrate it into any ot
 
 You can try the code above directly in CodeSandbox.
 
-* [React example](https://codesandbox.io/p/sandbox/lakejs-react-example-kvv8yq)
-* [Vue example](https://codesandbox.io/p/sandbox/lakejs-vue-example-2g4855)
+* [React example](https://codesandbox.io/embed/lakejs-react-example-kvv8yq)
+* [Vue example](https://codesandbox.io/embed/lakejs-vue-example-2g4855)
 
 
 ## Getting and setting value
