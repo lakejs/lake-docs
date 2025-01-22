@@ -5,7 +5,7 @@ title: Getting started
 
 # {{ $frontmatter.title }}
 
-## Using npm
+## Quick start using npm
 
 Lake is published on npm under the [lakelib](https://www.npmjs.com/package/lakelib) package. Install the latest version with the following command:
 
@@ -22,7 +22,7 @@ In the HTML page, add the following code that will serve as placeholders for the
 </div>
 ```
 
-Call the following JavaScript code to render the editor. For more information about the settings of Lake, refer to the [Editor config](/reference/) page.
+Call the following JavaScript code to render the editor. You can change the configuration through the [Toolbar](/reference/toolbar-config.md) and [Editor](/reference/) config.
 
 ```js
 import 'lakelib/lib/lake.css';
@@ -45,7 +45,7 @@ Go to [CodeSandbox](https://codesandbox.io/p/sandbox/lakejs-npm-example-hm39df) 
 :::
 
 
-## Using CDN
+## Quick start using CDN
 
 Bundled files are available in the `dist` folder of the distribution.
 
@@ -68,7 +68,7 @@ In the HTML page, add the following code that will serve as placeholders for the
 </div>
 ```
 
-Call the following JavaScript code to render the editor. For more information about the settings of Lake, refer to the [Editor config](/reference/) page.
+Call the following JavaScript code to render the editor. You can change the configuration through the [Toolbar](/reference/toolbar-config.md) and [Editor](/reference/) config.
 
 ```js
 const toolbar = new Lake.Toolbar({
@@ -81,12 +81,12 @@ const editor = new Lake.Editor({
 editor.render();
 ```
 
-Click [here](/assets/cdn.html){target="_blank"} to see how the editor is rendered using the CDN. The same example is also available on [CodeSandbox](https://codesandbox.io/p/sandbox/lakejs-cdn-example-z9p964).
+Click [here](/assets/cdn.html){target="_blank"} to see how the editor is rendered. The same example is also available on [CodeSandbox](https://codesandbox.io/p/sandbox/lakejs-cdn-example-z9p964).
 
 
 ## Integrating with frameworks
 
-Lake is a plain JavaScript library that allows you to integrate it into any other frameworks, such as React, Vue, and Angular.
+Lake is a plain JavaScript library, which means you can integrate it into any other frameworks, such as React, Vue, and Angular.
 
 ::: code-group
 
@@ -108,7 +108,7 @@ You can try the code above directly in CodeSandbox.
 
 Lake provides the following methods to get and set the content of the editor.
 
-### Setting default value
+### Initializing the editor with provided value
 
 The [value](/reference/#value) config is used to set the content when initializing the editor.
 
@@ -133,7 +133,7 @@ const content = editor.getValue();
 
 ### Setting value
 
-You can also use [setValue()](/reference/editor.md#setvalue) method to replace the content with the provided value.
+You can also use [setValue()](/reference/editor.md#setvalue) method to replace the existing content with the provided value.
 
 ```js
 editor.setValue('<p>foo</p>');
