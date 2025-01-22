@@ -19,9 +19,9 @@ export default function Lake() {
   }, []);
 
   return (
-    <div class="my-editor">
-      <div class="my-toolbar" ref={toolbarRef}></div>
-      <div class="my-content" ref={contentRef}></div>
+    <div className="my-editor">
+      <div className="my-toolbar" ref={toolbarRef}></div>
+      <div className="my-content" ref={contentRef}></div>
     </div>
   );
 }
