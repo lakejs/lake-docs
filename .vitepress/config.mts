@@ -1,4 +1,5 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from 'vitepress';
+import pkg from '../package.json';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -32,7 +33,7 @@ export default defineConfig({
       { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
       { text: 'Reference', link: '/reference/', activeMatch: '/reference/' },
       {
-        text: '0.3.2',
+        text: pkg.version,
         items: [
           { text: 'npm', link: 'https://www.npmjs.com/package/lakelib', target: '_blank' },
           { text: 'jsDelivr', link: 'https://www.jsdelivr.com/package/npm/lakelib', target: '_blank' },

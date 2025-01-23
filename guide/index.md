@@ -55,8 +55,8 @@ Bundled files are available in the `dist` folder of the distribution.
 Add the following lines of code in the `<head>` of your HTML page.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lakelib@latest/dist/lake.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/lakelib@latest/dist/lake.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lakelib@0.3/dist/lake.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/lakelib@0.3/dist/lake.min.js"></script>
 ```
 
 In the HTML page, add the following code that will serve as placeholders for the editor.
@@ -233,7 +233,7 @@ window.LakeCodeMirror = CodeMirror;
 ```
 
 ```html [CDN]
-<script src="https://cdn.jsdelivr.net/npm/lake-codemirror@latest/dist/codemirror.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lake-codemirror@2/dist/codemirror.min.js"></script>
 ```
 
 :::
@@ -252,8 +252,8 @@ window.katex = katex;
 ```
 
 ```html [CDN]
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"></script>
 ```
 
 :::
