@@ -71,10 +71,12 @@ In the HTML page, add the following code that will serve as placeholders for the
 Call the following JavaScript code to render the editor using default config. You can change the config through the [Toolbar](/reference/toolbar-config.md) and [Editor](/reference/) config.
 
 ```js
-const toolbar = new Lake.Toolbar({
+const { Editor, Toolbar } = Lake;
+
+const toolbar = new Toolbar({
   root: '.my-toolbar',
 });
-const editor = new Lake.Editor({
+const editor = new Editor({
   root: '.my-content',
   toolbar,
 });
