@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: About
+title: About Lake
 ---
 
 # {{ $frontmatter.title }}

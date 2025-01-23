@@ -73,7 +73,7 @@ export default defineConfig({
           { text: 'Getting started', link: '/guide/' },
           { text: 'Content format', link: '/guide/content-format' },
           { text: 'Markdown shortcuts', link: '/guide/markdown' },
-          { text: 'About', link: '/guide/about' },
+          { text: 'About Lake', link: '/guide/about' },
         ],
       }],
       '/reference/': [{
