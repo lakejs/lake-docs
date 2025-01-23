@@ -2,7 +2,7 @@
   "version": "0.3.2",
   "dependencies": {
     "katex": "^0.16.21",
-    "lake-codemirror": "^2.0.1",
+    "lake-codemirror": "^2.0.2",
     "lakelib": "^0.3.2"
   },
   "devDependencies": {

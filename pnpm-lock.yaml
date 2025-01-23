@@ -12,8 +12,8 @@ importers:
         specifier: ^0.16.21
         version: 0.16.21
       lake-codemirror:
-        specifier: ^2.0.1
-        version: 2.0.1
+        specifier: ^2.0.2
+        version: 2.0.2
       lakelib:
         specifier: ^0.3.2
         version: 0.3.2(typescript@5.5.3)
@@ -734,8 +734,8 @@ packages:
     resolution: {integrity: sha512-XvqR7FgOHtWupfMiigNzmh+MgUVmDGU2kXZm899ZkPfcuoPuFxyHmXsgATDpFZDAXCI8tvinaVcDo8PIIJSo4A==}
     hasBin: true
 
-  lake-codemirror@2.0.1:
-    resolution: {integrity: sha512-f9DFQICOKoSQlHI9CZ534C8i/pODmRd5vt7hsZ4+S2MBRdwaLvAN5YjcrLYRwh5z/wcKEb1XP/xfyleyYgExlA==}
+  lake-codemirror@2.0.2:
+    resolution: {integrity: sha512-PHFVbBkWoR3IGesSTkO9CSFxr6C6/1BzDQlf+V1dEOpnNE0eRwVoX77BaSYR0DBqMn2dbOv/gB79boIChRScng==}
 
   lakelib@0.3.2:
     resolution: {integrity: sha512-79+EKQN0xKc4IhR4qh/J2DN9Z8XrXueozWwXDS14IWAPzWkhdQDyJsd5Hu3FHSQek6DaXRwVYs+P6f3RM9jlLw==}
@@ -1743,7 +1743,7 @@ snapshots:
     dependencies:
       commander: 8.3.0
 
-  lake-codemirror@2.0.1:
+  lake-codemirror@2.0.2:
     dependencies:
       '@codemirror/commands': 6.8.0
       '@codemirror/lang-cpp': 6.0.2
