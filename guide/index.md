@@ -38,7 +38,7 @@ const editor = new Editor({
 editor.render();
 ```
 
-Go to [CodeSandbox](https://codesandbox.io/embed/hm39df?module=/src/index.js) to see the result of rendering the editor by running the code above.
+Visit the [npm example](https://codesandbox.io/embed/hm39df?module=/src/index.js) on CodeSandbox to see the result of rendering the editor by running the code above.
 
 ::: warning Note
 `lake.css` should be included when rendering the editor.
@@ -81,7 +81,7 @@ const editor = new Lake.Editor({
 editor.render();
 ```
 
-Click [here](/assets/cdn.html){target="_blank"} to see the result of running the code above. The same example is also available on [CodeSandbox](https://codesandbox.io/embed/z9p964).
+Directly visit the local [CDN example](/assets/cdn){target="_blank"} to see the result of running the code above. The same example is also available on [CodeSandbox](https://codesandbox.io/embed/z9p964).
 
 
 ## Integrating with frameworks
@@ -98,7 +98,7 @@ Lake is a plain JavaScript library, which means you can integrate it into any ot
 
 :::
 
-You can try the code above directly in CodeSandbox.
+You can go to CodeSandbox to try the code above.
 
 * [React example](https://codesandbox.io/embed/kvv8yq?module=/src/Lake.js)
 * [Vue example](https://codesandbox.io/embed/2g4855?module=/Lake.js)
