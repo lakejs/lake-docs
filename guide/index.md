@@ -135,7 +135,7 @@ const content = editor.getValue();
 
 ### Setting value
 
-You can also use [setValue()](/reference/editor.md#setvalue) method to replace the existing content with the provided value.
+You can use [setValue()](/reference/editor.md#setvalue) method to replace the existing content with the provided value.
 
 ```js
 editor.setValue('<p>foo</p>');
@@ -148,7 +148,7 @@ Lake allows you to set up an event using the `editor.event.on()` method.
 
 ### `change` event
 
-Fired when the content of the editor is changed. The `value` represents the content of the editor and conforms to the [LML format](/guide/content-format.md).
+Fired when the content of the editor is changed. The `value` represents the content of the editor, which conforms to the [LML format](/guide/content-format.md).
 
 ```js
 editor.event.on('change', value => {
@@ -174,7 +174,7 @@ To find out more available events, refer to the [Editor](/reference/editor#insta
 
 ## Configuring toolbar
 
-Lake allows you to make your own toolbar by setting the [items](/reference/toolbar-config#items) config for the toolbar. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
+Lake allows you to make your own toolbar by setting the [items](/reference/toolbar-config#items) config. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
 
 ```js
 const toolbarItems = [
@@ -191,7 +191,7 @@ new Toolbar({
 
 ## Uploading images
 
-This feature requires configuring the request settings for the image plugin. For more details, see the [image](/reference/index.md#image) config.
+To upload images, you need to configure the request settings for the `image` plugin. For more details, see the [image](/reference/index.md#image) config.
 
 ```js
 new Editor({
@@ -207,7 +207,7 @@ new Editor({
 
 ## Uploading files
 
-This feature requires configuring the request settings for the file plugin. For more details, see the [file](/reference/index.md#file) config.
+To upload files, you need to configure the request settings for the `file` plugin. For more details, see the [file](/reference/index.md#file) config.
 
 ```js
 new Editor({
@@ -223,7 +223,7 @@ new Editor({
 
 ## Code block
 
-This feature depends on [CodeMirror](https://codemirror.net/), so adding [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your HTML page is needed.
+The `code block` feature in Lake is implemented using [CodeMirror](https://codemirror.net/). However, since CodeMirror is quite large and not all users may need this feature, it is disabled by default. To activate it, you only need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your code, no additional config is needed.
 
 ::: code-group
 
@@ -241,7 +241,7 @@ window.LakeCodeMirror = CodeMirror;
 
 ## Mathematical formula
 
-This feature depends on [KaTeX](https://katex.org/), so you need to include KaTeX to your HTML page.
+For the same reason as the `code block` feature, the `formula` feature is disabled by default. To activate it, simply add [KaTeX](https://katex.org/) to your code.
 
 ::: code-group
 
