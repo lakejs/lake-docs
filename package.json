@@ -1,5 +1,7 @@
 {
+  "name": "lake-docs",
   "version": "0.3.2",
+  "description": "The Documentation for Lake",
   "dependencies": {
     "katex": "^0.16.21",
     "lake-codemirror": "^2.0.2",
