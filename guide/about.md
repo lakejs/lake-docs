@@ -13,9 +13,9 @@ There are already many rich text editors on the internet, but finding one that f
 
 * **Basic**: These editors often lack some features that are essential to you, so you have to spend a lot of time adding these features. And the people who do this work need to have advanced programming skills for customization.
 
-* **Commercial**: These editors usually include the features you need, but you have to buy a license for commercial use. And it is not easy to customize because of their complex structures.
+* **Commercial**: These editors usually include the features you need, but you have to buy a license for commercial use. And it is not easy to customize because they often have complex structures.
 
-Lake aims to provide as many features as possible with a simple structure while being free for commercial use under the MIT license.
+Lake aims to provide as many features as possible with a simple structure while being free for commercial use.
 
 ## Principles
 
@@ -34,4 +34,4 @@ The following features will not be added to Lake, as supporting them would signi
 * Real-time collaboration
 * Typography beyond standard web practices
 
-If these features are essential to you, please consider using other editors.
+If these features are essential to you, please consider using alternative editors.

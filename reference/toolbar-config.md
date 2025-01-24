@@ -5,7 +5,7 @@ title: Toolbar config
 
 # {{ $frontmatter.title }}
 
-This config is the parameter of the constructor of the [Toolbar](/reference/toolbar.md) class, it allows you to define the settings of the toolbar.
+You can customize the toolbar through the parameter of the constructor of the [Toolbar](/reference/toolbar.md) class.
 
 Example:
 

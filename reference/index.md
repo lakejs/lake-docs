@@ -5,7 +5,7 @@ title: Editor config
 
 # {{ $frontmatter.title }}
 
-This config is the parameter of the constructor of the [Editor](/reference/editor.md) class, it allows you to define the settings of the editor.
+You can customize the editor through the parameter of the constructor of the [Editor](/reference/editor.md) class.
 
 Example:
 
