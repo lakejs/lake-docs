@@ -13,7 +13,7 @@ Lake is published on npm under the [lakelib](https://www.npmjs.com/package/lakel
 npm install lakelib
 ```
 
-In the HTML page, add the following code that will serve as placeholders for the editor.
+In your HTML page, add the following code that will serve as placeholders for the editor.
 
 ```html
 <div class="my-editor">
@@ -47,12 +47,12 @@ Visit the [npm example](https://codesandbox.io/embed/hm39df?module=/src/index.js
 
 ## Quick start using CDN
 
-Bundled files are available in the `dist` folder of the distribution.
+If you prefer plain JavaScript without any build steps, you can use the bundled files directly from the `dist` folder in the distribution. You can also download these files and host them yourself.
 
 * jsDelivr: https://www.jsdelivr.com/package/npm/lakelib
 * UNPKG: https://unpkg.com/browse/lakelib/
 
-Add the following lines of code in the `<head>` of your HTML page.
+In the `<head>` of your HTML page, add the following lines of code.
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lakelib@0.3/dist/lake.min.css" />
@@ -88,7 +88,7 @@ Directly visit the local [CDN example](/assets/cdn){target="_blank"} to see the 
 
 ## Integrating with frameworks
 
-Lake is a plain JavaScript library, which means you can integrate it into any other frameworks, such as React, Vue, and Angular.
+Lake is a plain JavaScript library, which means you can integrate it into any other frameworks, such as [React](https://react.dev/), [Vue](https://vuejs.org/), and [Angular](https://angular.dev/).
 
 ::: code-group
 
