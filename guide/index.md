@@ -83,7 +83,7 @@ const editor = new Editor({
 editor.render();
 ```
 
-Directly visit the local [CDN example](/assets/cdn){target="_blank"} to see the result of running the code above. The same example is also available on [CodeSandbox](https://codesandbox.io/embed/z9p964).
+Directly visit the local [CDN example](/assets/cdn){target="_blank"} to see the result of running the code above. The same example is also available on [CodeSandbox](https://codesandbox.io/embed/z9p964?module=/index.html).
 
 
 ## Integrating with frameworks
