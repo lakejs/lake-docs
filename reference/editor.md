@@ -177,7 +177,7 @@ editor.event.on('change', value => {
 
 A [Selection](/reference/selection.md) object representing the range of content selected by the user or the current position of the cursor.
 
-* Type: `Selection`
+* Type: [Selection](/reference/selection.md)
 
 Example:
 
@@ -188,9 +188,9 @@ editor.selection.insertContents('<strong>foo</strong>');
 
 ### command <Badge type="info" text="Read only" />
 
-A `Command` object.
+A [Command](/reference/command.md) object managing all registered commands.
 
-* Type: `Command`
+* Type: [Command](/reference/command.md)
 
 Example:
 
