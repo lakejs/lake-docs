@@ -10,7 +10,6 @@ window.Editor = Editor;
 function createToolbar(config) {
   const editor = config.editor;
   const toolbarRoot = query(config.root);
-  toolbarRoot.addClass('lake-custom-properties');
   const buttonList = [];
   // Heading
   buttonList.push(new Button({
