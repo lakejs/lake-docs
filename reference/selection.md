@@ -170,6 +170,7 @@ Example:
 
 ```js
 const bookmark = selection.insertBookmark();
+console.log(bookmark.anchor, bookmark.focus);
 ```
 
 
@@ -219,3 +220,251 @@ Example:
 selection.insertContents('<p>foo</p>');
 ```
 
+
+### deleteContents()
+
+Removes the contents of the selection.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+selection.deleteContents();
+```
+
+
+### setBlocks()
+
+Adds new blocks or changes the target blocks in the selection.
+
+* Parameters:
+
+  `value`
+
+  An HTML string or key-value object.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+// Changes the target blocks to headings.
+selection.setBlocks('<h1 />');
+// Changes the target blocks to numbered lists.
+selection.setBlocks('<ol><li></li></ol>');
+// Adds "text-align" CSS property to the target blocks.
+selection.setBlocks({
+  'text-align': 'center',
+});
+```
+
+
+### splitBlock()
+
+Removes the contents of the selection and then splits the block node at the point of the cursor.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  ```ts
+  {
+    start: Nodes | null;
+    end: Nodes | null;
+  }
+  ```
+
+Example:
+
+```js
+const parts = selection.splitBlock();
+console.log(parts.start, parts.end);
+```
+
+
+### insertBlock()
+
+Inserts a block into the selection.
+
+* Parameters:
+
+  `value`
+
+  An HTML string or [Nodes](/reference/nodes.md) object.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+selection.insertBlock('<h1>heading</h1>');
+```
+
+
+### splitMarks()
+
+Splits text nodes or mark nodes.
+
+* Parameters:
+
+  `removeEmptyMark` <Badge type="info" text="Optional" />
+
+  A boolean value indicating whether the empty mark nodes are removed. Default value is `true`.
+
+* Return value:
+
+  ```ts
+  {
+    start: Nodes | null;
+    center: Nodes | null;
+    end: Nodes | null;
+  }
+  ```
+
+Example:
+
+```js
+const parts = selection.splitMarks();
+console.log(parts.start, parts.center, parts.end);
+```
+
+
+### addMark()
+
+Adds the specified mark to the texts of the selection.
+
+* Parameters:
+
+  `value`
+
+  An HTML string or [Nodes](/reference/nodes.md) object.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+// Adds bold.
+selection.addMark('<strong />');
+// Changes font size.
+selection.addMark('<span style="font-size: 18px;" />');
+```
+
+
+### removeMark()
+
+Removes the specified marks in the selection.
+
+* Parameters:
+
+  `value` <Badge type="info" text="Optional" />
+
+  An HTML string or [Nodes](/reference/nodes.md) object.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+// Removes all formatting.
+selection.removeMark();
+// Removes bold.
+selection.removeMark('<strong />');
+```
+
+
+### selectBox()
+
+Collapses the selection to the center position of the specified box.
+
+* Parameters:
+
+  `box`
+
+  A [Box](/reference/box.md) object or [Nodes](/reference/nodes.md) object.
+
+* Return value:
+
+  None.
+
+Example:
+
+```js
+selection.selectBox(query('lake-box').eq(0));
+```
+
+
+### insertBox()
+
+Inserts a box into the selection.
+
+* Parameters:
+
+  `boxName`
+
+  A string that specifies the name of the box.
+
+  `boxValue` <Badge type="info" text="Optional" />
+
+  A key-value object that specifies the data of the box.
+
+* Return value:
+
+  A [Box](/reference/box.md) object.
+
+* Exception:
+
+  Thrown when the box is not inserted.
+
+Example:
+
+```js
+// Inserts a horizontal rule.
+selection.insertBox('hr');
+// Inserts an emoji.
+selection.insertBox('emoji', {
+  url: '/assets/emojis/face_blowing_a_kiss_color.svg',
+  title: 'Face blowing a kiss',
+});
+```
+
+
+### removeBox()
+
+Removes the specified box. If not given, the selected box is removed.
+
+* Parameters:
+
+  `box` <Badge type="info" text="Optional" />
+
+  A [Box](/reference/box.md) object or [Nodes](/reference/nodes.md) object.
+
+* Return value:
+
+  A [Box](/reference/box.md) object or `null`.
+
+Example:
+
+```js
+// Removes the box that was selected by the user.
+selection.removeBox();
+// Removes the provided box.
+selection.removeBox(box);
+```

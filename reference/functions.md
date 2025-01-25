@@ -302,7 +302,8 @@ Splits text nodes or mark nodes.
 Example:
 
 ```js
-splitMarks(range);
+const parts = splitMarks(range);
+console.log(parts.start, parts.center, parts.end);
 ```
 
 
@@ -327,7 +328,7 @@ Adds the specified mark to the texts of the range.
 Example:
 
 ```js
-// Adds bold effect.
+// Adds bold.
 addMark(range, '<strong />');
 // Changes font size.
 addMark(range, '<span style="font-size: 18px;" />');
@@ -355,9 +356,9 @@ Removes the specified marks in the range.
 Example:
 
 ```js
-// Removes all format.
+// Removes all formatting.
 removeMark(range);
-// Removes bold effect.
+// Removes bold.
 removeMark(range, '<strong />');
 ```
 
@@ -382,7 +383,7 @@ Inserts a box into the specified range.
 
 * Return value:
 
-  A `Box` object or `null`.
+  A [Box](/reference/box.md) object or `null`.
 
 Example:
 
