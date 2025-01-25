@@ -7,7 +7,7 @@ title: Creating a Lake plugin
 
 ## Overview
 
-A Lake plugin is a function that allows you to customise Lake's behaviour. Its parameter is the current [Editor](/reference/editor.md) instance. It returns a cleanup function that is called when the [Editor](/reference/editor.md) instance is destroyed. This cleanup function is used for tasks such as removing event listeners and destroying popup instances. If you have nothing to clean up, returning a function is not necessary.
+A Lake plugin is a function that allows you to extend Lake's features. It takes the current [Editor](/reference/editor.md) instance as its parameter and returns a cleanup function, which is called when the [Editor](/reference/editor.md) instance is destroyed. This cleanup function is typically used for tasks such as removing event listeners and destroying popup instances. If there is nothing to clean up, returning a function is not required.
 
 ```js
 export default (editor) => {
@@ -17,6 +17,7 @@ export default (editor) => {
   };
 };
 ```
+
 
 ## A simple plugin
 
@@ -38,18 +39,19 @@ Editor.plugin.add('removeFormat', removeFormat);
 ```
 
 :::tip INFO
-The `command.add()` method is used to add a new command. The `selection.removeMark()` method removes the current styles such as bold, underline, and font color. When the `history.save()` method is called, the current content is stored in the memory, allowing you to undo or redo.
+The `command.add()` method is used to register a new command. The `selection.removeMark()` method removes the current styles such as bold, underline, and font color. When the `history.save()` method is called, the current content is stored in the memory, allowing you to undo or redo.
 :::
 
-After registering the `removeFormat` plugin, you can call the `command.execute()` method to remove all formatting from the current selection.
+Once the `removeFormat` plugin is registered, you can use the `command.execute()` method to remove all formatting from the current selection.
 
 ```js
 editor.command.execute('removeFormat');
 ```
 
+
 ## A plugin with box
 
-Lake allows you to insert an embed using the [Box](/reference/box.md) interface. The plugin with box usually has the following file structure.
+Lake allows you to insert an embed using the [Box](/reference/box.md) interface. A plugin with a box usually follows the file structure below.
 
 ```
 hello-world
@@ -156,21 +158,7 @@ lake-box[name='helloWorld'] .lake-box-focused .lake-hello-world {
 
 :::
 
-You also need to customize the toolbar button.
-
-```js
-const helloWorldItem = {
-  name: 'helloWorld',
-  type: 'button',
-  icon: '<img> or <svg> tag',
-  tooltip: 'Hello World',
-  onClick: (editor) => {
-    editor.command.execute('helloWorld');
-  },
-};
-```
-
-Finally, render the editor after registering the plugin above.
+Before using the `helloWorld` plugin, you also need to add a button to your toolbar. When a user clicks the button, it inserts a `helloWorld` box into the editor.
 
 ```js
 import { Editor, Toolbar } from 'lakelib';
@@ -180,10 +168,21 @@ Editor.box.add(helloWorldBox);
 
 Editor.plugin.add('helloWorld', helloWorld);
 
+const helloWorldItem = {
+  name: 'helloWorld',
+  type: 'button',
+  icon: '<img> or <svg>',
+  tooltip: 'Hello World',
+  onClick: (editor) => {
+    editor.command.execute('helloWorld');
+  },
+};
+
 const toolbar = new Toolbar({
   root: '.my-toolbar',
   items: [ helloWorldItem ],
 });
+
 const editor = new Editor({
   root: '.my-content',
   toolbar,
@@ -191,7 +190,7 @@ const editor = new Editor({
 editor.render();
 ```
 
+
 ## Playground
 
-You can visit [CodeSandbox](https://codesandbox.io/embed/s2wjyf?module=/src/index.js) to try the `helloWorld` plugin.
-
+The code above is available on CodeSandbox, You can visit the [plugin example](https://codesandbox.io/embed/s2wjyf?module=/src/index.js) there to try out the `helloWorld` plugin.

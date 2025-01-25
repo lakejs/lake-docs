@@ -5,7 +5,7 @@ title: Markdown shortcuts
 
 # {{ $frontmatter.title }}
 
-Lake provides markdown-style handy shortcuts, you can use the following shortcuts to format the text.
+Lake provides markdown-style handy shortcuts, you can use the [shortcuts](#shortcuts) below to format the text.
 
 ## Playground
 
