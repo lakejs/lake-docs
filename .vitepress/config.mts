@@ -90,6 +90,7 @@ export default defineConfig({
           { text: 'Fragment', link: '/reference/fragment' },
           { text: 'Range', link: '/reference/range' },
           { text: 'Box', link: '/reference/box' },
+          { text: 'Selection', link: '/reference/selection' },
           { text: 'HTMLParser', link: '/reference/html-parser' },
           { text: 'TextParser', link: '/reference/text-parser' },
           { text: 'Functions', link: '/reference/functions' },

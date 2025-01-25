@@ -117,7 +117,7 @@ console.log(bookmark.anchor, bookmark.focus);
 
 ## toBookmark()
 
-Changes the specified range to a range represented by the bookmark.
+Changes the specified range to a range represented by the provided bookmark.
 
 * Parameters:
 

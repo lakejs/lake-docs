@@ -51,7 +51,7 @@ editor.command.execute('removeFormat');
 
 ## A plugin with box
 
-Lake allows you to insert an embed using the [Box](/reference/box.md) interface. A plugin with a box usually follows the file structure below.
+Lake allows you to insert an embed using the [Box](/reference/box.md) interface. A plugin containing a box usually follows the file structure below.
 
 ```
 hello-world
