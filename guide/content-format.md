@@ -15,7 +15,7 @@ The `<focus />` tag represents the current position of the cursor.
 <p>This is the paragraph of text.<focus /></p>
 ```
 
-The `<anchor />` and `<focus />` tags represent the range of text selected by the user.
+The `<anchor />` and `<focus />` tags represent the range of content selected by the user.
 
 ```xml
 <p><anchor />This is the paragraph of text.<focus /></p>

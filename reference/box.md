@@ -60,7 +60,7 @@ const boxNode = box.node;
 
 ### event <Badge type="info" text="Read only" />
 
-An instance of the [EventEmitter](https://github.com/primus/eventemitter3) class used to set up events. For more details, see the [Instance events](#instance-events).
+An [EventEmitter](https://github.com/primus/eventemitter3) object used to set up events. For more details, see the [Instance events](#instance-events).
 
 * Type: [EventEmitter](https://github.com/primus/eventemitter3)
 
@@ -75,7 +75,7 @@ box.event.on('focus', () => {
 
 ### toolbar <Badge type="info" text="Read only" />
 
-An instance of the `FloatingToolbar` class.
+A toolbar for the box.
 
 * Type: `FloatingToolbar`
 
@@ -166,7 +166,7 @@ box.updateValue({
 
 ### getEditor()
 
-Returns an instance of the editor containing the box.
+Returns an [Editor](/reference/editor.md) object that contains the box.
 
 * Parameters:
 

@@ -61,7 +61,7 @@ const version = Editor.version;
 
 ### box <Badge type="info" text="Read only" />
 
-An instance of the `BoxManager` class managing the box components.
+A `BoxManager` object that manages the box components.
 
 * Type: `BoxManager`
 
@@ -74,7 +74,7 @@ const names = Editor.box.getNames();
 
 ### plugin <Badge type="info" text="Read only" />
 
-An instance of the `Plugin` class managing the plugins.
+A `Plugin` object that manages the plugins.
 
 * Type: `Plugin`
 
@@ -110,7 +110,7 @@ const root = editor.root;
 
 ### toolbar <Badge type="info" text="Read only" />
 
-An instance of the [Toolbar](/reference/toolbar.md) class.
+A toolbar for the editor.
 
 * Type: [Toolbar](/reference/toolbar.md)
 
@@ -160,7 +160,7 @@ const overlayContainer = editor.overlayContainer;
 
 ### event <Badge type="info" text="Read only" />
 
-An instance of the [EventEmitter](https://github.com/primus/eventemitter3) class used to set up events. For more details, see the [Instance events](#instance-events).
+An [EventEmitter](https://github.com/primus/eventemitter3) object used to set up events. For more details, see the [Instance events](#instance-events).
 
 * Type: [EventEmitter](https://github.com/primus/eventemitter3)
 
@@ -175,7 +175,7 @@ editor.event.on('change', value => {
 
 ### selection <Badge type="info" text="Read only" />
 
-An instance of the `Selection` class representing the range of text selected by the user or the current position of the cursor.
+A [Selection](/reference/selection.md) object representing the range of content selected by the user or the current position of the cursor.
 
 * Type: `Selection`
 
@@ -188,7 +188,7 @@ editor.selection.insertContents('<strong>foo</strong>');
 
 ### command <Badge type="info" text="Read only" />
 
-An instance of the `Command` class.
+A `Command` object.
 
 * Type: `Command`
 
@@ -201,7 +201,7 @@ editor.command.execute('bold');
 
 ### history  <Badge type="info" text="Read only" />
 
-An instance of the `History` class managing the history of the content of the editor.
+A `History` object that manages the editor's history.
 
 * Type: `History`
 
@@ -214,7 +214,7 @@ editor.history.save();
 
 ### keystroke <Badge type="info" text="Read only" />
 
-An instance of the `Keystroke` class managing keyboard shortcuts.
+A `Keystroke` object that manages keyboard shortcuts.
 
 * Type: `Keystroke`
 
@@ -230,7 +230,7 @@ editor.keystroke.setKeydown('mod+b', event => {
 
 ### box <Badge type="info" text="Read only" />
 
-An instance of the `BoxManager` class managing the box components.
+A `BoxManager` object that manages the box components.
 
 * Type: `BoxManager`
 
