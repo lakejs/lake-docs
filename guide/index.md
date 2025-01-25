@@ -7,7 +7,7 @@ title: Getting started
 
 ## Quick start using npm
 
-Lake is published on npm under the [lakelib](https://www.npmjs.com/package/lakelib) package. Install the latest version with the following command:
+Lake is available on npm as the [lakelib](https://www.npmjs.com/package/lakelib) package. Install the latest version using the following command:
 
 ```bash
 npm install lakelib
@@ -158,7 +158,7 @@ editor.event.on('change', value => {
 
 ### `statechange` event
 
-Fired when the current selection is changed. The `state` is a `SelectionState` object representing the state of the current selection.
+Fired when the current selection is changed. The `state` parameter is a `SelectionState` object representing the state of the current selection.
 
 ```js
 editor.event.on('statechange', state => {

@@ -29,9 +29,9 @@ Lake aims to provide as many features as possible with a simple structure while 
 
 ## Limitations
 
-The following features will not be added to Lake, as supporting them would significantly increase the size and complexity of the software, ultimately compromising the user experience.
+The following features will not be added to Lake, as supporting them would significantly increase the software's size and complexity, ultimately compromising the user experience.
 
 * Real-time collaboration
 * Typography beyond standard web practices
 
-If these features are essential to you, please consider using alternative editors.
+If these features are essential to you, please consider alternative editors.

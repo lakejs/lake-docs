@@ -24,7 +24,7 @@ features:
   - icon:
       src: /assets/icons/users.svg
     title: User experience
-    details: Lake offers a smooth editing experience, even with huge content. Its stability is ensured by high test coverage.
+    details: Lake offers a smooth editing experience, even with huge content. Its stability is ensured by extensive test coverage.
   - icon:
       src: /assets/icons/cube.svg
     title: Approachable

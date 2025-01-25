@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Selection` interface represents the range of text selected by the user or the current position of the cursor. Since the constructor is not currently available, you can access to it using the [selection](/reference/editor.md#selection) property of the [Editor](/reference/editor.md) class.
+The `Selection` interface represents the range of text selected by the user or the current position of the cursor. Since the constructor is not currently available, you can access it using the [selection](/reference/editor.md#selection) property of the [Editor](/reference/editor.md) class.
 
 Example:
 
