@@ -533,7 +533,7 @@ editor.event.on('change', value => {
 
 ### statechange
 
-Fired when the current selection is changed. The `state` is a `SelectionState` object representing the state of the current selection.
+Fired when the current selection is changed. The `state` is a [SelectionState](/reference/types.md#selectionstate) object representing the state of the current selection.
 
 Example:
 
@@ -542,10 +542,6 @@ editor.event.on('statechange', state => {
   console.log(state);
 });
 ```
-
-::: details SelectionState type
-<<< @/src/selection-state.ts
-:::
 
 
 ### click

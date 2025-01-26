@@ -131,16 +131,7 @@ Returns a list containing the items related to the current selection.
 
 * Return value:
 
-  An `Array` that contains `ActiveItem` objects.
-
-  ```ts
-  type ActiveItem = {
-    node: Nodes;
-    name: string;
-    attributes: KeyValue;
-    styles: KeyValue;
-  };
-  ```
+  An `Array` that contains [ActiveItem](/reference/types.md#activeitem) objects.
 
 Example:
 

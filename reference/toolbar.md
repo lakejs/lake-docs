@@ -88,9 +88,7 @@ Update the state of each item in the toolbar, such as whether it is selected, di
 
   `state`
 
-  A `SelectionState` object that specifies the state of the current selection.
-
-  <<< @/src/selection-state.ts
+  A [SelectionState](/reference/types.md#selectionstate) object that specifies the state of the current selection.
 
 * Return value:
 

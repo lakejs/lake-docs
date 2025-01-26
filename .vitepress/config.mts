@@ -95,6 +95,7 @@ export default defineConfig({
           { text: 'HTMLParser', link: '/reference/html-parser' },
           { text: 'TextParser', link: '/reference/text-parser' },
           { text: 'Functions', link: '/reference/functions' },
+          { text: 'Types', link: '/reference/types' },
         ],
       }],
     },

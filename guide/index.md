@@ -158,7 +158,7 @@ editor.event.on('change', value => {
 
 ### `statechange` event
 
-Fired when the current selection is changed. The `state` parameter is a `SelectionState` object representing the state of the current selection.
+Fired when the current selection is changed. The `state` parameter is a [SelectionState](/reference/types.md#selectionstate) object representing the state of the current selection.
 
 ```js
 editor.event.on('statechange', state => {
@@ -166,11 +166,8 @@ editor.event.on('statechange', state => {
 });
 ```
 
-::: details SelectionState type
-<<< @/src/selection-state.ts
-:::
-
 To find out more available events, refer to the [Editor](/reference/editor#instance-events) class.
+
 
 ## Configuring toolbar
 
@@ -188,6 +185,7 @@ new Toolbar({
   items: toolbarItems,
 });
 ```
+
 
 ## Uploading images
 
