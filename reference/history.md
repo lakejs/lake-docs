@@ -208,11 +208,11 @@ Saves the current content to the history. The content is saved only if it is dif
 
   An optional object with the following properties:
 
-  * `inputType` (optional): A string describing the action that triggered the save.
+  * `inputType` <Badge type="info" text="Optional" />: A string describing the action that triggered the save.
 
-  * `update` (optional): A boolean indicating whether the current content should update the last item in the history. Defaults to `false`.
+  * `update` <Badge type="info" text="Optional" />: A boolean indicating whether the current content should update the last item in the history. Defaults to `false`.
 
-  * `emitEvent` (optional): A boolean indicating whether to emit the [save](#save-1) event. Defaults to `true`.
+  * `emitEvent` <Badge type="info" text="Optional" />: A boolean indicating whether to emit the [save](#save-1) event. Defaults to `true`.
 
 * Return value:
 
@@ -221,10 +221,12 @@ Saves the current content to the history. The content is saved only if it is dif
 Example:
 
 ```js
+// Adds new item.
+history.save();
+
+// Updates the last item.
 history.save({
-  inputType: 'insertText',
-  update: false,
-  emitEvent: true,
+  update: true,
 });
 ```
 

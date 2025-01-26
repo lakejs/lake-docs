@@ -74,9 +74,9 @@ const names = Editor.box.getNames();
 
 ### plugin <Badge type="info" text="Read only" />
 
-A `Plugin` object that manages the plugins.
+A [Plugin](/reference/plugin.md) object that manages a collection of plugins.
 
-* Type: `Plugin`
+* Type: [Plugin](/reference/plugin.md)
 
 Example:
 
