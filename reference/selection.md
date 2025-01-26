@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Selection` interface represents the range of content selected by the user or the current position of the cursor. Since the constructor is not currently available, you can access it using the [selection](/reference/editor.md#selection) property of the [Editor](/reference/editor.md) class.
+The `Selection` interface represents the range of content selected by the user or the current position of the cursor. The constructor is not available, you can access its properties and methods through the [editor.selection](/reference/editor.md#selection) object.
 
 Example:
 
@@ -250,8 +250,10 @@ Example:
 ```js
 // Changes the target blocks to headings.
 selection.setBlocks('<h1 />');
+
 // Changes the target blocks to numbered lists.
 selection.setBlocks('<ol><li></li></ol>');
+
 // Adds "text-align" CSS property to the target blocks.
 selection.setBlocks({
   'text-align': 'center',
@@ -352,6 +354,7 @@ Example:
 ```js
 // Adds bold.
 selection.addMark('<strong />');
+
 // Changes font size.
 selection.addMark('<span style="font-size: 18px;" />');
 ```
@@ -376,6 +379,7 @@ Example:
 ```js
 // Removes all formatting.
 selection.removeMark();
+
 // Removes bold.
 selection.removeMark('<strong />');
 ```
@@ -429,6 +433,7 @@ Example:
 ```js
 // Inserts a horizontal rule.
 selection.insertBox('hr');
+
 // Inserts an emoji.
 selection.insertBox('emoji', {
   url: '/assets/emojis/face_blowing_a_kiss_color.svg',
@@ -456,6 +461,7 @@ Example:
 ```js
 // Removes the box that was selected by the user.
 selection.removeBox();
+
 // Removes the provided box.
 selection.removeBox(box);
 ```

@@ -36,8 +36,10 @@ Example:
 ```js
 // CSS selector
 query('.my-content').css('color', 'blue');
+
 // HTML string
 const node = query('<p>foo</p>');
+
 // DOM element
 query(document.body).append(node);
 ```
@@ -214,8 +216,10 @@ Example:
 ```js
 // Changes the target blocks to headings.
 setBlocks(range, '<h1 />');
+
 // Changes the target blocks to numbered lists.
 setBlocks(range, '<ol><li></li></ol>');
+
 // Adds "text-align" CSS property to the target blocks.
 setBlocks(range, {
   'text-align': 'center',
@@ -330,6 +334,7 @@ Example:
 ```js
 // Adds bold.
 addMark(range, '<strong />');
+
 // Changes font size.
 addMark(range, '<span style="font-size: 18px;" />');
 ```
@@ -358,6 +363,7 @@ Example:
 ```js
 // Removes all formatting.
 removeMark(range);
+
 // Removes bold.
 removeMark(range, '<strong />');
 ```
@@ -390,6 +396,7 @@ Example:
 ```js
 // Inserts a horizontal rule.
 insertBox(range, 'hr');
+
 // Inserts an emoji.
 insertBox(range, 'emoji', {
   url: '/assets/emojis/face_blowing_a_kiss_color.svg',
