@@ -33,6 +33,7 @@ Example:
 ```js
 // A native node.
 const body = new Nodes(document.body);
+
 // A list of native nodes.
 const nodes = new Nodes([
   document.createElement('p'),

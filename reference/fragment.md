@@ -33,6 +33,7 @@ Example:
 ```js
 // Without fragment parameter.
 const fragment = new Fragment();
+
 // With fragment parameter.
 const fragment = new Fragment(document.createDocumentFragment());
 ```
@@ -80,6 +81,7 @@ Example:
 const nativeFragment = document.createDocumentFragment();
 nativeFragment.appendChild(query('<div>foo</div>').get(0));
 nativeFragment.appendChild(query('<div>bar</div>').get(0));
+
 const fragment = new Fragment(nativeFragment);
 // Outputs "foo".
 console.log(fragment.find('div').get(0).innerText);

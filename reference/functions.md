@@ -11,13 +11,18 @@ A collection of utility functions.
 Example:
 
 ```js
-import { query } from 'lakelib';
+import { query, insertContents } from 'lakelib';
 
+// Inserts an HTML string just inside the body element, after its last child.
 query(document.body).append('<p>foo</p>');
+
+// Inserts an HTML string into the range.
+insertContents(range, '<strong>foo</strong>');
 ```
 
+## Basics
 
-## query()
+### query()
 
 Returns a [Nodes](/reference/nodes.md) object representing a collection of the nodes. This function is similar to [jQuery](https://jquery.com/), but its implementation is very simple. It is designed for simplifying DOM manipulation.
 
@@ -45,7 +50,7 @@ query(document.body).append(node);
 ```
 
 
-## template()
+### template()
 
 A tag function that converts all of the reserved characters in the specified string to HTML entities. It also removes empty spaces at the beginning and end of lines.
 
@@ -67,7 +72,7 @@ console.log(content);
 ```
 
 
-## toHex()
+### toHex()
 
 Converts a color in RGB or RGBA format to hex format.
 
@@ -90,7 +95,9 @@ console.log(color);
 ```
 
 
-## insertBookmark()
+## Operations
+
+### insertBookmark()
 
 Inserts a bookmark at the cursor position or a pair of bookmarks at the beginning and end of the range.
 
@@ -117,7 +124,7 @@ console.log(bookmark.anchor, bookmark.focus);
 ```
 
 
-## toBookmark()
+### toBookmark()
 
 Changes the specified range to a range represented by the provided bookmark.
 
@@ -147,7 +154,7 @@ toBookmark(range, bookmark);
 ```
 
 
-## insertContents()
+### insertContents()
 
 Inserts the specified contents into the range.
 
@@ -172,7 +179,7 @@ insertContents(range, '<p>foo</p>');
 ```
 
 
-## deleteContents()
+### deleteContents()
 
 Removes the contents of the specified range.
 
@@ -193,7 +200,7 @@ deleteContents(range);
 ```
 
 
-## setBlocks()
+### setBlocks()
 
 Adds new blocks or changes the target blocks in the specified range.
 
@@ -227,7 +234,7 @@ setBlocks(range, {
 ```
 
 
-## splitBlock()
+### splitBlock()
 
 Removes the contents of the specified range and then splits the block node at the point of the collapsed range.
 
@@ -254,7 +261,7 @@ console.log(parts.start, parts.end);
 ```
 
 
-## insertBlock()
+### insertBlock()
 
 Inserts a block into the specified range.
 
@@ -279,7 +286,7 @@ insertBlock(range, '<h1>heading</h1>');
 ```
 
 
-## splitMarks()
+### splitMarks()
 
 Splits text nodes or mark nodes.
 
@@ -311,7 +318,7 @@ console.log(parts.start, parts.center, parts.end);
 ```
 
 
-## addMark()
+### addMark()
 
 Adds the specified mark to the texts of the range.
 
@@ -340,7 +347,7 @@ addMark(range, '<span style="font-size: 18px;" />');
 ```
 
 
-## removeMark()
+### removeMark()
 
 Removes the specified marks in the range.
 
@@ -369,7 +376,7 @@ removeMark(range, '<strong />');
 ```
 
 
-## insertBox()
+### insertBox()
 
 Inserts a box into the specified range.
 
@@ -405,7 +412,7 @@ insertBox(range, 'emoji', {
 ```
 
 
-## removeBox()
+### removeBox()
 
 Removes a box that contains the specified range.
 
