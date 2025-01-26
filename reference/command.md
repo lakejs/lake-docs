@@ -6,7 +6,11 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Command` interface is used to manage all registered commands. The constructor is not available, you can access its methods through the [editor.command](/reference/editor.md#command) object.
+The `Command` interface is used to manage all registered commands.
+
+:::tip Note
+The constructor is not available, you can access its properties and methods through the [editor.command](/reference/editor.md#command) object.
+:::
 
 Example:
 

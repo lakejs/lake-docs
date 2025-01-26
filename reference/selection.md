@@ -6,7 +6,11 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Selection` interface represents the range of content selected by the user or the current position of the cursor. The constructor is not available, you can access its properties and methods through the [editor.selection](/reference/editor.md#selection) object.
+The `Selection` interface represents the range of content selected by the user or the current position of the cursor.
+
+:::tip Note
+The constructor is not available, you can access its properties and methods through the [editor.selection](/reference/editor.md#selection) object.
+:::
 
 Example:
 

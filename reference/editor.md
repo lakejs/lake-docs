@@ -201,9 +201,9 @@ editor.command.execute('bold');
 
 ### history  <Badge type="info" text="Read only" />
 
-A `History` object that manages the editor's history.
+A [History](/reference/history.md) object that manages the undo and redo history.
 
-* Type: `History`
+* Type: [History](/reference/history.md)
 
 Example:
 
