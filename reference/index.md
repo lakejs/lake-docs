@@ -65,7 +65,7 @@ new Editor({
 
 ## toolbar
 
-A [Toolbar](/reference/toolbar.md) object. If not given, the editor will be rendered without toolbar. For more information about toolbar, see the [Toolbar config](/reference/toolbar-config.md) page.
+A [Toolbar](/reference/toolbar.md) object. If not given, the editor will be rendered without toolbar. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
 
 * Type: [Toolbar](/reference/toolbar.md)
 
@@ -82,7 +82,7 @@ new Editor({
 
 ## value
 
-The default content of the editor. The format is [Lake Markup Language (LML)](/guide/content-format.md) similar to HTML.
+The default content for the editor. The format is [Lake Markup Language (LML)](/guide/content-format.md) similar to HTML.
 
 * Type: `string`
 * Default: `<p><br /></p>`
