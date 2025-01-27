@@ -93,6 +93,7 @@ export default defineConfig({
           { text: 'Selection', link: '/reference/selection' },
           { text: 'Command', link: '/reference/command' },
           { text: 'History', link: '/reference/history' },
+          { text: 'BoxManager', link: '/reference/box-manager' },
           { text: 'Plugin', link: '/reference/plugin' },
           { text: 'HTMLParser', link: '/reference/html-parser' },
           { text: 'TextParser', link: '/reference/text-parser' },

@@ -61,9 +61,9 @@ const version = Editor.version;
 
 ### box <Badge type="info" text="Read only" />
 
-A `BoxManager` object that manages the box components.
+A [BoxManager](/reference/box-manager.md) object that manages the box components.
 
-* Type: `BoxManager`
+* Type: [BoxManager](/reference/box-manager.md)
 
 Example:
 
@@ -225,19 +225,6 @@ editor.keystroke.setKeydown('mod+b', event => {
   event.preventDefault();
   editor.command.execute('bold');
 });
-```
-
-
-### box <Badge type="info" text="Read only" />
-
-A `BoxManager` object that manages the box components.
-
-* Type: `BoxManager`
-
-Example:
-
-```js
-const names = editor.box.getNames();
 ```
 
 

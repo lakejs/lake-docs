@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Command` interface is used to manage all registered commands.
+The `Command` interface is used to manage a collection of commands.
 
 :::tip Note
 The constructor is not available, you can access its properties and methods through the [editor.command](/reference/editor.md#command) object.
@@ -23,7 +23,7 @@ editor.command.execute('bold');
 
 ### add()
 
-Registers a new command.
+Adds a new command to the collection.
 
 * Parameters:
 
@@ -62,7 +62,7 @@ editor.command.add('removeFormat', {
 
 ### delete()
 
-Removes the specified command.
+Removes a command from the collection by its name.
 
 * Parameters:
 
@@ -91,7 +91,7 @@ Returns the names of all registered commands.
 
 * Return value:
 
-  An `Array` object.
+  An `Array` object containing the names of all commands.
 
 Example:
 
