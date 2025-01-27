@@ -8,8 +8,8 @@ outline: [2, 3]
 
 The `History` interface is used to manage the undo and redo history.
 
-:::tip Note
-The constructor is not available, you can access its properties and methods through the [editor.history](/reference/editor.md#history) object.
+:::warning Note
+The constructor is not directly accessible. Instead, you can access its methods via the [editor.history](/reference/editor.md#history) object.
 :::
 
 Example:
@@ -30,7 +30,7 @@ A list in which the current and previous contents are stored.
 Example:
 
 ```js
-const list = history.list;
+const list = editor.history.list;
 ```
 
 
@@ -43,7 +43,7 @@ An index that always indicates the position at which new content is stored.
 Example:
 
 ```js
-const index = history.index;
+const index = editor.history.index;
 ```
 
 
@@ -56,7 +56,7 @@ The maximum length of the history. Once this limit is reached, the earliest item
 Example:
 
 ```js
-history.limit = 100;
+editor.history.limit = 100;
 ```
 
 
@@ -69,7 +69,7 @@ An [EventEmitter](https://github.com/primus/eventemitter3) object used to set up
 Example:
 
 ```js
-history.event.on('save', value => {
+editor.history.event.on('save', value => {
   console.log(value);
 });
 ```
@@ -84,7 +84,7 @@ A boolean value indicating whether the history can be undone.
 Example:
 
 ```js
-const canUndo = history.canUndo;
+const canUndo = editor.history.canUndo;
 ```
 
 
@@ -97,7 +97,7 @@ A boolean value indicating whether the history can be redone.
 Example:
 
 ```js
-const canRedo = history.canRedo;
+const canRedo = editor.history.canRedo;
 ```
 
 
@@ -118,7 +118,7 @@ Creates a deep clone of the current container with its content. If there is a se
 Example:
 
 ```js
-const newContainer = history.cloneContainer();
+const newContainer = editor.history.cloneContainer();
 ```
 
 
@@ -137,7 +137,7 @@ Undoes to the previous saved content.
 Example:
 
 ```js
-history.undo();
+editor.history.undo();
 ```
 
 
@@ -156,7 +156,7 @@ Redoes to the next saved content.
 Example:
 
 ```js
-history.redo();
+editor.history.redo();
 ```
 
 
@@ -175,7 +175,7 @@ Resumes the ability to save history. This method re-enables saving after the [pa
 Example:
 
 ```js
-history.continue();
+editor.history.continue();
 ```
 
 
@@ -194,7 +194,7 @@ Pauses the ability to save history. This method temporarily disables saving hist
 Example:
 
 ```js
-history.pause();
+editor.history.pause();
 ```
 
 
@@ -222,10 +222,10 @@ Example:
 
 ```js
 // Adds new item.
-history.save();
+editor.history.save();
 
 // Updates the last item.
-history.save({
+editor.history.save({
   update: true,
 });
 ```
@@ -240,7 +240,7 @@ Fired when the history is undone.
 Example:
 
 ```js
-history.event.on('undo', value => {
+editor.history.event.on('undo', value => {
   console.log(value);
 });
 ```
@@ -253,7 +253,7 @@ Fired when the history is redone.
 Example:
 
 ```js
-history.event.on('redo', value => {
+editor.history.event.on('redo', value => {
   console.log(value);
 });
 ```
@@ -266,7 +266,7 @@ Fired when the history is saved. The `options` argument is the options passed to
 Example:
 
 ```js
-history.event.on('save', (value, options) => {
+editor.history.event.on('save', (value, options) => {
   console.log(value, options);
 });
 ```

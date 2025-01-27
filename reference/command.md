@@ -8,8 +8,8 @@ outline: [2, 3]
 
 The `Command` interface is used to manage a collection of commands.
 
-:::tip Note
-The constructor is not available, you can access its properties and methods through the [editor.command](/reference/editor.md#command) object.
+:::warning Note
+The constructor is not directly accessible. Instead, you can access its methods via the [editor.command](/reference/editor.md#command) object.
 :::
 
 Example:

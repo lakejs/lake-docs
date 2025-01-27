@@ -214,9 +214,9 @@ editor.history.save();
 
 ### keystroke <Badge type="info" text="Read only" />
 
-A `Keystroke` object that manages keyboard shortcuts.
+A [Keystroke](/reference/keystroke.md) object that manages keyboard shortcuts.
 
-* Type: `Keystroke`
+* Type: [Keystroke](/reference/keystroke.md)
 
 Example:
 

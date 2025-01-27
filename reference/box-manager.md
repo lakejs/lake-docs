@@ -8,8 +8,8 @@ outline: [2, 3]
 
 The `BoxManager` interface provides methods to manage a collection of [BoxComponent](/reference/types.md#boxcomponent) objects.
 
-:::tip Note
-The constructor is not available, you can access its methods through the [Editor.box](/reference/editor.md#box) object.
+:::warning Note
+The constructor is not directly accessible. Instead, you can access its methods via the [Editor.box](/reference/editor.md#box) object.
 :::
 
 Example:

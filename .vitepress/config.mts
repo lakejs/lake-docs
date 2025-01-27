@@ -95,6 +95,7 @@ export default defineConfig({
           { text: 'History', link: '/reference/history' },
           { text: 'BoxManager', link: '/reference/box-manager' },
           { text: 'Plugin', link: '/reference/plugin' },
+          { text: 'Keystroke', link: '/reference/keystroke' },
           { text: 'HTMLParser', link: '/reference/html-parser' },
           { text: 'TextParser', link: '/reference/text-parser' },
           { text: 'Functions', link: '/reference/functions' },

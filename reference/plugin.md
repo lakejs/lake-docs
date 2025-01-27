@@ -8,8 +8,8 @@ outline: [2, 3]
 
 The `Plugin` interface is used to manage a collection of plugins.
 
-:::tip Note
-The constructor is not available, you can access its methods through the [Editor.plugin](/reference/editor.md#plugin) object.
+:::warning Note
+The constructor is not directly accessible. Instead, you can access its methods via the [Editor.plugin](/reference/editor.md#plugin) object.
 :::
 
 Example:
@@ -45,7 +45,7 @@ Registers a plugin using a name as the key.
 Example:
 
 ```js
-plugin.add('myPlugin', (editor) => {
+Editor.plugin.add('myPlugin', (editor) => {
   console.log('myPlugin initialized.');
 });
 ```
@@ -69,7 +69,7 @@ Example:
 
 ```js
 // Load plugins
-const unmountMap = plugin.loadAll(editor);
+const unmountMap = Editor.plugin.loadAll(editor);
 
 // Unmount all loaded plugins
 unmountMap.forEach((unmount) => unmount());

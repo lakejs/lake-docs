@@ -8,8 +8,8 @@ outline: [2, 3]
 
 The `Selection` interface represents the range of content selected by the user or the current position of the cursor.
 
-:::tip Note
-The constructor is not available, you can access its properties and methods through the [editor.selection](/reference/editor.md#selection) object.
+:::warning Note
+The constructor is not directly accessible. Instead, you can access its methods via the [editor.selection](/reference/editor.md#selection) object.
 :::
 
 Example:
@@ -30,7 +30,7 @@ A [contenteditable](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
 Example:
 
 ```js
-const container = selection.container;
+const container = editor.selection.container;
 ```
 
 
@@ -43,7 +43,7 @@ A [Range](/reference/range.md) object which is used to add it to the native sele
 Example:
 
 ```js
-const range = selection.range;
+const range = editor.selection.range;
 ```
 
 
@@ -64,7 +64,7 @@ Returns a [Range](/reference/range.md) object that is currently selected.
 Example:
 
 ```js
-const range = selection.getCurrentRange();
+const range = editor.selection.getCurrentRange();
 ```
 
 
@@ -83,7 +83,7 @@ Adds the [selection.range](#range) to the native selection.
 Example:
 
 ```js
-selection.sync();
+editor.selection.sync();
 ```
 
 
@@ -102,7 +102,7 @@ Replaces the [selection.range](#range) with the range of the native selection.
 Example:
 
 ```js
-selection.updateByRange();
+editor.selection.updateByRange();
 ```
 
 
@@ -121,7 +121,7 @@ Replaces the [selection.range](#range) with the range represented by the bookmar
 Example:
 
 ```js
-selection.updateByBookmark();
+editor.selection.updateByBookmark();
 ```
 
 
@@ -140,7 +140,7 @@ Returns a list containing the items related to the current selection.
 Example:
 
 ```js
-const activeItems = selection.getActiveItems();
+const activeItems = editor.selection.getActiveItems();
 ```
 
 
@@ -164,7 +164,7 @@ Inserts a bookmark at the cursor position or a pair of bookmarks at the beginnin
 Example:
 
 ```js
-const bookmark = selection.insertBookmark();
+const bookmark = editor.selection.insertBookmark();
 console.log(bookmark.anchor, bookmark.focus);
 ```
 
@@ -191,7 +191,7 @@ Changes the [selection.range](#range) to a range represented by the provided boo
 Example:
 
 ```js
-selection.toBookmark(bookmark);
+editor.selection.toBookmark(bookmark);
 ```
 
 
@@ -212,7 +212,7 @@ Inserts the specified contents into the selection.
 Example:
 
 ```js
-selection.insertContents('<p>foo</p>');
+editor.selection.insertContents('<p>foo</p>');
 ```
 
 
@@ -231,7 +231,7 @@ Removes the contents of the selection.
 Example:
 
 ```js
-selection.deleteContents();
+editor.selection.deleteContents();
 ```
 
 
@@ -253,13 +253,13 @@ Example:
 
 ```js
 // Changes the target blocks to headings.
-selection.setBlocks('<h1 />');
+editor.selection.setBlocks('<h1 />');
 
 // Changes the target blocks to numbered lists.
-selection.setBlocks('<ol><li></li></ol>');
+editor.selection.setBlocks('<ol><li></li></ol>');
 
 // Adds "text-align" CSS property to the target blocks.
-selection.setBlocks({
+editor.selection.setBlocks({
   'text-align': 'center',
 });
 ```
@@ -285,7 +285,7 @@ Removes the contents of the selection and then splits the block node at the poin
 Example:
 
 ```js
-const parts = selection.splitBlock();
+const parts = editor.selection.splitBlock();
 console.log(parts.start, parts.end);
 ```
 
@@ -307,7 +307,7 @@ Inserts a block into the selection.
 Example:
 
 ```js
-selection.insertBlock('<h1>heading</h1>');
+editor.selection.insertBlock('<h1>heading</h1>');
 ```
 
 
@@ -334,7 +334,7 @@ Splits text nodes or mark nodes.
 Example:
 
 ```js
-const parts = selection.splitMarks();
+const parts = editor.selection.splitMarks();
 console.log(parts.start, parts.center, parts.end);
 ```
 
@@ -357,10 +357,10 @@ Example:
 
 ```js
 // Adds bold.
-selection.addMark('<strong />');
+editor.selection.addMark('<strong />');
 
 // Changes font size.
-selection.addMark('<span style="font-size: 18px;" />');
+editor.selection.addMark('<span style="font-size: 18px;" />');
 ```
 
 
@@ -382,10 +382,10 @@ Example:
 
 ```js
 // Removes all formatting.
-selection.removeMark();
+editor.selection.removeMark();
 
 // Removes bold.
-selection.removeMark('<strong />');
+editor.selection.removeMark('<strong />');
 ```
 
 
@@ -406,7 +406,7 @@ Collapses the selection to the center position of the specified box.
 Example:
 
 ```js
-selection.selectBox(query('lake-box').eq(0));
+editor.selection.selectBox(query('lake-box').eq(0));
 ```
 
 
@@ -436,10 +436,10 @@ Example:
 
 ```js
 // Inserts a horizontal rule.
-selection.insertBox('hr');
+editor.selection.insertBox('hr');
 
 // Inserts an emoji.
-selection.insertBox('emoji', {
+editor.selection.insertBox('emoji', {
   url: '/assets/emojis/face_blowing_a_kiss_color.svg',
   title: 'Face blowing a kiss',
 });
@@ -464,8 +464,8 @@ Example:
 
 ```js
 // Removes the box that was selected by the user.
-selection.removeBox();
+editor.selection.removeBox();
 
 // Removes the provided box.
-selection.removeBox(box);
+editor.selection.removeBox(box);
 ```
