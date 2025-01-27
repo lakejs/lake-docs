@@ -285,25 +285,11 @@ A button that inserts a mathematical formula.
 
 ### Customizing item
 
-You can also set a customized item using the `ToolbarItem`.
-
-```ts
-type ToolbarItem = ToolbarButtonItem | ToolbarDropdownItem;
-```
+You can also set a customized item, which must match the [ToolbarItem](/reference/types.md#toolbaritem) type.
 
 #### Button item
 
-```ts
-type ToolbarButtonItem = {
-  name: string;
-  type: 'button';
-  icon?: string;
-  tooltip: string | ((locale: TranslationFunctions) => string);
-  isSelected?: (appliedItems: AppliedItem[]) => boolean;
-  isDisabled?: (appliedItems: AppliedItem[]) => boolean;
-  onClick: (editor: Editor, value: string) => void;
-};
-```
+This item must match the [ToolbarButtonItem](/reference/types.md#toolbarbuttonitem) type.
 
 Example:
 
@@ -333,31 +319,7 @@ new Toolbar({
 
 #### Dropdown item
 
-```ts
-type DropdownMenuItem = {
-  value: string;
-  icon?: string;
-  text: string | ((locale: TranslationFunctions) => string);
-};
-type DropdownItem = {
-  name: string;
-  icon?: string;
-  accentIcon?: string;
-  downIcon?: string;
-  defaultValue: string;
-  tooltip: string | ((locale: TranslationFunctions) => string);
-  width: string;
-  menuType: 'list' | 'color';
-  menuItems: DropdownMenuItem[];
-};
-type ToolbarDropdownItem = DropdownItem & {
-  name: string;
-  type: 'dropdown';
-  selectedValues?: (appliedItems: AppliedItem[]) => string[];
-  isDisabled?: (appliedItems: AppliedItem[]) => boolean;
-  onSelect: (editor: Editor, value: string) => void;
-}
-```
+This item must match the [ToolbarDropdownItem](/reference/types.md#toolbardropdownitem) type.
 
 Example:
 

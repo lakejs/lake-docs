@@ -133,6 +133,63 @@ type BoxComponent = {
 };
 ```
 
+
+## Command
+
+### CommandItem
+
+```ts
+type CommandItem = {
+  isDisabled?: (activeItems: ActiveItem[]) => boolean;
+  isSelected?: (activeItems: ActiveItem[]) => boolean;
+  selectedValues?: (activeItems: ActiveItem[]) => string[];
+  execute: (...data: any[]) => void;
+};
+```
+
+
+## Plugin
+
+### UnmountPlugin
+
+```ts
+type UnmountPlugin = () => void;
+```
+
+
+### InitializePlugin
+
+```ts
+type InitializePlugin = (editor: Editor) => UnmountPlugin | void;
+```
+
+
+## Button
+
+### ButtonConfig
+
+```ts
+type ButtonConfig = {
+  // An element to which the button is appended.
+  root: Nodes;
+  // The name of the button.
+  name: string;
+  // The type of the button.
+  type?: 'primary' | 'default';
+  // The icon of the button.
+  icon?: string;
+  // The text of the button.
+  text?: string;
+  // The tooltip of the button.
+  tooltip?: string;
+  // The tab order of the button.
+  tabIndex?: number;
+  // The function triggered when clicked.
+  onClick: () => void;
+};
+```
+
+
 ## Dropdown
 
 ### DropdownLocation
@@ -183,6 +240,19 @@ type DropdownItem = {
   menuWidth?: string;
   menuHeight?: string;
   menuCheck?: boolean;
+};
+```
+
+### DropdownConfig
+
+```ts
+type DropdownConfig = DropdownItem & {
+  root: Nodes;
+  locale?: TranslationFunctions;
+  tabIndex?: number;
+  location?: DropdownLocation;
+  direction?: DropdownDirection;
+  onSelect: (value: string) => void;
 };
 ```
 
@@ -300,20 +370,4 @@ interface UploadRequestOption<T = any> {
   withCredentials?: boolean;
   headers?: UploadRequestHeader;
 }
-```
-
-
-## Plugin
-
-### UnmountPlugin
-
-```ts
-type UnmountPlugin = () => void;
-```
-
-
-### InitializePlugin
-
-```ts
-type InitializePlugin = (editor: Editor) => UnmountPlugin | void;
 ```

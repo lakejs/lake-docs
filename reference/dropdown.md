@@ -49,32 +49,7 @@ Creates a new `Dropdown` object.
 
   `config`
 
-  A key-value object.
-
-  ```ts
-  type DropdownItem = {
-    name: string;
-    icon?: string;
-    accentIcon?: string;
-    downIcon?: string;
-    defaultValue?: string;
-    tooltip: string | ((locale: TranslationFunctions) => string);
-    width?: string;
-    menuType: DropdownMenuType;
-    menuItems: DropdownMenuItem[];
-    menuWidth?: string;
-    menuHeight?: string;
-    menuCheck?: boolean;
-  };
-  type DropdownConfig = DropdownItem & {
-    root: Nodes;
-    locale?: TranslationFunctions;
-    tabIndex?: number;
-    location?: DropdownLocation;
-    direction?: DropdownDirection;
-    onSelect: (value: string) => void;
-  };
-  ```
+  A [DropdownConfig](/reference/types.md#dropdownconfig) object.
 
 Example:
 

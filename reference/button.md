@@ -33,28 +33,7 @@ Creates a new `Button` object.
 
   `config`
 
-  A key-value object.
-
-  ```ts
-  type ButtonConfig = {
-    // An element to which the button is appended.
-    root: Nodes;
-    // The name of the button.
-    name: string;
-    // The type of the button.
-    type?: 'primary' | 'default';
-    // The icon of the button.
-    icon?: string;
-    // The text of the button.
-    text?: string;
-    // The tooltip of the button.
-    tooltip?: string;
-    // The tab order of the button.
-    tabIndex?: number;
-    // The function triggered when clicked.
-    onClick: () => void;
-  };
-  ```
+  A [ButtonConfig](/reference/types.md#buttonconfig) object.
 
 Example:
 

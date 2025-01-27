@@ -33,16 +33,7 @@ Adds a new command to the collection.
 
   `commandItem`
 
-  A `CommandItem` object.
-
-  ```ts
-  type CommandItem = {
-    isDisabled?: (activeItems: ActiveItem[]) => boolean;
-    isSelected?: (activeItems: ActiveItem[]) => boolean;
-    selectedValues?: (activeItems: ActiveItem[]) => string[];
-    execute: (...data: any[]) => void;
-  };
-  ```
+  A [CommandItem](/reference/types.md#commanditem) object.
 
 * Return value:
 
