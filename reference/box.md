@@ -36,8 +36,10 @@ Example:
 ```js
 // The parameter is the name of a box.
 const box = new Box('hr');
+
 // The parameter is a native node.
 const box = new Box(query('lake-box').get(0));
+
 // The parameter is a Nodes object.
 const box = new Box(query('lake-box').eq(0));
 ```
@@ -123,6 +125,7 @@ Example:
 ```js
 // Gets the value.
 const value = box.value;
+
 // Sets the value.
 box.value = {
   foo: 1,
@@ -156,6 +159,7 @@ Example:
 ```js
 // Sets a key.
 box.updateValue('foo', '1');
+
 // Sets multiple keys.
 box.updateValue({
   foo: '2',

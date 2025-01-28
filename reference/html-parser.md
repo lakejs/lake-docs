@@ -37,6 +37,7 @@ Example:
 ```js
 // The parameter is an HTML string.
 const parser = new HTMLParser('<p>foo</p>');
+
 // The parameter is a native node.
 const parser = new Box(query('<p>foo</p>'));
 ```

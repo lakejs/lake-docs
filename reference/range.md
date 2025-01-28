@@ -34,6 +34,7 @@ Example:
 ```js
 // Without range parameter.
 const range = new Range();
+
 // With range parameter.
 const range = new Range(document.createRange());
 ```
