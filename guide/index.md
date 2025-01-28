@@ -5,7 +5,7 @@ title: Getting started
 
 # {{ $frontmatter.title }}
 
-## Quick start using npm
+## Quick start with npm
 
 Lake is available on npm as the [lakelib](https://www.npmjs.com/package/lakelib) package. Install the latest version using the following command:
 
@@ -13,7 +13,7 @@ Lake is available on npm as the [lakelib](https://www.npmjs.com/package/lakelib)
 npm install lakelib
 ```
 
-In your HTML page, add the following code that will serve as placeholders for the editor.
+In your HTML page, add the following code that will serve as placeholders for the editor:
 
 ```html
 <div class="my-editor">
@@ -22,7 +22,7 @@ In your HTML page, add the following code that will serve as placeholders for th
 </div>
 ```
 
-Call the following JavaScript code to render the editor. You can change the configuration through the [Toolbar](/reference/toolbar-config.md) and [Editor](/reference/) config.
+Use the following JavaScript code to render the editor. You can customize the [configuration](/reference/) for the toolbar and editor as needed.
 
 ```js
 import 'lakelib/lib/lake.css';
@@ -38,28 +38,28 @@ const editor = new Editor({
 editor.render();
 ```
 
-Visit the [npm example](https://codesandbox.io/embed/hm39df?module=/src/index.js) on CodeSandbox to see the result of rendering the editor by running the code above.
+Visit the [npm example](https://codesandbox.io/embed/hm39df?module=/src/index.js) on CodeSandbox to see this in action.
 
 ::: warning Note
-`lake.css` should be included when rendering the editor.
+Ensure `lake.css` is included before rendering the editor.
 :::
 
 
-## Quick start using CDN
+## Quick start with CDN
 
-If you prefer plain JavaScript without any build steps, you can use the bundled files directly from the `dist` folder in the distribution. You can also download these files and host them yourself.
+If you prefer plain JavaScript without any build steps, you can use the bundled files directly from a CDN like jsDelivr or UNPKG. You can also download these files and host them yourself.
 
 * jsDelivr: https://www.jsdelivr.com/package/npm/lakelib
 * UNPKG: https://unpkg.com/browse/lakelib/
 
-In the `<head>` of your HTML page, add the following lines of code.
+In the `<head>` of your HTML page, add the following lines of code:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lakelib@0.3/dist/lake.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/lakelib@0.3/dist/lake.min.js"></script>
 ```
 
-In the HTML page, add the following code that will serve as placeholders for the editor.
+In the HTML page, add the following code that will serve as placeholders for the editor:
 
 ```html
 <div class="my-editor">
@@ -68,7 +68,7 @@ In the HTML page, add the following code that will serve as placeholders for the
 </div>
 ```
 
-Call the following JavaScript code to render the editor using default config. You can change the config through the [Toolbar](/reference/toolbar-config.md) and [Editor](/reference/) config.
+Use the following JavaScript code to render the editor. You can customize the [configuration](/reference/) for the toolbar and editor as needed.
 
 ```js
 const { Editor, Toolbar } = Lake;
@@ -83,7 +83,7 @@ const editor = new Editor({
 editor.render();
 ```
 
-Directly visit the local [CDN example](/assets/cdn){target="_blank"} to see the result of running the code above. The same example is also available on [CodeSandbox](https://codesandbox.io/embed/z9p964?module=/index.html).
+Visit the [CDN example](/assets/cdn){target="_blank"} on this website to see the result of running the code above. The same example is also available on [CodeSandbox](https://codesandbox.io/embed/z9p964?module=/index.html).
 
 
 ## Integrating with frameworks
@@ -100,7 +100,7 @@ Lake is a plain JavaScript library, which means you can integrate it into any ot
 
 :::
 
-You can go to CodeSandbox to try the code above.
+You can go to CodeSandbox to try out the code above.
 
 * [React example](https://codesandbox.io/embed/kvv8yq?module=/src/Lake.js)
 * [Vue example](https://codesandbox.io/embed/2g4855?module=/Lake.js)
@@ -108,7 +108,7 @@ You can go to CodeSandbox to try the code above.
 
 ## Getting and setting value
 
-Lake provides the following methods to get and set the content of the editor.
+Lake provides the following methods to get and set the editor's content.
 
 ### Initializing the editor with provided value
 
@@ -148,7 +148,7 @@ Lake allows you to set up an event using the `editor.event.on()` method.
 
 ### `change` event
 
-Fired when the content of the editor is changed. The `value` represents the content of the editor, which conforms to the [LML format](/guide/content-format.md).
+Fired when the editor's content is changed. The `value` represents the editor's content, which conforms to the [LML format](/guide/content-format.md).
 
 ```js
 editor.event.on('change', value => {
@@ -169,7 +169,7 @@ editor.event.on('statechange', state => {
 To find out more available events, refer to the [Editor](/reference/editor#instance-events) class.
 
 
-## Configuring toolbar
+## Customizing toolbar
 
 Lake allows you to make your own toolbar by setting the [items](/reference/toolbar-config#items) config. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
 
@@ -221,7 +221,7 @@ new Editor({
 
 ## Code block
 
-The `code block` feature in Lake is implemented using [CodeMirror](https://codemirror.net/). However, since CodeMirror is quite large and not all users may need this feature, it is disabled by default. To activate it, you only need to add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) to your code, no additional config is needed.
+The `code block` feature in Lake is implemented using [CodeMirror](https://codemirror.net/). However, since CodeMirror is quite large and not all users may need this feature, it is disabled by default. To activate it, simply add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) into your code:
 
 ::: code-group
 
@@ -239,7 +239,7 @@ window.LakeCodeMirror = CodeMirror;
 
 ## Mathematical formula
 
-For the same reason as the `code block` feature, the `formula` feature is disabled by default. To activate it, simply add [KaTeX](https://katex.org/) to your code.
+For the same reason as the `code block` feature, the `formula` feature is disabled by default. Activate it by adding [KaTeX](https://katex.org/):
 
 ::: code-group
 

@@ -134,7 +134,7 @@ const config = editor.config;
 
 ### container <Badge type="info" text="Read only" />
 
-A [contenteditable](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/contentEditable) element where users can edit the content of the editor.
+A [contenteditable](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/contentEditable) element where users can edit the editor's content.
 
 * Type: [Nodes](/reference/nodes.md)
 
@@ -448,7 +448,7 @@ editor.setValue('<p>foo<focus /></p>');
 
 ### getValue()
 
-Returns the content of the editor.
+Returns the editor's content.
 
 * Parameters:
 
@@ -507,7 +507,7 @@ editor.unmount();
 
 ### change
 
-Fired when the content of the editor is changed. The `value` represents the content of the editor and conforms to the [LML format](/guide/content-format.md).
+Fired when the editor's content is changed. The `value` represents the editor's content and conforms to the [LML format](/guide/content-format.md).
 
 Example:
 
