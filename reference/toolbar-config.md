@@ -33,7 +33,6 @@ const toolbarItems = [
 </script>
 <EmbeddedEditor :toolbar="toolbarItems" />
 
-
 ::: details Source code
 
 ```js

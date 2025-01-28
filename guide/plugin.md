@@ -48,6 +48,12 @@ Once the `removeFormat` plugin is registered, you can use the `command.execute()
 editor.command.execute('removeFormat');
 ```
 
+Try the `removeFormat` plugin in the demo below:
+
+<EmbeddedEditor :toolbar="['removeFormat']" value="
+<p><strong><span style=&quot;color: #faad14;&quot;>Select here and click the toolbar button</span></strong></p>
+" />
+
 
 ## A plugin with box
 
