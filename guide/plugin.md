@@ -51,7 +51,7 @@ editor.command.execute('removeFormat');
 Try the `removeFormat` plugin in the demo below:
 
 <EmbeddedEditor :toolbar="['removeFormat']" value="
-<p><strong><span style=&quot;color: #faad14;&quot;>Select here and click the toolbar button</span></strong></p>
+<p><strong><u>Select here and click the <code>eraser</code> button.</u></strong></p>
 " />
 
 
@@ -70,97 +70,11 @@ Below is the code for these files:
 
 ::: code-group
 
-```js [index.js]
-import './hello-world-box.css';
-import helloWorldBox from './hello-world-box';
+<<< @/src/plugins/hello-world/index.js [index.js]
 
-export { helloWorldBox };
+<<< @/src/plugins/hello-world/hello-world-box.js [hello-world-box.js]
 
-export default (editor) => {
-  if (editor.readonly) {
-    return;
-  }
-  editor.command.add('helloWorld', {
-    execute: (value) => {
-      editor.selection.insertBox('helloWorld', value);
-      editor.history.save();
-    },
-  });
-};
-```
-
-```js [hello-world-box.js]
-import { query, template } from 'lakelib';
-
-export default {
-  type: 'block',
-  name: 'helloWorld',
-  value: {
-    number: 0,
-  },
-  render: (box) => {
-    const editor = box.getEditor();
-    const value = box.value;
-    const boxContainer = box.getContainer();
-    const rootNode = query(template`
-      <div class="lake-hello-world">
-        <div>Hello World!</div>
-        <div>
-          <button type="button" class="lake-button lake-text-button">Count</button>
-          <span>${value.number}</span>
-        </div>
-      </div>
-    `);
-    boxContainer.empty();
-    boxContainer.append(rootNode);
-    const numberNode = rootNode.find('span');
-    rootNode.find('button').on('click', () => {
-      const nextNumber = Number.parseInt(numberNode.text(), 10) + 1;
-      numberNode.text(nextNumber.toString(10));
-      box.updateValue({
-        number: nextNumber,
-      });
-      editor.history.save();
-    });
-    rootNode.on('click', () => {
-      editor.selection.selectBox(box);
-    });
-  },
-};
-```
-
-```css [hello-world-box.css]
-lake-box[name='helloWorld'] {
-  margin-bottom: 8px;
-}
-
-.lake-hello-world {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  background-color: #f6f8fa;
-  padding: 12px 24px;
-  user-select: none;
-}
-
-lake-box[name='helloWorld'] .lake-box-selected .lake-hello-world,
-lake-box[name='helloWorld'] .lake-box-focused .lake-hello-world {
-  border-color: #d9d9d9;
-}
-
-.lake-hello-world .lake-button {
-  margin: 0 12px;
-  border: 0;
-  background-color: #5672cd;
-  color: #fff;
-}
-
-.lake-hello-world .lake-button:hover {
-  background-color: #3a5ccc;
-}
-```
+<<< @/src/plugins/hello-world/hello-world-box.css [hello-world-box.css]
 
 :::
 
@@ -196,7 +110,13 @@ const editor = new Editor({
 editor.render();
 ```
 
+Try the `helloWorld` plugin in the demo below:
+
+<EmbeddedEditor :toolbar="['helloWorld']" value="
+<p>Click the <code>hand</code> button to insert a box.</p>
+" />
+
 
 ## Playground
 
-The complete example above is available on CodeSandbox, You can try out the `helloWorld` plugin by visiting the [plugin example](https://codesandbox.io/embed/s2wjyf?module=/src/index.js) there.
+The full example above is available on [CodeSandbox](https://codesandbox.io/embed/s2wjyf?module=/src/index.js), allowing you to explore and experiment with the source code.
