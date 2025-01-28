@@ -7,7 +7,7 @@ title: Creating a Lake plugin
 
 ## Overview
 
-A Lake plugin is a function that allows you to extend Lake's features. It takes the current [Editor](/reference/editor.md) instance as its parameter and returns a cleanup function, which is called when the [Editor](/reference/editor.md) instance is destroyed. This cleanup function is typically used for tasks such as removing event listeners and destroying popup instances. If there is nothing to clean up, returning a function is not required.
+A Lake plugin is a function that extends the capabilities of Lake. It takes the current [Editor](/reference/editor.md) instance as its parameter and optionally returns a cleanup function. It is called when the [Editor](/reference/editor.md) instance is destroyed, and is typically used for tasks like removing event listeners or destroying popup instances. If there is nothing to clean up, returning a function is optional.
 
 ```js
 export default (editor) => {
@@ -21,7 +21,7 @@ export default (editor) => {
 
 ## A simple plugin
 
-The code below uses the `plugin.add()` method to register a `removeFormat` plugin.
+The example below demonstrates how to use the [plugin.add()](/reference/plugin.md#add) method to register a `removeFormat` plugin.
 
 ```js
 import { Editor } from 'lakelib';
@@ -38,9 +38,9 @@ const removeFormat = (editor) => {
 Editor.plugin.add('removeFormat', removeFormat);
 ```
 
-:::tip INFO
-The `command.add()` method is used to register a new command. The `selection.removeMark()` method removes the current styles such as bold, underline, and font color. When the `history.save()` method is called, the current content is stored in the memory, allowing you to undo or redo.
-:::
+* `command.add()`: Registers a new command.
+* `selection.removeMark()`: Removes styling like bold, underline, or font color from the current selection.
+* `history.save()`: Stores the current content in the memory, allowing you to undo or redo.
 
 Once the `removeFormat` plugin is registered, you can use the `command.execute()` method to remove all formatting from the current selection.
 
@@ -51,7 +51,7 @@ editor.command.execute('removeFormat');
 
 ## A plugin with box
 
-Lake allows you to insert an embed using the [Box](/reference/box.md) interface. A plugin containing a box usually follows the file structure below.
+Lake supports embedding custom components, called boxes, using its [Box](/reference/box.md) interface. Plugins that include a box typically follow this structure:
 
 ```
 hello-world
@@ -60,7 +60,7 @@ hello-world
 └─ index.js
 ```
 
-The code below is the specific code for these files.
+Below is the code for these files:
 
 ::: code-group
 
@@ -193,4 +193,4 @@ editor.render();
 
 ## Playground
 
-The code above is available on CodeSandbox, You can visit the [plugin example](https://codesandbox.io/embed/s2wjyf?module=/src/index.js) there to try out the `helloWorld` plugin.
+The complete example above is available on CodeSandbox, You can try out the `helloWorld` plugin by visiting the [plugin example](https://codesandbox.io/embed/s2wjyf?module=/src/index.js) there.
