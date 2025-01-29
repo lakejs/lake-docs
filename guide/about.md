@@ -9,11 +9,15 @@ Lake is a browser-based rich text editor built for modern applications that requ
 
 ## Why create Lake?
 
-A lot of rich text editors are available on the internet, but finding one that truly fits your needs can be difficult. You often face two frustrating options:
+:::warning Note
+This section includes some personal opinions.
+:::
 
-* **Underpowered**: These editors lack critical features, forcing developers to reinvent the wheel. Customization often demands advanced expertise, slowing down development.
+There are a lot of rich text editors out there, but finding one that truly fits your needs can be difficult. You often face two frustrating options:
 
-* **Overcomplicated**: These editors may include desired features but come with restrictive licenses, opaque codebases, and steep learning curves.
+* **Too basic**: These editors lack essential features, forcing developers to build workarounds. Customization can be difficult and often requires deep technical knowledge.
+
+* **Too complex**: These editors may include desired features but come with restrictive licenses, convoluted code, and steep learning curves, making them hard to use and adapt.
 
 Lake aims to provide as many features as possible with a simple structure while being free for commercial use.
 
