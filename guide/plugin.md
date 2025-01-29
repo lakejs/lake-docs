@@ -39,7 +39,9 @@ Editor.plugin.add('removeFormat', removeFormat);
 ```
 
 * `command.add()`: Registers a new command.
+
 * `selection.removeMark()`: Removes styling like bold, underline, or font color from the current selection.
+
 * `history.save()`: Stores the current content in the memory, allowing you to undo or redo.
 
 Once the `removeFormat` plugin is registered, you can use the `command.execute()` method to remove all formatting from the current selection.
