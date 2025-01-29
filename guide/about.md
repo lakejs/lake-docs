@@ -5,12 +5,11 @@ title: About Lake
 
 # {{ $frontmatter.title }}
 
-Lake is a browser-based rich text editor designed for creating content such as blogs, comments, and emails.
-
+Lake is a browser-based rich text editor built for modern applications that require content creation like blog posts, user comments, and email composition.
 
 ## Why create Lake?
 
-A lot of rich text editors are available on the internet, but finding one that truly fits your needs can be difficult. They often either lack key features or are not open enough. There are usually two types:
+A lot of rich text editors are available on the internet, but finding one that truly fits your needs can be difficult. You often face two frustrating options:
 
 * **Underpowered**: These editors lack critical features, forcing developers to reinvent the wheel. Customization often demands advanced expertise, slowing down development.
 
