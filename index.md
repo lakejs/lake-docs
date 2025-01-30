@@ -23,15 +23,15 @@ hero:
 features:
   - icon:
       src: /assets/icons/users.svg
-    title: Reliable Performance
+    title: Reliable performance
     details: Lake provides a smooth editing experience, even with large amounts of content, backed by extensive test coverage to ensure stability.
   - icon:
       src: /assets/icons/cube.svg
-    title: Easy Integration
+    title: Easy integration
     details: You can easily integrate a powerful yet lightweight editor into your web application with just a few lines of code.
   - icon:
       src: /assets/icons/puzzle-piece.svg
-    title: Flexible Customization
+    title: Flexible customization
     details: With a straightforward structure and intuitive programming interface, Lake makes it easy to adapt the editor to your specific needs.
 
 ---
