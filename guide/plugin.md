@@ -121,4 +121,4 @@ Try the `helloWorld` plugin in the demo below:
 
 ## Playground
 
-The full example above is available on [CodeSandbox](https://codesandbox.io/embed/s2wjyf?module=/src/index.js), allowing you to explore and experiment with the source code.
+The complete example above is available on [CodeSandbox](https://codesandbox.io/embed/s2wjyf?module=/src/index.js). You can visit it to explore and experiment with the source code.
