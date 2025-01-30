@@ -19,8 +19,7 @@ There are a lot of rich text editors out there, but finding one that truly fits 
 
 * **Too complex**: These editors may include desired features but come with restrictive licenses, convoluted code, and steep learning curves, making them hard to use and adapt.
 
-Lake aims to provide as many features as possible with a simple structure while being free for commercial use.
-
+Lake aims to provide as many features as possible through a simple structure while remaining free for commercial use.
 
 ## Principles
 
