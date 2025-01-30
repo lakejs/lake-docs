@@ -5,7 +5,7 @@ title: Toolbar config
 
 # {{ $frontmatter.title }}
 
-You can customize the toolbar through the parameter of the constructor of the [Toolbar](/reference/toolbar.md) class.
+You can customize the toolbar by passing configuration options to the [Toolbar](/reference/toolbar.md) class.
 
 Example:
 

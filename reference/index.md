@@ -5,7 +5,7 @@ title: Editor config
 
 # {{ $frontmatter.title }}
 
-You can customize the editor through the parameter of the constructor of the [Editor](/reference/editor.md) class.
+You can customize the editor by passing configuration options to the [Editor](/reference/editor.md) class.
 
 Example:
 
