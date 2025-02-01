@@ -201,7 +201,7 @@ new Editor({
 
 ## minChangeSize
 
-Specifies the minimum text length required for saving history. If the inputted text is shorter than the `minChangeSize`, the history will not be saved until the length reaches or exceeds this threshold.
+Specifies the minimum text length to trigger history save. If the inputted text is shorter than the `minChangeSize`, the history will not be saved until the length reaches or exceeds this threshold.
 
 * Type: `number`
 * Default: `5`
