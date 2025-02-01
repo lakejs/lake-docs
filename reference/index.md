@@ -33,6 +33,7 @@ new Editor({
 You can disable a plugin by setting it to `false`. For example, setting the `mention` to `false` will prevent the pop-up menu for mention from being displayed.
 :::
 
+
 ## root
 
 An element to which the editor is appended.
@@ -63,9 +64,10 @@ new Editor({
 });
 ```
 
+
 ## toolbar
 
-A [Toolbar](/reference/toolbar.md) object. If not given, the editor will be rendered without toolbar. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
+The toolbar for the editor. If not given, the editor will be rendered without toolbar. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
 
 * Type: [Toolbar](/reference/toolbar.md)
 
@@ -79,6 +81,7 @@ new Editor({
   toolbar,
 });
 ```
+
 
 ## value
 
@@ -100,9 +103,10 @@ new Editor({
 });
 ```
 
+
 ## readonly
 
-The `readonly` defines whether the editor is in read-only mode. Setting it to `true` can be used to display the content in the view page. You can visit the [Read-only mode](/examples/readonly) example to see how it displays.
+A `boolean` value defining whether the editor is in read-only mode. Setting it to `true` can be used to display the content in the view page. You can visit the [Read-only mode](/examples/readonly) example to see how it displays.
 
 * Type: `boolean`
 * Default: `false`
@@ -115,9 +119,10 @@ new Editor({
 });
 ```
 
+
 ## spellcheck
 
-The `spellcheck` defines whether the editor is checked for spelling errors. For more details on `spellcheck`, refer to the [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck) page.
+A `boolean` value defining whether the editor is checked for spelling errors.
 
 * Type: `boolean`
 * Default: `false`
@@ -130,9 +135,10 @@ new Editor({
 });
 ```
 
+
 ## tabIndex
 
-The tab order of the editor. For more details on `tabIndex`, refer to the [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) page.
+The tab order for the editor.
 
 * Type: `number`
 * Default: `0`
@@ -144,6 +150,7 @@ new Editor({
   tabIndex: -1,
 });
 ```
+
 
 ## placeholder
 
@@ -159,9 +166,10 @@ new Editor({
 });
 ```
 
+
 ## indentWithTab
 
-The `indentWithTab` defines whether the content can be indented by `Tab` key. When the value is `false`, you can use `Tab` or `Shift-Tab` to move the focus. The [Comment box](/examples/comment-box) example demonstrates how it works.
+A `boolean` value defining whether the content can be indented by `Tab` key. When the value is `false`, you can use `Tab` or `Shift-Tab` to move the focus. The [Comment box](/examples/comment-box) example demonstrates how it works.
 
 * Type: `boolean`
 * Default: `true`
@@ -174,9 +182,10 @@ new Editor({
 });
 ```
 
+
 ## lang
 
-The `lang` defines the language in which the UI should be displayed. You can visit the [Internationalization](/examples/internationalization.md) example to see how it displays.
+The language in which the UI should be displayed. You can visit the [Internationalization](/examples/internationalization.md) example to see how it displays.
 
 * Type: `'en-US' | 'zh-CN' | 'ko' | 'ja'`
 * Default: `en-US`
@@ -188,6 +197,7 @@ new Editor({
   lang: 'zh-CN',
 });
 ```
+
 
 ## minChangeSize
 
@@ -204,6 +214,7 @@ new Editor({
 });
 ```
 
+
 ## historySize
 
 The maximum length of the history. When this threshold is reached, the earliest item in the history will be removed.
@@ -219,11 +230,12 @@ new Editor({
 });
 ```
 
+
 ## slash
 
 ### items
 
-The items of the slash commands.
+The items for the slash commands.
 
 * Type: `(string | SlashItem)[]`
 * Default:
@@ -314,6 +326,7 @@ The following items are currently available.
 
 `file`
 
+
 ## image
 
 ### requestAction
@@ -355,6 +368,7 @@ new Editor({
   },
 });
 ```
+
 
 ## file
 
@@ -419,6 +433,7 @@ new Editor({
 });
 ```
 
+
 ## codeBlock
 
 ### langList
@@ -468,6 +483,7 @@ new Editor({
   },
 });
 ```
+
 
 ## mention
 
