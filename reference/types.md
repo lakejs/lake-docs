@@ -166,20 +166,6 @@ type InitializePlugin = (editor: Editor) => UnmountPlugin | void;
 
 ## Dropdown
 
-### DropdownLocation
-
-```ts
-type DropdownLocation = 'local' | 'global';
-```
-
-
-### DropdownDirection
-
-```ts
-type DropdownDirection = 'top' | 'bottom' | 'auto';
-```
-
-
 ### DropdownMenuType
 
 ```ts
@@ -214,19 +200,6 @@ type DropdownItem = {
   menuWidth?: string;
   menuHeight?: string;
   menuCheck?: boolean;
-};
-```
-
-### DropdownConfig
-
-```ts
-type DropdownConfig = DropdownItem & {
-  root: Nodes;
-  locale?: TranslationFunctions;
-  tabIndex?: number;
-  location?: DropdownLocation;
-  direction?: DropdownDirection;
-  onSelect: (value: string) => void;
 };
 ```
 

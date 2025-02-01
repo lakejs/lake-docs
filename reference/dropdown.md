@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Dropdown` interface represents a UI component that provides a menu of options.
+The `Dropdown` interface represents a UI component that provides a menu of selectable options.
 
 Example:
 
@@ -43,13 +43,53 @@ dropdown.render();
 
 ## Constructor
 
-Creates a new `Dropdown` object.
+Creates a new `Dropdown` instance.
 
 * Parameters:
 
   `config`
 
-  A [DropdownConfig](/reference/types.md#dropdownconfig) object.
+  A key-value object with the following properties:
+
+  * `root`
+
+    Specifies the element to which the dropdown is appended.
+
+    Type: [Nodes](/reference/nodes.md)
+
+  * `onSelect`
+
+    Specifies the function triggered when selected.
+
+    Type: `function`
+
+  * `locale` <Badge type="info" text="Optional" />
+
+    Specifies the translation functions.
+
+    Type: `TranslationFunctions`
+
+  * `tabIndex` <Badge type="info" text="Optional" />
+
+    Specifies the tab order.
+
+    Type: `number`
+
+  * `location` <Badge type="info" text="Optional" />
+
+    Determines whether the toolbar is appended to the `root` or `document.body` element. When set to `local`, the toolbar is appended to the `root` element.
+
+    Type: `'local' | 'global'`
+
+    Default: `local`
+
+  * `direction` <Badge type="info" text="Optional" />
+
+    Determines whether the menu appears above or below the button. When set to `bottom`, the menu appears below the button.
+
+    Type: `'top' | 'bottom' | 'auto'`
+
+    Default: `auto`
 
 Example:
 
@@ -77,7 +117,7 @@ const dropdown = new Dropdown({
 
 ### node <Badge type="info" text="Read only" />
 
-An element to which the contents of the dropdown are appended.
+The DOM element that contains the dropdown's contents.
 
 * Type: [Nodes](/reference/nodes.md)
 
@@ -92,7 +132,7 @@ const dropdownNode = dropdown.node;
 
 ### render()
 
-Renders the dropdown.
+Renders the dropdown to the DOM.
 
 * Parameters:
 
@@ -111,7 +151,7 @@ dropdown.render();
 
 ### unmount()
 
-Destroys the dropdown.
+Removes the dropdown from the DOM and cleans up resources.
 
 * Parameters:
 

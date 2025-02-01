@@ -61,25 +61,25 @@ Creates a new `Button` instance.
 
   * `icon` <Badge type="info" text="Optional" />
 
-    Specifies the icon of the button.
+    Specifies the button icon.
 
     Type: `HTML string`
 
   * `text` <Badge type="info" text="Optional" />
 
-    Specifies the text of the button.
+    Specifies the button text.
 
     Type: `string`
 
   * `tooltip` <Badge type="info" text="Optional" />
 
-    Specifies the tooltip of the button.
+    Specifies the tooltip for the button.
 
     Type: `string`
 
   * `tabIndex` <Badge type="info" text="Optional" />
 
-    Specifies the tab order of the button.
+    Specifies the tab order.
 
     Type: `number`
 
@@ -102,7 +102,7 @@ const button = new Button({
 
 ### node <Badge type="info" text="Read only" />
 
-Represents the [button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) element.
+The [button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) element.
 
 * Type: [Nodes](/reference/nodes.md)
 
