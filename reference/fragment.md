@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Fragment` interface represents a minimal document object that has no parent. It is designed for more efficient manipulation.
+The `Fragment` interface represents a lightweight document object that has no parent. It is designed for efficient manipulation of document structures without affecting the main DOM.
 
 Example:
 
@@ -20,7 +20,7 @@ fragment.append('<div>foo</div><div>bar</div>');
 
 ## Constructor
 
-Creates a new `Fragment` object.
+Creates a new `Fragment` instance.
 
 * Parameters:
 
@@ -63,7 +63,7 @@ const nativeFragment = fragment.get();
 
 ### find()
 
-Returns the descendants of the fragment that match the specified CSS selector.
+Finds and returns descendants of the fragment that match the specified CSS selector.
 
 * Parameters:
 
@@ -73,7 +73,7 @@ Returns the descendants of the fragment that match the specified CSS selector.
 
 * Return value:
 
-  A [Nodes](/reference/nodes.md) object.
+  A [Nodes](/reference/nodes.md) object containing the matching elements.
 
 Example:
 
@@ -96,7 +96,7 @@ Inserts the specified content just inside the fragment, after its last child.
 
   `content`
 
-  HTML string, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), and [Nodes](/reference/nodes.md) object.
+  An HTML string, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), and [Nodes](/reference/nodes.md) object.
 
 * Return value:
 

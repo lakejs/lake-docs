@@ -20,7 +20,7 @@ body.append('<p>foo</p>');
 
 ## Constructor
 
-Creates a new `Nodes` object.
+Creates a new `Nodes` instance.
 
 * Parameters:
 
