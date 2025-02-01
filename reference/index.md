@@ -30,13 +30,13 @@ new Editor({
 ```
 
 ::: tip
-You can disable a plugin by setting it to `false`. For example, setting the `mention` to `false` will prevent the pop-up menu for mention from being displayed.
+You can disable a plugin by setting its value to `false`. For example, setting `mention` to `false` will disable the mention pop-up menu.
 :::
 
 
 ## root
 
-An element to which the editor is appended.
+Specifies the element where the editor is appended.
 
 * Type: [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) | [DOM element](https://developer.mozilla.org/en-US/docs/Web/API/Element) | [Nodes](/reference/nodes.md)
 
@@ -67,7 +67,7 @@ new Editor({
 
 ## toolbar
 
-The toolbar for the editor. If not given, the editor will be rendered without toolbar. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
+Defines the toolbar for the editor. If not given, the editor will be rendered without toolbar. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
 
 * Type: [Toolbar](/reference/toolbar.md)
 
@@ -85,7 +85,7 @@ new Editor({
 
 ## value
 
-The default content for the editor. The format is [Lake Markup Language (LML)](/guide/content-format.md) similar to HTML.
+Defines the default content for the editor. Its format uses [Lake Markup Language (LML)](/guide/content-format.md), similar to HTML.
 
 * Type: `string`
 * Default: `<p><br /></p>`
@@ -106,7 +106,7 @@ new Editor({
 
 ## readonly
 
-A `boolean` value defining whether the editor is in read-only mode. Setting it to `true` can be used to display the content in the view page. You can visit the [Read-only mode](/examples/readonly) example to see how it displays.
+Enables read-only mode for viewing content without editing. You can visit the [Read-only mode](/examples/readonly) example to see how it displays.
 
 * Type: `boolean`
 * Default: `false`
@@ -122,7 +122,7 @@ new Editor({
 
 ## spellcheck
 
-A `boolean` value defining whether the editor is checked for spelling errors.
+Enables or disables spellcheck.
 
 * Type: `boolean`
 * Default: `false`
@@ -138,7 +138,7 @@ new Editor({
 
 ## tabIndex
 
-The tab order for the editor.
+Defines the tab order of the editor.
 
 * Type: `number`
 * Default: `0`
@@ -154,7 +154,7 @@ new Editor({
 
 ## placeholder
 
-The text displayed in the editor when the editor has no content.
+Defines the placeholder text displayed when the editor is empty.
 
 * Type: `string`
 
@@ -169,7 +169,7 @@ new Editor({
 
 ## indentWithTab
 
-A `boolean` value defining whether the content can be indented by `Tab` key. When the value is `false`, you can use `Tab` or `Shift-Tab` to move the focus. The [Comment box](/examples/comment-box) example demonstrates how it works.
+Allows indentation using the `Tab` key. When set to `false`, you can use `Tab` or `Shift-Tab` to move the focus. The [Comment box](/examples/comment-box) example demonstrates how it works.
 
 * Type: `boolean`
 * Default: `true`
@@ -185,7 +185,7 @@ new Editor({
 
 ## lang
 
-The language in which the UI should be displayed. You can visit the [Internationalization](/examples/internationalization.md) example to see how it displays.
+Defines the language for the editor UI. You can visit the [Internationalization](/examples/internationalization.md) example to see how it displays.
 
 * Type: `'en-US' | 'zh-CN' | 'ko' | 'ja'`
 * Default: `en-US`
@@ -201,7 +201,7 @@ new Editor({
 
 ## minChangeSize
 
-The minimum length of the text for saving history. If the inputted text is shorter than the `minChangeSize`, the history will not be saved until the length reaches or exceeds this threshold.
+Specifies the minimum text length required for saving history. If the inputted text is shorter than the `minChangeSize`, the history will not be saved until the length reaches or exceeds this threshold.
 
 * Type: `number`
 * Default: `5`
@@ -217,7 +217,7 @@ new Editor({
 
 ## historySize
 
-The maximum length of the history. When this threshold is reached, the earliest item in the history will be removed.
+Sets the maximum number of history entries. When this threshold is reached, the earliest item in the history will be removed.
 
 * Type: `number`
 * Default: `100`
@@ -235,7 +235,7 @@ new Editor({
 
 ### items
 
-The items for the slash commands.
+Defines the menu items for the slash commands.
 
 * Type: `(string | SlashItem)[]`
 * Default:
@@ -280,58 +280,58 @@ new Editor({
 });
 ```
 
-The following items are currently available.
+The following built-in slash items are available:
 
-`heading1`
+* `heading1`: Converts the selected block into a heading 1.
 
-`heading2`
+* `heading2`: Converts the selected block into a heading 2.
 
-`heading3`
+* `heading3`: Converts the selected block into a heading 3.
 
-`heading4`
+* `heading4`: Converts the selected block into a heading 4.
 
-`heading5`
+* `heading5`: Converts the selected block into a heading 5.
 
-`heading6`
+* `heading6`: Converts the selected block into a heading 6.
 
-`paragraph`
+* `paragraph`: Converts the selected block into a paragraph.
 
-`blockQuote`
+* `blockQuote`: Formats the selected block as a block quotation.
 
-`numberedList`
+* `numberedList`: Creates a numbered list.
 
-`bulletedList`
+* `bulletedList`: Creates a bulleted list.
 
-`checklist`
+* `checklist`: Creates a checklist.
 
-`table`
+* `table`: Inserts a table.
 
-`infoAlert`
+* `infoAlert`: Creates an info alert.
 
-`tipAlert`
+* `tipAlert`: Creates a tip alert.
 
-`warningAlert`
+* `warningAlert`: Creates a warning alert.
 
-`dangerAlert`
+* `dangerAlert`: Creates a danger alert.
 
-`hr`
+* `hr`: Inserts a horizontal line.
 
-`codeBlock`
+* `codeBlock`: Inserts a block of code.
 
-`video`
+* `video`: Inserts a video.
 
-`equation`
+* `equation`: Inserts a mathematical formula.
 
-`image`
+* `image`: Uploads and inserts an image.
 
-`file`
+* `file`: Uploads and inserts a file.
 
 
 ## image
 
 ### requestAction
 
-The request URL for uploading image.
+Defines the request URL for uploading image.
 
 * Type: `URL`
 
@@ -345,14 +345,14 @@ Its response data should follow the following format:
 
 ### requestMethod
 
-The request method for uploading image.
+Defines the request method for uploading image.
 
 * Type: `'POST' | 'PUT' | 'PATCH'`
 * Default: `POST`
 
 ### requestTypes
 
-The MIME types allowed for uploading image.
+Defines the MIME types allowed for uploading image.
 
 * Type: `string[]`
 * Default: `['image/gif', 'image/jpeg', 'image/png', 'image/svg+xml']`
@@ -374,7 +374,7 @@ new Editor({
 
 ### requestAction
 
-The request URL for uploading file.
+Defines the request URL for uploading file.
 
 * Type: `URL`
 
@@ -388,14 +388,14 @@ Its response data should follow the following format:
 
 ### requestMethod
 
-The request method for uploading file.
+Defines the request method for uploading file.
 
 * Type: `'POST' | 'PUT' | 'PATCH'`
 * Default: `POST`
 
 ### requestTypes
 
-The MIME types allowed for uploading file.
+Defines the MIME types allowed for uploading file.
 
 * Type: `string[]`
 * Default:
@@ -438,7 +438,7 @@ new Editor({
 
 ### langList
 
-The language types for the dropdown.
+Defines the language types for the dropdown.
 
 * Type: `string[]`
 * Default:
@@ -468,7 +468,7 @@ The language types for the dropdown.
 
 ### defaultLang
 
-The default language type.
+Defines the default language type.
 
 * Type: `string`
 * Default: `text`
@@ -489,7 +489,7 @@ new Editor({
 
 ### requestAction
 
-The request URL for getting user list.
+Defines the request URL for getting user list.
 
 * Type: `URL`
 
@@ -516,14 +516,14 @@ Its response data should follow the following format:
 
 ### requestMethod
 
-The request method for getting user list.
+Defines the request method for getting user list.
 
 * Type: `'GET' | 'POST' | 'PUT' | 'PATCH'`
 * Default: `GET`
 
 ### getProfileUrl
 
-A function that returns a URL to visit the user profile.
+Defines the function that returns a URL to visit the user profile.
 
 * Type: `function`
 * Default:
