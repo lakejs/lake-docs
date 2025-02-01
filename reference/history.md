@@ -208,11 +208,23 @@ Saves the current content to the history. The content is saved only if it is dif
 
   An optional object with the following properties:
 
-  * `inputType` <Badge type="info" text="Optional" />: A string describing the action that triggered the save.
+  * `inputType` <Badge type="info" text="Optional" />
 
-  * `update` <Badge type="info" text="Optional" />: A boolean indicating whether the current content should update the last item in the history. Defaults to `false`.
+    Specifies the action that triggered the save.
 
-  * `emitEvent` <Badge type="info" text="Optional" />: A boolean indicating whether to emit the [save](#save-1) event. Defaults to `true`.
+    Type: `string`
+
+  * `update` <Badge type="info" text="Optional" />
+
+    Specifies whether the current content should update the last item in the history. Defaults to `false`.
+
+    Type: `boolean`
+
+  * `emitEvent` <Badge type="info" text="Optional" />
+
+    Specifies whether to emit the [save](#save-1) event. Defaults to `true`.
+
+    Type: `boolean`
 
 * Return value:
 

@@ -23,7 +23,7 @@ editor.setValue('<p>foo</p>');
 
 ## Constructor
 
-Creates a new `Editor` object.
+Creates a new `Editor` instance.
 
 * Parameters:
 

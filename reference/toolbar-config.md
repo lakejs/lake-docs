@@ -369,7 +369,7 @@ new Toolbar({
 
 Determines whether the toolbar appears above or below the editing area. When set to `bottom`, dropdown menus appear above the toolbar.
 
-* Type: `top | bottom`
+* Type: `'top' | 'bottom'`
 * Default: `top`
 
 Example:

@@ -29,7 +29,7 @@ const toolbar = new Toolbar({
 
 ## Constructor
 
-Creates a new `Toolbar` object.
+Creates a new `Toolbar` instance.
 
 * Parameters:
 
