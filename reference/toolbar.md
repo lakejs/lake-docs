@@ -35,7 +35,7 @@ Creates a new `Toolbar` object.
 
   `config`
 
-  A key-value object. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
+  A key-value object containing configuration options. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
 
 * Return value:
 
@@ -54,7 +54,7 @@ const toolbar = new Toolbar({
 
 ### root <Badge type="info" text="Read only" />
 
-An element to which the toolbar is appended.
+The element to which the toolbar is appended.
 
 * Type: [Nodes](/reference/nodes.md)
 
@@ -67,7 +67,7 @@ const root = toolbar.root;
 
 ### container <Badge type="info" text="Read only" />
 
-An element to which the items of the toolbar are appended.
+The element where toolbar items are appended.
 
 * Type: [Nodes](/reference/nodes.md)
 
@@ -82,7 +82,7 @@ const container = toolbar.container;
 
 ### updateState()
 
-Update the state of each item in the toolbar, such as whether it is selected, disabled.
+Updates the state of each toolbar item, such as whether it is selected or disabled.
 
 * Parameters:
 
@@ -106,7 +106,7 @@ toolbar.updateState({
 
 ### render()
 
-Renders a toolbar for the specified editor.
+Renders the toolbar for the specified editor.
 
 * Parameters:
 
@@ -127,7 +127,7 @@ toolbar.render(editor);
 
 ### unmount()
 
-Destroys the toolbar.
+Destroys the toolbar instance, removing it from the DOM.
 
 * Parameters:
 
