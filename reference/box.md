@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Box` interface represents an embedded content, which is used to enhance editing capability.
+The `Box` interface represents an embedded content designed to enhance editing capability.
 
 Example:
 
@@ -23,13 +23,13 @@ box.updateValue({
 
 ## Constructor
 
-Creates a new `Box` object.
+Creates a new `Box` instance.
 
 * Parameters:
 
   `node`
 
-  The name of a box, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), and [Nodes](/reference/nodes.md) object.
+  The name of a box, a [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), or a [Nodes](/reference/nodes.md) object.
 
 Example:
 
@@ -49,7 +49,7 @@ const box = new Box(query('lake-box').eq(0));
 
 ### node <Badge type="info" text="Read only" />
 
-A [lake-box](/guide/content-format.md#box) element to which the contents of the box are appended.
+The [lake-box](/guide/content-format.md#box) element to which the contents of the box are appended.
 
 * Type: [Nodes](/reference/nodes.md)
 
@@ -62,7 +62,7 @@ const boxNode = box.node;
 
 ### event <Badge type="info" text="Read only" />
 
-An [EventEmitter](https://github.com/primus/eventemitter3) object used to set up events. For more details, see the [Instance events](#instance-events).
+An [EventEmitter](https://github.com/primus/eventemitter3) object for handling events. See the [Instance events](#instance-events) for details.
 
 * Type: [EventEmitter](https://github.com/primus/eventemitter3)
 
@@ -77,7 +77,7 @@ box.event.on('focus', () => {
 
 ### toolbar <Badge type="info" text="Read only" />
 
-A toolbar for the box.
+A floating toolbar attached to the box.
 
 * Type: `FloatingToolbar`
 
@@ -90,7 +90,7 @@ const toolbar = box.toolbar;
 
 ### type <Badge type="info" text="Read only" />
 
-Returns the type of the box.
+Indicates the type of the box.
 
 * Type: `'inline' | 'block'`
 
@@ -138,17 +138,17 @@ box.value = {
 
 ### updateValue()
 
-Sets part of the value of the box.
+Updates part of the value of the box.
 
 * Parameters:
 
   `keyName`
 
-  A string representing the name of the key. This parameter can be a key-value object used to set multiple keys.
+  A string representing the key to update. It can be a key-value object used to set multiple keys.
 
   `keyValue` <Badge type="info" text="Optional" />
 
-  A string representing the value of the key.
+  A string representing the new value for the key.
 
 * Return value:
 
@@ -170,7 +170,7 @@ box.updateValue({
 
 ### getEditor()
 
-Returns an [Editor](/reference/editor.md) object that contains the box.
+Returns the [Editor](/reference/editor.md) object that contains the box.
 
 * Parameters:
 
@@ -193,7 +193,7 @@ const editor = box.getEditor();
 
 ### getContainer()
 
-Returns the container of the box.
+Returns the container element of the box.
 
 * Parameters:
 
@@ -212,7 +212,7 @@ const boxContainer = box.getContainer();
 
 ### getHTML()
 
-Returns the HTML string contained within the box.
+Returns the HTML content inside the box.
 
 * Parameters:
 
@@ -231,13 +231,13 @@ const html = box.getHTML();
 
 ### setToolbar()
 
-Sets a floating toolbar for the box.
+Adds a floating toolbar to the box.
 
 * Parameters:
 
   `items`
 
-  An `Array` object that contains `ToolbarItem` objects, representing the buttons of the toolbar.
+  An `Array` object that contains `ToolbarItem` objects, representing the buttons of the floating toolbar.
 
 * Return value:
 
@@ -260,7 +260,7 @@ box.setToolbar([{
 
 ### render()
 
-Renders the contents of the box.
+Renders the content inside the box.
 
 * Parameters:
 
@@ -279,7 +279,7 @@ box.render();
 
 ### unmount()
 
-Destroys the box.
+Destroys the box instance.
 
 * Parameters:
 
@@ -300,7 +300,7 @@ box.unmount();
 
 ### focus
 
-Fired when the box has received focus.
+Fired when the box receives focus.
 
 Example:
 
@@ -313,7 +313,7 @@ box.event.on('focus', () => {
 
 ### blur
 
-Fired when the box has lost focus.
+Fired when the box loses focus.
 
 Example:
 
@@ -339,7 +339,7 @@ box.event.on('beforeunmount', () => {
 
 ### renderfloatingtoolbar
 
-Fired when the floating toolbar has rendered.
+Fired when the floating toolbar is rendered.
 
 Example:
 

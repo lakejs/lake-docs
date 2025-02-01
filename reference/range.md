@@ -21,7 +21,7 @@ range.collapseToEnd();
 
 ## Constructor
 
-Creates a new `Range` object.
+Creates a new `Range` instance.
 
 * Parameters:
 
