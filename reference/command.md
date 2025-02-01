@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Command` interface is used to manage a collection of commands.
+The `Command` interface manages a collection of commands.
 
 :::warning Note
 The constructor is not directly accessible. Instead, you can access its methods via the [editor.command](/reference/editor.md#command) object.
@@ -33,7 +33,7 @@ Adds a new command to the collection.
 
   `commandItem`
 
-  A [CommandItem](/reference/types.md#commanditem) object.
+  A [CommandItem](/reference/types.md#commanditem) object that specifies the command item to be added.
 
 * Return value:
 
@@ -93,7 +93,7 @@ const names = editor.command.getNames();
 
 ### has()
 
-Returns a boolean value indicating whether the specified command exists.
+Checks whether the specified command exists.
 
 * Parameters:
 
@@ -114,7 +114,7 @@ editor.command.has('helloWorld');
 
 ### getItem()
 
-Returns an item by the name of the specified command.
+Returns a command item by its name.
 
 * Parameters:
 
@@ -124,7 +124,7 @@ Returns an item by the name of the specified command.
 
 * Return value:
 
-  A `CommandItem` object.
+  A [CommandItem](/reference/types.md#commanditem) object.
 
 Example:
 
@@ -135,7 +135,7 @@ const commandItem = editor.command.getItem('bold');
 
 ### isDisabled()
 
-Returns a boolean value indicating whether the specified command is disabled.
+Checks if the specified command is disabled.
 
 * Parameters:
 
@@ -156,7 +156,7 @@ const isDisabled = editor.command.isDisabled('bold');
 
 ### isSelected()
 
-Returns a boolean value indicating whether the specified command is selected.
+Checks if the specified command is selected.
 
 * Parameters:
 
@@ -166,7 +166,7 @@ Returns a boolean value indicating whether the specified command is selected.
 
 * Return value:
 
-  `true` if the the command is selected. `false` if not.
+  `true` if the command is selected. `false` if not.
 
 Example:
 
@@ -187,7 +187,7 @@ Returns the selected values for the specified command.
 
 * Return value:
 
-  An `Array` object that contains the selected value.
+  An `Array` object that contains selected values.
 
 Example:
 
@@ -208,7 +208,7 @@ Executes the specified command.
 
   `value` <Badge type="info" text="Optional" />
 
-  An argument for commands that require an input argument. For example, the `heading` requires a level such as `h1`, `h2`, and `h3`.
+  An argument required by some commands. For example, the `heading` command requires a level such as `h1`, `h2`, and `h3`.
 
 * Return value:
 
