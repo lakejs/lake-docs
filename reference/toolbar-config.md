@@ -5,7 +5,7 @@ title: Toolbar config
 
 # {{ $frontmatter.title }}
 
-You can customize the toolbar by passing configuration options to the [Toolbar](/reference/toolbar.md) class.
+The toolbar can be customized by passing configuration options to the [Toolbar](/reference/toolbar.md) class.
 
 Example:
 
@@ -68,7 +68,7 @@ new Toolbar({
 
 ## root
 
-An element to which the toolbar is appended.
+Specifies the element to which the toolbar is appended.
 
 * Type: [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) | [DOM element](https://developer.mozilla.org/en-US/docs/Web/API/Element) | [Nodes](/reference/nodes.md)
 
@@ -98,7 +98,7 @@ new Toolbar({
 
 ## items
 
-The buttons of the toolbar. The `|` character represents a divider, and other strings represent the names of built-in items.
+Defines the buttons available in the toolbar. The | character represents a divider, while other strings specify the names of built-in items.
 
 * Type: `(string | ToolbarItem)[]`
 
@@ -120,7 +120,7 @@ new Toolbar({
 
 ### Built-in items
 
-The following items are currently available.
+The following built-in toolbar items are available:
 
 `undo`
 
@@ -284,11 +284,11 @@ A button that inserts a mathematical formula.
 
 ### Customizing item
 
-You can also set a customized item, which must match the [ToolbarItem](/reference/types.md#toolbaritem) type.
+You can also set a custom item, which must conform to the [ToolbarItem](/reference/types.md#toolbaritem) type.
 
 #### Button item
 
-This item must match the [ToolbarButtonItem](/reference/types.md#toolbarbuttonitem) type.
+A button item follows the [ToolbarButtonItem](/reference/types.md#toolbarbuttonitem) type.
 
 Example:
 
@@ -318,7 +318,7 @@ new Toolbar({
 
 #### Dropdown item
 
-This item must match the [ToolbarDropdownItem](/reference/types.md#toolbardropdownitem) type.
+A dropdown item follows the [ToolbarDropdownItem](/reference/types.md#toolbardropdownitem) type.
 
 Example:
 
@@ -367,8 +367,7 @@ new Toolbar({
 
 ## placement
 
-The position of the toolbar, either above or below the editing area.
-If the value is set to `bottom`, the menu of dropdowns in the toolbar is displayed above the toolbar.
+Determines whether the toolbar appears above or below the editing area. When set to `bottom`, dropdown menus appear above the toolbar.
 
 * Type: `top | bottom`
 * Default: `top`
