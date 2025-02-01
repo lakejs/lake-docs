@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Plugin` interface is used to manage a collection of plugins.
+The `Plugin` interface manages a collection of plugins. It allows plugins to be added and loaded into an [Editor](/reference/editor.md) instance, and it handles the initialization and unmounting of those plugins.
 
 :::warning Note
 The constructor is not directly accessible. Instead, you can access its methods via the [Editor.plugin](/reference/editor.md#plugin) object.

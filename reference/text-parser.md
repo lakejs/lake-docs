@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `TextParser` interface provides the ability to parse a text.
+The `TextParser` interface enables parsing of text into structured HTML.
 
 Example:
 
@@ -21,13 +21,13 @@ console.log(parser.getHTML());
 
 ## Constructor
 
-Creates a new `TextParser` object.
+Creates a new `TextParser` instance.
 
 * Parameters:
 
   `content`
 
-  A string that will be parsed.
+  A string that specifies the text content to be parsed.
 
 Example:
 
@@ -40,7 +40,7 @@ const parser = new TextParser('foo\nbar');
 
 ### getHTML()
 
-Returns an HTML string.
+Converts the parsed text into an HTML string.
 
 * Parameters:
 
@@ -48,7 +48,7 @@ Returns an HTML string.
 
 * Return value:
 
-  The HTML string.
+  An HTML string.
 
 Example:
 
@@ -60,7 +60,7 @@ const html = parser.getHTML();
 
 ### getFragment()
 
-Returns a [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) object.
+Generates a [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) object that represents the parsed text.
 
 * Parameters:
 

@@ -20,7 +20,7 @@ console.log(parser.getHTML());
 
 ## Constructor
 
-Creates a new `HTMLParser` object.
+Creates a new `HTMLParser` instance.
 
 * Parameters:
 

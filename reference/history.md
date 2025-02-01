@@ -6,10 +6,10 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `History` interface is used to manage the undo and redo history.
+The `History` interface manages undo and redo functionality for a container that holds some editable content. It emits events when actions like save, undo, or redo are performed.
 
 :::warning Note
-The constructor is not directly accessible. Instead, you can access its methods via the [editor.history](/reference/editor.md#history) object.
+The constructor is not directly accessible. Instead, you can access its properties and methods via the [editor.history](/reference/editor.md#history) object.
 :::
 
 Example:

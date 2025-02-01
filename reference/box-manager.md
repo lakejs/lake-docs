@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `BoxManager` interface provides methods to manage a collection of [BoxComponent](/reference/types.md#boxcomponent) objects.
+The `BoxManager` interface manages a collection of [BoxComponent](/reference/types.md#boxcomponent) objects. It allows you to add, remove, and retrieve the names of components.
 
 :::warning Note
 The constructor is not directly accessible. Instead, you can access its methods via the [Editor.box](/reference/editor.md#box) object.
