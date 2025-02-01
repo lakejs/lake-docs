@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `HTMLParser` interface provides the ability to parse an HTML string by specified rules.
+The `HTMLParser` interface provides the ability to parse an HTML string according to specified rules.
 
 Example:
 
@@ -30,7 +30,7 @@ Creates a new `HTMLParser` instance.
 
   `rules` <Badge type="info" text="Optional" />
 
-  An object representing the rules.
+  An object defining parsing rules.
 
 Example:
 
@@ -47,7 +47,7 @@ const parser = new Box(query('<p>foo</p>'));
 
 ### getHTML()
 
-Returns an HTML string.
+Returns the parsed HTML as a string.
 
 * Parameters:
 
@@ -55,7 +55,7 @@ Returns an HTML string.
 
 * Return value:
 
-  The HTML string.
+  An HTML string.
 
 Example:
 
@@ -67,7 +67,7 @@ const html = parser.getHTML();
 
 ### getFragment()
 
-Returns a [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) object.
+Returns the parsed content as a [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) object.
 
 * Parameters:
 
