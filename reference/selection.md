@@ -6,10 +6,10 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Selection` interface represents the range of content selected by the user or the current position of the cursor.
+The `Selection` interface represents the range of content selected by the user or the current cursor position.
 
 :::warning Note
-The constructor is not directly accessible. Instead, you can access its methods via the [editor.selection](/reference/editor.md#selection) object.
+The constructor is not directly accessible. Instead, you can access its properties and methods via the [editor.selection](/reference/editor.md#selection) object.
 :::
 
 Example:
@@ -36,7 +36,7 @@ const container = editor.selection.container;
 
 ### range
 
-A [Range](/reference/range.md) object which is used to add it to the native selection later.
+A [Range](/reference/range.md) object than can be added to the native selection later.
 
 * Type: [Range](/reference/range.md)
 
@@ -127,7 +127,7 @@ editor.selection.updateByBookmark();
 
 ### getActiveItems()
 
-Returns a list containing the items related to the current selection.
+Returns a list of items related to the current selection.
 
 * Parameters:
 
@@ -146,7 +146,7 @@ const activeItems = editor.selection.getActiveItems();
 
 ### insertBookmark()
 
-Inserts a bookmark at the cursor position or a pair of bookmarks at the beginning and end of the selection.
+Inserts a bookmark at the cursor position or a pair of bookmarks at the selection boundaries.
 
 * Parameters:
 
@@ -171,7 +171,7 @@ console.log(bookmark.anchor, bookmark.focus);
 
 ### toBookmark()
 
-Changes the [selection.range](#range) to a range represented by the provided bookmark.
+Changes [selection.range](#range) to the range represented by the provided bookmark.
 
 * Parameters:
 
@@ -197,13 +197,13 @@ editor.selection.toBookmark(bookmark);
 
 ### insertContents()
 
-Inserts the specified contents into the selection.
+Inserts the specified content into the selection.
 
 * Parameters:
 
   `contents`
 
-  HTML string, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment), [Nodes](/reference/nodes.md), and [Fragment](/reference/fragment.md).
+  An HTML string, [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment), [Nodes](/reference/nodes.md), and [Fragment](/reference/fragment.md).
 
 * Return value:
 
@@ -267,7 +267,7 @@ editor.selection.setBlocks({
 
 ### splitBlock()
 
-Removes the contents of the selection and then splits the block node at the point of the cursor.
+Removes the contents of the selection and splits the block node at the cursor position.
 
 * Parameters:
 
@@ -341,7 +341,7 @@ console.log(parts.start, parts.center, parts.end);
 
 ### addMark()
 
-Adds the specified mark to the texts of the selection.
+Adds the specified mark to the selected text.
 
 * Parameters:
 
@@ -366,7 +366,7 @@ editor.selection.addMark('<span style="font-size: 18px;" />');
 
 ### removeMark()
 
-Removes the specified marks in the selection.
+Removes specified marks from the selection.
 
 * Parameters:
 
@@ -448,7 +448,7 @@ editor.selection.insertBox('emoji', {
 
 ### removeBox()
 
-Removes the specified box. If not given, the selected box is removed.
+Removes the specified box. If no parameter is given, the selected box is removed.
 
 * Parameters:
 
@@ -463,9 +463,9 @@ Removes the specified box. If not given, the selected box is removed.
 Example:
 
 ```js
-// Removes the box that was selected by the user.
+// Removes selected box.
 editor.selection.removeBox();
 
-// Removes the provided box.
+// Removes a specified box.
 editor.selection.removeBox(box);
 ```
