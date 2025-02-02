@@ -95,6 +95,31 @@ console.log(color);
 ```
 
 
+### getBox()
+
+Returns an existing [Box](/reference/box.md) instance associated with the provided `boxNode` or generates a new one if none exists. The function handles the creation and storage of [Box](/reference/box.md) instances, storing them either in a temporary or permanent map based on whether the `boxNode` is contained within a container.
+
+* Parameters:
+
+  `boxNode`
+
+  The source used to determine or create a [Box](/reference/box.md) instance. If a `string` is provided, it is treated as a name. If a [Nodes](/reference/nodes.md) object is provided, it is treated as a node.
+
+* Return value:
+
+  The existing or newly created [Box](/reference/box.md) instance.
+
+Example:
+
+```js
+// Using a string as boxNode
+const boxByName = getBox('myBoxName');
+
+// Using a Nodes instance
+const boxByNode = getBox(query('lake-box').eq(0));
+```
+
+
 ## Operations
 
 ### insertBookmark()
