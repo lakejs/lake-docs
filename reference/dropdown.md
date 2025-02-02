@@ -159,27 +159,6 @@ Creates a new `Dropdown` instance.
 
     Type: `boolean`
 
-Example:
-
-```js
-const dropdown = new Dropdown({
-  root: query('.lake-toolbar'),
-  name: 'align',
-  icon: icons.get('alignLeft'),
-  downIcon: icons.get('down'),
-  tooltip: 'Alignment',
-  menuType: 'list',
-  menuItems: [
-    { icon: icons.get('alignLeft'), value: 'left', text: 'Align left' },
-    { icon: icons.get('alignCenter'), value: 'center', text: 'Align center' },
-    { icon: icons.get('alignRight'), value: 'right', text: 'Align right' },
-  ],
-  onSelect: value => {
-    console.log(value);
-  },
-});
-```
-
 
 ## Instance properties
 

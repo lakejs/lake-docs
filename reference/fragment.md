@@ -28,16 +28,6 @@ Creates a new `Fragment` instance.
 
   A native [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) object.
 
-Example:
-
-```js
-// Without fragment parameter.
-const fragment = new Fragment();
-
-// With fragment parameter.
-const fragment = new Fragment(document.createDocumentFragment());
-```
-
 
 ## Instance methods
 

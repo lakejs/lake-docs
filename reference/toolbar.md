@@ -41,14 +41,6 @@ Creates a new `Toolbar` instance.
 
   A new `Toolbar` object.
 
-Example:
-
-```js
-const toolbar = new Toolbar({
-  root: '.my-toolbar',
-});
-```
-
 
 ## Instance properties
 

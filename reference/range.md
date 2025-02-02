@@ -29,16 +29,6 @@ Creates a new `Range` instance.
 
   A native [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range) object.
 
-Example:
-
-```js
-// Without range parameter.
-const range = new Range();
-
-// With range parameter.
-const range = new Range(document.createRange());
-```
-
 
 ## Instance properties
 

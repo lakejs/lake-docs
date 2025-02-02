@@ -29,12 +29,6 @@ Creates a new `TextParser` instance.
 
   A string that specifies the text content to be parsed.
 
-Example:
-
-```js
-const parser = new TextParser('foo\nbar');
-```
-
 
 ## Instance methods
 

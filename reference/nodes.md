@@ -28,19 +28,6 @@ Creates a new `Nodes` instance.
 
   A native [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node) object or a list of native nodes.
 
-Example:
-
-```js
-// A native node.
-const body = new Nodes(document.body);
-
-// A list of native nodes.
-const nodes = new Nodes([
-  document.createElement('p'),
-  document.createTextNode('foo'),
-]);
-```
-
 
 ## Instance properties
 

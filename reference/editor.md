@@ -35,14 +35,6 @@ Creates a new `Editor` instance.
 
   A new `Editor` object.
 
-Example:
-
-```js
-const editor = new Editor({
-  root: '.my-content',
-});
-```
-
 
 ## Static properties
 

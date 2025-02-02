@@ -29,20 +29,7 @@ Creates a new `Box` instance.
 
   `node`
 
-  The name of a box, a [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node), or a [Nodes](/reference/nodes.md) object.
-
-Example:
-
-```js
-// The parameter is the name of a box.
-const box = new Box('hr');
-
-// The parameter is a native node.
-const box = new Box(query('lake-box').get(0));
-
-// The parameter is a Nodes object.
-const box = new Box(query('lake-box').eq(0));
-```
+  The name of a box, a native [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node) object, or a [Nodes](/reference/nodes.md) object.
 
 
 ## Instance properties
