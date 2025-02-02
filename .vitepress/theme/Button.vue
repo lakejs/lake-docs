@@ -35,5 +35,14 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="lake-button-root" ref="buttonRef" style="display: inline-block; margin-right: 10px; vertical-align: middle;"></div>
+  <div :class="$style.button" ref="buttonRef"></div>
 </template>
+
+<style module>
+.button {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  line-height: 0;
+}
+</style>

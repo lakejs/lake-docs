@@ -14,9 +14,9 @@ Example:
 
 <Button name="cancel" text="Cancel" />
 
-<Button name="iconButton" iconName="open" tooltip="Open" />
+<Button name="open" iconName="open" tooltip="Open" />
 
-<Button name="iconButton" iconName="check" text="Save" />
+<Button name="save" iconName="check" text="Save" />
 
 ::: code-group
 
@@ -24,7 +24,7 @@ Example:
 import { query, Button } from 'lakelib';
 
 new Button({
-  root: query('.lake-button-root'),
+  root: query('.button-root'),
   name: 'done',
   type: 'primary',
   text: 'Done',
@@ -38,7 +38,7 @@ new Button({
 import { query, Button } from 'lakelib';
 
 new Button({
-  root: query('.lake-button-root'),
+  root: query('.button-root'),
   name: 'cancel',
   text: 'Cancel',
   onClick: () => {
@@ -51,7 +51,7 @@ new Button({
 import { query, Button } from 'lakelib';
 
 new Button({
-  root: query('.lake-button-root'),
+  root: query('.button-root'),
   name: 'open',
   icon: icons.get('open'),
   tooltip: 'Open',
@@ -65,7 +65,7 @@ new Button({
 import { query, Button } from 'lakelib';
 
 new Button({
-  root: query('.lake-button-root'),
+  root: query('.button-root'),
   name: 'save',
   icon: icons.get('save'),
   text: 'Save',
