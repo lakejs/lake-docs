@@ -7,13 +7,16 @@ title: Creating a Lake plugin
 
 ## Overview
 
-A Lake plugin is a function that extends the capabilities of Lake. It takes the current [Editor](/reference/editor.md) instance as its parameter and optionally returns a cleanup function. It is called when the [Editor](/reference/editor.md) instance is destroyed, and is typically used for tasks like removing event listeners or destroying popup instances. If there is nothing to clean up, returning a function is optional.
+A Lake plugin is a function that extends the capabilities of Lake. It receives the current [Editor](/reference/editor.md) instance as its parameter and can optionally return a cleanup function that will be called when the [Editor](/reference/editor.md) instance is destroyed. This cleanup function is useful for tasks such as removing event listeners or destroying popup instances. If no cleanup is needed, returning a function is optional.
+
+
+Basic plugin structure:
 
 ```js
 export default (editor) => {
-  // setup code
+  // Setup code here
   return () => {
-    // cleanup code
+    // Cleanup code here
   };
 };
 ```
@@ -21,7 +24,7 @@ export default (editor) => {
 
 ## A simple plugin
 
-The example below demonstrates how to use the [plugin.add()](/reference/plugin.md#add) method to register a `removeFormat` plugin.
+The example below demonstrates how to register a `removeFormat` plugin using the [plugin.add()](/reference/plugin.md#add) method. This plugin registers a command to remove formatting from the current selection.
 
 ```js
 import { Editor } from 'lakelib';
@@ -44,7 +47,7 @@ Editor.plugin.add('removeFormat', removeFormat);
 
 * `history.save()`: Stores the current content in the memory, allowing you to undo or redo.
 
-Once the `removeFormat` plugin is registered, you can use the `command.execute()` method to remove all formatting from the current selection.
+After registering the `removeFormat` plugin, you can remove formatting by executing the following command:
 
 ```js
 editor.command.execute('removeFormat');
@@ -80,7 +83,7 @@ Below is the code for these files:
 
 :::
 
-Before using the `helloWorld` plugin, you also need to add a button to your toolbar. When a user clicks the button, it inserts a `helloWorld` box into the editor.
+Before the `helloWorld` plugin can be used, you must register its box and add a corresponding button to your toolbar. When clicked, the button executes the command to insert a `helloWorld` box into the editor.
 
 ```js
 import { Editor, Toolbar } from 'lakelib';
