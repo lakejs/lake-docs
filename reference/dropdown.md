@@ -16,7 +16,7 @@ Example:
 import { query, icons, Dropdown } from 'lakelib';
 
 const dropdown = new Dropdown({
-  root: query('.lake-dropdown-root'),
+  root: query('.dropdown-root'),
   name: 'langType',
   downIcon: icons.get('down'),
   defaultValue: 'html',
@@ -53,11 +53,65 @@ Creates a new `Dropdown` instance.
 
     Type: [Nodes](/reference/nodes.md)
 
+  * `name`
+
+    Specifies the name of the dropdown.
+
+    Type: `string`
+
+  * `menuType`
+
+    Specifies the type of the dropdown.
+
+    Type: `'list' | 'icon' | 'character' | 'color'`
+
+  * `menuItems`
+
+    Specifies the menu items.
+
+    Type: [DropdownMenuItem](/reference/types.md#dropdownmenuitem)
+
   * `onSelect`
 
     Specifies the function triggered when selected.
 
     Type: `function`
+
+  * `icon` <Badge type="info" text="Optional" />
+
+    Specifies the dropdown icon.
+
+    Type: `HTML string`
+
+  * `accentIcon` <Badge type="info" text="Optional" />
+
+    Specifies the accent icon for color picker.
+
+    Type: `HTML string`
+
+  * `downIcon` <Badge type="info" text="Optional" />
+
+    Specifies the caret down icon.
+
+    Type: `HTML string`
+
+  * `defaultValue` <Badge type="info" text="Optional" />
+
+    Specifies the default value.
+
+    Type: `string`
+
+  * `tooltip` <Badge type="info" text="Optional" />
+
+    Specifies the tooltip for the dropdown.
+
+    Type: `string`
+
+  * `width` <Badge type="info" text="Optional" />
+
+    Specifies the width for the dropdown.
+
+    Type: `string`
 
   * `locale` <Badge type="info" text="Optional" />
 
@@ -86,6 +140,24 @@ Creates a new `Dropdown` instance.
     Type: `'top' | 'bottom' | 'auto'`
 
     Default: `auto`
+
+  * `menuWidth` <Badge type="info" text="Optional" />
+
+    Specifies the width for the menu.
+
+    Type: `string`
+
+  * `menuHeight` <Badge type="info" text="Optional" />
+
+    Specifies the height for the menu.
+
+    Type: `string`
+
+  * `menuCheck` <Badge type="info" text="Optional" />
+
+    Determines whether the menu can be selected. When set to `false`, the menu is not selectable.
+
+    Type: `boolean`
 
 Example:
 

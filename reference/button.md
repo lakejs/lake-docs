@@ -136,20 +136,6 @@ Creates a new `Button` instance.
 
     Type: `number`
 
-Example:
-
-```js
-const button = new Button({
-  root: query('.lake-toolbar'),
-  name: 'bold',
-  icon: icons.get('bold'),
-  tooltip: 'Bold',
-  onClick: () => {
-    console.log('clicked');
-  },
-});
-```
-
 
 ## Instance properties
 
