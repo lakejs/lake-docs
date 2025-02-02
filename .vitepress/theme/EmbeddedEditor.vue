@@ -27,6 +27,7 @@ onMounted(() => {
     editorRef.value.style.height = '';
   })();
 });
+
 onUnmounted(() => {
   if (editor) {
     editor.unmount();

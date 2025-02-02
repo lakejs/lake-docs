@@ -10,19 +10,72 @@ The `Button` interface represents a UI component that users can click to perform
 
 Example:
 
-```js
+<Button name="done" type="primary" text="Done" />
+
+<Button name="cancel" text="Cancel" />
+
+<Button name="iconButton" iconName="open" tooltip="Open" />
+
+<Button name="iconButton" iconName="check" text="Save" />
+
+::: code-group
+
+```js [Done]
 import { query, Button } from 'lakelib';
 
 new Button({
-  root: query('.lake-button-row'),
-  name: 'embed',
+  root: query('.lake-button-root'),
+  name: 'done',
   type: 'primary',
-  text: 'Embed video',
+  text: 'Done',
   onClick: () => {
     console.log('clicked');
   },
 }).render();
 ```
+
+```js [Cancel]
+import { query, Button } from 'lakelib';
+
+new Button({
+  root: query('.lake-button-root'),
+  name: 'cancel',
+  text: 'Cancel',
+  onClick: () => {
+    console.log('clicked');
+  },
+}).render();
+```
+
+```js [Open]
+import { query, Button } from 'lakelib';
+
+new Button({
+  root: query('.lake-button-root'),
+  name: 'open',
+  icon: icons.get('open'),
+  tooltip: 'Open',
+  onClick: () => {
+    console.log('clicked');
+  },
+}).render();
+```
+
+```js [Save]
+import { query, Button } from 'lakelib';
+
+new Button({
+  root: query('.lake-button-root'),
+  name: 'save',
+  icon: icons.get('save'),
+  text: 'Save',
+  onClick: () => {
+    console.log('clicked');
+  },
+}).render();
+```
+
+:::
 
 
 ## Constructor

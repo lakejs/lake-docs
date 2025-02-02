@@ -10,28 +10,24 @@ The `Dropdown` interface represents a UI component that provides a menu of selec
 
 Example:
 
+<Dropdown />
+
 ```js
 import { query, icons, Dropdown } from 'lakelib';
 
 const dropdown = new Dropdown({
-  root: query('.lake-code-block'),
+  root: query('.lake-dropdown-root'),
   name: 'langType',
   downIcon: icons.get('down'),
   defaultValue: 'html',
   tooltip: 'Select language',
   location: 'global',
   menuType: 'list',
-  menuHeight: '200px',
   menuItems: [
     { value: 'text', text: 'Plain text' },
-    { value: 'css', text: 'CSS', component: css },
-    { value: 'html', text: 'HTML', component: html },
-    { value: 'java', text: 'Java', component: java },
-    { value: 'javascript', text: 'JavaScript', component: javascript },
-    { value: 'php', text: 'PHP', component: php },
-    { value: 'python', text: 'Python', component: python },
-    { value: 'typescript', text: 'TypeScript', component: javascript },
-    { value: 'xml', text: 'XML', component: xml },
+    { value: 'css', text: 'CSS' },
+    { value: 'html', text: 'HTML' },
+    { value: 'javascript', text: 'JavaScript' },
   ],
   onSelect: value => {
     console.log(value);

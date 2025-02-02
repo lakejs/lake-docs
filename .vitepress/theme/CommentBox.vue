@@ -23,6 +23,7 @@ onMounted(() => {
     editorRef.value.style.visibility = 'visible';
   })();
 });
+
 onUnmounted(() => {
   if (editor) {
     editor.unmount();

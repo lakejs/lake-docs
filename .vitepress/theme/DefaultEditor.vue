@@ -32,6 +32,7 @@ onMounted(() => {
     editorRef.value.style.display = 'block';
   })();
 });
+
 onUnmounted(() => {
   if (editor) {
     editor.unmount();
