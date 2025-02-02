@@ -237,7 +237,7 @@ Adds a floating toolbar to the box.
 
   `items`
 
-  An `Array` object that contains `ToolbarItem` objects, representing the buttons of the floating toolbar.
+  An `Array` object that contains [ToolbarItem](/reference/types.md#toolbaritem) objects, representing the buttons of the floating toolbar.
 
 * Return value:
 

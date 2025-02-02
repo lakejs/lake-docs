@@ -623,7 +623,7 @@ Returns the descendants of the first node that match the specified CSS selector 
 
   `selector`
 
-  A `string` that specifies CSS selector. A `NodePath` that specifies node path.
+  A `string` that specifies CSS selector or a [NodePath](/reference/types.md#nodepath) that specifies node path.
 
 * Return value:
 
@@ -900,7 +900,7 @@ Returns the path of the first node.
 
 * Return value:
 
-  A `NodePath` indicating node path.
+  A [NodePath](/reference/types.md#nodepath) indicating node path.
 
 Example:
 

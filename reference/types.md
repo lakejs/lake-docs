@@ -8,67 +8,40 @@ outline: [2, 3]
 
 A collection of types.
 
-## Basics
-
-### KeyValue
+## KeyValue
 
 ```ts
 type KeyValue = { [key: string]: string };
 ```
 
 
-### NativeRange
-
-```ts
-type NativeRange = Range;
-```
-
-
-### NativeSelection
-
-```ts
-type NativeSelection = Selection;
-```
-
-
-### TwoParts
-
-```ts
-type TwoParts = {
-  start: Nodes | null;
-  end: Nodes | null;
-};
-```
-
-
-### ThreeParts
-
-```ts
-type type ThreeParts = TwoParts & {
-  center: Nodes | null;
-};
-```
-
-
-### Point
-
-```ts
-type Point = {
-  node: Nodes;
-  offset: number;
-};
-```
-
-
-### NodePath
+## NodePath
 
 ```ts
 type NodePath = number[];
 ```
 
 
+## BoxValue
 
-### ActiveItem
+```ts
+type BoxValue = { [key: string]: any };
+```
+
+
+## BoxComponent
+
+```ts
+type BoxComponent = {
+  type: 'inline' | 'block';
+  name: string;
+  value?: BoxValue;
+  render: (box: Box) => Nodes | string | void;
+};
+```
+
+
+## ActiveItem
 
 ```ts
 type ActiveItem = {
@@ -80,7 +53,7 @@ type ActiveItem = {
 ```
 
 
-### SelectionState
+## SelectionState
 
 ```ts
 type SelectionState = {
@@ -91,52 +64,8 @@ type SelectionState = {
 };
 ```
 
-## Box
 
-### BoxType
-
-```ts
-type BoxType = 'inline' | 'block';
-```
-
-
-### BoxValue
-
-```ts
-type BoxValue = { [key: string]: any };
-```
-
-
-### BoxRender
-
-```ts
-type BoxRender = (box: Box) => Nodes | string | void;
-```
-
-
-### BoxHTML
-
-```ts
-type BoxHTML = (box: Box) => string;
-```
-
-
-### BoxComponent
-
-```ts
-type BoxComponent = {
-  type: BoxType;
-  name: string;
-  value?: BoxValue;
-  render: BoxRender;
-  html?: BoxHTML;
-};
-```
-
-
-## Command
-
-### CommandItem
+## CommandItem
 
 ```ts
 type CommandItem = {
@@ -148,32 +77,21 @@ type CommandItem = {
 ```
 
 
-## Plugin
-
-### UnmountPlugin
+## UnmountPlugin
 
 ```ts
 type UnmountPlugin = () => void;
 ```
 
 
-### InitializePlugin
+## InitializePlugin
 
 ```ts
 type InitializePlugin = (editor: Editor) => UnmountPlugin | void;
 ```
 
 
-## Dropdown
-
-### DropdownMenuType
-
-```ts
-type DropdownMenuType = 'list' | 'icon' | 'character' | 'color';
-```
-
-
-### DropdownMenuItem
+## DropdownMenuItem
 
 ```ts
 type DropdownMenuItem = {
@@ -184,7 +102,7 @@ type DropdownMenuItem = {
 ```
 
 
-### DropdownItem
+## DropdownItem
 
 ```ts
 type DropdownItem = {
@@ -195,7 +113,7 @@ type DropdownItem = {
   defaultValue?: string;
   tooltip: string | ((locale: TranslationFunctions) => string);
   width?: string;
-  menuType: DropdownMenuType;
+  menuType: 'list' | 'icon' | 'character' | 'color';
   menuItems: DropdownMenuItem[];
   menuWidth?: string;
   menuHeight?: string;
@@ -204,9 +122,7 @@ type DropdownItem = {
 ```
 
 
-## Toolbar
-
-### ToolbarButtonItem
+## ToolbarButtonItem
 
 ```ts
 type ToolbarButtonItem = {
@@ -221,7 +137,7 @@ type ToolbarButtonItem = {
 ```
 
 
-### ToolbarDropdownItem
+## ToolbarDropdownItem
 
 ```ts
 type ToolbarDropdownItem = DropdownItem & {
@@ -234,7 +150,7 @@ type ToolbarDropdownItem = DropdownItem & {
 ```
 
 
-### ToolbarUploadItem
+## ToolbarUploadItem
 
 ```ts
 type ToolbarUploadItem = {
@@ -248,73 +164,56 @@ type ToolbarUploadItem = {
 ```
 
 
-### ToolbarItem
+## ToolbarItem
 
 ```ts
 type ToolbarItem = ToolbarButtonItem | ToolbarDropdownItem | ToolbarUploadItem;
 ```
 
 
-### CornerToolbarItem
+## MentionItem
 
 ```ts
-type CornerToolbarItem = {
+type MentionItem = {
+  id: string;
   name: string;
-  icon?: string;
-  tooltip: string | ((locale: TranslationFunctions) => string);
-  onClick: (event: Event) => void;
+  nickname?: string;
+  avatar?: string;
 };
 ```
 
 
-## Upload
-
-### BeforeUploadFileType
+## SlashButtonItem
 
 ```ts
-type BeforeUploadFileType = File | Blob | boolean | string;
+type SlashButtonItem = {
+  name: string;
+  type: 'button';
+  icon?: string;
+  title: string | ((locale: TranslationFunctions) => string);
+  description: string | ((locale: TranslationFunctions) => string);
+  onClick: (editor: Editor, value: string) => void;
+};
 ```
 
 
-
-### UploadRequestMethod
+## SlashUploadItem
 
 ```ts
-type UploadRequestMethod = 'GET' | 'POST' | 'PUT' | 'PATCH';
+type SlashUploadItem = {
+  name: string;
+  type: 'upload';
+  icon?: string;
+  title: string | ((locale: TranslationFunctions) => string);
+  description: string | ((locale: TranslationFunctions) => string);
+  accept?: string;
+  multiple?: boolean;
+};
 ```
 
 
-### UploadRequestHeader
+## SlashItem
 
 ```ts
-type UploadRequestHeader = Record<string, string>;
-```
-
-
-### UploadRequestError
-
-```ts
-interface UploadRequestError extends Error {
-  status?: number;
-  method?: UploadRequestMethod;
-  url?: string;
-}
-```
-
-
-### UploadRequestOption
-
-```ts
-interface UploadRequestOption<T = any> {
-  method: UploadRequestMethod;
-  action: string;
-  file?: Exclude<BeforeUploadFileType, File | boolean> | File;
-  onSuccess?: (body: T, xhr?: XMLHttpRequest) => void;
-  onProgress?: (event: ProgressEvent) => void;
-  onError?: (event: UploadRequestError | ProgressEvent, body?: T) => void;
-  data?: Record<string, unknown>;
-  filename?: string;
-  withCredentials?: boolean;
-  headers?: UploadRequestHeader;
-}
+type SlashItem = SlashButtonItem | SlashUploadItem;
 ```
