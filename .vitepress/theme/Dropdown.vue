@@ -3,6 +3,8 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 const dropdownRef = ref(null);
 
+const props = defineProps(['name', 'defaultValue', 'tooltip', 'iconName', 'width', 'menuType', 'menuItems']);
+
 let dropdown = null;
 
 onMounted(() => {
@@ -10,18 +12,14 @@ onMounted(() => {
     const { query, icons, Dropdown } = await import('lakelib');
     dropdown = new Dropdown({
       root: query(dropdownRef.value),
-      name: 'langType',
+      name: props.name,
       downIcon: icons.get('down'),
-      defaultValue: 'html',
-      tooltip: 'Select language',
-      location: 'global',
-      menuType: 'list',
-      menuItems: [
-        { value: 'text', text: 'Plain text' },
-        { value: 'css', text: 'CSS' },
-        { value: 'html', text: 'HTML' },
-        { value: 'javascript', text: 'JavaScript' },
-      ],
+      defaultValue: props.defaultValue,
+      icon: props.iconName ? icons.get(props.iconName) : undefined,
+      tooltip: props.tooltip,
+      width: props.width,
+      menuType: props.menuType,
+      menuItems: props.menuItems,
       onSelect: value => {
         console.log(value);
       },
@@ -39,5 +37,17 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="lake-button-root" ref="dropdownRef" style="display: inline-block; margin-right: 10px; vertical-align: middle;"></div>
+  <div :class="$style.dropdown" ref="dropdownRef"></div>
 </template>
+
+<style module>
+.dropdown {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  line-height: 0;
+}
+.dropdown :global .lake-dropdown button.lake-dropdown-title {
+  border: 1px solid #d9d9d9;
+}
+</style>

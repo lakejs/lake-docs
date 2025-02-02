@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 const buttonRef = ref(null);
 
-const props = defineProps(['name', 'type', 'iconName', 'icon', 'text', 'tooltip', 'tabIndex']);
+const props = defineProps(['name', 'type', 'iconName', 'text', 'tooltip']);
 
 let button = null;
 
@@ -14,10 +14,9 @@ onMounted(() => {
       root: query(buttonRef.value),
       name: props.name,
       type: props.type,
-      icon: props.iconName ? icons.get(props.iconName) : props.icon,
+      icon: props.iconName ? icons.get(props.iconName) : undefined,
       text: props.text,
       tooltip: props.tooltip,
-      tabIndex: props.tabIndex,
       onClick: () => {
         console.log('clicked');
       },

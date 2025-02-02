@@ -31,6 +31,7 @@ const toolbarItems = [
   'moreStyle',
 ];
 </script>
+
 <EmbeddedEditor :toolbar="toolbarItems" />
 
 ::: details Source code
