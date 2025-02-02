@@ -6,7 +6,7 @@ outline: [2, 3]
 
 # {{ $frontmatter.title }}
 
-The `Button` interface represents a UI component that users can click to perform an action.
+The `Button` interface represents a clickable UI component. When a user clicks the button, a specified action is executed.
 
 Example:
 
@@ -90,49 +90,51 @@ Creates a new `Button` instance.
 
   * `root`
 
-    Specifies the element to which the button is appended.
+    Specifies the element to which the button will be appended.
 
     Type: [Nodes](/reference/nodes.md)
 
   * `name`
 
-    Specifies the name of the button.
+    Specifies the unique name for the button.
 
     Type: `string`
 
   * `onClick`
 
-    Specifies the function triggered when clicked.
+    Specifies the callback function executed when the button is clicked.
 
     Type: `function`
 
   * `type` <Badge type="info" text="Optional" />
 
-    Specifies the type of the button.
+    Specifies the button style.
 
     Type: `'primary' | 'default'`
 
+    Default: `default`
+
   * `icon` <Badge type="info" text="Optional" />
 
-    Specifies the button icon.
+    Specifies an icon to be displayed on the button.
 
     Type: `HTML string`
 
   * `text` <Badge type="info" text="Optional" />
 
-    Specifies the button text.
+    Specifies the text label displayed on the button.
 
     Type: `string`
 
   * `tooltip` <Badge type="info" text="Optional" />
 
-    Specifies the tooltip for the button.
+    Specifies the tooltip text shown when the user hovers over the button.
 
     Type: `string`
 
   * `tabIndex` <Badge type="info" text="Optional" />
 
-    Specifies the tab order.
+    Specifies the tab order of the button.
 
     Type: `number`
 
