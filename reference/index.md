@@ -5,7 +5,7 @@ title: Editor config
 
 # {{ $frontmatter.title }}
 
-You can customize the editor by passing configuration options to the [Editor](/reference/editor.md) class.
+Lake is highly customizable via configuration options that can be passed directly to the [Editor](/reference/editor.md) class. You can tailor its behavior, appearance, and functionality by providing values for various properties.
 
 Example:
 
@@ -30,7 +30,7 @@ new Editor({
 ```
 
 ::: tip
-You can disable a plugin by setting its value to `false`. For example, setting `mention` to `false` will disable the mention pop-up menu.
+You can disable any plugin by setting its configuration to `false`. For instance, setting `mention` to `false` will prevent the mention pop-up menu from appearing during content editing.
 :::
 
 
