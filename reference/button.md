@@ -80,63 +80,64 @@ new Button({
 
 ## Constructor
 
-Creates a new `Button` instance.
+Creates a new `Button` instance. It receives a key-value object with the following properties as its parameter.
 
-* Parameters:
+### `root`
 
-  `config`
+  Specifies the element to which the button will be appended.
 
-  A key-value object with the following properties:
+  Type: [Nodes](/reference/nodes.md)
 
-  * `root`
 
-    Specifies the element to which the button will be appended.
+### `name`
 
-    Type: [Nodes](/reference/nodes.md)
+  Specifies the unique name for the button.
 
-  * `name`
+  Type: `string`
 
-    Specifies the unique name for the button.
 
-    Type: `string`
+### `onClick`
 
-  * `onClick`
+  Specifies the callback function executed when the button is clicked.
 
-    Specifies the callback function executed when the button is clicked.
+  Type: `function`
 
-    Type: `function`
 
-  * `type` <Badge type="info" text="Optional" />
+### `type` <Badge type="info" text="Optional" />
 
-    Specifies the button style.
+  Specifies the button style.
 
-    Type: `'primary' | 'default'`
+  Type: `'primary' | 'default'`
 
-    Default: `default`
+  Default: `default`
 
-  * `icon` <Badge type="info" text="Optional" />
 
-    Specifies an icon to be displayed on the button.
+### `icon` <Badge type="info" text="Optional" />
 
-    Type: `HTML string`
+  Specifies an icon to be displayed on the button.
 
-  * `text` <Badge type="info" text="Optional" />
+  Type: `HTML string`
 
-    Specifies the text label displayed on the button.
 
-    Type: `string`
+### `text` <Badge type="info" text="Optional" />
 
-  * `tooltip` <Badge type="info" text="Optional" />
+  Specifies the text label displayed on the button.
 
-    Specifies the tooltip text shown when the user hovers over the button.
+  Type: `string`
 
-    Type: `string`
 
-  * `tabIndex` <Badge type="info" text="Optional" />
+### `tooltip` <Badge type="info" text="Optional" />
 
-    Specifies the tab order of the button.
+  Specifies the tooltip text shown when the user hovers over the button.
 
-    Type: `number`
+  Type: `string`
+
+
+### `tabIndex` <Badge type="info" text="Optional" />
+
+  Specifies the tab order of the button.
+
+  Type: `number`
 
 
 ## Instance properties

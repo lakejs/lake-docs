@@ -105,125 +105,136 @@ dropdown.render();
 
 ## Constructor
 
-Creates a new `Dropdown` instance.
+Creates a new `Dropdown` instance. It receives a key-value object with the following properties as its parameter.
 
-* Parameters:
+### `root`
 
-  `config`
+  Specifies the element where the dropdown will be appended.
 
-  A key-value object with the following properties:
+  Type: [Nodes](/reference/nodes.md)
 
-  * `root`
 
-    Specifies the element where the dropdown will be appended.
+### `name`
 
-    Type: [Nodes](/reference/nodes.md)
+  Specifies the name attribute for the dropdown.
 
-  * `name`
+  Type: `string`
 
-    Specifies the name attribute for the dropdown.
 
-    Type: `string`
+### `menuType`
 
-  * `menuType`
+  Specifies the style of the dropdown menu.
 
-    Specifies the style of the dropdown menu.
+  Type: `'list' | 'icon' | 'character' | 'color'`
 
-    Type: `'list' | 'icon' | 'character' | 'color'`
 
-  * `menuItems`
+### `menuItems`
 
-    Specifies an array of menu items to display. Each item should include at least a `value` and `text` property.
+  Specifies an array of menu items to display. Each item should include at least a `value` and `text` property.
 
-    Type: [DropdownMenuItem](/reference/types.md#dropdownmenuitem)
+  Type: [DropdownMenuItem](/reference/types.md#dropdownmenuitem)
 
-  * `onSelect`
 
-    Specifies the function triggered when an option is selected. Receives the selected value as its argument.
+### `onSelect`
 
-    Type: `function`
+  Specifies the function triggered when an option is selected. Receives the selected value as its argument.
 
-  * `icon` <Badge type="info" text="Optional" />
+  Type: `function`
 
-    Specifies custom icon for the dropdown.
 
-    Type: `HTML string`
+### `icon` <Badge type="info" text="Optional" />
 
-  * `accentIcon` <Badge type="info" text="Optional" />
+  Specifies custom icon for the dropdown.
 
-    Specifies an accent icon used specifically for a color type.
+  Type: `HTML string`
 
-    Type: `HTML string`
 
-  * `downIcon` <Badge type="info" text="Optional" />
+### `accentIcon` <Badge type="info" text="Optional" />
 
-    Specifies an icon for the caret-down indicator.
+  Specifies an accent icon used specifically for a color type.
 
-    Type: `HTML string`
+  Type: `HTML string`
 
-  * `defaultValue` <Badge type="info" text="Optional" />
 
-    Specifies the default selected value when the dropdown is first rendered.
+### `downIcon` <Badge type="info" text="Optional" />
 
-    Type: `string`
+  Specifies an icon for the caret-down indicator.
 
-  * `tooltip` <Badge type="info" text="Optional" />
+  Type: `HTML string`
 
-    Specifies the tooltip text for the dropdown button.
 
-    Type: `string`
+### `defaultValue` <Badge type="info" text="Optional" />
 
-  * `width` <Badge type="info" text="Optional" />
+  Specifies the default selected value when the dropdown is first rendered.
 
-    Specifies the width of the dropdown.
+  Type: `string`
 
-    Type: `string`
 
-  * `locale` <Badge type="info" text="Optional" />
+### `tooltip` <Badge type="info" text="Optional" />
 
-    Specifies custom translation functions for localization.
+  Specifies the tooltip text for the dropdown button.
 
-    Type: `TranslationFunctions`
+  Type: `string`
 
-  * `tabIndex` <Badge type="info" text="Optional" />
 
-    Specifies the tab order of the dropdown.
+### `width` <Badge type="info" text="Optional" />
 
-    Type: `number`
+  Specifies the width of the dropdown.
 
-  * `location` <Badge type="info" text="Optional" />
+  Type: `string`
 
-    Determines whether the toolbar is appended to the `root` or `document.body` element. When set to `local`, the toolbar is appended to the `root` element.
 
-    Type: `'local' | 'global'`
+### `locale` <Badge type="info" text="Optional" />
 
-    Default: `local`
+  Specifies custom translation functions for localization.
 
-  * `direction` <Badge type="info" text="Optional" />
+  Type: `TranslationFunctions`
 
-    Sets the vertical position of the menu relative to the button. `bottom` places the menu below the button, `top` above it, or `auto` to decide automatically.
 
-    Type: `'top' | 'bottom' | 'auto'`
+### `tabIndex` <Badge type="info" text="Optional" />
 
-    Default: `auto`
+  Specifies the tab order of the dropdown.
 
-  * `menuWidth` <Badge type="info" text="Optional" />
+  Type: `number`
 
-    Specifies the width of the dropdown menu.
 
-    Type: `string`
+### `location` <Badge type="info" text="Optional" />
 
-  * `menuHeight` <Badge type="info" text="Optional" />
+  Determines whether the toolbar is appended to the `root` or `document.body` element. When set to `local`, the toolbar is appended to the `root` element.
 
-    Specifies the height of the dropdown menu.
+  Type: `'local' | 'global'`
 
-    Type: `string`
+  Default: `local`
 
-  * `menuCheck` <Badge type="info" text="Optional" />
 
-    Determines if menu items are selectable. If set to `false`, the menu items will not be selectable.
+### `direction` <Badge type="info" text="Optional" />
 
-    Type: `boolean`
+  Sets the vertical position of the menu relative to the button. `bottom` places the menu below the button, `top` above it, or `auto` to decide automatically.
+
+  Type: `'top' | 'bottom' | 'auto'`
+
+  Default: `auto`
+
+
+### `menuWidth` <Badge type="info" text="Optional" />
+
+  Specifies the width of the dropdown menu.
+
+  Type: `string`
+
+
+### `menuHeight` <Badge type="info" text="Optional" />
+
+  Specifies the height of the dropdown menu.
+
+  Type: `string`
+
+
+### `menuCheck` <Badge type="info" text="Optional" />
+
+  Determines if menu items are selectable. If set to `false`, the menu items will not be selectable.
+
+  Type: `boolean`
 
 
 ## Instance properties
