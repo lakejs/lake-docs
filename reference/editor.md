@@ -29,11 +29,7 @@ Creates a new `Editor` instance.
 
   `config`
 
-  A key-value object. For more details, see the [Editor config](/reference/) page.
-
-* Return value:
-
-  A new `Editor` object.
+  A key-value object containing configuration options. See the [Editor config](/reference/) page for details.
 
 
 ## Static properties
@@ -499,7 +495,7 @@ editor.unmount();
 
 ### change
 
-Fired when the editor's content is changed. The `value` represents the editor's content and conforms to the [LML format](/guide/content-format.md).
+Fired when the editor's content is changed. The `value` parameter is the current content, which conforms to [LML format](/guide/content-format.md).
 
 Example:
 

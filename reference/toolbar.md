@@ -35,11 +35,7 @@ Creates a new `Toolbar` instance.
 
   `config`
 
-  A key-value object containing configuration options. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
-
-* Return value:
-
-  A new `Toolbar` object.
+  A key-value object containing configuration options. See the [Toolbar config](/reference/toolbar-config.md) page for details.
 
 
 ## Instance properties

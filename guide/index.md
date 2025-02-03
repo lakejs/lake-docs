@@ -13,7 +13,7 @@ Lake is available on npm as the [lakelib](https://www.npmjs.com/package/lakelib)
 npm install lakelib
 ```
 
-In your HTML page, add the following code that will serve as placeholders for the editor:
+Place the editor placeholders within your HTML:
 
 ```html
 <div class="my-editor">
@@ -22,7 +22,7 @@ In your HTML page, add the following code that will serve as placeholders for th
 </div>
 ```
 
-Use the following JavaScript code to render the editor. You can customize the [configuration](/reference/) for the toolbar and editor as needed.
+Import the required CSS and JavaScript modules, then initialize and render the editor. You can customize the [toolbar](/reference/toolbar-config.md) and [editor](/reference/) config as needed.
 
 ```js
 import 'lakelib/lib/lake.css';
@@ -38,28 +38,27 @@ const editor = new Editor({
 editor.render();
 ```
 
-Visit the [npm example](https://codesandbox.io/embed/hm39df?module=/src/index.js) on CodeSandbox to see this in action.
-
 ::: warning Note
-Ensure `lake.css` is included before rendering the editor.
+Ensure `lake.css` is loaded before rendering the editor.
 :::
 
+For a live demonstration, check out the [npm example](https://codesandbox.io/embed/hm39df?module=/src/index.js) on CodeSandbox.
 
 ## Quick start with CDN
 
-If you prefer plain JavaScript without any build steps, you can use the bundled files directly from a CDN like jsDelivr or UNPKG. You can also download these files and host them yourself.
+If you prefer to use plain JavaScript without any build steps, you can load the bundled files directly from a CDN like jsDelivr or UNPKG. You can also download and host the files yourself.
 
 * jsDelivr: https://www.jsdelivr.com/package/npm/lakelib
 * UNPKG: https://unpkg.com/browse/lakelib/
 
-In the `<head>` of your HTML page, add the following lines of code:
+Include the following lines in the `<head>` section of your HTML page:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lakelib@0.3/dist/lake.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/lakelib@0.3/dist/lake.min.js"></script>
 ```
 
-In the HTML page, add the following code that will serve as placeholders for the editor:
+Place the editor placeholders within your HTML:
 
 ```html
 <div class="my-editor">
@@ -68,7 +67,7 @@ In the HTML page, add the following code that will serve as placeholders for the
 </div>
 ```
 
-Use the following JavaScript code to render the editor. You can customize the [configuration](/reference/) for the toolbar and editor as needed.
+Use the following JavaScript to initialize and render the editor. You can customize the [toolbar](/reference/toolbar-config.md) and [editor](/reference/) config as needed.
 
 ```js
 const { Editor, Toolbar } = Lake;
@@ -83,7 +82,7 @@ const editor = new Editor({
 editor.render();
 ```
 
-Visit the [CDN example](/assets/cdn){target="_blank"} on this website to see the result of running the code above. The same example is also available on [CodeSandbox](https://codesandbox.io/embed/z9p964?module=/index.html).
+For a live demonstration, visit the [CDN example](/assets/cdn){target="_blank"} on this website or try it on [CodeSandbox](https://codesandbox.io/embed/z9p964?module=/index.html).
 
 
 ## Integrating with frameworks
@@ -100,7 +99,7 @@ Lake is a plain JavaScript library, which means you can integrate it into any ot
 
 :::
 
-You can go to CodeSandbox to try out the code above.
+You can visit CodeSandbox to try these examples.
 
 * [React example](https://codesandbox.io/embed/kvv8yq?module=/src/Lake.js)
 * [Vue example](https://codesandbox.io/embed/2g4855?module=/Lake.js)
@@ -110,14 +109,14 @@ You can go to CodeSandbox to try out the code above.
 
 Lake provides the following methods to get and set the editor's content.
 
-### Initializing the editor with provided value
+### Initializing the editor with a provided value
 
-The [value](/reference/#value) config is used to set the content when initializing the editor.
+Use the [value](/reference/#value) config to set the initial content:
 
 ```js
 const defaultValue = `
-  <h1>title</h1>
-  <p>content<focus /></p>
+  <h1>Title</h1>
+  <p>Content<focus /></p>
 `;
 new Editor({
   root: '.my-content',
@@ -127,7 +126,7 @@ new Editor({
 
 ### Getting value
 
-You can call [getValue()](/reference/editor.md#getvalue) method to get the current content.
+Get the current content using the [getValue()](/reference/editor.md#getvalue) method:
 
 ```js
 const content = editor.getValue();
@@ -135,20 +134,20 @@ const content = editor.getValue();
 
 ### Setting value
 
-You can use [setValue()](/reference/editor.md#setvalue) method to replace the existing content with the provided value.
+Replace the existing content with a new value using the [setValue()](/reference/editor.md#setvalue) method:
 
 ```js
-editor.setValue('<p>foo</p>');
+editor.setValue('<p>New content</p>');
 ```
 
 
 ## Binding events
 
-Lake allows you to set up an event using the `editor.event.on()` method.
+Lake supports event binding through the `editor.event.on()` method.
 
 ### `change` event
 
-Fired when the editor's content is changed. The `value` represents the editor's content, which conforms to the [LML format](/guide/content-format.md).
+Fired when the editor's content is changed. The `value` parameter is the current content, which conforms to [LML format](/guide/content-format.md).
 
 ```js
 editor.event.on('change', value => {
@@ -166,7 +165,7 @@ editor.event.on('statechange', state => {
 });
 ```
 
-To find out more available events, refer to the [Editor](/reference/editor#instance-events) class.
+For more event options, refer to the [Editor](/reference/editor#instance-events) class.
 
 
 ## Customizing toolbar
@@ -189,7 +188,7 @@ new Toolbar({
 
 ## Uploading images
 
-To upload images, you need to configure the request settings for the `image` plugin. For more details, see the [image](/reference/index.md#image) config.
+Configure the `image` plugin to enable image uploads. Refer to the [image](/reference/index.md#image) config for further details.
 
 ```js
 new Editor({
@@ -205,7 +204,7 @@ new Editor({
 
 ## Uploading files
 
-To upload files, you need to configure the request settings for the `file` plugin. For more details, see the [file](/reference/index.md#file) config.
+Similarly, configure the `file` plugin for file uploads. See the [file](/reference/index.md#file) config for more information.
 
 ```js
 new Editor({
@@ -221,7 +220,7 @@ new Editor({
 
 ## Code block
 
-The `code block` feature in Lake is implemented using [CodeMirror](https://codemirror.net/). However, since CodeMirror is quite large and not all users may need this feature, it is disabled by default. To activate it, simply add [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) into your code:
+The `code block` feature is powered by [CodeMirror](https://codemirror.net/). Since CodeMirror is a large dependency and not all users require this feature, it is disabled by default. To enable it, include [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) in your project:
 
 ::: code-group
 
@@ -239,7 +238,7 @@ window.LakeCodeMirror = CodeMirror;
 
 ## Mathematical formula
 
-For the same reason as the `code block` feature, the `formula` feature is disabled by default. Activate it by adding [KaTeX](https://katex.org/):
+Similarly, the `formula` feature is disabled by default. Enable it by adding [KaTeX](https://katex.org/):
 
 ::: code-group
 
