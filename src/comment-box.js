@@ -27,13 +27,14 @@ for (const color of colors) {
 }
 
 const heading = {
-  name: 'heading',
+  name: 'heading3',
   type: 'button',
   icon: icons.get('heading'),
   tooltip: 'Heading',
   isSelected: appliedItems => !!appliedItems.find(item => item.name === 'h3'),
   onClick: editor => {
-    editor.command.execute('heading', 'h3');
+    const selectedValues = editor.command.selectedValues('heading');
+    editor.command.execute('heading', selectedValues.indexOf('h3') >= 0 ? 'p' : 'h3');
   },
 };
 
