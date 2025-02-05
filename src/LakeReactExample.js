@@ -1,12 +1,10 @@
 import 'lakelib/lib/lake.css';
 import { Editor, Toolbar } from 'lakelib';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 
 export default function Lake({ defaultValue }) {
   const toolbarRef = useRef(null);
   const contentRef = useRef(null);
-
-  const [content, setContent] = useState(defaultValue);
 
   useEffect(() => {
     const toolbar = new Toolbar({
@@ -19,7 +17,7 @@ export default function Lake({ defaultValue }) {
     });
     editor.render();
     editor.event.on('change', (value) => {
-      setContent(value);
+      console.log(value);
     });
     return () => editor.unmount();
   }, []);

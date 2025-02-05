@@ -17,6 +17,9 @@ onMounted(() => {
     toolbar,
   });
   editor.render();
+  editor.event.on('change', (value) => {
+    console.log(value);
+  });
 });
 
 onUnmounted(() => {

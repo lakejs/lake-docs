@@ -102,7 +102,7 @@ Lake is a plain JavaScript library, which means you can integrate it into any ot
 You can visit CodeSandbox to try these examples.
 
 * [React example](https://codesandbox.io/embed/kvv8yq?module=/src/Lake.js)
-* [Vue example](https://codesandbox.io/embed/2g4855?module=/Lake.js)
+* [Vue example](https://codesandbox.io/embed/ftljxh?module=/src/Lake.js)
 
 
 ## Getting and setting value
