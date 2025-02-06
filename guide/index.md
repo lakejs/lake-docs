@@ -87,13 +87,15 @@ For a live demonstration, visit the [CDN example](/assets/cdn){target="_blank"} 
 
 ## Integrating with frameworks
 
-Lake is a plain JavaScript library, which means you can integrate it into any other frameworks, such as [React](https://react.dev/), [Vue](https://vuejs.org/), and [Angular](https://angular.dev/).
+Lake is a plain JavaScript library, which means you can integrate it into any other frameworks, such as [React](https://react.dev/), [Vue](https://vuejs.org/), [Svelte](https://svelte.dev/), and [Angular](https://angular.dev/).
 
 ::: code-group
 
 <<< @/src/LakeReactExample.js [React]
 
 <<< @/src/LakeVueExample.vue [Vue]
+
+<<< @/src/LakeSvelteExample.svelte [Svelte]
 
 <<< @/src/LakeAngularExample.ts [Angular]
 

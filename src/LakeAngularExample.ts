@@ -28,8 +28,12 @@ export class Lake {
       const editor = new Editor({
         root: nativeElement.querySelector('.my-content'),
         toolbar,
+        value: '<p>Hello World!</p>',
       });
       editor.render();
+      editor.event.on('change', (value) => {
+        console.log(value);
+      });
       this.editor = editor;
     });
   }
