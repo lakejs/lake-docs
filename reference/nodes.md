@@ -554,7 +554,7 @@ console.log(div.matches('.foo'));
 
 ### contains()
 
-Returns a boolean value indicating whether the first node is a descendant of a given node, that is the first node itself, one of its direct children (childNodes), one of the children's direct children, and so on.
+Returns a boolean value indicating whether the given node is a descendant of the first node, that is the node itself, one of its direct children (childNodes), one of the children's direct children, and so on.
 
 * Parameters:
 

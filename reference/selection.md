@@ -36,7 +36,7 @@ const container = editor.selection.container;
 
 ### range
 
-A [Range](/reference/range.md) object than can be added to the native selection later.
+A [Range](/reference/range.md) object that can be added to the native selection later.
 
 * Type: [Range](/reference/range.md)
 
