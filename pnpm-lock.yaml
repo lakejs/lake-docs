@@ -15,8 +15,8 @@ importers:
         specifier: ^2.0.2
         version: 2.0.2
       lakelib:
-        specifier: ^0.3.3
-        version: 0.3.3(typescript@5.7.3)
+        specifier: ^0.3.4
+        version: 0.3.4(typescript@5.7.3)
     devDependencies:
       vitepress:
         specifier: ^1.6.3
@@ -759,8 +759,8 @@ packages:
   lake-codemirror@2.0.2:
     resolution: {integrity: sha512-PHFVbBkWoR3IGesSTkO9CSFxr6C6/1BzDQlf+V1dEOpnNE0eRwVoX77BaSYR0DBqMn2dbOv/gB79boIChRScng==}
 
-  lakelib@0.3.3:
-    resolution: {integrity: sha512-dVLAgCpE9kstutZzRnkdaSbHLGLAYwOJbrHalIfUahI2I11mn883sNt9dgWYYBh9YvlKH9t2Nspqms+Hcb0Jyw==}
+  lakelib@0.3.4:
+    resolution: {integrity: sha512-L65sGqY/ayGX1V5DnnWSMpiPsahslbX+2CB/zAVj18vU7J9ZBW1asCRZ8mYx+/VNrL1GSwmV3yqMNI7BWX2wRQ==}
 
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
@@ -1827,7 +1827,7 @@ snapshots:
       '@codemirror/view': 6.36.2
       '@lezer/highlight': 1.2.1
 
-  lakelib@0.3.3(typescript@5.7.3):
+  lakelib@0.3.4(typescript@5.7.3):
     dependencies:
       '@types/is-hotkey': 0.1.10
       debounce: 2.2.0

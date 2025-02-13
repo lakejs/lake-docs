@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress';
 import pkg from '../package.json';
 
+const lakeVersion = pkg.dependencies.lakelib.replace(/^[^\d]/, '');
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: '.',
@@ -33,7 +35,7 @@ export default defineConfig({
       { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
       { text: 'Reference', link: '/reference/', activeMatch: '/reference/' },
       {
-        text: pkg.version,
+        text: lakeVersion,
         items: [
           { text: 'npm', link: 'https://www.npmjs.com/package/lakelib', target: '_blank' },
           { text: 'jsDelivr', link: 'https://www.jsdelivr.com/package/npm/lakelib', target: '_blank' },
