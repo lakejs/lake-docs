@@ -101,10 +101,12 @@ Lake is a plain JavaScript library, which means you can integrate it into any ot
 
 :::
 
-You can visit CodeSandbox to try these examples.
+You can visit the following sandboxes to try these examples in your browser:
 
-* [React example](https://codesandbox.io/embed/kvv8yq?module=/src/Lake.js)
-* [Vue example](https://codesandbox.io/embed/ftljxh?module=/src/Lake.js)
+* [React example (CodeSandbox)](https://codesandbox.io/embed/kvv8yq?module=/src/Lake.js)
+* [Vue example (StackBlitz)](https://stackblitz.com/edit/lake-vue?file=src%2Fcomponents%2FLake.vue)
+* [Svelte example (StackBlitz)](https://stackblitz.com/edit/lake-svelte?file=src%2Flib%2FLake.svelte)
+* [Angular example (StackBlitz)](https://stackblitz.com/edit/lake-angular?file=src%2FLake.ts)
 
 
 ## Getting and setting value

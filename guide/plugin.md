@@ -121,7 +121,4 @@ Try the `helloWorld` plugin in the demo below:
 <p>Click the <code>hand</code> button to insert a box.</p>
 " />
 
-
-## Playground
-
-The complete example above is available on [CodeSandbox](https://codesandbox.io/embed/s2wjyf?module=/src/index.js). You can visit it to explore and experiment with the source code.
+The complete example above is also available on [CodeSandbox](https://codesandbox.io/embed/s2wjyf?module=/src/index.js). You can visit it to explore and experiment with the source code.
