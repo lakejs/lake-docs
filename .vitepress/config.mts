@@ -15,6 +15,7 @@ export default defineConfig({
   title: "Lake",
   description: "Lake is a browser-based rich text editor designed for creating content such as blogs, comments, and emails.",
   head: [
+    ['meta', { name: 'google-adsense-account', content: 'ca-pub-7116729301372758' }],
     ['link', { rel: 'icon', href: '/assets/icons/favicon.ico' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/assets/icons/favicon-16.png' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/icons/favicon-32.png' }],
