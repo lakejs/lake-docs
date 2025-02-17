@@ -77,7 +77,7 @@ const toolbar = box.toolbar;
 
 ### type <Badge type="info" text="Read only" />
 
-Indicates the type of the box.
+Indicates whether the box is treated as a block or inline element.
 
 * Type: `'inline' | 'block'`
 

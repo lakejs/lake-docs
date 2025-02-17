@@ -5,7 +5,7 @@ title: Content format
 
 # {{ $frontmatter.title }}
 
-Lake uses `Lake Markup Language (LML)` format similar to HTML to describe the editor's content.
+Lake uses its own markup language—Lake Markup Language (LML)—which is similar to HTML. LML describes the content in the editor and provides various tags and attributes for formatting and embedding content.
 
 ## Selection
 
@@ -15,7 +15,7 @@ The `<focus />` tag represents the current position of the cursor.
 <p>This is the paragraph of text.<focus /></p>
 ```
 
-The `<anchor />` and `<focus />` tags represent the range of content selected by the user.
+The `<anchor />` and `<focus />` tags together define the range of content selected by the user.
 
 ```xml
 <p><anchor />This is the paragraph of text.<focus /></p>
@@ -23,25 +23,23 @@ The `<anchor />` and `<focus />` tags represent the range of content selected by
 
 ## Box
 
-The `<lake-box>` tag represents embedded content, which is used to enhance editing capability.
-
-Attributes:
+The `<lake-box>` tag is used to embed content to enhance editing capabilities. It supports the following attributes:
 
 * type: `inline | block`
 
-  Indicates whether the box is treated as a block or inline box.
+  Determines whether the box is rendered as an inline or block element.
 
-* name: `hr | image | codeBlock`
+* name: `string`
 
-  The name of the box.
+  Specifies the type of embedded content.
 
 * value: `Base64 string`
 
-  The data of the box.
+  Contains the encoded data for the box.
 
 * focus: `start | center | end`
 
-  The position of the cursor in the box.
+  Indicates the cursor position within the box.
 
 ```xml
 <lake-box type="block" name="hr" focus="start"></lake-box>
@@ -50,7 +48,7 @@ Attributes:
 
 ## Headings
 
-The `<h1>` to `<h6>` tags represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+The `<h1>` to `<h6>` tags represent six levels of section headings. `<h1>` is the highest level and `<h6>` is the lowest.
 
 ```html
 <h1>Heading level 1</h1>
@@ -72,7 +70,7 @@ The `<p>` tag represents a paragraph.
 
 ## Line break
 
-The `<br />` tag represents a line break in text.
+The `<br />` tag represents a line break within text.
 
 ```html
 <p>First text<br />Second text</p>
@@ -88,7 +86,7 @@ The `<blockquote>` tag represents a block quotation.
 
 ## Numbered list
 
-The `<ol>` tag with `<li>` represents an item in an ordered list.
+Numbered lists use the `<ol>` tag with `<li>` elements. The `start` attribute sets the starting number, and the `indent` attribute defines sub-levels.
 
 ```html
 <ol start="1"><li>first item</li></ol>
@@ -99,11 +97,9 @@ The `<ol>` tag with `<li>` represents an item in an ordered list.
 <ol start="1"><li>third item</li></ol>
 ```
 
-> The `indent` attribute represents the indentation of the list.
-
 ## Bulleted list
 
-The `<ul>` tag with `<li>` represents an item in an unordered list.
+Bulleted lists use the `<ul>` tag with `<li>` elements. Indentation is similarly managed with the `indent` attribute.
 
 ```html
 <ul><li>first item</li></ul>
@@ -116,7 +112,7 @@ The `<ul>` tag with `<li>` represents an item in an unordered list.
 
 ## Checklist
 
-If the `type` of `<ul>` is `checklist`, the `<ul>` tag with `<li>` represents an item in a checklist.
+For checklist items, specify `type="checklist"` on the `<ul>` tag. Each `<li>` includes a `value` attribute indicating its state (`true` for checked, `false` for unchecked).
 
 ```html
 <ul type="checklist"><li value="true">first item</li></ul>
@@ -129,7 +125,7 @@ If the `type` of `<ul>` is `checklist`, the `<ul>` tag with `<li>` represents an
 
 ## Table
 
-The `<table>` tag represents tabular data. The `<tr>` tag represents a row of cells in a table. The `<td>` tag represents a cell of a table that contains data.
+Tables are defined using `<table>`, `<tr>`, and `<td>` tags. The `<tr>` tag represents a row of cells in a table. The `<td>` tag represents a cell of a table that contains data.
 
 ```html
 <table>
@@ -153,7 +149,7 @@ The `<table>` tag represents tabular data. The `<tr>` tag represents a row of ce
 
 ## Block indentation
 
-The block tag with its `margin-left` property represents the indentation of a block.
+Apply block-level indentation using the `margin-left` property.
 
 ```html
 <p>This is the first paragraph of text.</p>
@@ -163,7 +159,7 @@ The block tag with its `margin-left` property represents the indentation of a bl
 
 ## Text indentation
 
-The block tag with its `text-indent` property represents the length of empty space (indentation) that is put before lines of text in a block.
+Indent the first line of text in a block using the `text-indent` property.
 
 ```html
 <p>This is the first paragraph of text.</p>
@@ -173,7 +169,7 @@ The block tag with its `text-indent` property represents the length of empty spa
 
 ## Text alignment
 
-The block tag with its `text-align` property represents the horizontal alignment of the inline-level content inside a block.
+Set horizontal text alignment using the `text-align` property.
 
 ```html
 <p>This is the first paragraph of text.</p>
@@ -183,7 +179,7 @@ The block tag with its `text-align` property represents the horizontal alignment
 
 ## Bold
 
-The `<strong>` tag represents bold that have strong importance, seriousness, or urgency.
+Use `<strong>` for strong importance.
 
 ```html
 <strong>Bold</strong>
@@ -191,7 +187,7 @@ The `<strong>` tag represents bold that have strong importance, seriousness, or 
 
 ## Italic
 
-The `<i>` tag represents italic, which renders text with italicized style.
+Use `<i>` for italicized text.
 
 ```html
 <i>Italic</i>
@@ -199,7 +195,7 @@ The `<i>` tag represents italic, which renders text with italicized style.
 
 ## Underline
 
-The `<u>` tag represents underline, which renders text with a simple solid underline.
+Use `<u>` for underlined text.
 
 ```html
 <u>Underline</u>
@@ -207,7 +203,7 @@ The `<u>` tag represents underline, which renders text with a simple solid under
 
 ## Strikethrough
 
-The `<s>` tag represents strikethrough, which renders text with a strikethrough or a line through it.
+Use `<s>` for strikethrough text.
 
 ```html
 <s>Strikethrough</s>
@@ -215,7 +211,7 @@ The `<s>` tag represents strikethrough, which renders text with a strikethrough 
 
 ## Font name
 
-The `<span>` tag with its `font-family` property represents font name, which sets a font name for the selected text.
+Use `<span>` with `font-family` to specify the font.
 
 ```html
 <span style="font-family: 'Arial Black';">Font name</span>
@@ -223,7 +219,7 @@ The `<span>` tag with its `font-family` property represents font name, which set
 
 ## Font size
 
-The `<span>` tag with its `font-size` property represents font size.
+Use `<span>` with `font-size` to set the text size.
 
 ```html
 <span style="font-size: 24px;">Font size</span>
@@ -231,7 +227,7 @@ The `<span>` tag with its `font-size` property represents font size.
 
 ## Font color
 
-The `<span>` tag with its `color` property represents font color, which sets the foreground color for the selected text.
+Use `<span>` with `color` to set the text color.
 
 ```html
 <span style="color: #F5222D;">Font color</span>
@@ -239,7 +235,7 @@ The `<span>` tag with its `color` property represents font color, which sets the
 
 ## Highlight
 
-The `<span>` tag with its `background-color` property represents highlight.
+Use `<span>` with `background-color` to highlight text.
 
 ```html
 <span style="background-color: #FADB14;">Highlight</span>
@@ -247,7 +243,7 @@ The `<span>` tag with its `background-color` property represents highlight.
 
 ## Superscript
 
-The `<sup>` tag represents superscript, which renders text with a raised baseline using smaller text.
+Use `<sup>` to display superscript text.
 
 ```html
 <sup>Superscript</sup>
@@ -255,7 +251,7 @@ The `<sup>` tag represents superscript, which renders text with a raised baselin
 
 ## Subscript
 
-The `<sub>` tag represents subscript, which renders text with a lowered baseline using smaller text.
+Use `<sub>` to display subscript text.
 
 ```html
 <sup>Subscript</sup>
@@ -263,7 +259,7 @@ The `<sub>` tag represents subscript, which renders text with a lowered baseline
 
 ## Inline code
 
-The `<code>` tag represents inline code, which displays a short fragment of computer code.
+Display inline code fragments with the `<code>` tag.
 
 ```html
 <code>Inline code</code>
@@ -271,7 +267,7 @@ The `<code>` tag represents inline code, which displays a short fragment of comp
 
 ## Alerts
 
-The `<blockquote>` with `type` attribute represents alerts that you can use to emphasize critical information.
+Emphasize critical information using the `<blockquote>` tag with a `type` attribute.
 
 ```html
 <blockquote type="info">This is an info.</blockquote>
@@ -282,7 +278,7 @@ The `<blockquote>` with `type` attribute represents alerts that you can use to e
 
 ## Link
 
-The `<a>` tag with its `href` attribute represents a hyperlink.
+Display hyperlinks using the `<a>` tag with the `href` attribute.
 
 ```html
 <a href="https://github.com/">Github</a>
@@ -290,7 +286,7 @@ The `<a>` tag with its `href` attribute represents a hyperlink.
 
 ## Thematic break
 
-Lake uses the `<lake-box name="hr">` tag to represent the thematic break (horizontal rule).
+The `<lake-box>` tag with `name="hr"` represents a horizontal rule.
 
 ```html
 <lake-box type="block" name="hr"></lake-box>
@@ -298,7 +294,7 @@ Lake uses the `<lake-box name="hr">` tag to represent the thematic break (horizo
 
 ## Image
 
-Lake uses the `<lake-box name="image">` tag to represent an image.
+The `<lake-box>` tag with `name="image"` tag represents an image.
 
 ```xml
 <lake-box type="inline" name="image" value=".."></lake-box>
@@ -306,7 +302,7 @@ Lake uses the `<lake-box name="image">` tag to represent an image.
 
 ## Video
 
-Lake uses the `<lake-box name="video">` tag to represent a video.
+The `<lake-box>` tag with `name="video"` tag represents a video.
 
 ```xml
 <lake-box type="inline" name="video" value=".."></lake-box>
@@ -314,7 +310,7 @@ Lake uses the `<lake-box name="video">` tag to represent a video.
 
 ## File
 
-Lake uses the `<lake-box name="file">` tag to represent a file.
+The `<lake-box>` tag with `name="file"` tag represents a file.
 
 ```xml
 <lake-box type="inline" name="file" value=".."></lake-box>
@@ -322,7 +318,7 @@ Lake uses the `<lake-box name="file">` tag to represent a file.
 
 ## Code block
 
-Lake uses the `<lake-box name="codeBlock">` tag to represent a code block.
+The `<lake-box>` tag with `name="codeBlock"` tag represents a code block.
 
 ```xml
 <lake-box type="block" name="codeBlock" value=".."></lake-box>
@@ -330,7 +326,7 @@ Lake uses the `<lake-box name="codeBlock">` tag to represent a code block.
 
 ## Emoji
 
-Lake uses the `<lake-box name="emoji">` tag to represent an emoji.
+The `<lake-box>` tag with `name="emoji"` tag represents an emoji.
 
 ```xml
 <lake-box type="inline" name="emoji" value=".."></lake-box>
@@ -338,7 +334,7 @@ Lake uses the `<lake-box name="emoji">` tag to represent an emoji.
 
 ## Mathematical formula
 
-Lake uses the `<lake-box name="equation">` tag to represent a mathematical formula.
+The `<lake-box>` tag with `name="equation"` tag represents a mathematical formula.
 
 ```xml
 <lake-box type="inline" name="equation" value=".."></lake-box>
@@ -346,7 +342,7 @@ Lake uses the `<lake-box name="equation">` tag to represent a mathematical formu
 
 ## Mention
 
-Lake uses the `<lake-box name="mention">` tag to represent a mentioned user.
+The `<lake-box>` tag with `name="mention"` tag represents a user mentioned.
 
 ```xml
 <lake-box type="inline" name="mention" value=".."></lake-box>

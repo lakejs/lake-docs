@@ -85,7 +85,7 @@ new Editor({
 
 ## value
 
-Defines the default content for the editor. Its format uses [Lake Markup Language (LML)](/guide/content-format.md), similar to HTML.
+Defines the default content for the editor. Its format uses [LML format](/guide/content-format.md) that is similar to HTML.
 
 * Type: `string`
 * Default: `<p><br /></p>`
