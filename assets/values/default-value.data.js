@@ -2,201 +2,129 @@ export default {
   load() {
     return {
       value: `
-<h3>Slash commands</h3>
+<h3>Image</h3>
+<p>You have three ways to add images:</p>
+<ol start="1"><li>Click the <code>Image</code> icon in the toolbar above to select and upload an image from your device.</li></ol>
+<ol start="2"><li>Copy an image to your clipboard and paste it directly into your editor.</li></ol>
+<ol start="3"><li>At the beginning of a paragraph, type <code>/</code> to display a popup menu containing commonly used commands. Select the <code>Image</code> option to upload an image.</li></ol>
+<p><br /></p>
+<p><lake-box type="inline" name="image" value="eyJ1cmwiOiIuLi9hc3NldHMvaW1hZ2VzL2hlYXZlbi1sYWtlLTUxMi5wbmciLCJzdGF0dXMiOiJkb25lIiwibmFtZSI6ImhlYXZlbi1sYWtlLTUxMi5wbmciLCJzaXplIjo2MDAwOCwidHlwZSI6ImltYWdlL2pwZWciLCJsYXN0TW9kaWZpZWQiOjE3MTAyMjk1MTcxOTgsIndpZHRoIjo1MTIsImhlaWdodCI6MzcwLCJvcmlnaW5hbFdpZHRoIjo1MTIsIm9yaWdpbmFsSGVpZ2h0IjozNzAsImNhcHRpb24iOiJPdmVyaGVhZCBwYW5vcmFtYSBvZiBIZWF2ZW4gTGFrZS4ifQ=="></lake-box></p>
+<p>In case you were wondering why the editor's name is Lake. It is inspired by Heaven Lake, a volcanic crater lake atop Changbai Mountain. In Korea, it is known as Paektu Mountain or Baekdu Mountain. It lies on the border between China and North Korea, and is roughly evenly divided between the two countries.</p>
+<p>Heaven Lake is renowned for its stunning beauty and cultural significance. It is the deepest crater lake in the world, with an average depth of 213 meters and a maximum depth of 384 meters. The lake's surface elevation is 2,189.1 meters above sea level.</p>
+
+<p><br /></p>
 <lake-box type="block" name="hr"></lake-box>
-<p>At the beginning of a paragraph, type <code>/</code> to display a popup menu containing commonly used commands. You can search for commands by typing <code>/keyword</code>.</p>
 <p><br /></p>
 
-<h3>Headings</h3>
-<lake-box type="block" name="hr"></lake-box>
-<p>At the beginning of a paragraph, input <code>#</code>, <code>##</code>, or <code>###</code> followed by a space to create a heading 1, heading 2, or heading 3.</p>
-<h1>Heading level 1</h1>
-<h2>Heading level 2</h2>
-<h3>Heading level 3</h3>
-<h4>Heading level 4</h4>
-<h5>Heading level 5</h5>
-<h6>Heading level 6</h6>
-<p><br /></p>
+<h3>Markdown shortcuts</h3>
+<p>Lake provides markdown-style handy shortcuts that you can use to format the content. The table below lists some commonly used shortcuts. For all shortcut definitions, refer to the <a href="https://lakejs.org/guide/markdown">Markdown shortcuts</a> page.</p>
+<table>
+  <tr>
+    <td style="background-color: #fafafa;"><p style="text-align: center;"><strong>Format type</strong></p></td>
+    <td style="background-color: #fafafa;"><p style="text-align: center;"><strong>Character and key</strong></p></td>
+  </tr>
+  <tr>
+    <td>Heading 1</td>
+    <td><code>#</code> <code>Space</code></td>
+  </tr>
+  <tr>
+    <td>Heading 3</td>
+    <td><code>###</code> <code>Space</code></td>
+  </tr>
+  <tr>
+    <td>Numbered list</td>
+    <td><code>1.</code> <code>Space</code></td>
+  </tr>
+  <tr>
+    <td>Bulleted list</td>
+    <td><code>*</code> <code>Space</code></td>
+  </tr>
+  <tr>
+    <td>Checklist</td>
+    <td><code>[]</code> <code>Space</code></td>
+  </tr>
+  <tr>
+    <td>Block quotation</td>
+    <td><code>&gt;</code> <code>Space</code></td>
+  </tr>
+  <tr>
+    <td>Inline code</td>
+    <td><code>\`code\`</code> <code>Space</code></td>
+  </tr>
+  <tr>
+    <td>Thematic break</td>
+    <td><code>---</code> <code>Enter</code></td>
+  </tr>
+  <tr>
+    <td>Code block</td>
+    <td><code>\`\`\`</code> <code>Enter</code></td>
+  </tr>
+</table>
 
-<h3>Line break</h3>
-<lake-box type="block" name="hr"></lake-box>
-<p>Press <code>Shift+Enter</code> key to insert a line break in text.</p>
 <p><br /></p>
-<p>
-  O’er all the hilltops<br />
-  Is quiet now,<br />
-  In all the treetops<br />
-  Hearest thou<br />
-  Hardly a breath;<br />
-  The birds are asleep in the trees:<br />
-  Wait, soon like these<br />
-  Thou too shalt rest.
-</p>
-<p><br /></p>
-
-<h3>Block quotation</h3>
 <lake-box type="block" name="hr"></lake-box>
-<p>At the beginning of a paragraph, input <code>&gt;</code> followed by a space to create a block quotation.</p>
-<blockquote>This is a block quotation.</blockquote>
-<p><br /></p>
-
-<h3>Numbered list</h3>
-<lake-box type="block" name="hr"></lake-box>
-<p>At the beginning of a paragraph, input <code>1.</code> followed by a space to create a numbered list.</p>
-<ol start="1"><li>first item</li></ol>
-<ol start="2"><li>second item</li></ol>
-<ol start="1" indent="1"><li>second item first subitem</li></ol>
-<ol start="2" indent="1"><li>second item second subitem</li></ol>
-<ol start="3" indent="1"><li>second item third subitem</li></ol>
-<ol start="1"><li>third item</li></ol>
-<p><br /></p>
-
-<h3>Bulleted list</h3>
-<lake-box type="block" name="hr"></lake-box>
-<p>At the beginning of a paragraph, input <code>*</code>, <code>-</code>, or <code>+</code> followed by a space to create a bulleted list.</p>
-<ul><li>first item</li></ul>
-<ul><li>second item</li></ul>
-<ul indent="1"><li>second item first subitem</li></ul>
-<ul indent="1"><li>second item second subitem</li></ul>
-<ul indent="1"><li>second item third subitem</li></ul>
-<ul><li>third item</li></ul>
 <p><br /></p>
 
 <h3>Checklist</h3>
-<lake-box type="block" name="hr"></lake-box>
-<p>At the beginning of a paragraph, input <code>[]</code> or <code>[x]</code> followed by a space to create a checklist.</p>
+<p>You have two ways to create checklist:</p>
+<ol start="1"><li>Click the <code>Checklist</code> icon in the toolbar above.</li></ol>
+<ol start="3"><li>At the beginning of a paragraph, input <code>[]</code> or <code>[x]</code> followed by a space.</li></ol>
+<p><br /></p>
 <ul type="checklist"><li value="true">first item</li></ul>
 <ul type="checklist"><li value="false">second item</li></ul>
 <ul type="checklist" indent="1"><li value="false">second item first subitem</li></ul>
 <ul type="checklist" indent="1"><li value="false">second item second subitem</li></ul>
 <ul type="checklist" indent="1"><li value="false">second item third subitem</li></ul>
 <ul type="checklist"><li value="false">third item</li></ul>
-<p><br /></p>
 
-<h3>Table</h3>
-<lake-box type="block" name="hr"></lake-box>
-<table>
-  <tr>
-    <td style="background-color: #fafafa;"><p style="text-align: center;"><strong>Tag name</strong></p></td>
-    <td style="background-color: #fafafa;"><p style="text-align: center;"><strong>Description</strong></p></td>
-  </tr>
-  <tr>
-    <td><code>&lt;table&gt;</code></td>
-    <td>The tag represents tabular data.</td>
-  </tr>
-  <tr>
-    <td><code>&lt;tr&gt;</code></td>
-    <td>The tag represents a row of cells in a table.</td>
-  </tr>
-  <tr>
-    <td><code>&lt;td&gt;</code></td>
-    <td>The tag represents a cell of a table that contains data.</td>
-  </tr>
-</table>
 <p><br /></p>
-
-<h3>Text indentation</h3>
 <lake-box type="block" name="hr"></lake-box>
-<p>This is the first paragraph of text.</p>
-<p style="text-indent: 2em;">This is the second paragraph.</p>
-<p>This is the third paragraph.</p>
-<p><br /></p>
-
-<h3>Text alignment</h3>
-<lake-box type="block" name="hr"></lake-box>
-<p>This is the first paragraph of text.</p>
-<p style="text-align: center;">This is the second paragraph.</p>
-<p>This is the third paragraph.</p>
-<p><br /></p>
-
-<h3>Text styles</h3>
-<lake-box type="block" name="hr"></lake-box>
-<p>
-  <strong>Bold</strong>,
-  <i>Italic</i>,
-  <u>Underline</u>,
-  <s>Strikethrough</s>,
-  <span style="font-family: 'Arial Black';">Font name</span>,
-  <span style="font-size: 24px;">Font size</span>,
-  <span style="color: #F5222D;">Font color</span>,
-  <span style="background-color: #FADB14;">Highlight</span>,
-  <sup>Superscript</sup>,
-  <sup>Subscript</sup>,
-  <code>Inline code</code>
-</p>
-<p><br /></p>
-
-<h3>Alerts</h3>
-<lake-box type="block" name="hr"></lake-box>
-<p>At the beginning of a paragraph, input <code>:::info</code>, <code>:::tip</code>, <code>:::warning</code>, or <code>:::danger</code> followed by an enter to create an alert.</p>
-<blockquote type="info">Useful information that users should know, even when skimming content.</blockquote>
-<blockquote type="tip">Helpful advice for doing things better or more easily.</blockquote>
-<blockquote type="warning">Urgent info that needs immediate user attention to avoid problems.</blockquote>
-<blockquote type="danger">Advises about risks or negative outcomes of certain actions.</blockquote>
-<p><br /></p>
-
-<h3>Link</h3>
-<lake-box type="block" name="hr"></lake-box>
-<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Documentation for Web developers</a></li></ul>
-<ul><li><a href="https://github.com/">Github</a></li></ul>
-<ul><li><a href="https://www.google.com/">Google</a></li></ul>
-<p><br /></p>
-
-<h3>Image</h3>
-<lake-box type="block" name="hr"></lake-box>
-<p><lake-box type="inline" name="image" value="eyJ1cmwiOiIuLi9hc3NldHMvaW1hZ2VzL2hlYXZlbi1sYWtlLTUxMi5wbmciLCJzdGF0dXMiOiJkb25lIiwibmFtZSI6ImhlYXZlbi1sYWtlLTUxMi5wbmciLCJzaXplIjo2MDAwOCwidHlwZSI6ImltYWdlL2pwZWciLCJsYXN0TW9kaWZpZWQiOjE3MTAyMjk1MTcxOTgsIndpZHRoIjo1MTIsImhlaWdodCI6MzcwLCJvcmlnaW5hbFdpZHRoIjo1MTIsIm9yaWdpbmFsSGVpZ2h0IjozNzAsImNhcHRpb24iOiJPdmVyaGVhZCBwYW5vcmFtYSBvZiBIZWF2ZW4gTGFrZS4ifQ=="></lake-box></p>
-<p>Heaven Lake is a volcanic crater lake atop Changbai Mountain. In Korea, it is known as Paektu Mountain or Baekdu Mountain. It lies on the border between China and North Korea, and is roughly evenly divided between the two countries. The North Korean part is in Ryanggang Province while the Chinese part is in Jilin Province.</p>
 <p><br /></p>
 
 <h3>Video</h3>
-<lake-box type="block" name="hr"></lake-box>
 <p><lake-box type="inline" name="video" value="eyJ1cmwiOiJodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTVzTUJoRHY0c2lrIn0="></lake-box></p>
-<p>Think Different</p>
-<p>Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They're not fond of rules. And they have no respect for the status quo.</p>
-<p>You can quote them, disagree with them, glorify or vilify them. About the only thing you can't do is ignore them. Because they change things. They push the human race forward. And while some may see them as the crazy ones, we see genius.</p>
-<p>Because the people who are crazy enough to think they can change the world, are the ones who do.</p>
-<p>- Apple Inc.</p>
+
+<p><br /></p>
+<lake-box type="block" name="hr"></lake-box>
 <p><br /></p>
 
 <h3>File</h3>
-<lake-box type="block" name="hr"></lake-box>
 <p><lake-box type="inline" name="file" value="eyJ1cmwiOiIuLi9hc3NldHMvZmlsZXMvaGVhdmVuLWxha2Utd2lraXBlZGlhLnBkZiIsInN0YXR1cyI6ImRvbmUiLCJuYW1lIjoiSGVhdmVuIExha2UgLSBXaWtpcGVkaWEucGRmIiwic2l6ZSI6NzQ3Mzg1LCJ0eXBlIjoiYXBwbGljYXRpb24vcGRmIiwibGFzdE1vZGlmaWVkIjoxNzE1OTM1MjE1MzA5fQ=="></lake-box></p>
-<p><br /></p>
 
-<h3>Emoji using image</h3>
-<lake-box type="block" name="hr"></lake-box>
-<ul>
-  <li>Face blowing a kiss: <lake-box type="inline" name="emoji" value="eyJ1cmwiOiIuLi9hc3NldHMvZW1vamlzL2ZhY2VfYmxvd2luZ19hX2tpc3NfY29sb3Iuc3ZnIiwidGl0bGUiOiJGYWNlIGJsb3dpbmcgYSBraXNzIn0="></lake-box></li>
-  <li>Face exhaling: <lake-box type="inline" name="emoji" value="eyJ1cmwiOiIuLi9hc3NldHMvZW1vamlzL2ZhY2VfZXhoYWxpbmdfY29sb3Iuc3ZnIiwidGl0bGUiOiJGYWNlIGV4aGFsaW5nIn0="></lake-box></li>
-</ul>
 <p><br /></p>
-
-<h3>Emoji using special character</h3>
 <lake-box type="block" name="hr"></lake-box>
-<ul>
-  <li>Grinning face with big eyes: 😃</li>
-  <li>Beaming face with smiling eyes: 😁</li>
-</ul>
 <p><br /></p>
 
 <h3>Code block</h3>
+<lake-box type="block" name="codeBlock" value="eyJsYW5nIjoiamF2YXNjcmlwdCIsImNvZGUiOiJpbXBvcnQgJ2xha2VsaWIvbGliL2xha2UuY3NzJztcbmltcG9ydCB7IEVkaXRvciwgVG9vbGJhciB9IGZyb20gJ2xha2VsaWInO1xuXG5jb25zdCB0b29sYmFyID0gbmV3IFRvb2xiYXIoe1xuICByb290OiAnLm15LXRvb2xiYXInLFxufSk7XG5jb25zdCBlZGl0b3IgPSBuZXcgRWRpdG9yKHtcbiAgcm9vdDogJy5teS1jb250ZW50JyxcbiAgdG9vbGJhcixcbn0pO1xuZWRpdG9yLnJlbmRlcigpOyJ9"></lake-box>
+
+<p><br /></p>
 <lake-box type="block" name="hr"></lake-box>
-<p>At the beginning of a paragraph, input <code>\`\`\`</code> or <code>\`\`\`js</code> followed by an enter to create a code block.</p>
-<lake-box type="block" name="codeBlock" value="eyJjb2RlIjoiZnVuY3Rpb24gbXlGdW5jKHRoZU9iamVjdCkge1xuICB0aGVPYmplY3QubWFrZSA9IFwiVG95b3RhXCI7XG59XG5cbmNvbnN0IG15Y2FyID0ge1xuICBtYWtlOiBcIkhvbmRhXCIsXG4gIG1vZGVsOiBcIkFjY29yZFwiLFxuICB5ZWFyOiAxOTk4LFxufTtcblxuY29uc29sZS5sb2cobXljYXIubWFrZSk7IC8vIFwiSG9uZGFcIlxubXlGdW5jKG15Y2FyKTtcbmNvbnNvbGUubG9nKG15Y2FyLm1ha2UpOyAvLyBcIlRveW90YVwiIiwibGFuZyI6ImphdmFzY3JpcHQifQ=="></lake-box>
-<blockquote type="tip">This feature is based on <a href="https://codemirror.net/">CodeMirror</a>.</blockquote>
 <p><br /></p>
 
 <h3>Mathematical formula</h3>
-<lake-box type="block" name="hr"></lake-box>
 <ul>
   <li>Difference of squares: <lake-box type="inline" name="equation" value="eyJjb2RlIjoiYV4yLWJeMj0oYStiKShhLWIpIn0="></lake-box></li>
   <li>Difference of cubes: <lake-box type="inline" name="equation" value="eyJjb2RlIjoiYV4zLWJeMz0oYS1iKShhXjIrYWIrYl4yKSJ9"></lake-box></li>
 </ul>
+
+<p><br /></p>
+<lake-box type="block" name="hr"></lake-box>
 <p><br /></p>
 
 <h3>Mention</h3>
+<p>Type <code>@</code> to display a popup menu containing specified users. You can search for users by typing <code>@keyword</code>.</p>
+
+<p><br /></p>
 <lake-box type="block" name="hr"></lake-box>
-<p>At the beginning of a paragraph, type <code>@</code> to display a popup menu containing specified users. You can search for users by typing <code>@keyword</code>.</p>
+<p><br /></p>
+
+<h3>Alerts</h3>
+<p>You can input <code>:::info</code>, <code>:::tip</code>, <code>:::warning</code>, or <code>:::danger</code> followed by an enter to create an alert. You can also type <code>/</code> to select an alert in the popup menu.</p>
+<blockquote type="info">Useful information that users should know, even when skimming content.</blockquote>
+<blockquote type="tip">Helpful advice for doing things better or more easily.</blockquote>
+<blockquote type="warning">Urgent info that needs immediate user attention to avoid problems.</blockquote>
+<blockquote type="danger">Advises about risks or negative outcomes of certain actions.</blockquote>
 <p><br /></p>
 `
     }
