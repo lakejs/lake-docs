@@ -169,12 +169,12 @@ editor.event.on('statechange', state => {
 });
 ```
 
-For more event options, refer to the [Editor](/reference/editor#instance-events) class.
+For all event names, refer to the [Editor](/reference/editor#instance-events) class.
 
 
 ## Customizing toolbar
 
-Lake allows you to make your own toolbar by setting the [items](/reference/toolbar-config#items) config. For more details, see the [Toolbar config](/reference/toolbar-config.md) page.
+Lake allows you to make your own toolbar by setting the [items](/reference/toolbar-config#items) config.
 
 ```js
 const toolbarItems = [
@@ -192,7 +192,7 @@ new Toolbar({
 
 ## Uploading images
 
-Configure the `image` plugin to enable image uploads. Refer to the [image](/reference/index.md#image) config for further details.
+Before using image uploads, you need to set the [image](/reference/index.md#image) config.
 
 ```js
 new Editor({
@@ -208,7 +208,7 @@ new Editor({
 
 ## Uploading files
 
-Similarly, configure the `file` plugin for file uploads. See the [file](/reference/index.md#file) config for more information.
+Similarly, before using file uploads, you need to set the [file](/reference/index.md#file) config.
 
 ```js
 new Editor({
@@ -224,7 +224,7 @@ new Editor({
 
 ## Code block
 
-The `code block` feature is powered by [CodeMirror](https://codemirror.net/). Since CodeMirror is a large dependency and not all users require this feature, it is disabled by default. To enable it, include [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) in your project:
+This feature is powered by [CodeMirror](https://codemirror.net/). Since CodeMirror is a quite large library and not all users require it, it is disabled by default. To enable it, include [CodeMirror for Lake](https://www.npmjs.org/package/lake-codemirror) in your project:
 
 ::: code-group
 
