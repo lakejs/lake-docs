@@ -82,4 +82,7 @@ onUnmounted(() => {
   height: 500px;
   overflow: auto;
 }
+.content :global .lake-container {
+  min-height: 498px;
+}
 </style>
