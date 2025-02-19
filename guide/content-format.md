@@ -265,7 +265,7 @@ Display inline code fragments with the `<code>` tag.
 <code>Inline code</code>
 ```
 
-## Alerts
+## Alert
 
 Emphasize critical information using the `<blockquote>` tag with a `type` attribute.
 

@@ -2,7 +2,7 @@ export default {
   load() {
     return {
       value: `
-<h3>Image</h3>
+<h3>Insert image</h3>
 <p>You have three ways to add images:</p>
 <ol start="1"><li>Click the <code>Image</code> icon in the toolbar above to select and upload an image from your device.</li></ol>
 <ol start="2"><li>Copy an image to your clipboard and paste it directly into your editor.</li></ol>
@@ -16,7 +16,7 @@ export default {
 <lake-box type="block" name="hr"></lake-box>
 <p><br /></p>
 
-<h3>Markdown shortcuts</h3>
+<h3>Markdown-style shortcuts</h3>
 <p>Lake provides markdown-style handy shortcuts that you can use to format the content. The table below lists some commonly used shortcuts. For all shortcut definitions, refer to the <a href="https://lakejs.org/guide/markdown">Markdown shortcuts</a> page.</p>
 <table>
   <tr>
@@ -81,14 +81,14 @@ export default {
 <lake-box type="block" name="hr"></lake-box>
 <p><br /></p>
 
-<h3>Video</h3>
+<h3>Insert video</h3>
 <p><lake-box type="inline" name="video" value="eyJ1cmwiOiJodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTVzTUJoRHY0c2lrIn0="></lake-box></p>
 
 <p><br /></p>
 <lake-box type="block" name="hr"></lake-box>
 <p><br /></p>
 
-<h3>File</h3>
+<h3>Insert file</h3>
 <p><lake-box type="inline" name="file" value="eyJ1cmwiOiIuLi9hc3NldHMvZmlsZXMvaGVhdmVuLWxha2Utd2lraXBlZGlhLnBkZiIsInN0YXR1cyI6ImRvbmUiLCJuYW1lIjoiSGVhdmVuIExha2UgLSBXaWtpcGVkaWEucGRmIiwic2l6ZSI6NzQ3Mzg1LCJ0eXBlIjoiYXBwbGljYXRpb24vcGRmIiwibGFzdE1vZGlmaWVkIjoxNzE1OTM1MjE1MzA5fQ=="></lake-box></p>
 
 <p><br /></p>
@@ -119,7 +119,7 @@ export default {
 <lake-box type="block" name="hr"></lake-box>
 <p><br /></p>
 
-<h3>Alerts</h3>
+<h3>Alert</h3>
 <p>You can input <code>:::info</code>, <code>:::tip</code>, <code>:::warning</code>, or <code>:::danger</code> followed by an enter to create an alert. You can also type <code>/</code> to select an alert in the popup menu.</p>
 <blockquote type="info">Useful information that users should know, even when skimming content.</blockquote>
 <blockquote type="tip">Helpful advice for doing things better or more easily.</blockquote>
