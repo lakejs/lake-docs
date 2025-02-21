@@ -6,11 +6,10 @@ export default {
 <p>You have three ways to add images:</p>
 <ol start="1"><li>Click the <code>Image</code> icon in the toolbar above to select and upload an image from your device.</li></ol>
 <ol start="2"><li>Copy an image to your clipboard and paste it directly into your editor.</li></ol>
-<ol start="3"><li>At the beginning of a paragraph, type <code>/</code> to display a popup menu containing commonly used commands. Select the <code>Image</code> option to upload an image.</li></ol>
+<ol start="3"><li>Start a line with <code>/</code> to display <code>Slash commands</code>. Select the <code>Image</code> option to upload an image.</li></ol>
 <p><br /></p>
 <p><lake-box type="inline" name="image" value="eyJ1cmwiOiIuLi9hc3NldHMvaW1hZ2VzL2hlYXZlbi1sYWtlLTUxMi5wbmciLCJzdGF0dXMiOiJkb25lIiwibmFtZSI6ImhlYXZlbi1sYWtlLTUxMi5wbmciLCJzaXplIjo2MDAwOCwidHlwZSI6ImltYWdlL2pwZWciLCJsYXN0TW9kaWZpZWQiOjE3MTAyMjk1MTcxOTgsIndpZHRoIjo1MTIsImhlaWdodCI6MzcwLCJvcmlnaW5hbFdpZHRoIjo1MTIsIm9yaWdpbmFsSGVpZ2h0IjozNzAsImNhcHRpb24iOiJPdmVyaGVhZCBwYW5vcmFtYSBvZiBIZWF2ZW4gTGFrZS4ifQ=="></lake-box></p>
-<p>In case you were wondering why the editor's name is Lake. It is inspired by Heaven Lake, a volcanic crater lake atop Changbai Mountain. In Korea, it is known as Paektu Mountain or Baekdu Mountain. It lies on the border between China and North Korea, and is roughly evenly divided between the two countries.</p>
-<p>Heaven Lake is renowned for its stunning beauty and cultural significance. It is the deepest crater lake in the world, with an average depth of 213 meters and a maximum depth of 384 meters. The lake's surface elevation is 2,189.1 meters above sea level.</p>
+<p>You might be wondering about the name. Lake actually refers to <a href="https://en.wikipedia.org/wiki/Heaven_Lake">Heaven Lake</a>, a volcanic crater lake renowned for its stunning beauty and cultural significance.</p>
 
 <p><br /></p>
 <lake-box type="block" name="hr"></lake-box>
@@ -66,16 +65,10 @@ export default {
 <p><br /></p>
 
 <h3>Checklist</h3>
-<p>You have two ways to create checklist:</p>
-<ol start="1"><li>Click the <code>Checklist</code> icon in the toolbar above.</li></ol>
-<ol start="3"><li>At the beginning of a paragraph, input <code>[]</code> or <code>[x]</code> followed by a space.</li></ol>
-<p><br /></p>
-<ul type="checklist"><li value="true">first item</li></ul>
-<ul type="checklist"><li value="false">second item</li></ul>
-<ul type="checklist" indent="1"><li value="false">second item first subitem</li></ul>
-<ul type="checklist" indent="1"><li value="false">second item second subitem</li></ul>
-<ul type="checklist" indent="1"><li value="false">second item third subitem</li></ul>
-<ul type="checklist"><li value="false">third item</li></ul>
+<p>You have three ways to create checklist:</p>
+<ul type="checklist"><li value="true">Click the <code>Checklist</code> icon in the toolbar above.</li></ul>
+<ul type="checklist"><li value="true">Start a line with <code>[]</code> or <code>[x]</code> followed by a space.</li></ul>
+<ul type="checklist"><li value="false">Start a line with <code>/</code> to display <code>Slash commands</code>. Type <code>c</code> and select the <code>Checklist</code> option.</li></ul>
 
 <p><br /></p>
 <lake-box type="block" name="hr"></lake-box>
@@ -89,7 +82,7 @@ export default {
 <p><br /></p>
 
 <h3>Insert file</h3>
-<p><lake-box type="inline" name="file" value="eyJ1cmwiOiIuLi9hc3NldHMvZmlsZXMvaGVhdmVuLWxha2Utd2lraXBlZGlhLnBkZiIsInN0YXR1cyI6ImRvbmUiLCJuYW1lIjoiSGVhdmVuIExha2UgLSBXaWtpcGVkaWEucGRmIiwic2l6ZSI6NzQ3Mzg1LCJ0eXBlIjoiYXBwbGljYXRpb24vcGRmIiwibGFzdE1vZGlmaWVkIjoxNzE1OTM1MjE1MzA5fQ=="></lake-box></p>
+<p><lake-box type="inline" name="file" value="eyJ1cmwiOiIuLi9hc3NldHMvZmlsZXMvdGhpbmstZGlmZmVyZW50LXdpa2lwZWRpYS5wZGYiLCJzdGF0dXMiOiJkb25lIiwibmFtZSI6IlRoaW5rIGRpZmZlcmVudCAtIFdpa2lwZWRpYS5wZGYiLCJzaXplIjo1MTA1NTgsInR5cGUiOiJhcHBsaWNhdGlvbi9wZGYiLCJsYXN0TW9kaWZpZWQiOjE3NDAwOTc3MTg1OTh9"></lake-box></p>
 
 <p><br /></p>
 <lake-box type="block" name="hr"></lake-box>
@@ -120,7 +113,7 @@ export default {
 <p><br /></p>
 
 <h3>Alert</h3>
-<p>You can input <code>:::info</code>, <code>:::tip</code>, <code>:::warning</code>, or <code>:::danger</code> followed by an enter to create an alert. You can also type <code>/</code> to select an alert in the popup menu.</p>
+<p>You can start a line with <code>:::info</code>, <code>:::tip</code>, <code>:::warning</code>, or <code>:::danger</code> followed by an enter to create an alert. You can also type <code>/</code> to select an alert in the popup menu.</p>
 <blockquote type="info">Useful information that users should know, even when skimming content.</blockquote>
 <blockquote type="tip">Helpful advice for doing things better or more easily.</blockquote>
 <blockquote type="warning">Urgent info that needs immediate user attention to avoid problems.</blockquote>
