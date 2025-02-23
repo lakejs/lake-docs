@@ -6,7 +6,7 @@ export default {
 <p>You have three ways to add images:</p>
 <ol start="1"><li>Click the <code>Image</code> icon in the toolbar above to select and upload an image from your device.</li></ol>
 <ol start="2"><li>Copy an image to your clipboard and paste it directly into your editor.</li></ol>
-<ol start="3"><li>Start a line with <code>/</code> to display <code>Slash commands</code>. Select the <code>Image</code> option to upload an image.</li></ol>
+<ol start="3"><li>Start a line with <code>/</code> to display a popup menu. Select the <code>Image</code> option to upload an image.</li></ol>
 <p><br /></p>
 <p><lake-box type="inline" name="image" value="eyJ1cmwiOiIuLi9hc3NldHMvaW1hZ2VzL2hlYXZlbi1sYWtlLTUxMi5wbmciLCJzdGF0dXMiOiJkb25lIiwibmFtZSI6ImhlYXZlbi1sYWtlLTUxMi5wbmciLCJzaXplIjo2MDAwOCwidHlwZSI6ImltYWdlL2pwZWciLCJsYXN0TW9kaWZpZWQiOjE3MTAyMjk1MTcxOTgsIndpZHRoIjo1MTIsImhlaWdodCI6MzcwLCJvcmlnaW5hbFdpZHRoIjo1MTIsIm9yaWdpbmFsSGVpZ2h0IjozNzAsImNhcHRpb24iOiJPdmVyaGVhZCBwYW5vcmFtYSBvZiBIZWF2ZW4gTGFrZS4ifQ=="></lake-box></p>
 <p>You might be wondering about the name. Lake actually refers to <a href="https://en.wikipedia.org/wiki/Heaven_Lake">Heaven Lake</a>, a volcanic crater lake renowned for its stunning beauty and cultural significance.</p>
@@ -68,7 +68,7 @@ export default {
 <p>You have three ways to create checklist:</p>
 <ul type="checklist"><li value="true">Click the <code>Checklist</code> icon in the toolbar above.</li></ul>
 <ul type="checklist"><li value="true">Start a line with <code>[]</code> or <code>[x]</code> followed by a space.</li></ul>
-<ul type="checklist"><li value="false">Start a line with <code>/</code> to display <code>Slash commands</code>. Type <code>c</code> and select the <code>Checklist</code> option.</li></ul>
+<ul type="checklist"><li value="false">Start a line with <code>/</code> to display a popup menu. Type <code>c</code> and select the <code>Checklist</code> option.</li></ul>
 
 <p><br /></p>
 <lake-box type="block" name="hr"></lake-box>
