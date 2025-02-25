@@ -8,7 +8,7 @@ export default defineConfig({
   srcDir: '.',
   outDir: './.vitepress/dist',
   assetsDir: 'static',
-  appearance: false,
+  appearance: true,
   cleanUrls: true,
   lastUpdated: false,
   lang: 'en-US',

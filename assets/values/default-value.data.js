@@ -19,8 +19,8 @@ export default {
 <p>Lake provides markdown-style handy shortcuts that you can use to format the content. The table below lists some commonly used shortcuts. For all shortcut definitions, refer to the <a href="https://lakejs.org/guide/markdown">Markdown shortcuts</a> page.</p>
 <table>
   <tr>
-    <td style="background-color: #fafafa;"><p style="text-align: center;"><strong>Format type</strong></p></td>
-    <td style="background-color: #fafafa;"><p style="text-align: center;"><strong>Character and key</strong></p></td>
+    <td style="background-color: #0000000a;"><p style="text-align: center;"><strong>Format type</strong></p></td>
+    <td style="background-color: #0000000a;"><p style="text-align: center;"><strong>Character and key</strong></p></td>
   </tr>
   <tr>
     <td>Heading 1</td>
