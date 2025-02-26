@@ -9,7 +9,7 @@ hero:
   text: "Browser-based WYSIWYG Editor"
   tagline: Feature-rich and lightweight
   image:
-    src: /assets/images/hero.png
+    src: /assets/images/hero.webp
     alt: Lake
   actions:
     - theme: brand

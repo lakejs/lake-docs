@@ -355,7 +355,7 @@ Defines the request method for uploading image.
 Defines the MIME types allowed for uploading image.
 
 * Type: `string[]`
-* Default: `['image/gif', 'image/jpeg', 'image/png', 'image/svg+xml']`
+* Default: `['image/gif', 'image/jpeg', 'image/png', 'image/svg+xml', 'image/webp']`
 
 Example:
 
@@ -409,6 +409,7 @@ Defines the MIME types allowed for uploading file.
   'image/jpeg',
   'image/png',
   'image/svg+xml',
+  'image/webp',
   'text/plain',
   'text/html',
   'application/pdf',
