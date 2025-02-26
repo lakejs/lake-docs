@@ -48,6 +48,6 @@ onUnmounted(() => {
   line-height: 0;
 }
 .dropdown :global .lake-dropdown button.lake-dropdown-title {
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--lake-border-color);
 }
 </style>

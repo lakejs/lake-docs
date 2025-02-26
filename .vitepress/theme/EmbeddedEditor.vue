@@ -45,13 +45,13 @@ onUnmounted(() => {
 
 <style module>
 .toolbar {
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--lake-border-color);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-bottom: 0;
 }
 .content {
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--lake-border-color);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   max-height: 200px;

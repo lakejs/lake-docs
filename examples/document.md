@@ -121,16 +121,16 @@ onUnmounted(() => {
   width: 100%;
   min-width: 550px;
   padding: 6px 0;
-  border-bottom: 1px solid #d9d9d9;
-  background-color: #fff;
+  border-bottom: 1px solid var(--lake-border-color);
+  background-color: var(--lake-background-color);
   z-index: 1;
 }
 .content {
   margin: 84px auto 28px auto;
   min-width: 550px;
   max-width: 1000px;
-  border: 1px solid #d9d9d9;
-  background-color: #fff;
+  border: 1px solid var(--lake-border-color);
+  background-color: var(--lake-background-color);
 }
 .content :global .lake-container {
   height: auto;
