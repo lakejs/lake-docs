@@ -12,7 +12,7 @@
     "build": "vitepress build && cp -r ./assets ./.vitepress/dist/assets",
     "preview": "vitepress preview"
   },
-  "packageManager": "pnpm@10.2.1",
+  "packageManager": "pnpm@10.5.2",
   "pnpm": {
     "overrides": {}
   }
