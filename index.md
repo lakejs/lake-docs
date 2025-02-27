@@ -1,13 +1,13 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-title: Lake - Browser-based WYSIWYG Editor
+title: Lake - Rich text editor
 titleTemplate: false
 
 hero:
   name: "Lake"
-  text: "Browser-based WYSIWYG Editor"
-  tagline: Feature-rich and lightweight
+  text: "Rich text editor"
+  tagline: Feature-rich yet lightweight
   image:
     src: /assets/images/hero.webp
     alt: Lake
@@ -27,7 +27,7 @@ features:
   - icon:
       src: /assets/icons/cube.svg
     title: Easy integration
-    details: You can easily integrate a powerful yet lightweight editor into your web application with just a few lines of code.
+    details: You can easily integrate a feature-rich yet lightweight editor into your web application with just a few lines of code.
   - icon:
       src: /assets/icons/puzzle-piece.svg
     title: Flexible customization

@@ -5,7 +5,7 @@ title: About Lake
 
 # {{ $frontmatter.title }}
 
-Lake is a browser-based rich text editor built for modern applications that require content creation like blog posts, user comments, and email composition.
+Lake is a rich text editor built for modern applications that require content creation like blog posts, user comments, and email composition.
 
 ## Why create Lake?
 

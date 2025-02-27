@@ -13,7 +13,7 @@ export default defineConfig({
   lastUpdated: false,
   lang: 'en-US',
   title: "Lake",
-  description: "Lake is a browser-based rich text editor designed for creating content such as blogs, comments, and emails.",
+  description: "Lake is a rich text editor designed for creating content such as blogs, comments, and emails.",
   head: [
     ['meta', { name: 'google-adsense-account', content: 'ca-pub-7116729301372758' }],
     ['link', { rel: 'icon', href: '/assets/icons/favicon.ico' }],
