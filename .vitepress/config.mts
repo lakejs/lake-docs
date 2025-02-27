@@ -121,8 +121,8 @@ export default defineConfig({
       level: 2,
     },
     editLink: {
-      pattern: 'https://github.com/lakejs/lake-docs/edit/main/:path',
-      text: 'Edit this page on GitHub'
+      pattern: 'https://github.com/lakejs/lake-docs/blob/main/:path?plain=1',
+      text: 'View this page on GitHub'
     },
     footer: {
       message: 'Released under the MIT License.',

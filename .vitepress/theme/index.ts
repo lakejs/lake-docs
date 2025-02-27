@@ -2,7 +2,7 @@ import DefaultTheme from 'vitepress/theme';
 import 'lakelib/lib/lake.css';
 import './index.css';
 import Layout from './Layout.vue';
-import Example from './Example.vue';
+import ExampleLayout from './ExampleLayout.vue';
 import DefaultEditor from './DefaultEditor.vue';
 import EmbeddedEditor from './EmbeddedEditor.vue';
 import CommentBox from './CommentBox.vue';
@@ -14,7 +14,7 @@ export default {
   extends: DefaultTheme,
   Layout,
   enhanceApp({ app }) {
-    app.component('example', Example);
+    app.component('example', ExampleLayout);
     app.component('DefaultEditor', DefaultEditor);
     app.component('EmbeddedEditor', EmbeddedEditor);
     app.component('CommentBox', CommentBox);

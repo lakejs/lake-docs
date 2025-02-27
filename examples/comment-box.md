@@ -1,10 +1,6 @@
 ---
-layout: doc
+layout: example
 title: Comment box
-prev: false
-next: false
-editLink: false
-lastUpdated: false
 ---
 
 # {{ $frontmatter.title }}

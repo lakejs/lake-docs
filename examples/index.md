@@ -3,6 +3,8 @@ layout: example
 title: Feature-rich editor
 ---
 
+# {{ $frontmatter.title }}
+
 This example shows most of the available features. If you want to learn how to install Lake, see the [Getting started](/guide/) page.
 
 <script setup>

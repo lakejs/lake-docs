@@ -1,15 +1,13 @@
 ---
-layout: doc
+layout: example
 title: Read-only mode
-prev: false
-next: false
-editLink: false
-lastUpdated: false
 ---
 
 # {{ $frontmatter.title }}
 
 Read-only mode is used to display the editor's content in the view page. You can enable read-only by setting the [readonly](/reference/index.md#readonly) config to `true`.
+
+---
 
 <script setup>
 import { ref, onMounted } from 'vue';
