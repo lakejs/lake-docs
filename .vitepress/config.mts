@@ -41,7 +41,12 @@ export default defineConfig({
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/assets/icons/logo.svg',
+    logo: {
+      light: '/assets/icons/logo-light.svg',
+      dark: '/assets/icons/logo-dark.svg',
+      width: 24,
+      height: 24,
+    },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/examples/', activeMatch: '/examples/' },
