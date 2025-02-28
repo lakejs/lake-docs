@@ -34,7 +34,7 @@ Lake aims to provide as many features as possible through a simple structure whi
 
 ## Limitations
 
-Lake will not support the features below, as supporting them would significantly increase the software's size and complexity, ultimately compromising the user experience.
+Lake will not support the features below, as supporting them would significantly increase the software's size and complexity, ultimately compromising editing experiences.
 
 * Real-time collaboration
 * Typography beyond standard web practices
