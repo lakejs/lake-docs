@@ -31,7 +31,7 @@ const heading = {
   type: 'button',
   icon: icons.get('heading'),
   tooltip: 'Heading',
-  isSelected: appliedItems => !!appliedItems.find(item => item.name === 'h3'),
+  isSelected: activeItems => !!activeItems.find(item => item.name === 'h3'),
   onClick: editor => {
     const selectedValues = editor.command.selectedValues('heading');
     editor.command.execute('heading', selectedValues.indexOf('h3') >= 0 ? 'p' : 'h3');
@@ -49,8 +49,8 @@ const fontColor = {
   width: 'auto',
   menuType: 'color',
   menuItems: colorMenuItems,
-  selectedValues: appliedItems => {
-    const currentValue = appliedItems[0].node.computedCSS('color');
+  selectedValues: activeItems => {
+    const currentValue = activeItems[0].node.computedCSS('color');
     return [toHex(currentValue)];
   },
   onSelect: (editor, value) => {
@@ -69,8 +69,8 @@ const highlight = {
   width: 'auto',
   menuType: 'color',
   menuItems: colorMenuItems,
-  selectedValues: appliedItems => {
-    const currentValue = appliedItems[0].node.computedCSS('background-color');
+  selectedValues: activeItems => {
+    const currentValue = activeItems[0].node.computedCSS('background-color');
     return [toHex(currentValue)];
   },
   onSelect: (editor, value) => {
