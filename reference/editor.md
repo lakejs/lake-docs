@@ -413,6 +413,25 @@ editor.blur();
 ```
 
 
+### getState()
+
+Returns the state of the current selection.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A [SelectionState](/reference/types.md#selectionstate) object.
+
+Example:
+
+```js
+const state = editor.getState();
+```
+
+
 ### setValue()
 
 Sets the specified content to the editor.
