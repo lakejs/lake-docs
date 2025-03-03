@@ -11,7 +11,22 @@ A collection of types.
 ## KeyValue
 
 ```ts
-type KeyValue = { [key: string]: string };
+type KeyValue = Record<string, string>;
+```
+
+
+## ContentRules
+
+```ts
+type ContentStyleValue = string | string[] | RegExp;
+
+type ContentStyle = Record<string, ContentStyleValue>;
+
+type ContentAttributeValue = string | string[] | RegExp | ContentStyle;
+
+type ContentAttribute = Record<string, ContentAttributeValue>;
+
+type ContentRules = Record<string, string | ContentAttribute>;
 ```
 
 
@@ -25,7 +40,7 @@ type NodePath = number[];
 ## BoxValue
 
 ```ts
-type BoxValue = { [key: string]: any };
+export type BoxValue = Record<string, any>;
 ```
 
 

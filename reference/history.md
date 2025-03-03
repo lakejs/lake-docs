@@ -36,7 +36,7 @@ const list = editor.history.list;
 
 ### index
 
-An index that always indicates the position at which new content is stored.
+A number that always indicates the position at which new content is stored.
 
 * Type: `number`
 
@@ -57,6 +57,22 @@ Example:
 
 ```js
 editor.history.limit = 100;
+```
+
+
+### contentRules
+
+A [ContentRules](/reference/types.md#contentrules) object defining the HTML parsing rules used by [HTMLParser](/reference/html-parser.md).
+
+* Type: [ContentRules](/reference/types.md#contentrules)
+
+Example:
+
+```js
+editor.history.contentRules = {
+  h1: {},
+  p: {},
+};
 ```
 
 

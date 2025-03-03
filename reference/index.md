@@ -199,6 +199,25 @@ new Editor({
 ```
 
 
+## contentRules
+
+Defines the HTML parsing rules used by [HTMLParser](/reference/html-parser.md).
+
+* Type: [ContentRules](/reference/types.md#contentrules)
+* Default: The return value of [getContentRules()](/reference/functions.md#getcontentrules)
+
+Example:
+
+```js
+new Editor({
+  contentRules: {
+    h1: {},
+    p: {},
+  },
+});
+```
+
+
 ## minChangeSize
 
 Specifies the minimum text length to trigger history save. If the inputted text is shorter than the `minChangeSize`, the history will not be saved until the length reaches or exceeds this threshold.

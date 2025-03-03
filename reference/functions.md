@@ -456,3 +456,22 @@ Example:
 ```js
 removeBox(range);
 ```
+
+
+### getContentRules()
+
+Returns the default HTML parsing rules used by [HTMLParser](/reference/html-parser.md).
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  A [ContentRules](/reference/types.md#contentrules) object.
+
+Example:
+
+```js
+const rules = getContentRules();
+```
