@@ -83,6 +83,7 @@ export default defineConfig({
           { text: 'Huge content', link: '/examples/huge-content' },
           { text: 'Read-only mode', link: '/examples/readonly' },
           { text: 'Internationalization', link: '/examples/internationalization' },
+          { text: 'Dark mode', link: '/examples/dark', target: '_blank' },
           { text: 'Document editor', link: '/examples/document', target: '_blank' },
         ],
       }],
