@@ -7,14 +7,14 @@ title: Dark mode
 import { onMounted } from 'vue';
 
 const defaultValue = `
-<h3>How to set the theme to dark mode?</h3>
-<p><br /></p>
+<h3>Setting the theme to dark mode</h3>
 <p>First, add the <code>lake-dark</code> class to the <code>&lt;html&gt;</code> element:</p>
 <lake-box type="block" name="codeBlock" value="eyJsYW5nIjoiaHRtbCIsImNvZGUiOiI8aHRtbCBjbGFzcz1cImxha2UtZGFya1wiPiJ9"></lake-box>
-<p><br /></p>
+<p>If you prefer not to modify the HTML directly, you can add the class dynamically using JavaScript:</p>
+<lake-box type="block" name="codeBlock" value="eyJsYW5nIjoiamF2YXNjcmlwdCIsImNvZGUiOiJkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuY2xhc3NMaXN0LmFkZCgnbGFrZS1kYXJrJyk7In0="></lake-box>
 <p>Then, set the <code>color</code> and <code>background-color</code> CSS properties for the <code>&lt;body&gt;</code> element:</p>
 <lake-box type="block" name="codeBlock" value="eyJsYW5nIjoiY3NzIiwiY29kZSI6ImJvZHkge1xuICBjb2xvcjogdmFyKC0tbGFrZS10ZXh0LWNvbG9yKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGFrZS1iYWNrZ3JvdW5kLWNvbG9yKTtcbn0ifQ=="></lake-box>
-<p><br /></p>
+<p>This will apply the dark mode theme based on the predefined CSS variables.</p>
 `;
 
 onMounted(() => {
