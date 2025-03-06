@@ -30,7 +30,7 @@ Creates a new `HTMLParser` instance.
 
   `rules` <Badge type="info" text="Optional" />
 
-  An object defining parsing rules.
+  A [ContentRules](/reference/types.md#contentrules) object that defines parsing rules. Defaults to the return value of [getContentRules()](/reference/functions.md#getcontentrules).
 
 
 ## Instance methods
