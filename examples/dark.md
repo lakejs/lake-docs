@@ -4,7 +4,10 @@ title: Dark mode
 ---
 
 <script setup>
-import { onMounted } from 'vue';
+import { useData } from 'vitepress';
+import { onMounted, onUnmounted } from 'vue';
+
+const { isDark } = useData();
 
 const defaultValue = `
 <h3>Setting the theme to dark mode</h3>
@@ -14,11 +17,17 @@ const defaultValue = `
 <lake-box type="block" name="codeBlock" value="eyJsYW5nIjoiamF2YXNjcmlwdCIsImNvZGUiOiJkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuY2xhc3NMaXN0LmFkZCgnbGFrZS1kYXJrJyk7In0="></lake-box>
 <p>Then, set the <code>color</code> and <code>background-color</code> CSS properties for the <code>&lt;body&gt;</code> element:</p>
 <lake-box type="block" name="codeBlock" value="eyJsYW5nIjoiY3NzIiwiY29kZSI6ImJvZHkge1xuICBjb2xvcjogdmFyKC0tbGFrZS10ZXh0LWNvbG9yKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGFrZS1iYWNrZ3JvdW5kLWNvbG9yKTtcbn0ifQ=="></lake-box>
-<p>This will apply the dark mode theme based on the predefined CSS variables.</p>
+<p>This will apply the dark theme based on the predefined CSS variables.</p>
 `;
 
 onMounted(() => {
   document.documentElement.classList.add('lake-dark');
+});
+
+onUnmounted(() => {
+  if (!isDark.value) {
+    document.documentElement.classList.remove('lake-dark');
+  }
 });
 </script>
 
