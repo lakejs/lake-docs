@@ -90,7 +90,7 @@ const endOffset = range.endOffset;
 
 ### commonAncestor <Badge type="info" text="Read only" />
 
-The deepest — or furthest down the document tree — node that contains both boundary points of the range.
+The deepest node, or the lowest point in the document tree, that contains both boundary points of the range.
 
 * Type: [Nodes](/reference/nodes.md)
 

@@ -5,7 +5,7 @@ title: Content format
 
 # {{ $frontmatter.title }}
 
-Lake uses its own markup language—Lake Markup Language (LML)—which is similar to HTML. LML describes the content in the editor and provides various tags and attributes for formatting and embedding content.
+Lake uses its own markup language, Lake Markup Language (LML), which is similar to HTML. LML defines the content within the editor and provides various tags and attributes for formatting and embedding content.
 
 ## Selection
 
