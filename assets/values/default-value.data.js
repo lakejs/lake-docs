@@ -112,7 +112,7 @@ export default {
 <lake-box type="block" name="hr"></lake-box>
 <p><br /></p>
 
-<h3>Alert</h3>
+<h3>Alerts</h3>
 <p>You can start a line with <code>:::info</code>, <code>:::tip</code>, <code>:::warning</code>, or <code>:::danger</code> followed by an enter to create an alert. You can also type <code>/</code> to select an alert in the popup menu.</p>
 <blockquote type="info">Useful information that users should know, even when skimming content.</blockquote>
 <blockquote type="tip">Helpful advice for doing things better or more easily.</blockquote>

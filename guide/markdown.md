@@ -43,7 +43,7 @@ Lake provides markdown-style handy shortcuts, you can use the [shortcuts](#short
 | Highlight  | `==highlight==` `Space`  |
 | Strikethrough  | `~~strikethrough~~` `Space`  |
 | Inline code  | <code>\`code\`</code> `Space`  |
-| Alert  | `:::info` `Enter`  |
+| Alerts  | `:::info` `Enter`  |
 |   | `:::tip` `Enter`  |
 |   | `:::warning` `Enter`  |
 |   | `:::danger` `Enter`  |
