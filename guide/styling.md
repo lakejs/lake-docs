@@ -133,4 +133,4 @@ body {
 }
 ```
 
-This will apply the dark theme based on the predefined CSS variables. You can visit the [Dark mode](/examples/dark){target="_blank"} example to see how it displays.
+This will apply the dark theme based on the predefined CSS variables. You can visit the [Dark mode](/examples/dark){target="_blank"} example to see how it is displayed.

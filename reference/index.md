@@ -106,7 +106,7 @@ new Editor({
 
 ## readonly
 
-Enables read-only mode for viewing content without editing. You can visit the [Read-only mode](/examples/readonly) example to see how it displays.
+Enables read-only mode for viewing content without editing. You can visit the [Read-only mode](/examples/readonly) example to see how it is displayed.
 
 * Type: `boolean`
 * Default: `false`
@@ -185,7 +185,7 @@ new Editor({
 
 ## lang
 
-Defines the language for the editor UI. You can visit the [Internationalization](/examples/internationalization.md) example to see how it displays.
+Defines the language for the editor's UI. You can visit the [Internationalization](/examples/internationalization.md) example to see how it is displayed.
 
 * Type: `'en-US' | 'zh-CN' | 'ko' | 'ja'`
 * Default: `en-US`
