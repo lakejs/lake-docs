@@ -271,10 +271,6 @@ A button that inserts a code block.
 
 A button that uploads and inserts an image.
 
-`video`
-
-A button that inserts a video.
-
 `file`
 
 A button that uploads and inserts a file.
@@ -282,6 +278,15 @@ A button that uploads and inserts a file.
 `equation`
 
 A button that inserts a mathematical formula.
+
+`video`
+
+A button that inserts a video from YouTube.
+
+`twitter`
+
+A button that inserts a post from X (Twitter).
+
 
 ### Customizing item
 

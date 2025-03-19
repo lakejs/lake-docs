@@ -74,13 +74,6 @@ export default {
 <lake-box type="block" name="hr"></lake-box>
 <p><br /></p>
 
-<h3>Insert video</h3>
-<p><lake-box type="inline" name="video" value="eyJ1cmwiOiJodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTVzTUJoRHY0c2lrIn0="></lake-box></p>
-
-<p><br /></p>
-<lake-box type="block" name="hr"></lake-box>
-<p><br /></p>
-
 <h3>Insert file</h3>
 <p><lake-box type="inline" name="file" value="eyJ1cmwiOiIuLi9hc3NldHMvZmlsZXMvdGhpbmstZGlmZmVyZW50LXdpa2lwZWRpYS5wZGYiLCJzdGF0dXMiOiJkb25lIiwibmFtZSI6IlRoaW5rIGRpZmZlcmVudCAtIFdpa2lwZWRpYS5wZGYiLCJzaXplIjo1MTA1NTgsInR5cGUiOiJhcHBsaWNhdGlvbi9wZGYiLCJsYXN0TW9kaWZpZWQiOjE3NDAwOTc3MTg1OTh9"></lake-box></p>
 
@@ -119,6 +112,22 @@ export default {
 <blockquote type="warning">Urgent info that needs immediate user attention to avoid problems.</blockquote>
 <blockquote type="danger">Advises about risks or negative outcomes of certain actions.</blockquote>
 <p><br /></p>
+
+<p><br /></p>
+<lake-box type="block" name="hr"></lake-box>
+<p><br /></p>
+
+<h3>YouTube video</h3>
+<p><lake-box type="inline" name="video" value="eyJ1cmwiOiJodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTVzTUJoRHY0c2lrIn0="></lake-box></p>
+
+<p><br /></p>
+<lake-box type="block" name="hr"></lake-box>
+<p><br /></p>
+
+<h3>X (Tweet)</h3>
+<p><lake-box type="inline" name="twitter" value="eyJ1cmwiOiJodHRwczovL3guY29tL1N1cHBvcnQvc3RhdHVzLzExNDEwMzk4NDE5OTMzNTUyNjQifQ=="></lake-box></p>
+<p><br /></p>
+
 `
     }
   }

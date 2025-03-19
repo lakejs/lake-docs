@@ -45,12 +45,13 @@ const toolbarItems = [
   '|',
   'link',
   'image',
-  'video',
   'file',
   'emoji',
   'specialCharacter',
   'codeBlock',
   'equation',
+  'video',
+  'twitter',
   'table',
   'blockQuote',
   'paragraph',
@@ -79,8 +80,9 @@ const slashItems = [
   'dangerAlert',
   'hr',
   'codeBlock',
-  'video',
   'equation',
+  'video',
+  'twitter',
 ];
 </script>
 

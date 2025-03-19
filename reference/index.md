@@ -337,9 +337,11 @@ The following built-in slash items are available:
 
 * `codeBlock`: Inserts a block of code.
 
-* `video`: Inserts a video.
-
 * `equation`: Inserts a mathematical formula.
+
+* `video`: Inserts a video from YouTube.
+
+* `twitter`: Inserts a post from X (Twitter).
 
 * `image`: Uploads and inserts an image.
 

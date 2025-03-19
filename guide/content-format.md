@@ -300,14 +300,6 @@ The `<lake-box>` tag with `name="image"` tag represents an image.
 <lake-box type="inline" name="image" value=".."></lake-box>
 ```
 
-## Video
-
-The `<lake-box>` tag with `name="video"` tag represents a video.
-
-```xml
-<lake-box type="inline" name="video" value=".."></lake-box>
-```
-
 ## File
 
 The `<lake-box>` tag with `name="file"` tag represents a file.
@@ -346,4 +338,20 @@ The `<lake-box>` tag with `name="mention"` tag represents a user mentioned.
 
 ```xml
 <lake-box type="inline" name="mention" value=".."></lake-box>
+```
+
+## YouTube video
+
+The `<lake-box>` tag with `name="video"` tag represents a video from YouTube.
+
+```xml
+<lake-box type="inline" name="video" value=".."></lake-box>
+```
+
+## X (Tweet)
+
+The `<lake-box>` tag with `name="twitter"` tag represents a post from X (Twitter).
+
+```xml
+<lake-box type="inline" name="twitter" value=".."></lake-box>
 ```
