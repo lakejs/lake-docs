@@ -122,7 +122,7 @@ const boxByNode = getBox(query('lake-box').eq(0));
 
 ### createIframeBox()
 
-Creates a [BoxComponent](/reference/types.md#boxcomponent) that is used to embed external content using an iframe. It receives a key-value object with the following properties as its parameter.
+Creates a [BoxComponent](/reference/types.md#boxcomponent) that is used to embed external content using an iframe. It accepts a configuration object with the following properties:
 
 #### type
 
@@ -204,7 +204,7 @@ Function to generate attributes for the iframe element.
 
 #### beforeIframeLoad <Badge type="info" text="Optional" />
 
-Callback executed before the iframe loads.
+Callback triggered before the iframe loads.
 
 * Type: `(box: Box) => void`
 
