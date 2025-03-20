@@ -120,6 +120,133 @@ const boxByNode = getBox(query('lake-box').eq(0));
 ```
 
 
+### createIframeBox()
+
+Creates a [BoxComponent](/reference/types.md#boxcomponent) that is used to embed external content using an iframe. It receives a key-value object with the following properties as its parameter.
+
+#### type
+
+The type of the box.
+
+* Type: `'inline' | 'block'`
+
+#### name
+
+The name of the iframe box component.
+
+* Type: `string`
+
+#### width
+
+The default width of the iframe.
+
+* Type: `string`
+
+#### height
+
+The default height of the iframe.
+
+* Type: `string`
+
+#### formDescription
+
+Description text for the form, which can be localized.
+
+* Type: `string | ((locale: TranslationFunctions) => string)`
+
+#### urlLabel <Badge type="info" text="Optional" />
+
+Label for the URL input field, which can be localized.
+
+* Type: `string | ((locale: TranslationFunctions) => string)`
+
+#### urlPlaceholder
+
+Placeholder text for the URL input field.
+
+* Type: `string`
+
+#### embedButtonText
+
+Text for the embed button, which can be localized.
+
+* Type: `string | ((locale: TranslationFunctions) => string)`
+
+#### deleteButtonText
+
+Tooltip text for the delete button, which can be localized.
+
+* Type: `string | ((locale: TranslationFunctions) => string)`
+
+#### validUrl
+
+Function to validate the inputted URL.
+
+* Type: `(url: string) => boolean`
+
+#### urlError
+
+Error message shown if URL validation fails.
+
+* Type: `string | ((locale: TranslationFunctions) => string)`
+
+#### iframePlaceholder <Badge type="info" text="Optional" />
+
+Placeholder icon or text shown while the iframe is loading.
+
+* Type: `HTML string`
+
+#### iframeAttributes
+
+Function to generate attributes for the iframe element.
+
+* Type: `(url: string) => Record<string, string>`
+
+#### beforeIframeLoad <Badge type="info" text="Optional" />
+
+Callback executed before the iframe loads.
+
+* Type: `(box: Box) => void`
+
+#### resize <Badge type="info" text="Optional" />
+
+If `true`, allows resizing of the iframe. Defaults to `false`.
+
+* Type: `boolean`
+
+Example:
+
+```js
+function getId(url: string): string {
+  const result = /[\w\-]+$/.exec(url || '');
+  return result ? result[0] : '';
+}
+const youbuteBox = createIframeBox({
+  type: 'inline',
+  name: 'youtube',
+  width: '560px',
+  height: '315px',
+  formDescription: 'Paste a YouTube link to embed the video.',
+  urlLabel: 'Link',
+  urlPlaceholder: 'https://www.youtube.com/watch?v=...',
+  embedButtonText: 'Embed video',
+  deleteButtonText: 'Delete',
+  validUrl: url => url.indexOf('https://www.youtube.com/') === 0,
+  urlError: 'Invalid YouTube link',
+  iframePlaceholder: '<span>YouTube</span>',
+  iframeAttributes: url => ({
+    src: `https://www.youtube.com/embed/${getId(url)}`,
+    title: 'YouTube video player',
+    frameborder: '0',
+    allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+    referrerpolicy: 'strict-origin-when-cross-origin',
+    allowfullscreen: 'true',
+  }),
+  resize: true,
+});
+```
+
+
 ## Operations
 
 ### insertBookmark()
