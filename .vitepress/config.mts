@@ -95,7 +95,7 @@ export default defineConfig({
           { text: 'Creating a plugin', link: '/guide/plugin' },
           { text: 'Content format', link: '/guide/content-format' },
           { text: 'Markdown shortcuts', link: '/guide/markdown' },
-          { text: 'About Lake', link: '/guide/about' },
+          { text: 'Why create Lake?', link: '/guide/why' },
         ],
       }],
       '/reference/': [{

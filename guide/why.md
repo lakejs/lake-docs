@@ -1,19 +1,15 @@
 ---
 layout: doc
-title: About Lake
+title: Why create Lake?
 ---
 
 # {{ $frontmatter.title }}
-
-Lake is a rich text editor built for modern applications that require content creation like blog posts, user comments, and email composition.
-
-## Why create Lake?
 
 :::warning Note
 This section includes some personal opinions.
 :::
 
-There are a lot of rich text editors out there, but finding one that truly fits your needs can be difficult. You often face two frustrating options:
+There are a lot of rich text editors out there, but finding one that completely fits your needs can be very difficult. You often face two frustrating options:
 
 * **Too basic**: These editors lack essential features, forcing developers to build workarounds. Customization can be difficult and often requires deep technical knowledge.
 
