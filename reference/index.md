@@ -352,7 +352,7 @@ The following built-in slash items are available:
 
 ### requestAction
 
-Defines the request URL for uploading image.
+Defines a URL where the file will be uploaded.
 
 * Type: `URL`
 
@@ -364,19 +364,41 @@ Its response data should follow the following format:
 }
 ```
 
+You can use the [transformResponse](#transformresponse) config to convert the data returned by your API.
+
 ### requestMethod
 
-Defines the request method for uploading image.
+Defines an HTTP method for the request.
 
 * Type: `'POST' | 'PUT' | 'PATCH'`
 * Default: `POST`
 
 ### requestTypes
 
-Defines the MIME types allowed for uploading image.
+Defines allowed MIME types for the upload.
 
 * Type: `string[]`
 * Default: `['image/gif', 'image/jpeg', 'image/png', 'image/svg+xml', 'image/webp']`
+
+### requestFieldName
+
+Defines the field name for the uploaded file.
+
+* Type: `string`
+* Default: `file`
+
+### requestHeaders
+
+Defines custom headers for the upload request.
+
+* Type: `Record<string, string>`
+
+### transformResponse
+
+Defines a function to transform the response before handling it.
+
+* Type: `(body: any) => any`
+
 
 Example:
 
@@ -386,6 +408,13 @@ new Editor({
     requestMethod: 'POST',
     requestAction: '/upload',
     requestTypes: ['image/gif', 'image/jpeg', 'image/png'],
+    requestFieldName: 'file',
+    requestHeaders: { from: 'hello' },
+    transformResponse: (body: any) => {
+      return {
+        url: body.data.url,
+      };
+    },
   },
 });
 ```
@@ -395,7 +424,7 @@ new Editor({
 
 ### requestAction
 
-Defines the request URL for uploading file.
+Defines a URL where the file will be uploaded.
 
 * Type: `URL`
 
@@ -407,16 +436,18 @@ Its response data should follow the following format:
 }
 ```
 
+You can use the `transformResponse` config to convert the data returned by your API.
+
 ### requestMethod
 
-Defines the request method for uploading file.
+Defines an HTTP method for the request.
 
 * Type: `'POST' | 'PUT' | 'PATCH'`
 * Default: `POST`
 
 ### requestTypes
 
-Defines the MIME types allowed for uploading file.
+Defines allowed MIME types for the upload.
 
 * Type: `string[]`
 * Default:
@@ -443,6 +474,26 @@ Defines the MIME types allowed for uploading file.
 ]
 ```
 
+### requestFieldName
+
+Defines the field name for the uploaded file.
+
+* Type: `string`
+* Default: `file`
+
+### requestHeaders
+
+Defines custom headers for the upload request.
+
+* Type: `Record<string, string>`
+
+### transformResponse
+
+Defines a function to transform the response before handling it.
+
+* Type: `(body: any) => any`
+
+
 Example:
 
 ```js
@@ -451,6 +502,13 @@ new Editor({
     requestMethod: 'POST',
     requestAction: '/upload',
     requestTypes: ['application/zip', 'application/pdf'],
+    requestFieldName: 'file',
+    requestHeaders: { from: 'hello' },
+    transformResponse: (body: any) => {
+      return {
+        url: body.data.url,
+      };
+    },
   },
 });
 ```
@@ -511,7 +569,7 @@ new Editor({
 
 ### requestAction
 
-Defines the request URL for getting user list.
+Defines a URL that will return user list.
 
 * Type: `URL`
 
@@ -536,16 +594,30 @@ Its response data should follow the following format:
 }
 ```
 
+You can use the `transformResponse` config to convert the data returned by your API.
+
 ### requestMethod
 
-Defines the request method for getting user list.
+Defines an HTTP method for the request.
 
 * Type: `'GET' | 'POST' | 'PUT' | 'PATCH'`
 * Default: `GET`
 
+### requestHeaders
+
+Defines custom headers for the request.
+
+* Type: `Record<string, string>`
+
+### transformResponse
+
+Defines a function to transform the response before handling it.
+
+* Type: `(body: any) => any`
+
 ### getProfileUrl
 
-Defines the function that returns a URL to visit the user profile.
+Defines a function that returns a URL to visit the user profile.
 
 * Type: `function`
 * Default:
@@ -561,6 +633,12 @@ new Editor({
   mention: {
     requestMethod: 'GET',
     requestAction: '/mention/list',
+    requestHeaders: { from: 'hello' },
+    transformResponse: (body: any) => {
+      return {
+        data: body.list,
+      };
+    },
     getProfileUrl: value => `/user/${value.id}`
   },
 });
