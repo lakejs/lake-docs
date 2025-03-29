@@ -102,7 +102,6 @@ export default {
 <blockquote type="tip">Helpful advice for doing things better or more easily.</blockquote>
 <blockquote type="warning">Urgent info that needs immediate user attention to avoid problems.</blockquote>
 <blockquote type="danger">Advises about risks or negative outcomes of certain actions.</blockquote>
-<p><br /></p>
 
 <lake-box type="block" name="hr"></lake-box>
 
