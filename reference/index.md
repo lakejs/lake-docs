@@ -250,6 +250,50 @@ new Editor({
 ```
 
 
+## showMessage
+
+Handles feedback messages based on their type.
+
+* Type: `(type: 'success' | 'error' | 'warning', message: string) => void`
+
+Example:
+
+```js
+new Editor({
+  showMessage: (type, message) => {
+    if (type === 'success') {
+      console.log(message);
+      return;
+    }
+    if (type === 'warning') {
+      console.warn(message);
+      return;
+    }
+    if (type === 'error') {
+      console.error(message);
+    }
+  },
+});
+```
+
+
+## downloadFile
+
+Handles file downloading based on their type.
+
+* Type: `(type: 'image' | 'file', url: string) => void`
+
+Example:
+
+```js
+new Editor({
+  downloadFile: (type, url) => {
+    window.open(url);
+  },
+});
+```
+
+
 ## slash
 
 ### items

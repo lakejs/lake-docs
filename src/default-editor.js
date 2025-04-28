@@ -233,7 +233,7 @@ export function createDefaultEditor(config) {
     toolbar,
     lang: config.lang || 'en-US',
     value: config.value || '<p><br /></p>',
-    onMessage: (type, message) => {
+    showMessage: (type, message) => {
       if (type === 'error') {
         window.alert(message);
       } else {

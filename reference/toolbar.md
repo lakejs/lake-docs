@@ -19,6 +19,8 @@ const toolbarItems = [
   '|',
   'bold',
   'moreStyle',
+  '-',
+  'table',
 ];
 const toolbar = new Toolbar({
   root: '.my-toolbar',

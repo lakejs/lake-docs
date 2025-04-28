@@ -99,7 +99,7 @@ new Toolbar({
 
 ## items
 
-Defines the buttons available in the toolbar. The | character represents a divider, while other strings specify the names of built-in items.
+Defines the buttons available in the toolbar. The `|` character represents a divider and the `-` character represents a line break, while other strings specify the names of built-in items.
 
 * Type: `(string | ToolbarItem)[]`
 
@@ -111,6 +111,8 @@ const toolbarItems = [
   'redo',
   '|',
   'bold',
+  '-',
+  'table',
 ];
 new Toolbar({
   root: '.my-toolbar',

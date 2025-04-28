@@ -119,25 +119,6 @@ const canRedo = editor.history.canRedo;
 
 ## Instance methods
 
-### cloneContainer()
-
-Creates a deep clone of the current container with its content. If there is a selection within the container, it ensures the selection is also preserved in the cloned container.
-
-* Parameters:
-
-  None.
-
-* Return value:
-
-  A [Nodes](/reference/nodes.md) object.
-
-Example:
-
-```js
-const newContainer = editor.history.cloneContainer();
-```
-
-
 ### undo()
 
 Undoes to the previous saved content.
