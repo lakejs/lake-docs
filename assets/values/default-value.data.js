@@ -111,7 +111,7 @@ export default {
 <lake-box type="block" name="hr"></lake-box>
 
 <h3>X (Tweet)</h3>
-<p><lake-box type="inline" name="twitter" value="eyJ1cmwiOiJodHRwczovL3guY29tL1N1cHBvcnQvc3RhdHVzLzExNDEwMzk4NDE5OTMzNTUyNjQifQ=="></lake-box></p>
+<p><lake-box type="inline" name="twitter" value="eyJ1cmwiOiJodHRwczovL3guY29tL0ludGVyaW9yL3N0YXR1cy80NjM0NDA0MjQxNDE0NTk0NTYifQ=="></lake-box></p>
 <p><br /></p>
 
 `
