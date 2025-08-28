@@ -54,8 +54,8 @@ If you prefer to use plain JavaScript without any build steps, you can load the 
 Include the following lines in the `<head>` section of your HTML page:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lakelib@0.3/dist/lake.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/lakelib@0.3/dist/lake.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lakelib@0.4/dist/lake.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/lakelib@0.4/dist/lake.min.js"></script>
 ```
 
 Place the editor placeholders within your HTML:
