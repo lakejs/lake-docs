@@ -329,17 +329,19 @@ Example:
 
 ```js
 new Editor({
-  slash: [
-    'image',
-    'heading1',
-    'paragraph',
-    'blockQuote',
-    'numberedList',
-    'bulletedList',
-    'checklist',
-    'table',
-    'hr',
-  ],
+  slash: {
+    items: [
+      'image',
+      'heading1',
+      'paragraph',
+      'blockQuote',
+      'numberedList',
+      'bulletedList',
+      'checklist',
+      'table',
+      'hr',
+    ],
+  },
 });
 ```
 
