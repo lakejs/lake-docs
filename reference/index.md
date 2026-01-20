@@ -433,6 +433,13 @@ Defines the field name for the uploaded file.
 * Type: `string`
 * Default: `file`
 
+### requestWithCredentials
+
+Defines whether or not cross-site `Access-Control` requests should be made using credentials such as cookies, authentication headers.
+
+* Type: `boolean`
+* Default: `false`
+
 ### requestHeaders
 
 Defines custom headers for the upload request.
@@ -455,6 +462,7 @@ new Editor({
     requestAction: '/upload',
     requestTypes: ['image/gif', 'image/jpeg', 'image/png'],
     requestFieldName: 'file',
+    requestWithCredentials: true,
     requestHeaders: { from: 'hello' },
     transformResponse: (body: any) => {
       return {
@@ -527,6 +535,13 @@ Defines the field name for the uploaded file.
 * Type: `string`
 * Default: `file`
 
+### requestWithCredentials
+
+Defines whether or not cross-site `Access-Control` requests should be made using credentials such as cookies, authentication headers.
+
+* Type: `boolean`
+* Default: `false`
+
 ### requestHeaders
 
 Defines custom headers for the upload request.
@@ -549,6 +564,7 @@ new Editor({
     requestAction: '/upload',
     requestTypes: ['application/zip', 'application/pdf'],
     requestFieldName: 'file',
+    requestWithCredentials: true,
     requestHeaders: { from: 'hello' },
     transformResponse: (body: any) => {
       return {
@@ -649,6 +665,13 @@ Defines an HTTP method for the request.
 * Type: `'GET' | 'POST' | 'PUT' | 'PATCH'`
 * Default: `GET`
 
+### requestWithCredentials
+
+Defines whether or not cross-site `Access-Control` requests should be made using credentials such as cookies, authentication headers.
+
+* Type: `boolean`
+* Default: `false`
+
 ### requestHeaders
 
 Defines custom headers for the request.
@@ -679,6 +702,7 @@ new Editor({
   mention: {
     requestMethod: 'GET',
     requestAction: '/mention/list',
+    requestWithCredentials: true,
     requestHeaders: { from: 'hello' },
     transformResponse: (body: any) => {
       return {
