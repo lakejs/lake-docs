@@ -130,11 +130,27 @@ new Editor({
 
 ### Getting value
 
-Get the current content using the [getValue()](/reference/editor.md#getvalue) method:
+To get the current content, use the [getValue()](/reference/editor.md#getvalue) method:
 
 ```js
 const content = editor.getValue();
 ```
+
+To get the content already transformed into standard HTML, use the [getHTML()](/reference/editor.md#gethtml) method:
+
+```js
+const html = editor.getHTML();
+```
+
+the [getHTML()](/reference/editor.md#gethtml) method is equivalent to calling the `toHTML()` function from the [lake-html](https://www.npmjs.com/package/lake-html) package. You can customize the HTML output by passing a second parameter to the `toHTML()` function.
+
+```js
+import { toHTML } from 'lake-html';
+
+const html = toHTML(editor.getValue(), renderers);
+```
+
+For more details, visit the documentation at: https://github.com/lakejs/lake-html
 
 ### Setting value
 

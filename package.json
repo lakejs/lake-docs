@@ -2,7 +2,7 @@
   "dependencies": {
     "katex": "^0.16.27",
     "lake-codemirror": "^2.0.2",
-    "lakelib": "^0.4.2"
+    "lakelib": "^0.4.3"
   },
   "devDependencies": {
     "vitepress": "^1.6.4"

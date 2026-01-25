@@ -47,6 +47,19 @@ const version = Editor.version;
 ```
 
 
+### locale <Badge type="info" text="Read only" />
+
+A `LocaleManager` object that manages the locale translations.
+
+* Type: `LocaleManager`
+
+Example:
+
+```js
+Editor.locale.add('zh-TW', zhTW);
+```
+
+
 ### box <Badge type="info" text="Read only" />
 
 A [BoxManager](/reference/box-manager.md) object that manages the box components.
@@ -56,7 +69,7 @@ A [BoxManager](/reference/box-manager.md) object that manages the box components
 Example:
 
 ```js
-const names = Editor.box.getNames();
+Editor.box.add(codesandboxBox);
 ```
 
 
@@ -469,6 +482,24 @@ Example:
 
 ```js
 const content = editor.getValue();
+```
+
+### getHTML()
+
+Returns the editor's content in HTML format.
+
+* Parameters:
+
+  None.
+
+* Return value:
+
+  a standard HTML string.
+
+Example:
+
+```js
+const html = editor.getHTML();
 ```
 
 

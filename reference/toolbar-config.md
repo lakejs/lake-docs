@@ -387,3 +387,40 @@ new Toolbar({
   placement: 'bottom',
 });
 ```
+
+## fontFamily
+
+Defines the default font and the list of available fonts in the toolbar dropdown.
+
+* Type:
+
+```ts
+{
+  defaultValue: string;
+  menuItems: DropdownMenuItem[];
+}
+```
+
+Example:
+
+```js
+new Toolbar({
+  fontFamily: {
+    defaultValue: 'Tahoma',
+    menuItems: [
+      {
+        value: 'Arial',
+        text: '<span style="font-family: Arial;">Arial</span>',
+      },
+      {
+        value: 'Arial Black',
+        text: '<span style="font-family: \'Arial Black\';">Arial Black</span>',
+      },
+      {
+        value: 'Tahoma',
+        text: '<span style="font-family: Tahoma;">Tahoma</span>',
+      },
+    ],
+  },
+});
+```
