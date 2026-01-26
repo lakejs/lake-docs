@@ -85,6 +85,7 @@ export default defineConfig({
           { text: 'Internationalization', link: '/examples/internationalization' },
           { text: 'Dark mode', link: '/examples/dark', target: '_blank' },
           { text: 'Document editor', link: '/examples/document', target: '_blank' },
+          { text: 'More demos', link: '/examples/more' },
         ],
       }],
       '/guide/': [{
