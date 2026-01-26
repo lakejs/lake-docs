@@ -31,11 +31,14 @@ onUnmounted(() => {
 });
 </script>
 
-<DefaultEditor :value="defaultValue" />
+<div :class="$style.editor">
+  <DefaultEditor :value="defaultValue" />
+</div>
 
 <style module>
-body {
+.editor {
   padding: 16px;
+  height: 100vh;
   color: var(--lake-text-color);
   background-color: var(--lake-background-color);
 }
