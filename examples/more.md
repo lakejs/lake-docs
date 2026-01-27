@@ -21,6 +21,7 @@ To help you find what you need more quickly, this page gathers demos from third-
 ## Plugins
 
 * [Line height](https://codesandbox.io/embed/hcwts8?module=/src/index.js)
+* [Google Maps](https://codesandbox.io/embed/wk56c6?module=/src/index.js)
 * [CodeSandbox](https://codesandbox.io/embed/srrzl7?module=/src/index.js)
 * [StackBlitz](https://codesandbox.io/embed/cjl7ty?module=/src/index.js)
 * [Box demo](https://codesandbox.io/embed/s2wjyf?module=/src/index.js)
