@@ -222,6 +222,22 @@ new Editor({
 ```
 
 
+## Uploading videos
+
+Before using video uploads, you need to set the [media](/reference/index.md#media) config.
+
+```js
+new Editor({
+  root: '.my-content',
+  media: {
+    requestMethod: 'POST',
+    requestAction: '/upload',
+    requestTypes: ['video/mp4', 'video/mpeg', 'video/webm'],
+  },
+});
+```
+
+
 ## Uploading files
 
 Similarly, before using file uploads, you need to set the [file](/reference/index.md#file) config.
