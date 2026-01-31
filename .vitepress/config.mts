@@ -108,6 +108,8 @@ export default defineConfig({
           { text: 'Toolbar', link: '/reference/toolbar' },
           { text: 'Button', link: '/reference/button' },
           { text: 'Dropdown', link: '/reference/dropdown' },
+          { text: 'CornerToolbar', link: '/reference/corner-toolbar' },
+          { text: 'Resizer', link: '/reference/resizer' },
           { text: 'Nodes', link: '/reference/nodes' },
           { text: 'Fragment', link: '/reference/fragment' },
           { text: 'Range', link: '/reference/range' },

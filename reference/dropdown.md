@@ -109,132 +109,130 @@ Creates a new `Dropdown` instance. It receives a key-value object with the follo
 
 ### `root`
 
-  Specifies the element where the dropdown will be appended.
+Specifies the element where the dropdown will be appended.
 
-  Type: [Nodes](/reference/nodes.md)
+* Type: [Nodes](/reference/nodes.md)
 
 
 ### `name`
 
-  Specifies the name attribute for the dropdown.
+Specifies the name attribute for the dropdown.
 
-  Type: `string`
+* Type: `string`
 
 
 ### `menuType`
 
-  Specifies the style of the dropdown menu.
+Specifies the style of the dropdown menu.
 
-  Type: `'list' | 'icon' | 'character' | 'color'`
+* Type: `'list' | 'icon' | 'character' | 'color'`
 
 
 ### `menuItems`
 
-  Specifies an array of menu items to display. Each item should include at least a `value` and `text` property.
+Specifies an array of menu items to display. Each item should include at least a `value` and `text` property.
 
-  Type: [DropdownMenuItem](/reference/types.md#dropdownmenuitem)
+* Type: [DropdownMenuItem](/reference/types.md#dropdownmenuitem)
 
 
 ### `onSelect`
 
-  Specifies the function triggered when an option is selected. Receives the selected value as its argument.
+Specifies the function triggered when an option is selected. Receives the selected value as its argument.
 
-  Type: `function`
+* Type: `function`
 
 
 ### `icon` <Badge type="info" text="Optional" />
 
-  Specifies custom icon for the dropdown.
+Specifies custom icon for the dropdown.
 
-  Type: `HTML string`
+* Type: `HTML string`
 
 
 ### `accentIcon` <Badge type="info" text="Optional" />
 
-  Specifies an accent icon used specifically for a color type.
+Specifies an accent icon used specifically for a color type.
 
-  Type: `HTML string`
+* Type: `HTML string`
 
 
 ### `downIcon` <Badge type="info" text="Optional" />
 
-  Specifies an icon for the caret-down indicator.
+Specifies an icon for the caret-down indicator.
 
-  Type: `HTML string`
+* Type: `HTML string`
 
 
 ### `defaultValue` <Badge type="info" text="Optional" />
 
-  Specifies the default selected value when the dropdown is first rendered.
+Specifies the default selected value when the dropdown is first rendered.
 
-  Type: `string`
+* Type: `string`
 
 
 ### `tooltip` <Badge type="info" text="Optional" />
 
-  Specifies the tooltip text for the dropdown button.
+Specifies the tooltip text for the dropdown button.
 
-  Type: `string`
+* Type: `string`
 
 
 ### `width` <Badge type="info" text="Optional" />
 
-  Specifies the width of the dropdown.
+Specifies the width of the dropdown.
 
-  Type: `string`
+* Type: `string`
 
 
 ### `locale` <Badge type="info" text="Optional" />
 
-  Specifies custom translation functions for localization.
+Specifies custom translation functions for localization.
 
-  Type: `TranslationFunctions`
+* Type: `TranslationFunctions`
 
 
 ### `tabIndex` <Badge type="info" text="Optional" />
 
-  Specifies the tab order of the dropdown.
+Specifies the tab order of the dropdown.
 
-  Type: `number`
+* Type: `number`
 
 
 ### `location` <Badge type="info" text="Optional" />
 
-  Determines whether the toolbar is appended to the `root` or `document.body` element. When set to `local`, the toolbar is appended to the `root` element.
+Determines whether the toolbar is appended to the `root` or `document.body` element. When set to `local`, the toolbar is appended to the `root` element.
 
-  Type: `'local' | 'global'`
-
-  Default: `local`
+* Type: `'local' | 'global'`
+* Default: `local`
 
 
 ### `direction` <Badge type="info" text="Optional" />
 
-  Sets the vertical position of the menu relative to the button. `bottom` places the menu below the button, `top` above it, or `auto` to decide automatically.
+Sets the vertical position of the menu relative to the button. `bottom` places the menu below the button, `top` above it, or `auto` to decide automatically.
 
-  Type: `'top' | 'bottom' | 'auto'`
-
-  Default: `auto`
+* Type: `'top' | 'bottom' | 'auto'`
+* Default: `auto`
 
 
 ### `menuWidth` <Badge type="info" text="Optional" />
 
-  Specifies the width of the dropdown menu.
+Specifies the width of the dropdown menu.
 
-  Type: `string`
+* Type: `string`
 
 
 ### `menuHeight` <Badge type="info" text="Optional" />
 
-  Specifies the height of the dropdown menu.
+Specifies the height of the dropdown menu.
 
-  Type: `string`
+* Type: `string`
 
 
 ### `menuCheck` <Badge type="info" text="Optional" />
 
-  Determines if menu items are selectable. If set to `false`, the menu items will not be selectable.
+Determines if menu items are selectable. If set to `false`, the menu items will not be selectable.
 
-  Type: `boolean`
+* Type: `boolean`
 
 
 ## Instance properties

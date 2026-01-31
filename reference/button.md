@@ -84,60 +84,59 @@ Creates a new `Button` instance. It receives a key-value object with the followi
 
 ### `root`
 
-  Specifies the element to which the button will be appended.
+Specifies the element to which the button will be appended.
 
-  Type: [Nodes](/reference/nodes.md)
+* Type: [Nodes](/reference/nodes.md)
 
 
 ### `name`
 
-  Specifies the unique name for the button.
+Specifies the unique name for the button.
 
-  Type: `string`
+* Type: `string`
 
 
 ### `onClick`
 
-  Specifies the callback function executed when the button is clicked.
+Specifies the callback function executed when the button is clicked.
 
-  Type: `function`
+* Type: `function`
 
 
 ### `type` <Badge type="info" text="Optional" />
 
-  Specifies the button style.
+Specifies the button style.
 
-  Type: `'primary' | 'default'`
-
-  Default: `default`
+* Type: `'primary' | 'default'`
+* Default: `default`
 
 
 ### `icon` <Badge type="info" text="Optional" />
 
-  Specifies an icon to be displayed on the button.
+Specifies an icon to be displayed on the button.
 
-  Type: `HTML string`
+* Type: `HTML string`
 
 
 ### `text` <Badge type="info" text="Optional" />
 
-  Specifies the text label displayed on the button.
+Specifies the text label displayed on the button.
 
-  Type: `string`
+* Type: `string`
 
 
 ### `tooltip` <Badge type="info" text="Optional" />
 
-  Specifies the tooltip text shown when the user hovers over the button.
+Specifies the tooltip text shown when the user hovers over the button.
 
-  Type: `string`
+* Type: `string`
 
 
 ### `tabIndex` <Badge type="info" text="Optional" />
 
-  Specifies the tab order of the button.
+Specifies the tab order of the button.
 
-  Type: `number`
+* Type: `number`
 
 
 ## Instance properties

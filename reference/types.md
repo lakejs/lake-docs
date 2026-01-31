@@ -37,58 +37,72 @@ type NodePath = number[];
 ```
 
 
+## BoxType
+
+```ts
+type BoxType = 'inline' | 'block';
+```
+
+
 ## BoxValue
 
 ```ts
-export type BoxValue = Record<string, any>;
+type BoxValue = Record<string, any>;
+```
+
+
+## RenderBox
+
+```ts
+type RenderBox = (box: Box) => Nodes | string | void;
 ```
 
 
 ## BoxComponent
 
 ```ts
-type BoxComponent = {
-  type: 'inline' | 'block';
+interface BoxComponent {
+  type: BoxType;
   name: string;
   value?: BoxValue;
-  render: (box: Box) => Nodes | string | void;
-};
+  render: RenderBox;
+}
 ```
 
 
 ## ActiveItem
 
 ```ts
-type ActiveItem = {
+interface ActiveItem {
   node: Nodes;
   name: string;
   attributes: KeyValue;
   styles: KeyValue;
-};
+}
 ```
 
 
 ## SelectionState
 
 ```ts
-type SelectionState = {
+interface SelectionState {
   activeItems: ActiveItem[];
   disabledNameMap?: Map<string, boolean>;
   selectedNameMap?: Map<string, boolean>;
   selectedValuesMap?: Map<string, string[]>;
-};
+}
 ```
 
 
 ## CommandItem
 
 ```ts
-type CommandItem = {
+interface CommandItem {
   isDisabled?: (activeItems: ActiveItem[]) => boolean;
   isSelected?: (activeItems: ActiveItem[]) => boolean;
   selectedValues?: (activeItems: ActiveItem[]) => string[];
   execute: (...data: any[]) => void;
-};
+}
 ```
 
 
@@ -109,18 +123,18 @@ type InitializePlugin = (editor: Editor) => UnmountPlugin | void;
 ## DropdownMenuItem
 
 ```ts
-type DropdownMenuItem = {
+interface DropdownMenuItem {
   value: string;
   icon?: string;
   text: string | ((locale: TranslationFunctions) => string);
-};
+}
 ```
 
 
 ## DropdownItem
 
 ```ts
-type DropdownItem = {
+interface DropdownItem {
   name: string;
   icon?: string;
   accentIcon?: string;
@@ -128,19 +142,31 @@ type DropdownItem = {
   defaultValue?: string;
   tooltip: string | ((locale: TranslationFunctions) => string);
   width?: string;
-  menuType: 'list' | 'icon' | 'character' | 'color';
+  menuType: DropdownMenuType;
   menuItems: DropdownMenuItem[];
   menuWidth?: string;
   menuHeight?: string;
   menuCheck?: boolean;
-};
+}
+```
+
+
+## CornerToolbarItem
+
+```ts
+interface CornerToolbarItem {
+  name: string;
+  icon?: string;
+  tooltip: string | ((locale: TranslationFunctions) => string);
+  onClick: (event: Event) => void;
+}
 ```
 
 
 ## ToolbarButtonItem
 
 ```ts
-type ToolbarButtonItem = {
+interface ToolbarButtonItem {
   name: string;
   type: 'button';
   icon?: string;
@@ -148,14 +174,14 @@ type ToolbarButtonItem = {
   isSelected?: (activeItems: ActiveItem[]) => boolean;
   isDisabled?: (activeItems: ActiveItem[]) => boolean;
   onClick: (editor: Editor, value: string) => void;
-};
+}
 ```
 
 
 ## ToolbarDropdownItem
 
 ```ts
-type ToolbarDropdownItem = DropdownItem & {
+interface ToolbarDropdownItem extends DropdownItem {
   name: string;
   type: 'dropdown';
   selectedValues?: (activeItems: ActiveItem[]) => string[];
@@ -168,14 +194,14 @@ type ToolbarDropdownItem = DropdownItem & {
 ## ToolbarUploadItem
 
 ```ts
-type ToolbarUploadItem = {
+interface ToolbarUploadItem {
   name: string;
   type: 'upload';
   icon?: string;
   tooltip: string | ((locale: TranslationFunctions) => string);
   accept?: string;
   multiple?: boolean;
-};
+}
 ```
 
 
@@ -189,33 +215,33 @@ type ToolbarItem = ToolbarButtonItem | ToolbarDropdownItem | ToolbarUploadItem;
 ## MentionItem
 
 ```ts
-type MentionItem = {
+interface MentionItem {
   id: string;
   name: string;
   nickname?: string;
   avatar?: string;
-};
+}
 ```
 
 
 ## SlashButtonItem
 
 ```ts
-type SlashButtonItem = {
+interface SlashButtonItem {
   name: string;
   type: 'button';
   icon?: string;
   title: string | ((locale: TranslationFunctions) => string);
   description: string | ((locale: TranslationFunctions) => string);
   onClick: (editor: Editor, value: string) => void;
-};
+}
 ```
 
 
 ## SlashUploadItem
 
 ```ts
-type SlashUploadItem = {
+interface SlashUploadItem {
   name: string;
   type: 'upload';
   icon?: string;
@@ -223,7 +249,7 @@ type SlashUploadItem = {
   description: string | ((locale: TranslationFunctions) => string);
   accept?: string;
   multiple?: boolean;
-};
+}
 ```
 
 
