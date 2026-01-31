@@ -13,7 +13,7 @@ Lake is available on npm as the [lakelib](https://www.npmjs.com/package/lakelib)
 npm install lakelib
 ```
 
-Place the editor placeholders within your HTML:
+Place placeholders for the toolbar and the content area:
 
 ```html
 <div class="my-editor">
@@ -22,7 +22,7 @@ Place the editor placeholders within your HTML:
 </div>
 ```
 
-Import the required CSS and JavaScript modules, then initialize and render the editor. You can customize the [toolbar](/reference/toolbar-config.md) and [editor](/reference/) config as needed.
+Import the modules and CSS, then render the editor. You can customize the [toolbar](/reference/toolbar-config.md) and [editor](/reference/) config as needed.
 
 ```js
 import 'lakelib/lib/lake.css';
@@ -39,10 +39,10 @@ editor.render();
 ```
 
 ::: warning Note
-Ensure `lake.css` is loaded before rendering the editor.
+Ensure `lake.css` is loaded before calling `editor.render()`.
 :::
 
-For a live demonstration, check out the [npm example](https://codesandbox.io/embed/hm39df?module=/src/index.js) on CodeSandbox.
+For a live demonstration, visit [npm example](https://codesandbox.io/embed/hm39df?module=/src/index.js) on CodeSandbox.
 
 ## Quick start with CDN
 
@@ -51,14 +51,14 @@ If you prefer to use plain JavaScript without any build steps, you can load the 
 * jsDelivr: https://www.jsdelivr.com/package/npm/lakelib
 * UNPKG: https://unpkg.com/browse/lakelib/
 
-Include the following lines in the `<head>` section of your HTML page:
+Add the following lines to the `<head>` section of your HTML page:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lakelib@0.4/dist/lake.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/lakelib@0.4/dist/lake.min.js"></script>
 ```
 
-Place the editor placeholders within your HTML:
+Place placeholders for the toolbar and the content area:
 
 ```html
 <div class="my-editor">
@@ -67,7 +67,7 @@ Place the editor placeholders within your HTML:
 </div>
 ```
 
-Use the following JavaScript to initialize and render the editor. You can customize the [toolbar](/reference/toolbar-config.md) and [editor](/reference/) config as needed.
+Use the following JavaScript to render the editor. You can customize the [toolbar](/reference/toolbar-config.md) and [editor](/reference/) config as needed.
 
 ```js
 const { Editor, Toolbar } = Lake;
@@ -82,7 +82,7 @@ const editor = new Editor({
 editor.render();
 ```
 
-For a live demonstration, visit the [CDN example](/assets/cdn){target="_blank"} on this website or try it on [CodeSandbox](https://codesandbox.io/embed/z9p964?module=/index.html).
+For a live demonstration, visit [CDN example](/assets/cdn){target="_blank"} on this website or try it on [CodeSandbox](https://codesandbox.io/embed/z9p964?module=/index.html).
 
 
 ## Integrating with frameworks
@@ -101,7 +101,7 @@ Lake is a plain JavaScript library, which means you can integrate it into any ot
 
 :::
 
-You can visit the following sandboxes to try these examples in your browser:
+You can try these examples online:
 
 * [React example (CodeSandbox)](https://codesandbox.io/embed/kvv8yq?module=/src/Lake.js)
 * [Vue example (StackBlitz)](https://stackblitz.com/edit/lake-vue?file=src%2Fcomponents%2FLake.vue)
@@ -111,7 +111,7 @@ You can visit the following sandboxes to try these examples in your browser:
 
 ## Getting and setting value
 
-Lake provides the following methods to get and set the editor's content.
+Lake provides simple methods to get and set editor data.
 
 ### Initializing the editor with a provided value
 
