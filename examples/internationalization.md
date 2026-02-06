@@ -9,7 +9,9 @@ lastUpdated: false
 
 # {{ $frontmatter.title }}
 
-This page shows how the editor displays user interfaces in different languages. You can change the language by setting the [lang](/reference/index.md#lang) config.
+Lake supports the following four languages out of the box. You can change the language by setting the [lang](/reference/index.md#lang) config.
+
+For other languages, you'll need to use the [editor.locale.add()](/reference/editor#locale) method. Visit [More demos](/examples/more#internationalization) for reference.
 
 ## English
 

@@ -7,6 +7,10 @@ title: Read-only mode
 
 Read-only mode is used to display the editor's content in the view page. You can enable read-only by setting the [readonly](/reference/index.md#readonly) config to `true`.
 
+::: tip
+If you need cross-platform display or server-side rendering, you can use [lake-html](https://github.com/lakejs/lake-html) to convert editor data. It supports both Node.js and the browser.
+:::
+
 ---
 
 <script setup>
