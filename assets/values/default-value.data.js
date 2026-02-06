@@ -65,6 +65,11 @@ export default {
 
 <lake-box type="block" name="hr"></lake-box>
 
+<h3>Slash commands</h3>
+<p>Start a line with <code>/</code> to display a popup menu containing commonly used commands. You can search for commands by typing <code>/keyword</code>.</p>
+
+<lake-box type="block" name="hr"></lake-box>
+
 <h3>Checklist</h3>
 <p>You have three ways to create checklist:</p>
 <ul type="checklist"><li value="true">Click the <code>Checklist</code> icon in the toolbar above.</li></ul>
@@ -102,6 +107,15 @@ export default {
 <blockquote type="tip">Helpful advice for doing things better or more easily.</blockquote>
 <blockquote type="warning">Urgent info that needs immediate user attention to avoid problems.</blockquote>
 <blockquote type="danger">Advises about risks or negative outcomes of certain actions.</blockquote>
+
+<lake-box type="block" name="hr"></lake-box>
+
+<h3>Insert videos</h3>
+<p>You have two ways to add videos:</p>
+<ol start="1"><li>Click the <code>Video</code> icon in the toolbar above to select and upload a video from your device.</li></ol>
+<ol start="2"><li>Start a line with <code>/</code> to display a popup menu. Select the <code>Video</code> option to upload a video.</li></ol>
+<p><br /></p>
+<p><lake-box type="inline" name="media" value="eyJ1cmwiOiIuLi9hc3NldHMvZmlsZXMvZmxvd2VyLndlYm0iLCJzdGF0dXMiOiJkb25lIiwibmFtZSI6ImZsb3dlci53ZWJtIiwic2l6ZSI6NTEwNTU4LCJ0eXBlIjoidmlkZW8vd2VibSIsImxhc3RNb2RpZmllZCI6MTc0MDA5NzcxODU5OCwid2lkdGgiOiI1NjBweCIsImhlaWdodCI6IjMxNXB4In0="></lake-box></p>
 
 <lake-box type="block" name="hr"></lake-box>
 

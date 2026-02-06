@@ -45,6 +45,7 @@ const toolbarItems = [
   '|',
   'link',
   'image',
+  'media',
   'file',
   'emoji',
   'specialCharacter',
@@ -61,6 +62,7 @@ const toolbarItems = [
 ];
 const slashItems = [
   'image',
+  'media',
   'file',
   'heading1',
   'heading2',

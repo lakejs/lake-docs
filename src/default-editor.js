@@ -244,6 +244,10 @@ export function createDefaultEditor(config) {
       requestMethod: 'GET',
       requestAction: '/assets/json/upload-image.json',
     },
+    media: {
+      requestMethod: 'GET',
+      requestAction: '/assets/json/upload-media.json',
+    },
     file: {
       requestMethod: 'GET',
       requestAction: '/assets/json/upload-file.json',
